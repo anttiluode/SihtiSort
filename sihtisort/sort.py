@@ -388,7 +388,7 @@ def look_again(sv, seed, ledger):
     return t, lab, clean
 
 
-def run_s(data, seed=0, base=None, block=True, memory=True, use_sieve=True, commit=False):
+def run_s(data, seed=0, base=None, block=True, memory=True, use_sieve=True, commit=False, two_channel=False):
     """commit=True: PROTOCOL_2 mode (turn-taking parts become state hypotheses with refuters)."""
     r = base or snapshot_sort(data, seed)
     ledger = []
@@ -419,9 +419,97 @@ def run_s(data, seed=0, base=None, block=True, memory=True, use_sieve=True, comm
     st = finalize_states(sv, addresses, memory)
     commits = commitments(sv['t'], sv['addr'], st)
     unit_rev = revise(sv['addr'], st, commits)
-    return dict(t=sv['t'], unit=sv['addr'], state=st, ledger=ledger,
-                n_states=[len(a['states']) for a in addresses],
-                unit_revised=unit_rev, commitments=commits)
+    out = dict(t=sv['t'], unit=sv['addr'], state=st, ledger=ledger,
+               n_states=[len(a['states']) for a in addresses],
+               unit_revised=unit_rev, commitments=commits)
+    if two_channel:
+        clean = snippets(sv['residue'], sv['t']) + sv['amp'][:, None, None] * sv['Tm'][sv['k']].reshape(len(sv['t']), L, -1)
+        out['unit_two_channel'], out['remainder'] = remainder_channel(sv['t'], sv['addr'], st, clean, seed)
+    return out
+
+
+# ------------------------------------------------ PROTOCOL_3: the remainder
+POS_MIN = 0.15            # channels
+POS_Z = 3.0
+POS_SE_TESTED = 0.05      # the position test had power to see a 0.15 gap
+
+
+def spike_centroid(snips):
+    f = snips.max(1) - snips.min(1)
+    f = np.clip(f - 0.2 * f.max(1, keepdims=True), 0, None)
+    return (f * np.arange(f.shape[1])).sum(1) / np.clip(f.sum(1), 1e-9, None)
+
+
+def template_centroid(T):
+    f = T.max(0) - T.min(0)
+    f = np.clip(f - 0.2 * f.max(), 0, None)
+    return float((f * np.arange(len(f))).sum() / max(f.sum(), 1e-9))
+
+
+def template_gap(Sa, Sb, seed=0, boots=40):
+    """Position gap between the mean spikes of two parts, with a bootstrap standard error.
+    (Per-spike centroids are biased toward the probe centre for small spikes; averaged templates are not.)"""
+    gap = abs(template_centroid(Sa.mean(0)) - template_centroid(Sb.mean(0)))
+    rng = np.random.default_rng(seed)
+    bs = [abs(template_centroid(Sa[rng.integers(0, len(Sa), len(Sa))].mean(0))
+              - template_centroid(Sb[rng.integers(0, len(Sb), len(Sb))].mean(0))) for _ in range(boots)]
+    return float(gap), float(np.std(bs))
+
+
+def _forced_split(X, seed):
+    """Two-way split fitted on even-indexed spikes only; the test then uses odd-indexed spikes,
+    so the split cannot manufacture the difference it is tested on."""
+    fit = np.arange(len(X)) % 2 == 0
+    pca = PCA(n_components=5, random_state=seed).fit(X[fit])
+    g = GaussianMixture(2, covariance_type="full", n_init=5, random_state=seed, reg_covar=1e-3).fit(pca.transform(X[fit]))
+    return g.predict(pca.transform(X)), ~fit
+
+
+def remainder_channel(t, addr, state, clean, seed=0):
+    unit = addr.copy(); nxt = int(addr.max()) + 1 if len(addr) else 0
+    rem = []
+    for a in np.unique(addr):
+        m = np.where(addr == a)[0]
+        sts = np.unique(state[m])
+        if len(sts) >= 2:
+            counts = {int(s): int((state[m] == s).sum()) for s in sts}
+            ref = max(counts, key=counts.get)
+            parts = [(state[m] == ref, state[m] == s, 'states') for s in sts if s != ref]
+            test_mask = np.ones(len(m), bool)
+        elif len(m) >= 60:
+            lab, test_mask = _forced_split(clean[m].reshape(len(m), -1), seed)
+            parts = [(lab == 0, lab == 1, 'forced split')]
+        else:
+            rem.append(dict(address=int(a), n=int(len(m)), status='silent', reason='too few spikes'))
+            continue
+        for pm, qm, kind in parts:
+            p, q = m[pm], m[qm]
+            tp, tq = m[pm & test_mask], m[qm & test_mask]
+            rec = dict(address=int(a), kind=kind, n=[int(len(p)), int(len(q))])
+            if min(len(tp), len(tq)) < MIN_N // 2:
+                rec.update(status='silent', reason='a part is too small')
+                rem.append(rec); continue
+            gap, se = template_gap(clean[tp], clean[tq], seed)
+            zp = gap / max(se, 1e-9)
+            R = switch_ratio(t[p], t[q])
+            rate = None
+            if R <= R_MAX:
+                tt = np.concatenate([t[p], t[q]]); ll = np.r_[np.zeros(len(p), int), np.ones(len(q), int)]
+                o = np.argsort(tt, kind='stable'); rate = refute(tt[o], ll[o], 0, 1)
+            pos_fire = gap >= POS_MIN and zp >= POS_Z
+            rate_fire = rate is not None and rate['status'] == 'refuted'
+            rec.update(position_gap=round(gap, 3), position_se=round(se, 3), position_z=round(zp, 2),
+                       switch_ratio=round(R, 3), rate=rate)
+            if pos_fire or rate_fire:
+                rec['status'] = 'reopened'
+                rec['by'] = [w for w, f in (('position', pos_fire), ('rate', rate_fire)) if f]
+                unit[q] = nxt; nxt += 1
+            elif se <= POS_SE_TESTED:
+                rec['status'] = 'agrees'
+            else:
+                rec['status'] = 'silent'
+            rem.append(rec)
+    return unit, rem
 
 
 # ------------------------------------------------- commit, refute, revise
