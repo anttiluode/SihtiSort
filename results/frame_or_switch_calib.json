@@ -1,0 +1,726 @@
+{
+ "calib_linear": {
+  "table": {
+   "naive": {
+    "false_reopenings": 6,
+    "true_reopenings": 0,
+    "mood": [
+     8,
+     3
+    ],
+    "stable": [
+     8,
+     7
+    ],
+    "separable": 1,
+    "separated": 0,
+    "recordings": 2,
+    "passed": false
+   },
+   "window": {
+    "false_reopenings": 0,
+    "true_reopenings": 1,
+    "mood": [
+     8,
+     8
+    ],
+    "stable": [
+     8,
+     8
+    ],
+    "separable": 1,
+    "separated": 1,
+    "recordings": 2,
+    "passed": true
+   },
+   "frame-oracle": {
+    "false_reopenings": 0,
+    "true_reopenings": 1,
+    "mood": [
+     8,
+     8
+    ],
+    "stable": [
+     8,
+     8
+    ],
+    "separable": 1,
+    "separated": 1,
+    "recordings": 2,
+    "passed": true
+   },
+   "frame-estimated": {
+    "false_reopenings": 0,
+    "true_reopenings": 1,
+    "mood": [
+     8,
+     8
+    ],
+    "stable": [
+     8,
+     8
+    ],
+    "separable": 1,
+    "separated": 1,
+    "recordings": 2,
+    "passed": true
+   },
+   "frame-wrong": {
+    "false_reopenings": 8,
+    "true_reopenings": 1,
+    "mood": [
+     8,
+     2
+    ],
+    "stable": [
+     8,
+     6
+    ],
+    "separable": 1,
+    "separated": 1,
+    "recordings": 2,
+    "passed": false
+   },
+   "switch": {
+    "false_reopenings": 0,
+    "true_reopenings": 1,
+    "mood": [
+     8,
+     8
+    ],
+    "stable": [
+     8,
+     8
+    ],
+    "separable": 1,
+    "separated": 1,
+    "recordings": 2,
+    "passed": true
+   },
+   "switch+frame": {
+    "false_reopenings": 0,
+    "true_reopenings": 1,
+    "mood": [
+     8,
+     8
+    ],
+    "stable": [
+     8,
+     8
+    ],
+    "separable": 1,
+    "separated": 1,
+    "recordings": 2,
+    "passed": true
+   }
+  },
+  "rows": [
+   {
+    "seed": 92,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.038,
+    "turn_rate_ratio": 1.783,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0247,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 2,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.285,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.319,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.251,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.481,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.494,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.224,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.265,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.473,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 93,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.272,
+    "turn_rate_ratio": 1.392,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0219,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 1,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.216,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.15,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.313,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.219,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.241,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.209,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.371,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.219,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.222,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.569,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.252,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.254,
+       "false": false
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "calib_sine": {
+  "table": {
+   "naive": {
+    "false_reopenings": 2,
+    "true_reopenings": 1,
+    "mood": [
+     4,
+     4
+    ],
+    "stable": [
+     4,
+     3
+    ],
+    "separable": 0,
+    "separated": 0,
+    "recordings": 1,
+    "passed": false
+   },
+   "window": {
+    "false_reopenings": 1,
+    "true_reopenings": 1,
+    "mood": [
+     4,
+     4
+    ],
+    "stable": [
+     4,
+     3
+    ],
+    "separable": 0,
+    "separated": 0,
+    "recordings": 1,
+    "passed": true
+   },
+   "frame-oracle": {
+    "false_reopenings": 0,
+    "true_reopenings": 1,
+    "mood": [
+     4,
+     4
+    ],
+    "stable": [
+     4,
+     4
+    ],
+    "separable": 0,
+    "separated": 0,
+    "recordings": 1,
+    "passed": true
+   },
+   "frame-estimated": {
+    "false_reopenings": 0,
+    "true_reopenings": 1,
+    "mood": [
+     4,
+     4
+    ],
+    "stable": [
+     4,
+     4
+    ],
+    "separable": 0,
+    "separated": 0,
+    "recordings": 1,
+    "passed": true
+   },
+   "frame-wrong": {
+    "false_reopenings": 2,
+    "true_reopenings": 1,
+    "mood": [
+     4,
+     3
+    ],
+    "stable": [
+     4,
+     3
+    ],
+    "separable": 0,
+    "separated": 0,
+    "recordings": 1,
+    "passed": false
+   },
+   "switch": {
+    "false_reopenings": 0,
+    "true_reopenings": 0,
+    "mood": [
+     4,
+     4
+    ],
+    "stable": [
+     4,
+     4
+    ],
+    "separable": 0,
+    "separated": 0,
+    "recordings": 1,
+    "passed": true
+   },
+   "switch+frame": {
+    "false_reopenings": 0,
+    "true_reopenings": 0,
+    "mood": [
+     4,
+     4
+    ],
+    "stable": [
+     4,
+     4
+    ],
+    "separable": 0,
+    "separated": 0,
+    "recordings": 1,
+    "passed": true
+   }
+  },
+  "rows": [
+   {
+    "seed": 94,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.394,
+    "turn_rate_ratio": 1.358,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0331,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.164,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.399,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.472,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.337,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.62,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.395,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.417,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.25,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.173,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.661,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   }
+  ]
+ }
+}

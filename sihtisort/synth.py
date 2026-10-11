@@ -66,7 +66,17 @@ def state_at(times, blocks):
     return st
 
 
-def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None, drift=None, dwell=None):
+def drift_at(meta, samples):
+    """True probe displacement (channels) at the given sample times, from a recording's meta."""
+    samples = np.asarray(samples, float)
+    if not meta.get('drift_kind'):
+        return np.zeros_like(samples)
+    if meta['drift_kind'] == 'sine':
+        return meta['drift'] * np.sin(2 * np.pi * samples / (40 * FS) + meta['drift_phase'])
+    return meta['drift'] * samples / meta['n']
+
+
+def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None, drift=None, dwell=None, drift_kind='linear'):
     """min_sep (channels): if given, POST HOC sparse setting -- every neuron outside the
     turn-taking pair sits at least min_sep from every other neuron. Default None is the
     protocol's setting (positions uniformly random).
@@ -131,9 +141,13 @@ def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None, drift
     noise = 0.6 * noise[1:] + 0.4 * noise[:-1]                                  # lightly in time
     noise /= noise.std(0, keepdims=True)
     data = noise
-    shift = 0.0
+    shift, phase = 0.0, 0.0
     if drift is not None:          # separate generator, so the default draws above are untouched
-        shift = drift * (1.0 if np.random.default_rng(seed + 10 ** 6).random() < 0.5 else -1.0)
+        drng = np.random.default_rng(seed + 10 ** 6)
+        shift = drift * (1.0 if drng.random() < 0.5 else -1.0)
+        if drift_kind == 'sine':   # PROTOCOL_5: amplitude |drift|, period 40 s, random phase
+            shift, phase = abs(drift), float(drng.uniform(0, 2 * np.pi))
+    dmeta = dict(drift=float(shift), drift_kind=drift_kind if drift is not None else None, drift_phase=phase, n=n)
     gt_t, gt_u, gt_s = [], [], []
     for nu in neurons:
         samples = np.round(nu['times'] * FS).astype(int)
@@ -146,12 +160,12 @@ def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None, drift
                 T = nu['templates'][s]
             else:
                 a_, w_, r_, s_ = nu['params'][s]
-                T = template(a_, w_, r_, nu['pos'] + shift * smp / n, s_)
+                T = template(a_, w_, r_, nu['pos'] + float(drift_at(dmeta, smp)), s_)
             data[a:b] += (j * T).astype(np.float32)
             gt_t.append(smp); gt_u.append(nu['id']); gt_s.append(s)
     order = np.argsort(gt_t)
     gt = dict(t=np.array(gt_t)[order], unit=np.array(gt_u)[order], state=np.array(gt_s)[order])
-    meta = dict(seed=seed, turn_offset=float(turn_offset), drift=float(shift),
+    meta = dict(seed=seed, turn_offset=float(turn_offset), **dmeta,
                 neurons=[dict(id=nu['id'], kind=nu['kind'], pos=float(nu['pos']),
                               rate=float(nu['rate']), n=int(len(nu['times'])))
                          for nu in neurons])

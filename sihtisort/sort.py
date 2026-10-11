@@ -427,6 +427,7 @@ def run_s(data, seed=0, base=None, block=True, memory=True, use_sieve=True, comm
         out['unit_two_channel'], out['remainder'] = remainder_channel(sv['t'], sv['addr'], st, clean, seed)
         out['unit_two_channel_aware'], out['remainder_aware'] = remainder_channel(sv['t'], sv['addr'], st, clean, seed,
                                                                                   aware=True)
+        out['_rem_inputs'] = (sv['t'], sv['addr'], st, clean)      # in memory only (PROTOCOL_5 methods)
     return out
 
 
@@ -489,6 +490,85 @@ def window_gap(tp, Sp, tq, Sq, seed=0, boots=40):
     return gap, float(np.std(bs))
 
 
+SWITCH_K = 15
+
+
+def general_gap(tp, Sp, tq, Sq, mode, drift_fn=None, seed=0, boots=40):
+    """PROTOCOL_5 position gap. Groups of (part p spikes, part q spikes) compared at matched conditions:
+    'naive' one group (whole parts); 'window' shared 15 s windows; 'switch' the <= 15 spikes on each side
+    of every label switch in the time-ordered union. Positions are corrected by drift_fn if given."""
+    groups = []
+    if mode == 'naive':
+        groups = [(tp, Sp, tq, Sq)]
+    elif mode == 'window':
+        lo = min(tp.min(), tq.min())
+        for a in np.arange(lo, max(tp.max(), tq.max()) + 1, WIN):
+            mp = (tp >= a) & (tp < a + WIN); mq = (tq >= a) & (tq < a + WIN)
+            if mp.sum() >= MIN_WIN and mq.sum() >= MIN_WIN:
+                groups.append((tp[mp], Sp[mp], tq[mq], Sq[mq]))
+    elif mode == 'switch':
+        tt = np.concatenate([tp, tq]); lab = np.r_[np.zeros(len(tp), int), np.ones(len(tq), int)]
+        idx = np.r_[np.arange(len(tp)), np.arange(len(tq))]
+        o = np.argsort(tt, kind='stable'); lab, idx = lab[o], idx[o]
+        starts = np.r_[0, np.where(lab[1:] != lab[:-1])[0] + 1]; ends = np.r_[starts[1:], len(lab)]
+        for r in range(len(starts) - 1):
+            a0, a1, b0, b1 = starts[r], ends[r], starts[r + 1], ends[r + 1]
+            before = idx[max(a0, a1 - SWITCH_K):a1]; after = idx[b0:min(b1, b0 + SWITCH_K)]
+            if len(before) < MIN_WIN or len(after) < MIN_WIN:
+                continue
+            if lab[a0] == 0:
+                groups.append((tp[before], Sp[before], tq[after], Sq[after]))
+            else:
+                groups.append((tp[after], Sp[after], tq[before], Sq[before]))
+    if not groups:
+        return None, None
+    d = drift_fn if drift_fn is not None else (lambda x: np.zeros(len(x)))
+
+    def est(gs):
+        g = np.array([(template_centroid(a.mean(0)) - float(np.mean(d(ta))))
+                      - (template_centroid(b.mean(0)) - float(np.mean(d(tb)))) for ta, a, tb, b in gs])
+        w = np.array([min(len(a), len(b)) for _, a, _, b in gs], float)
+        return float((g * w).sum() / w.sum())
+
+    gap = abs(est(groups))
+    rng = np.random.default_rng(seed)
+    bs = []
+    for _ in range(boots):
+        pick = rng.integers(0, len(groups), len(groups)) if len(groups) > 1 else [0]
+        res = []
+        for i in pick:
+            ta, a, tb, b = groups[i]
+            ia = rng.integers(0, len(a), len(a)); ib = rng.integers(0, len(b), len(b))
+            res.append((ta[ia], a[ia], tb[ib], b[ib]))
+        bs.append(est(res))
+    return gap, float(np.std(bs))
+
+
+def estimate_drift(t, addr, clean, win=5 * FS, min_spikes=6, min_windows=3):
+    """PROTOCOL_5: blind estimate of the shared probe displacement from all committed addresses.
+    Returns a function samples -> channels (zero median), or None if no address qualifies."""
+    T = float(t.max()) if len(t) else 0.0
+    edges = np.arange(0, T + win, win); centers = edges[:-1] + win / 2
+    rows = []
+    for a in np.unique(addr):
+        m = addr == a
+        tr = np.full(len(centers), np.nan)
+        for i in range(len(centers)):
+            k = m & (t >= edges[i]) & (t < edges[i + 1])
+            if k.sum() >= min_spikes:
+                tr[i] = template_centroid(clean[k].mean(0))
+        if np.isfinite(tr).sum() >= min_windows:
+            rows.append(tr - np.nanmedian(tr))
+    if not rows:
+        return None
+    dhat = np.nanmedian(np.array(rows), 0)
+    ok = np.isfinite(dhat)
+    if ok.sum() < 2:
+        return None
+    xc, yc = centers[ok], dhat[ok]
+    return lambda x: np.interp(np.asarray(x, float), xc, yc)
+
+
 def _forced_split(X, seed):
     """Two-way split fitted on even-indexed spikes only; the test then uses odd-indexed spikes,
     so the split cannot manufacture the difference it is tested on."""
@@ -498,8 +578,14 @@ def _forced_split(X, seed):
     return g.predict(pca.transform(X)), ~fit
 
 
-def remainder_channel(t, addr, state, clean, seed=0, aware=False):
-    """aware=True (PROTOCOL_4): compare the parts' positions only inside shared 15 s windows."""
+def remainder_channel(t, addr, state, clean, seed=0, aware=False, mode=None, drift_fn=None):
+    """aware=True (PROTOCOL_4): compare the parts' positions only inside shared 15 s windows.
+    PROTOCOL_5: mode in {'naive', 'window', 'switch'}; drift_fn(samples) -> probe displacement in
+    channels, subtracted from positions before comparing (None = no correction)."""
+    if mode is None:
+        mode = 'window' if aware else 'naive'
+    if mode != 'naive' or drift_fn is not None:
+        aware = None      # handled by the general path below
     unit = addr.copy(); nxt = int(addr.max()) + 1 if len(addr) else 0
     rem = []
     for a in np.unique(addr):
@@ -523,7 +609,11 @@ def remainder_channel(t, addr, state, clean, seed=0, aware=False):
             if min(len(tp), len(tq)) < MIN_N // 2:
                 rec.update(status='silent', reason='a part is too small')
                 rem.append(rec); continue
-            if aware:
+            if aware is None:
+                gap, se = general_gap(t[tp], clean[tp], t[tq], clean[tq], mode, drift_fn, seed)
+                if gap is None:
+                    gap, se = 0.0, np.inf
+            elif aware:
                 gap, se = window_gap(t[tp], clean[tp], t[tq], clean[tq], seed)
                 if gap is None:
                     gap, se = 0.0, np.inf
