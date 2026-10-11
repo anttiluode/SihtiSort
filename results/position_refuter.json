@@ -1,0 +1,325 @@
+{
+ "note": "POST HOC",
+ "summary": {
+  "one_neuron_gap_max": 0.097,
+  "one_neuron_gap_median": 0.024,
+  "n_one": 30,
+  "two_neuron_gaps": [
+   [
+    0.014,
+    0.0
+   ],
+   [
+    0.09,
+    0.117
+   ],
+   [
+    0.1,
+    0.157
+   ],
+   [
+    0.267,
+    0.231
+   ],
+   [
+    0.27,
+    0.253
+   ],
+   [
+    0.295,
+    0.321
+   ]
+  ],
+  "n_two": 6
+ },
+ "rows": [
+  {
+   "seed": 20,
+   "truth": "two neurons",
+   "kind": "turn_b",
+   "status": "survived",
+   "position_gap": 0.267,
+   "true_offset": 0.231
+  },
+  {
+   "seed": 20,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.025,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 20,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.005,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 20,
+   "truth": "one neuron",
+   "kind": "mood_mild",
+   "status": "survived",
+   "position_gap": 0.024,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 21,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.004,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 22,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.025,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 22,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.004,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 23,
+   "truth": "two neurons",
+   "kind": "turn_a",
+   "status": "untested from here",
+   "position_gap": 0.295,
+   "true_offset": 0.321
+  },
+  {
+   "seed": 23,
+   "truth": "one neuron",
+   "kind": "mood_mild",
+   "status": "survived",
+   "position_gap": 0.015,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 23,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.024,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 23,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.008,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 24,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.017,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 24,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.002,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 24,
+   "truth": "one neuron",
+   "kind": "mood_mild",
+   "status": "survived",
+   "position_gap": 0.016,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 25,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.033,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 25,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.017,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 25,
+   "truth": "two neurons",
+   "kind": "turn_a",
+   "status": "survived",
+   "position_gap": 0.014,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 26,
+   "truth": "one neuron",
+   "kind": "mood_mild",
+   "status": "survived",
+   "position_gap": 0.067,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 26,
+   "truth": "two neurons",
+   "kind": "turn_b",
+   "status": "survived",
+   "position_gap": 0.09,
+   "true_offset": 0.117
+  },
+  {
+   "seed": 26,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.04,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 27,
+   "truth": "two neurons",
+   "kind": "turn_b",
+   "status": "survived",
+   "position_gap": 0.1,
+   "true_offset": 0.157
+  },
+  {
+   "seed": 27,
+   "truth": "one neuron",
+   "kind": "mood_mild",
+   "status": "survived",
+   "position_gap": 0.009,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 27,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.062,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 27,
+   "truth": "one neuron",
+   "kind": "mood_mild",
+   "status": "survived",
+   "position_gap": 0.062,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 27,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.055,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 28,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.052,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 28,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.038,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 29,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.049,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 29,
+   "truth": "two neurons",
+   "kind": "turn_b",
+   "status": "survived",
+   "position_gap": 0.27,
+   "true_offset": 0.253
+  },
+  {
+   "seed": 29,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.038,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 30,
+   "truth": "one neuron",
+   "kind": "mood_mild",
+   "status": "survived",
+   "position_gap": 0.004,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 30,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.05,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 31,
+   "truth": "one neuron",
+   "kind": "mood_mild",
+   "status": "survived",
+   "position_gap": 0.018,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 31,
+   "truth": "one neuron",
+   "kind": "mood_mild",
+   "status": "survived",
+   "position_gap": 0.009,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 31,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "survived",
+   "position_gap": 0.097,
+   "true_offset": 0.0
+  },
+  {
+   "seed": 31,
+   "truth": "one neuron",
+   "kind": "mood_strong",
+   "status": "untested from here",
+   "position_gap": 0.017,
+   "true_offset": 0.0
+  }
+ ]
+}
