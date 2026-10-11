@@ -200,6 +200,38 @@ A second caveat (also Sol's): the switch comparison takes up to 15 spikes on eac
 
 **The two fixes fail in opposite directions.** Frame correction finds every separable pair but can split a true neuron when the probe moves fast. The switch comparison never split a true neuron in any of the 36 recordings, drift or not, but it needs handovers with at least 6 spikes on each side, so it misses some real pairs. Combined, the switch comparison with the estimated frame passed the sine and no-drift sets and failed linear on recall alone (4 of 6). No single method passed all three sets.
 
+## Register each spike first ([PROTOCOL_6.md](PROTOCOL_6.md), Sol's suggestion) — and a replication
+
+Sol pointed out that Protocol 5's "true drift" check averaged spikes *before* correcting them. Current sorters move each spike back into place first. Protocol 6 tested that order on 36 new recordings, run once, with the same generator settings as Protocol 5. Same cell format: false reopenings of true neurons, then separable false merges that end up apart.
+
+| Method | Linear drift | Sine drift | No drift |
+|---|---|---|---|
+| frame, true drift, centroid (Protocol 5's version) | 2 · 4/6 | **0** · 6/6 | 2 · 4/5 |
+| frame, true drift, registered per spike | 2 · 4/6 | 5 · 6/6 | 2 · 4/5 |
+| frame, estimated drift, centroid | 1 · 5/6 | 4 · 6/6 | 2 · 4/5 |
+| frame, estimated drift, registered | 2 · 5/6 | 11 · 6/6 | 2 · 4/5 |
+| frame, wrong drift, registered (control) | 46 · 5/6 | 41 · 6/6 | 2 · 4/5 |
+| switch | 1 · 3/6 | 6 · 5/6 | 2 · 3/5 |
+
+| Gate | Result |
+|---|---|
+| G1 registering first fixes the sine failure | **Fail.** With the true drift, registering each spike made *more* false reopenings under sine drift (5) than averaging first (0). |
+| G2 estimated drift + registration passes all sets | **Fail.** |
+| G3 the wrong correction does damage | **Pass.** 46 false reopenings. |
+
+**Protocol 5 did not replicate.** On these new recordings the true-drift centroid method, which failed the sine set before (5 false reopenings), made none. The switch comparison, which made none in all 36 Protocol 5 recordings, made 9 here (1, 6 and 2).
+
+With 12 recordings per set, counts of 0–6 false reopenings move around from batch to batch by about as much as the differences between methods. The method comparisons drawn from Protocol 5 were within that noise. What has held in every batch is the large effect: comparing positions without accounting for drift gives about 40–50 false reopenings, and so does a deliberately wrong correction. Any method that accounts for drift, by any of these routes, gives roughly 0–11.
+
+Where the remaining errors come from:
+
+- **Almost every false reopening was a forced split.** Leaving out the wrong-drift control, 42 of 44 were. Those triggered by position had gaps just above the threshold, 0.15–0.23 channels (one at 0.42). The forced split is fitted to the data, and under drift its two halves differ by about the threshold, so the 0.15-channel threshold sits inside the noise of that split.
+- **The 2 false reopenings without drift come from the rate refuter**, again on forced splits, as Sol warned. Fixing position cannot remove them.
+- **The switch comparisons are not instants.** Measured spans: median about 4 s, 95th percentile 11–12 s, longest 19 s. Under sine drift that is enough motion to explain its 6 false reopenings there.
+- **Why per-spike registration hurt is not established.** One untested suspect is the linear interpolation between channels: it smooths a footprint by an amount that depends on the fractional shift, and that changes the centroid.
+
+Before comparing these methods further, the sets need to be several times larger, and the forced split needs its own, stricter evidence bar.
+
 ## The test that matters next
 
 The preprint's **spe-1** dataset ([CRCNS](https://crcns.org/), analysis code at [voytekresearch/spikewise](https://github.com/voytekresearch/spikewise)) has simultaneous intracellular ground truth beside the Neuropixels recording. For the cells whose waveform switches state, the question is whether a sorter that remembers keeps each one as one unit where snapshot sorting splits it. Download needs a CRCNS account, and this repository does not include a loader yet.
@@ -222,6 +254,7 @@ python diagnostics/two_channel.py          # PROTOCOL_3 (~45 min on 2 cores)
 python diagnostics/figure_two_channel.py
 python diagnostics/drift_control.py        # PROTOCOL_4 (~12 min on 2 cores)
 python diagnostics/frame_or_switch.py      # PROTOCOL_5 (~30 min on 2 cores)
+python diagnostics/register_first.py       # PROTOCOL_6 (~30 min on 2 cores)
 ```
 
 Files: [sihtisort/synth.py](sihtisort/synth.py) (recording and ground truth) · [sihtisort/sort.py](sihtisort/sort.py) (B1, B2, SihtiSort) · [sihtisort/evaluate.py](sihtisort/evaluate.py) (scoring) · [run_gates.py](run_gates.py) · `results/*.json` (every number above, with the ledger of every hypothesis tested).
