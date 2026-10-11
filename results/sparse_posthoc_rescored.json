@@ -1,0 +1,524 @@
+{
+ "note": "rescored with one-to-one matching after Sol found the double-count bug",
+ "pooled_one_to_one": {
+  "B1": {
+   "mood_one_unit": 13,
+   "n_mood": 20,
+   "strong_one_unit": 3,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.8815,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     true
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     true
+    ]
+   ],
+   "overlap_recall": 0.2151,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "B2": {
+   "mood_one_unit": 14,
+   "n_mood": 20,
+   "strong_one_unit": 4,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.8867,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     true
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     true
+    ]
+   ],
+   "overlap_recall": 0.2358,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "S": {
+   "mood_one_unit": 20,
+   "n_mood": 20,
+   "strong_one_unit": 10,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.9861,
+   "false_merges": 2,
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "overlap_recall": 0.9143,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.9936,
+    0.988,
+    0.9948,
+    0.9948,
+    0.9968,
+    0.9982,
+    0.9943
+   ]
+  },
+  "S-block": {
+   "mood_one_unit": 13,
+   "n_mood": 20,
+   "strong_one_unit": 3,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.9864,
+   "false_merges": 2,
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "overlap_recall": 0.8478,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "S-memory": {
+   "mood_one_unit": 20,
+   "n_mood": 20,
+   "strong_one_unit": 10,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.9861,
+   "false_merges": 2,
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "overlap_recall": 0.9143,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.9936,
+    0.9849,
+    0.9948,
+    0.9931,
+    0.9968,
+    0.9964,
+    0.9885
+   ]
+  },
+  "S-sieve": {
+   "mood_one_unit": 19,
+   "n_mood": 20,
+   "strong_one_unit": 9,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.8867,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     true
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     true
+    ]
+   ],
+   "overlap_recall": 0.2505,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.9964,
+    0.9981,
+    0.9963,
+    1.0,
+    0.9961
+   ]
+  }
+ },
+ "gates_one_to_one": {
+  "G0": {
+   "B1_mood_pct": 65.0,
+   "B1_stable_acc": 0.8815,
+   "passed": false
+  },
+  "G1": {
+   "S_mood_pct": 100.0,
+   "B2_mood_pct": 70.0,
+   "gain": 30.0,
+   "S_false_merges": 2,
+   "B2_false_merges": 3,
+   "S_stable": 0.9861,
+   "B2_stable": 0.8867,
+   "passed": true
+  },
+  "G2": {
+   "S_block_mood_pct": 65.0,
+   "B2_mood_pct": 70.0,
+   "passed": true
+  },
+  "G3": {
+   "S_state_mild": [],
+   "S_memory_state_mild": [],
+   "S_state_strong": [
+    0.9936,
+    0.988,
+    0.9948,
+    0.9948,
+    0.9968,
+    0.9982,
+    0.9943
+   ],
+   "S_memory_state_strong": [
+    0.9936,
+    0.9849,
+    0.9948,
+    0.9931,
+    0.9968,
+    0.9964,
+    0.9885
+   ],
+   "diff_points": null,
+   "passed": false
+  },
+  "G4": {
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "far_merges": 0,
+   "merge_rule_failed": false
+  },
+  "G5": {
+   "S_overlap": 0.9143,
+   "S_sieve_overlap": 0.2505,
+   "passed": true
+  }
+ },
+ "pooled_old_scoring": {
+  "B1": {
+   "mood_one_unit": 13,
+   "n_mood": 20,
+   "strong_one_unit": 3,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.8815,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     true
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     true
+    ]
+   ],
+   "overlap_recall": 0.2156,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "B2": {
+   "mood_one_unit": 14,
+   "n_mood": 20,
+   "strong_one_unit": 4,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.8867,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     true
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     true
+    ]
+   ],
+   "overlap_recall": 0.2363,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "S": {
+   "mood_one_unit": 20,
+   "n_mood": 20,
+   "strong_one_unit": 10,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.9916,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "overlap_recall": 0.9432,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.9921,
+    0.9881,
+    0.9931,
+    0.9948,
+    0.9968,
+    0.9982,
+    0.9943
+   ]
+  },
+  "S-block": {
+   "mood_one_unit": 13,
+   "n_mood": 20,
+   "strong_one_unit": 3,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.9916,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "overlap_recall": 0.8754,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "S-memory": {
+   "mood_one_unit": 20,
+   "n_mood": 20,
+   "strong_one_unit": 10,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.9916,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "overlap_recall": 0.9432,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.9921,
+    0.9851,
+    0.9931,
+    0.9931,
+    0.9968,
+    0.9964,
+    0.9885
+   ]
+  },
+  "S-sieve": {
+   "mood_one_unit": 19,
+   "n_mood": 20,
+   "strong_one_unit": 9,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.8867,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     true
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     true
+    ]
+   ],
+   "overlap_recall": 0.2514,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.9964,
+    0.9961,
+    0.9963,
+    1.0,
+    0.9961
+   ]
+  }
+ }
+}

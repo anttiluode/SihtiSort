@@ -12,7 +12,7 @@ SihtiSort tests whether remembering fixes that. If two clusters sit at the same 
 
 ## Result, in one paragraph
 
-**The preregistered test failed.** On the five test recordings, SihtiSort recovered 7 of 20 mood neurons as one unit, against 6 of 20 for the snapshot-plus-merge baseline; the gate needed +25 points. The post-hoc analysis says why: neurons were placed at random, and 14 of the 20 mood neurons had another neuron within half a channel. No sorter recovered those 14, and every sorter recovered the other 6, so the test set held almost no case where the idea could matter. On recordings with neurons at least one channel apart (post hoc, not a gate result), SihtiSort recovered **20/20** against **14/20**, and **10/10** strong mood neurons against **4/10**. Removing the temporal rule drops that to 3/10. False merges stayed equal.
+**The preregistered test failed.** On the five test recordings, SihtiSort recovered 7 of 20 mood neurons as one unit, against 6 of 20 for the snapshot-plus-merge baseline; the gate needed +25 points. The post-hoc analysis says why: neurons were placed at random, and 14 of the 20 mood neurons had another neuron within half a channel. No sorter recovered those 14, and every sorter recovered the other 6, so the test set held almost no case where the idea could matter. On recordings with neurons at least one channel apart (post hoc, not a gate result), SihtiSort recovered **20/20** against **14/20**, and **10/10** strong mood neurons against **4/10**. Removing the temporal rule drops that to 3/10. False merges did not rise (2 vs 3).
 
 ## How it works
 
@@ -28,27 +28,31 @@ The vocabulary maps onto the conversation it came from: addresses that open and 
 
 Every hypothesis tested in steps 2, 3, 5 and 6 is written to a **ledger** with its numbers and verdict: "could it be this? no, they interleave. Could it be that? Yes."
 
+## Scoring correction (11 Oct, found by Sol)
+
+The protocol says spikes match ground truth one-to-one, but the first evaluator matched each true spike to its nearest sorted spike, so one sorted spike could be counted twice where spikes overlap. [diagnostics/rescore.py](diagnostics/rescore.py) reruns the sorters (they are deterministic) and scores them both ways: the old scoring reproduces the original files exactly, and the one-to-one scoring changes no gate verdict. Overlap recall falls (SihtiSort 0.82 → 0.78 on the test set), the test-set baselines gain two false merges, and stable accuracy moves by under 0.01. All tables below use one-to-one scoring; the original files `results/test.json` and `results/sparse_posthoc.json` are kept as they were, and `results/*_rescored.json` hold both versions.
+
 ## Preregistered test (seeds 0–4, frozen commit `5c2153c`, run once)
 
 The gates are in [PROTOCOL.md](PROTOCOL.md), committed before any code existed.
 
 | Sorter | Mood neurons as one unit | Strong | Mild | Stable accuracy | False merges | Overlap recall |
 |---|---|---|---|---|---|---|
-| B1 snapshot | 8/20 | 3/10 | 5/10 | 0.739 | 21 | 0.13 |
-| B2 snapshot + standard merge | 6/20 | 2/10 | 4/10 | 0.614 | 18 | 0.26 |
-| **S SihtiSort** | **7/20** | 3/10 | 4/10 | **0.778** | **14** | **0.82** |
-| S − temporal rule | 5/20 | 1/10 | 4/10 | 0.778 | 14 | 0.79 |
-| S − memory | 7/20 | 3/10 | 4/10 | 0.778 | 14 | 0.82 |
-| S − sieve | 6/20 | 2/10 | 4/10 | 0.614 | 18 | 0.26 |
+| B1 snapshot | 8/20 | 3/10 | 5/10 | 0.738 | 23 | 0.13 |
+| B2 snapshot + standard merge | 6/20 | 2/10 | 4/10 | 0.613 | 20 | 0.25 |
+| **S SihtiSort** | **7/20** | 3/10 | 4/10 | **0.772** | **14** | **0.78** |
+| S − temporal rule | 5/20 | 1/10 | 4/10 | 0.772 | 14 | 0.76 |
+| S − memory | 7/20 | 3/10 | 4/10 | 0.772 | 14 | 0.78 |
+| S − sieve | 6/20 | 2/10 | 4/10 | 0.613 | 20 | 0.25 |
 
 | Gate | Verdict |
 |---|---|
 | G0 the problem exists | **Fail.** B1 recovers 40% of mood neurons, under the 50% bar, but its stable accuracy is 0.74, under the 0.8 bar: the baseline itself struggles on these recordings. |
-| G1 main claim (+25 points over B2) | **Fail.** +5 points. False merges (14 vs 18) and stable accuracy (0.78 vs 0.61) do meet their conditions. |
+| G1 main claim (+25 points over B2) | **Fail.** +5 points. False merges (14 vs 20) and stable accuracy (0.77 vs 0.61) do meet their conditions. |
 | G2 the temporal rule does the work | Pass (S − temporal rule 25% vs B2 30%), but with G1 failed there is little to attribute. |
 | G3 memory improves state decoding on mild neurons | **Not testable.** No sorter ever split a mild neuron into states, so there was nothing to decode. On strong neurons, state accuracy is 0.98–1.0 with or without memory. |
 | G4 turn-taking pair | Merged once, at 0.86 channels apart (seed 3); never at ≥ 1.25. That is close to the stated prediction (merge at ≤ ~0.75). |
-| G5 sieve sanity | Pass: overlap recall 0.82 vs 0.26. This is matching pursuit, which is prior art. |
+| G5 sieve sanity | Pass: overlap recall 0.78 vs 0.25. This is matching pursuit, which is prior art. |
 
 ## Post-hoc analysis (after the failure, labelled as such)
 
@@ -66,15 +70,15 @@ The gates are in [PROTOCOL.md](PROTOCOL.md), committed before any code existed.
 | Sorter | Mood as one unit | Strong | Mild | Stable accuracy | False merges |
 |---|---|---|---|---|---|
 | B2 snapshot + standard merge | 14/20 | 4/10 | 10/10 | 0.887 | 3 |
-| **S SihtiSort** | **20/20** | **10/10** | 10/10 | **0.992** | 3 |
-| S − temporal rule | 13/20 | 3/10 | 10/10 | 0.992 | 3 |
+| **S SihtiSort** | **20/20** | **10/10** | 10/10 | **0.986** | 2 |
+| S − temporal rule | 13/20 | 3/10 | 10/10 | 0.986 | 2 |
 | S − sieve | 19/20 | 9/10 | 10/10 | 0.887 | 3 |
 
 Here the temporal rule is what recovers the strong mood neurons: 3/10 without it, 10/10 with it, and 9/10 even without the sieve. Mild moods were never split in the first place. The turn-taking pair (0.81–1.92 channels apart) was never merged.
 
 ## What the memory did
 
-Almost nothing measurable. Each spike carries strong evidence about its own state, so the remembered state only decides near-ties. State accuracy on strong neurons in the sparse set is 0.9939 with memory and 0.9922 without. Memory should matter where single spikes are ambiguous: lower amplitudes, more similar moods, or real noise. These recordings don't contain that case.
+Almost nothing measurable. Each spike carries strong evidence about its own state, so the remembered state only decides near-ties. State accuracy on strong neurons in the sparse set is 0.994 with memory and 0.993 without. Memory should matter where single spikes are ambiguous: lower amplitudes, more similar moods, or real noise. These recordings don't contain that case.
 
 ## Deviations from the protocol
 
@@ -106,6 +110,7 @@ python run_gates.py sparse_posthoc   # seeds 10-14, post hoc (~2.5 min)
 python diagnostics/oracle_front_end.py
 python diagnostics/crowding.py
 python diagnostics/figure_timeline.py
+python diagnostics/rescore.py         # one-to-one rescoring (~5 min)
 ```
 
 Files: [sihtisort/synth.py](sihtisort/synth.py) (recording and ground truth) · [sihtisort/sort.py](sihtisort/sort.py) (B1, B2, SihtiSort) · [sihtisort/evaluate.py](sihtisort/evaluate.py) (scoring) · [run_gates.py](run_gates.py) · `results/*.json` (every number above, with the ledger of every hypothesis tested).

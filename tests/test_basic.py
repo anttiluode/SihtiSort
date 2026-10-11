@@ -33,3 +33,9 @@ def test_viterbi_smooths_a_flip():
 
 def test_match_idx_tolerance():
     assert list(match_idx(np.array([100, 200]), np.array([105, 300]))) == [0, -1]
+
+
+def test_global_match_is_one_to_one():
+    from sihtisort.evaluate import global_match
+    # Sol's example: two true spikes at 100 and 105, one sorted spike at 102
+    assert list(global_match(np.array([100, 105]), np.array([102]))) in ([0, -1], [-1, 0])
