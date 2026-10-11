@@ -1,0 +1,189 @@
+{
+ "calib": {
+  "summary": {
+   "naive": {
+    "false_reopenings": 7,
+    "true_reopenings": 0,
+    "mood": 3,
+    "stable": 6,
+    "false_merges": 1,
+    "separable_pairs_merged_by_commit": 1,
+    "separated": 0
+   },
+   "aware": {
+    "false_reopenings": 0,
+    "true_reopenings": 1,
+    "mood": 8,
+    "stable": 8,
+    "false_merges": 1,
+    "separable_pairs_merged_by_commit": 1,
+    "separated": 1
+   },
+   "committed": {
+    "mood": 8,
+    "stable": 8,
+    "false_merges": 1
+   }
+  },
+  "gates": {
+   "D0": {
+    "naive_false_reopenings": 7,
+    "danger_real": true
+   },
+   "D1": {
+    "aware_false_reopenings": 0,
+    "mood": [
+     8,
+     8
+    ],
+    "stable": [
+     8,
+     8
+    ],
+    "passed": true
+   },
+   "D2": {
+    "separable": 1,
+    "separated": 1,
+    "passed": true
+   }
+  },
+  "rows": [
+   {
+    "seed": 92,
+    "drift": 0.6,
+    "turn_offset": 0.038,
+    "turn_rate_ratio": 1.783,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 2,
+     "stable": 2,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.261,
+      "true_a": 8,
+      "true_b": 8,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.319,
+      "true_a": 2,
+      "true_b": 2,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.22,
+      "true_a": 6,
+      "true_b": 6,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.251,
+      "true_a": 1,
+      "true_b": 1,
+      "false": true
+     }
+    ],
+    "reopen_aware": []
+   },
+   {
+    "seed": 93,
+    "drift": -0.6,
+    "turn_offset": 0.272,
+    "turn_rate_ratio": 1.392,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 1,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.216,
+      "true_a": 1,
+      "true_b": 1,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.15,
+      "true_a": 2,
+      "true_b": 2,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.313,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.219,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ]
+   }
+  ]
+ }
+}

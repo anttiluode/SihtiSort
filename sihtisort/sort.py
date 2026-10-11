@@ -425,6 +425,8 @@ def run_s(data, seed=0, base=None, block=True, memory=True, use_sieve=True, comm
     if two_channel:
         clean = snippets(sv['residue'], sv['t']) + sv['amp'][:, None, None] * sv['Tm'][sv['k']].reshape(len(sv['t']), L, -1)
         out['unit_two_channel'], out['remainder'] = remainder_channel(sv['t'], sv['addr'], st, clean, seed)
+        out['unit_two_channel_aware'], out['remainder_aware'] = remainder_channel(sv['t'], sv['addr'], st, clean, seed,
+                                                                                  aware=True)
     return out
 
 
@@ -456,6 +458,37 @@ def template_gap(Sa, Sb, seed=0, boots=40):
     return float(gap), float(np.std(bs))
 
 
+WIN = 15 * FS
+MIN_WIN = 6
+
+
+def window_gap(tp, Sp, tq, Sq, seed=0, boots=40):
+    """Drift-aware position gap: compare the two parts only within shared 15 s windows.
+    Returns (|weighted mean signed gap|, two-stage bootstrap SE), or (None, None) if no window is shared."""
+    lo = min(tp.min(), tq.min())
+    wins = []
+    for a in np.arange(lo, max(tp.max(), tq.max()) + 1, WIN):
+        mp = (tp >= a) & (tp < a + WIN); mq = (tq >= a) & (tq < a + WIN)
+        if mp.sum() >= MIN_WIN and mq.sum() >= MIN_WIN:
+            wins.append((Sp[mp], Sq[mq]))
+    if not wins:
+        return None, None
+
+    def est(ws):
+        g = np.array([template_centroid(a.mean(0)) - template_centroid(b.mean(0)) for a, b in ws])
+        w = np.array([min(len(a), len(b)) for a, b in ws], float)
+        return float((g * w).sum() / w.sum())
+
+    gap = abs(est(wins))
+    rng = np.random.default_rng(seed)
+    bs = []
+    for _ in range(boots):
+        pick = rng.integers(0, len(wins), len(wins))
+        bs.append(est([(wins[i][0][rng.integers(0, len(wins[i][0]), len(wins[i][0]))],
+                        wins[i][1][rng.integers(0, len(wins[i][1]), len(wins[i][1]))]) for i in pick]))
+    return gap, float(np.std(bs))
+
+
 def _forced_split(X, seed):
     """Two-way split fitted on even-indexed spikes only; the test then uses odd-indexed spikes,
     so the split cannot manufacture the difference it is tested on."""
@@ -465,7 +498,8 @@ def _forced_split(X, seed):
     return g.predict(pca.transform(X)), ~fit
 
 
-def remainder_channel(t, addr, state, clean, seed=0):
+def remainder_channel(t, addr, state, clean, seed=0, aware=False):
+    """aware=True (PROTOCOL_4): compare the parts' positions only inside shared 15 s windows."""
     unit = addr.copy(); nxt = int(addr.max()) + 1 if len(addr) else 0
     rem = []
     for a in np.unique(addr):
@@ -489,7 +523,12 @@ def remainder_channel(t, addr, state, clean, seed=0):
             if min(len(tp), len(tq)) < MIN_N // 2:
                 rec.update(status='silent', reason='a part is too small')
                 rem.append(rec); continue
-            gap, se = template_gap(clean[tp], clean[tq], seed)
+            if aware:
+                gap, se = window_gap(t[tp], clean[tp], t[tq], clean[tq], seed)
+                if gap is None:
+                    gap, se = 0.0, np.inf
+            else:
+                gap, se = template_gap(clean[tp], clean[tq], seed)
             zp = gap / max(se, 1e-9)
             R = switch_ratio(t[p], t[q])
             rate = None
@@ -498,14 +537,15 @@ def remainder_channel(t, addr, state, clean, seed=0):
                 o = np.argsort(tt, kind='stable'); rate = refute(tt[o], ll[o], 0, 1)
             pos_fire = gap >= POS_MIN and zp >= POS_Z
             rate_fire = rate is not None and rate['status'] == 'refuted'
-            rec.update(position_gap=round(gap, 3), position_se=round(se, 3), position_z=round(zp, 2),
+            rec.update(position_gap=round(gap, 3), position_se=round(se, 3) if np.isfinite(se) else None, position_z=round(zp, 2),
                        switch_ratio=round(R, 3), rate=rate)
             if pos_fire or rate_fire:
                 rec['status'] = 'reopened'
                 rec['by'] = [w for w, f in (('position', pos_fire), ('rate', rate_fire)) if f]
+                rec['new_unit'] = nxt
                 unit[q] = nxt; nxt += 1
             elif se <= POS_SE_TESTED:
-                rec['status'] = 'agrees'
+                rec['status'] = 'no contradiction at tested resolution'
             else:
                 rec['status'] = 'silent'
             rem.append(rec)

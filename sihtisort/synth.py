@@ -66,10 +66,13 @@ def state_at(times, blocks):
     return st
 
 
-def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None):
+def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None, drift=None, dwell=None):
     """min_sep (channels): if given, POST HOC sparse setting -- every neuron outside the
     turn-taking pair sits at least min_sep from every other neuron. Default None is the
-    protocol's setting (positions uniformly random)."""
+    protocol's setting (positions uniformly random).
+    drift (channels, PROTOCOL_4): the whole probe moves linearly by this much over the recording,
+    direction random. dwell (s, PROTOCOL_4): mean dwell of mood and turn-taking blocks (minimum 5 s).
+    With both None the recording is exactly the earlier one."""
     rng = np.random.default_rng(seed)
     n = int(duration * FS)
     neurons = []
@@ -79,7 +82,8 @@ def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None):
     if turn_range is not None:     # PROTOCOL_2 identifiability set: same draw, mapped onto a closer range
         lo, hi = turn_range
         turn_offset = lo + (turn_offset - 0.5) / 1.5 * (hi - lo)
-    turn_blocks = block_process(rng, duration)
+    blk = (lambda: block_process(rng, duration)) if dwell is None else (lambda: block_process(rng, duration, dwell, 5.0))
+    turn_blocks = blk()
     for k, kind in enumerate(kinds):
         sigma = rng.uniform(1.2, 1.8)
         A = rng.uniform(9, 15) if kind.startswith('mood') else rng.uniform(7, 14)
@@ -100,13 +104,14 @@ def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None):
                     pos = rng.uniform(0.5, N_CH - 1.5)
                 else:
                     raise RuntimeError('could not place neuron with min_sep')
-        states = [template(A, w, r, pos, sigma)]
+        params = [(A, w, r, sigma)]
         if kind == 'mood_strong':
-            states.append(template(0.6 * A, 1.6 * w, 1.3 * r, pos, sigma * (1 + rng.uniform(-0.15, 0.15))))
+            params.append((0.6 * A, 1.6 * w, 1.3 * r, sigma * (1 + rng.uniform(-0.15, 0.15))))
         elif kind == 'mood_mild':
-            states.append(template(0.8 * A, 1.3 * w, 1.1 * r, pos, sigma * (1 + rng.uniform(-0.15, 0.15))))
+            params.append((0.8 * A, 1.3 * w, 1.1 * r, sigma * (1 + rng.uniform(-0.15, 0.15))))
+        states = [template(a_, w_, r_, pos, s_) for a_, w_, r_, s_ in params]
         if kind.startswith('mood'):
-            blocks = block_process(rng, duration)
+            blocks = blk()
             times = poisson_train(rng, rate, duration)
             st = state_at(times, blocks)
         elif kind in ('turn_a', 'turn_b'):
@@ -118,7 +123,7 @@ def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None):
             times = poisson_train(rng, rate, duration)
             st = np.zeros(len(times), int)
         neurons.append(dict(id=k, kind=kind, pos=pos, sigma=sigma, rate=rate,
-                            templates=states, times=times, states=st))
+                            templates=states, params=params, times=times, states=st))
 
     # noise: white, smoothed across channels and lightly in time, unit std
     white = rng.standard_normal((n + 1, N_CH + 2)).astype(np.float32)
@@ -126,6 +131,9 @@ def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None):
     noise = 0.6 * noise[1:] + 0.4 * noise[:-1]                                  # lightly in time
     noise /= noise.std(0, keepdims=True)
     data = noise
+    shift = 0.0
+    if drift is not None:          # separate generator, so the default draws above are untouched
+        shift = drift * (1.0 if np.random.default_rng(seed + 10 ** 6).random() < 0.5 else -1.0)
     gt_t, gt_u, gt_s = [], [], []
     for nu in neurons:
         samples = np.round(nu['times'] * FS).astype(int)
@@ -134,11 +142,16 @@ def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None):
             a, b = smp - WIN_PRE, smp + WIN_POST
             if a < 0 or b > n:
                 continue
-            data[a:b] += (j * nu['templates'][s]).astype(np.float32)
+            if drift is None:
+                T = nu['templates'][s]
+            else:
+                a_, w_, r_, s_ = nu['params'][s]
+                T = template(a_, w_, r_, nu['pos'] + shift * smp / n, s_)
+            data[a:b] += (j * T).astype(np.float32)
             gt_t.append(smp); gt_u.append(nu['id']); gt_s.append(s)
     order = np.argsort(gt_t)
     gt = dict(t=np.array(gt_t)[order], unit=np.array(gt_u)[order], state=np.array(gt_s)[order])
-    meta = dict(seed=seed, turn_offset=float(turn_offset),
+    meta = dict(seed=seed, turn_offset=float(turn_offset), drift=float(shift),
                 neurons=[dict(id=nu['id'], kind=nu['kind'], pos=float(nu['pos']),
                               rate=float(nu['rate']), n=int(len(nu['times'])))
                          for nu in neurons])
