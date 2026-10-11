@@ -66,7 +66,10 @@ def state_at(times, blocks):
     return st
 
 
-def make_recording(seed, duration=DURATION):
+def make_recording(seed, duration=DURATION, min_sep=None):
+    """min_sep (channels): if given, POST HOC sparse setting -- every neuron outside the
+    turn-taking pair sits at least min_sep from every other neuron. Default None is the
+    protocol's setting (positions uniformly random)."""
     rng = np.random.default_rng(seed)
     n = int(duration * FS)
     neurons = []
@@ -86,6 +89,14 @@ def make_recording(seed, duration=DURATION):
             pos = turn_pos + turn_offset
         else:
             pos = rng.uniform(0.5, N_CH - 1.5)
+            if min_sep is not None:
+                taken = [turn_pos, turn_pos + turn_offset] + [nu['pos'] for nu in neurons]
+                for _ in range(10000):
+                    if min(abs(pos - q) for q in taken) >= min_sep:
+                        break
+                    pos = rng.uniform(0.5, N_CH - 1.5)
+                else:
+                    raise RuntimeError('could not place neuron with min_sep')
         states = [template(A, w, r, pos, sigma)]
         if kind == 'mood_strong':
             states.append(template(0.6 * A, 1.6 * w, 1.3 * r, pos, sigma * (1 + rng.uniform(-0.15, 0.15))))

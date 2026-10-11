@@ -2,6 +2,7 @@
 
     python run_gates.py calibration     # seeds 100-102, for debugging only
     python run_gates.py test            # seeds 0-4, run once on frozen code
+    python run_gates.py sparse_posthoc  # POST HOC: seeds 10-14, neurons >= 1 channel apart
 """
 import json
 import subprocess
@@ -14,12 +15,14 @@ from sihtisort import sort as S
 from sihtisort.evaluate import score
 from sihtisort.synth import make_recording
 
-SETS = {'calibration': [100, 101, 102], 'test': [0, 1, 2, 3, 4]}
+SETS = {'calibration': [100, 101, 102], 'test': [0, 1, 2, 3, 4],
+        'sparse_posthoc': [10, 11, 12, 13, 14]}       # POST HOC: neurons >= 1 channel apart
+MIN_SEP = {'sparse_posthoc': 1.0}
 VARIANTS = ['B1', 'B2', 'S', 'S-block', 'S-memory', 'S-sieve']
 
 
-def run_seed(seed):
-    data, gt, meta = make_recording(seed)
+def run_seed(seed, min_sep=None):
+    data, gt, meta = make_recording(seed, min_sep=min_sep)
     base = S.snapshot_sort(data, 0)
     outs = {
         'B1': dict(t=base['t'], unit=base['label'], state=np.zeros(len(base['t']), int)),
@@ -84,7 +87,7 @@ def main(which):
     dirty = bool(subprocess.run(['git', 'status', '--porcelain', 'sihtisort'], capture_output=True, text=True).stdout.strip())
     results = {}
     for seed in SETS[which]:
-        results[seed] = run_seed(seed)
+        results[seed] = run_seed(seed, MIN_SEP.get(which))
         print(f'seed {seed} done ({time.time() - t0:.0f} s)', flush=True)
     P = {v: pooled(results, v) for v in VARIANTS}
     G = gates(P)
