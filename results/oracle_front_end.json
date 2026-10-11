@@ -1,0 +1,529 @@
+{
+ "note": "POST HOC, after the test run",
+ "totals": {
+  "temporal": {
+   "mood_rejoined": 14,
+   "false_joins": 11,
+   "turn_pair_joined": [
+    [
+     0.9,
+     false
+    ],
+    [
+     1.93,
+     false
+    ],
+    [
+     0.95,
+     false
+    ],
+    [
+     0.86,
+     false
+    ],
+    [
+     1.27,
+     false
+    ]
+   ]
+  },
+  "standard only": {
+   "mood_rejoined": 10,
+   "false_joins": 11,
+   "turn_pair_joined": [
+    [
+     0.9,
+     false
+    ],
+    [
+     1.93,
+     false
+    ],
+    [
+     0.95,
+     false
+    ],
+    [
+     0.86,
+     false
+    ],
+    [
+     1.27,
+     false
+    ]
+   ]
+  }
+ },
+ "per_seed": {
+  "0": {
+   "turn_offset": 0.9046800706458055,
+   "temporal": {
+    "mood_rejoined": 4,
+    "false_joins": 1,
+    "turn_pair_joined": false,
+    "temporal_tests": [
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.997,
+      "n": [
+       255,
+       269
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.023,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 8,
+      "footprint": 0.991,
+      "n": [
+       255,
+       207
+      ],
+      "union_viol": 0.0065,
+      "switch_ratio": 0.596,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.991,
+      "n": [
+       269,
+       207
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.411,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 8,
+      "footprint": 0.992,
+      "n": [
+       524,
+       207
+      ],
+      "union_viol": 0.0041,
+      "switch_ratio": 0.769,
+      "verdict": "reject: they interleave"
+     }
+    ]
+   },
+   "standard only": {
+    "mood_rejoined": 3,
+    "false_joins": 1,
+    "turn_pair_joined": false,
+    "temporal_tests": []
+   }
+  },
+  "1": {
+   "turn_offset": 1.925695544488903,
+   "temporal": {
+    "mood_rejoined": 2,
+    "false_joins": 4,
+    "turn_pair_joined": false,
+    "temporal_tests": [
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.999,
+      "n": [
+       258,
+       305
+      ],
+      "union_viol": 0.0036,
+      "switch_ratio": 0.437,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 2,
+      "footprint": 0.998,
+      "n": [
+       258,
+       383
+      ],
+      "union_viol": 0.0063,
+      "switch_ratio": 0.504,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.997,
+      "n": [
+       305,
+       383
+      ],
+      "union_viol": 0.0058,
+      "switch_ratio": 0.646,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 8,
+      "b": 12,
+      "footprint": 0.955,
+      "n": [
+       1038,
+       833
+      ],
+      "union_viol": 0.0166,
+      "switch_ratio": 0.984,
+      "verdict": "reject: refractory"
+     }
+    ]
+   },
+   "standard only": {
+    "mood_rejoined": 2,
+    "false_joins": 4,
+    "turn_pair_joined": false,
+    "temporal_tests": []
+   }
+  },
+  "2": {
+   "turn_offset": 0.947736715121185,
+   "temporal": {
+    "mood_rejoined": 3,
+    "false_joins": 2,
+    "turn_pair_joined": false,
+    "temporal_tests": [
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.998,
+      "n": [
+       445,
+       260
+      ],
+      "union_viol": 0.0043,
+      "switch_ratio": 0.339,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 6,
+      "footprint": 0.951,
+      "n": [
+       445,
+       841
+      ],
+      "union_viol": 0.0148,
+      "switch_ratio": 0.898,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.999,
+      "n": [
+       199,
+       219
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.038,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 8,
+      "footprint": 0.979,
+      "n": [
+       841,
+       209
+      ],
+      "union_viol": 0.0086,
+      "switch_ratio": 0.756,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 16,
+      "b": 18,
+      "footprint": 0.971,
+      "n": [
+       525,
+       198
+      ],
+      "union_viol": 0.0055,
+      "switch_ratio": 0.996,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.998,
+      "n": [
+       445,
+       260
+      ],
+      "union_viol": 0.0043,
+      "switch_ratio": 0.339,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 6,
+      "footprint": 0.951,
+      "n": [
+       445,
+       841
+      ],
+      "union_viol": 0.0148,
+      "switch_ratio": 0.898,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 8,
+      "footprint": 0.979,
+      "n": [
+       841,
+       209
+      ],
+      "union_viol": 0.0086,
+      "switch_ratio": 0.756,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 16,
+      "b": 18,
+      "footprint": 0.971,
+      "n": [
+       525,
+       198
+      ],
+      "union_viol": 0.0055,
+      "switch_ratio": 0.996,
+      "verdict": "reject: refractory"
+     }
+    ]
+   },
+   "standard only": {
+    "mood_rejoined": 2,
+    "false_joins": 2,
+    "turn_pair_joined": false,
+    "temporal_tests": []
+   }
+  },
+  "3": {
+   "turn_offset": 0.8552157598941496,
+   "temporal": {
+    "mood_rejoined": 1,
+    "false_joins": 2,
+    "turn_pair_joined": false,
+    "temporal_tests": [
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.996,
+      "n": [
+       721,
+       267
+      ],
+      "union_viol": 0.0041,
+      "switch_ratio": 0.765,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 2,
+      "footprint": 0.997,
+      "n": [
+       721,
+       110
+      ],
+      "union_viol": 0.0048,
+      "switch_ratio": 0.315,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.99,
+      "n": [
+       267,
+       110
+      ],
+      "union_viol": 0.008,
+      "switch_ratio": 0.553,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 12,
+      "b": 14,
+      "footprint": 0.997,
+      "n": [
+       459,
+       641
+      ],
+      "union_viol": 0.0091,
+      "switch_ratio": 1.027,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 12,
+      "b": 16,
+      "footprint": 0.959,
+      "n": [
+       459,
+       297
+      ],
+      "union_viol": 0.004,
+      "switch_ratio": 1.083,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 14,
+      "b": 16,
+      "footprint": 0.972,
+      "n": [
+       641,
+       297
+      ],
+      "union_viol": 0.0096,
+      "switch_ratio": 1.048,
+      "verdict": "reject: refractory"
+     }
+    ]
+   },
+   "standard only": {
+    "mood_rejoined": 1,
+    "false_joins": 2,
+    "turn_pair_joined": false,
+    "temporal_tests": []
+   }
+  },
+  "4": {
+   "turn_offset": 1.2669913292215425,
+   "temporal": {
+    "mood_rejoined": 4,
+    "false_joins": 2,
+    "turn_pair_joined": false,
+    "temporal_tests": [
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.998,
+      "n": [
+       266,
+       384
+      ],
+      "union_viol": 0.0015,
+      "switch_ratio": 0.01,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.995,
+      "n": [
+       266,
+       477
+      ],
+      "union_viol": 0.0094,
+      "switch_ratio": 0.657,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 4,
+      "footprint": 0.996,
+      "n": [
+       384,
+       477
+      ],
+      "union_viol": 0.0081,
+      "switch_ratio": 0.722,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.999,
+      "n": [
+       123,
+       375
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.06,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.996,
+      "n": [
+       650,
+       477
+      ],
+      "union_viol": 0.0107,
+      "switch_ratio": 0.962,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.999,
+      "n": [
+       123,
+       375
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.06,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.996,
+      "n": [
+       650,
+       477
+      ],
+      "union_viol": 0.0107,
+      "switch_ratio": 0.962,
+      "verdict": "reject: refractory"
+     }
+    ]
+   },
+   "standard only": {
+    "mood_rejoined": 2,
+    "false_joins": 2,
+    "turn_pair_joined": false,
+    "temporal_tests": []
+   }
+  }
+ }
+}
