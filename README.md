@@ -123,6 +123,36 @@ On the earlier sets nothing regressed: mood neurons kept as one unit stayed at 7
 
 The three pairs ≥ 0.23 channels apart sit well clear of every one-neuron merge. The pairs at 0.12–0.16 channels overlap the one-neuron spread, and the pair at 0.00 is truly identical from here. So "getting closer" means sub-channel position, and below about a tenth of a channel this probe cannot tell; a denser probe could.
 
+## Two channels: a committed address and a remainder ([PROTOCOL_3.md](PROTOCOL_3.md))
+
+Protocol 2 failed because the alternative "two neurons" was erased before any refuter could look, as Sol pointed out. The J-space paper (Gurnee et al. 2026, §4.1.1) shows a language model doing better. Given an ambiguous input, its workspace commits to one reading while the rest of the activation still carries the unresolved mixture, for a while. So SihtiSort now keeps two channels:
+
+1. **The committed address**, which it acts on.
+2. **A remainder**: every address keeps a split of itself alive. For a two-state address that is its states; for a one-state address it is a forced two-way split of its purified spikes. The split is fitted on half the spikes and tested on the other half, so it cannot manufacture the difference it is tested for.
+
+The remainder is tested for *position* (do the two parts sit ≥ 0.15 channels apart, at z ≥ 3?) and, when the parts take turns, for *rate*. If either fires, the address is **reopened** into two. The whole pipeline is rerun on the first 10, 20, … 60 s of each recording, with no access to later data, so each column below is what the sorter believed at that moment.
+
+![online](results/two_channel_online.png)
+
+Two design changes were made on calibration seeds 70–71, before the frozen commit `9f762e7`. Per-spike position estimates were biased toward the probe centre for small spikes, which made a neuron's quieter mood look as if it had moved, so position now uses averaged spikes with a bootstrap error. The forced split uses 5 restarts. The thresholds are unchanged.
+
+**Fresh identifiability set** (seeds 50–61, run once):
+
+| Gate | Result |
+|---|---|
+| P1 reopens false merges that can be seen (offset ≥ 0.25 ch or rate gap ≥ 1.5×) | **Pass.** 9 of 9 separated at 60 s. |
+| P2 keeps true mood merges (drop ≤ 1) | **Pass.** 46 → 45. |
+| P3 doesn't shatter single neurons (drop ≤ 2) | **Pass.** 48 → 48. |
+| P4 revises online without flip-flopping back | **Condition failed.** 7 pairs were merged early and separated later, most of them merged at 10 s and apart from 20 s on. But one pair (0.01 channels apart, rates 1.13×) was apart at 10–20 s and merged from 30 s on. |
+| P5 what it can't see | Only that same pair stays merged. Its remainder says *agrees*: position gap 0.03 ± 0.02 channels and similar rates. Neither refuter can see a pair at the same place firing at the same rate. |
+
+Two things in the picture are worth saying plainly:
+
+- **The committed sorter alone gets *more* wrong as data arrives.** In 6 of the 12 rows it starts "apart" and ends "merged": more spikes make the turn-taking look more convincing. Persistence is not confirmation.
+- **The remainder moves the other way.** Its early mistakes at 10 s are corrected by 20 s and stay corrected.
+
+The other sets were run with the full recording only, post hoc. On the crowded test set the remainder helps: stable neurons recovered as one unit go from 11 to 17 of 20, mood neurons from 7 to 8, and false merges from 14 to 11. On the sparse set nothing is reopened and nothing changes.
+
 ## The test that matters next
 
 The preprint's **spe-1** dataset ([CRCNS](https://crcns.org/), analysis code at [voytekresearch/spikewise](https://github.com/voytekresearch/spikewise)) has simultaneous intracellular ground truth beside the Neuropixels recording. For the cells whose waveform switches state, the question is whether a sorter that remembers keeps each one as one unit where snapshot sorting splits it. Download needs a CRCNS account, and this repository does not include a loader yet.
@@ -141,6 +171,8 @@ python diagnostics/figure_timeline.py
 python diagnostics/rescore.py         # one-to-one rescoring (~5 min)
 python diagnostics/commit_and_revise.py    # PROTOCOL_2 (~9 min)
 python diagnostics/position_refuter.py     # post hoc (~3.5 min)
+python diagnostics/two_channel.py          # PROTOCOL_3 (~45 min on 2 cores)
+python diagnostics/figure_two_channel.py
 ```
 
 Files: [sihtisort/synth.py](sihtisort/synth.py) (recording and ground truth) · [sihtisort/sort.py](sihtisort/sort.py) (B1, B2, SihtiSort) · [sihtisort/evaluate.py](sihtisort/evaluate.py) (scoring) · [run_gates.py](run_gates.py) · `results/*.json` (every number above, with the ledger of every hypothesis tested).
