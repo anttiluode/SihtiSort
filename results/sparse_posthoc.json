@@ -1,0 +1,4018 @@
+{
+ "set": "sparse_posthoc",
+ "seeds": [
+  10,
+  11,
+  12,
+  13,
+  14
+ ],
+ "commit": "1de04274f9ddf05eca8833a7fdab2fdf94292b03",
+ "code_dirty": false,
+ "pooled": {
+  "B1": {
+   "mood_one_unit": 13,
+   "n_mood": 20,
+   "strong_one_unit": 3,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.8815,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     true
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     true
+    ]
+   ],
+   "overlap_recall": 0.2156,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "B2": {
+   "mood_one_unit": 14,
+   "n_mood": 20,
+   "strong_one_unit": 4,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.8867,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     true
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     true
+    ]
+   ],
+   "overlap_recall": 0.2363,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "S": {
+   "mood_one_unit": 20,
+   "n_mood": 20,
+   "strong_one_unit": 10,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.9916,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "overlap_recall": 0.9432,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.9921,
+    0.9881,
+    0.9931,
+    0.9948,
+    0.9968,
+    0.9982,
+    0.9943
+   ]
+  },
+  "S-block": {
+   "mood_one_unit": 13,
+   "n_mood": 20,
+   "strong_one_unit": 3,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.9916,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "overlap_recall": 0.8754,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "S-memory": {
+   "mood_one_unit": 20,
+   "n_mood": 20,
+   "strong_one_unit": 10,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.9916,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "overlap_recall": 0.9432,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.9921,
+    0.9851,
+    0.9931,
+    0.9931,
+    0.9968,
+    0.9964,
+    0.9885
+   ]
+  },
+  "S-sieve": {
+   "mood_one_unit": 19,
+   "n_mood": 20,
+   "strong_one_unit": 9,
+   "mild_one_unit": 10,
+   "stable_mean_acc": 0.8867,
+   "false_merges": 3,
+   "turn_merged": [
+    [
+     0.81,
+     true
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     true
+    ]
+   ],
+   "overlap_recall": 0.2514,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.9964,
+    0.9961,
+    0.9963,
+    1.0,
+    0.9961
+   ]
+  }
+ },
+ "gates": {
+  "G0": {
+   "B1_mood_pct": 65.0,
+   "B1_stable_acc": 0.8815,
+   "passed": false
+  },
+  "G1": {
+   "S_mood_pct": 100.0,
+   "B2_mood_pct": 70.0,
+   "gain": 30.0,
+   "S_false_merges": 3,
+   "B2_false_merges": 3,
+   "S_stable": 0.9916,
+   "B2_stable": 0.8867,
+   "passed": true
+  },
+  "G2": {
+   "S_block_mood_pct": 65.0,
+   "B2_mood_pct": 70.0,
+   "passed": true
+  },
+  "G3": {
+   "S_state_mild": [],
+   "S_memory_state_mild": [],
+   "S_state_strong": [
+    0.9921,
+    0.9881,
+    0.9931,
+    0.9948,
+    0.9968,
+    0.9982,
+    0.9943
+   ],
+   "S_memory_state_strong": [
+    0.9921,
+    0.9851,
+    0.9931,
+    0.9931,
+    0.9968,
+    0.9964,
+    0.9885
+   ],
+   "diff_points": null,
+   "passed": false
+  },
+  "G4": {
+   "turn_merged": [
+    [
+     0.81,
+     false
+    ],
+    [
+     1.25,
+     false
+    ],
+    [
+     1.92,
+     false
+    ],
+    [
+     1.78,
+     false
+    ],
+    [
+     1.04,
+     false
+    ]
+   ],
+   "far_merges": 0,
+   "merge_rule_failed": false
+  },
+  "G5": {
+   "S_overlap": 0.9432,
+   "S_sieve_overlap": 0.2514,
+   "passed": true
+  }
+ },
+ "per_seed": {
+  "10": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.45,
+      "best_acc": 0.5952,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.13,
+      "best_acc": 0.7987,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.91,
+      "best_acc": 0.8851,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 6.5,
+      "best_acc": 0.8637,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.52,
+      "best_acc": 0.6594,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.33,
+      "best_acc": 0.2934,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.82,
+      "best_acc": 0.8998,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.35,
+      "best_acc": 0.8878,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.1,
+      "best_acc": 0.8852,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 0.903,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": true,
+    "turn_offset": 0.8115227151187203,
+    "n_units": 11,
+    "overlap_recall": 0.2326,
+    "n_overlap": 533
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.45,
+      "best_acc": 0.9177,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.13,
+      "best_acc": 0.7987,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.91,
+      "best_acc": 0.8851,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 6.5,
+      "best_acc": 0.8637,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.52,
+      "best_acc": 0.6594,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.33,
+      "best_acc": 0.2934,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.82,
+      "best_acc": 0.8998,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.35,
+      "best_acc": 0.8878,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.1,
+      "best_acc": 0.8852,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 0.903,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": true,
+    "turn_offset": 0.8115227151187203,
+    "n_units": 10,
+    "overlap_recall": 0.257,
+    "n_overlap": 533
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.45,
+      "best_acc": 0.9898,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.13,
+      "best_acc": 0.9926,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.91,
+      "best_acc": 0.9773,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 6.5,
+      "best_acc": 0.9863,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.52,
+      "best_acc": 0.9913,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.33,
+      "best_acc": 0.981,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.82,
+      "best_acc": 0.9885,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.35,
+      "best_acc": 0.9903,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.1,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 0.9899,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 0.8115227151187203,
+    "n_units": 11,
+    "overlap_recall": 0.9531,
+    "n_overlap": 533,
+    "ledger": [
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 7,
+      "footprint": 0.998,
+      "corr": 0.902,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "look again inside address",
+      "address": 0,
+      "n": 490,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 1,
+      "n": 612,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 566,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 3,
+      "n": 601,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 4,
+      "n": 585,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 334,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 272,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 7,
+      "n": 437,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 9,
+      "n": 435,
+      "parts": 1
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.997,
+      "corr": 0.911,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 7,
+      "footprint": 0.91,
+      "n": [
+       231,
+       103
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 6,
+      "viol": 0.2,
+      "depth": 6.67,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 65,
+      "viol": 0.0,
+      "depth": 0.7,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.45,
+      "best_acc": 0.9898,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.13,
+      "best_acc": 0.9926,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.91,
+      "best_acc": 0.9773,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 6.5,
+      "best_acc": 0.9863,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.52,
+      "best_acc": 0.9913,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.33,
+      "best_acc": 0.981,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.82,
+      "best_acc": 0.9885,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.35,
+      "best_acc": 0.9903,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.1,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 0.9899,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 0.8115227151187203,
+    "n_units": 11,
+    "overlap_recall": 0.9531,
+    "n_overlap": 533
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.45,
+      "best_acc": 0.9898,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.13,
+      "best_acc": 0.9926,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.91,
+      "best_acc": 0.9773,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 6.5,
+      "best_acc": 0.9863,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.52,
+      "best_acc": 0.9913,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.33,
+      "best_acc": 0.981,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.82,
+      "best_acc": 0.9885,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.35,
+      "best_acc": 0.9903,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.1,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 0.9899,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 0.8115227151187203,
+    "n_units": 11,
+    "overlap_recall": 0.9531,
+    "n_overlap": 533
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.45,
+      "best_acc": 0.9177,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.13,
+      "best_acc": 0.7987,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.91,
+      "best_acc": 0.8851,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 6.5,
+      "best_acc": 0.8637,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.52,
+      "best_acc": 0.6594,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.33,
+      "best_acc": 0.2934,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.82,
+      "best_acc": 0.8998,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.35,
+      "best_acc": 0.8878,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.1,
+      "best_acc": 0.8852,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 0.903,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": true,
+    "turn_offset": 0.8115227151187203,
+    "n_units": 10,
+    "overlap_recall": 0.257,
+    "n_overlap": 533
+   }
+  },
+  "11": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 8.19,
+      "best_acc": 0.6019,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.72,
+      "best_acc": 0.8923,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.71,
+      "best_acc": 0.8722,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.21,
+      "best_acc": 0.9016,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 3.41,
+      "best_acc": 0.8772,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 4.66,
+      "best_acc": 0.91,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 9.48,
+      "best_acc": 0.8822,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.79,
+      "best_acc": 0.8957,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 0.7727,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 6.33,
+      "best_acc": 0.9044,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 2,
+    "turn_merged": false,
+    "turn_offset": 1.2489167936601724,
+    "n_units": 14,
+    "overlap_recall": 0.1893,
+    "n_overlap": 486
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 8.19,
+      "best_acc": 0.6019,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.72,
+      "best_acc": 0.8923,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.71,
+      "best_acc": 0.8722,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.21,
+      "best_acc": 0.9016,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 3.41,
+      "best_acc": 0.8772,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 4.66,
+      "best_acc": 0.91,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 9.48,
+      "best_acc": 0.8822,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.79,
+      "best_acc": 0.8957,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 0.7727,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 6.33,
+      "best_acc": 0.9044,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 2,
+    "turn_merged": false,
+    "turn_offset": 1.2489167936601724,
+    "n_units": 14,
+    "overlap_recall": 0.1893,
+    "n_overlap": 486
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 8.19,
+      "best_acc": 0.9968,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9921
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.72,
+      "best_acc": 0.9824,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9881
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.71,
+      "best_acc": 0.9943,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.21,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 3.41,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 4.66,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 9.48,
+      "best_acc": 0.9866,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.79,
+      "best_acc": 0.998,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 6.33,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": false,
+    "turn_offset": 1.2489167936601724,
+    "n_units": 10,
+    "overlap_recall": 0.9733,
+    "n_overlap": 486,
+    "ledger": [
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 13,
+      "footprint": 0.986,
+      "corr": 0.957,
+      "union_viol": 0.0109,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 11,
+      "footprint": 0.986,
+      "corr": 0.946,
+      "union_viol": 0.0417,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.903,
+      "n": [
+       438,
+       121
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 3,
+      "b": 12,
+      "footprint": 0.935,
+      "n": [
+       150,
+       109
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 4,
+      "b": 13,
+      "footprint": 0.986,
+      "n": [
+       121,
+       614
+      ],
+      "union_viol": 0.0109,
+      "switch_ratio": 0.966,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 5,
+      "b": 9,
+      "footprint": 0.997,
+      "n": [
+       381,
+       182
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.045,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 12,
+      "footprint": 0.945,
+      "n": [
+       394,
+       109
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 8,
+      "b": 11,
+      "footprint": 0.986,
+      "n": [
+       457,
+       143
+      ],
+      "union_viol": 0.0417,
+      "switch_ratio": 0.892,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.903,
+      "n": [
+       438,
+       121
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 3,
+      "b": 12,
+      "footprint": 0.935,
+      "n": [
+       150,
+       109
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 4,
+      "b": 13,
+      "footprint": 0.986,
+      "n": [
+       121,
+       614
+      ],
+      "union_viol": 0.0109,
+      "switch_ratio": 0.966,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 12,
+      "footprint": 0.945,
+      "n": [
+       394,
+       109
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 8,
+      "b": 11,
+      "footprint": 0.986,
+      "n": [
+       457,
+       143
+      ],
+      "union_viol": 0.0417,
+      "switch_ratio": 0.892,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "look again inside address",
+      "address": 0,
+      "n": 488,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 1,
+      "n": 669,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 272,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 3,
+      "n": 171,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 630,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 430,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 7,
+      "n": 213,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 8,
+      "n": 512,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 9,
+      "n": 211,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 12,
+      "n": 675,
+      "parts": 2
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 14,
+      "footprint": 0.985,
+      "corr": 0.951,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 15,
+      "footprint": 0.985,
+      "corr": 0.907,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 13,
+      "footprint": 0.958,
+      "corr": 0.908,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 12,
+      "footprint": 0.976,
+      "corr": 0.929,
+      "union_viol": 0.0019,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 14,
+      "b": 15,
+      "footprint": 0.998,
+      "corr": 0.953,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 14,
+      "footprint": 0.983,
+      "corr": 0.939,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 13,
+      "footprint": 0.958,
+      "corr": 0.908,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 12,
+      "footprint": 0.976,
+      "corr": 0.929,
+      "union_viol": 0.0019,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 13,
+      "footprint": 0.958,
+      "corr": 0.908,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 12,
+      "footprint": 0.976,
+      "corr": 0.929,
+      "union_viol": 0.0019,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 13,
+      "footprint": 0.958,
+      "corr": 0.908,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.999,
+      "n": [
+       359,
+       310
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.033,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 7,
+      "footprint": 0.996,
+      "n": [
+       427,
+       203
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.04,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 7,
+      "footprint": 0.996,
+      "n": [
+       427,
+       203
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.04,
+      "verdict": "accept"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 63,
+      "viol": 0.0,
+      "depth": 0.77,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     1,
+     2,
+     1,
+     1,
+     1,
+     2,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 8.19,
+      "best_acc": 0.6746,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.72,
+      "best_acc": 0.5324,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.71,
+      "best_acc": 0.9943,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.21,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 3.41,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 4.66,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 9.48,
+      "best_acc": 0.9866,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.79,
+      "best_acc": 0.998,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 6.33,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": false,
+    "turn_offset": 1.2489167936601724,
+    "n_units": 12,
+    "overlap_recall": 0.8621,
+    "n_overlap": 486
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 8.19,
+      "best_acc": 0.9968,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9921
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.72,
+      "best_acc": 0.9824,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9851
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.71,
+      "best_acc": 0.9943,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.21,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 3.41,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 4.66,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 9.48,
+      "best_acc": 0.9866,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.79,
+      "best_acc": 0.998,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 6.33,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": false,
+    "turn_offset": 1.2489167936601724,
+    "n_units": 10,
+    "overlap_recall": 0.9733,
+    "n_overlap": 486
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 8.19,
+      "best_acc": 0.8894,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9964
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.72,
+      "best_acc": 0.8923,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.71,
+      "best_acc": 0.8722,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.21,
+      "best_acc": 0.9016,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 3.41,
+      "best_acc": 0.8772,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 4.66,
+      "best_acc": 0.91,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 9.48,
+      "best_acc": 0.8822,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.79,
+      "best_acc": 0.8957,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 0.79,
+      "best_acc": 0.7727,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 6.33,
+      "best_acc": 0.9044,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 2,
+    "turn_merged": false,
+    "turn_offset": 1.2489167936601724,
+    "n_units": 13,
+    "overlap_recall": 0.2037,
+    "n_overlap": 486
+   }
+  },
+  "12": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.49,
+      "best_acc": 0.8528,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 1.99,
+      "best_acc": 0.5473,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 11.03,
+      "best_acc": 0.8981,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 8.73,
+      "best_acc": 0.8778,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.76,
+      "best_acc": 0.6325,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 6.68,
+      "best_acc": 0.9031,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 0.57,
+      "best_acc": 0.7395,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 3.71,
+      "best_acc": 0.8786,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 12.12,
+      "best_acc": 0.853,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.93,
+      "best_acc": 0.8867,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.920129414289137,
+    "n_units": 13,
+    "overlap_recall": 0.1535,
+    "n_overlap": 430
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.49,
+      "best_acc": 0.8528,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 1.99,
+      "best_acc": 0.5473,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 11.03,
+      "best_acc": 0.8981,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 8.73,
+      "best_acc": 0.8778,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.76,
+      "best_acc": 0.6325,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 6.68,
+      "best_acc": 0.9031,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 0.57,
+      "best_acc": 0.7395,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 3.71,
+      "best_acc": 0.8786,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 12.12,
+      "best_acc": 0.9562,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.93,
+      "best_acc": 0.8867,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.920129414289137,
+    "n_units": 12,
+    "overlap_recall": 0.2326,
+    "n_overlap": 430
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.49,
+      "best_acc": 0.9431,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 1.99,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9931
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 11.03,
+      "best_acc": 0.9716,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 8.73,
+      "best_acc": 0.9931,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.76,
+      "best_acc": 0.908,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 6.68,
+      "best_acc": 0.9868,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 0.57,
+      "best_acc": 0.9886,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 3.71,
+      "best_acc": 0.9881,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 12.12,
+      "best_acc": 0.9883,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.93,
+      "best_acc": 0.982,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": false,
+    "turn_offset": 1.920129414289137,
+    "n_units": 11,
+    "overlap_recall": 0.9279,
+    "n_overlap": 430,
+    "ledger": [
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 12,
+      "footprint": 0.997,
+      "corr": 0.992,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.949,
+      "n": [
+       514,
+       111
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 3,
+      "b": 11,
+      "footprint": 0.998,
+      "n": [
+       318,
+       200
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.053,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 5,
+      "b": 10,
+      "footprint": 0.902,
+      "n": [
+       540,
+       265
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.949,
+      "n": [
+       514,
+       111
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 5,
+      "b": 10,
+      "footprint": 0.902,
+      "n": [
+       540,
+       265
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "look again inside address",
+      "address": 0,
+      "n": 578,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 1,
+      "n": 211,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 580,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 3,
+      "n": 581,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 4,
+      "n": 176,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 601,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 594,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 7,
+      "n": 88,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 8,
+      "n": 227,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 9,
+      "n": 285,
+      "parts": 1
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 8,
+      "footprint": 0.977,
+      "corr": 0.947,
+      "union_viol": 0.0017,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 9,
+      "footprint": 0.913,
+      "n": [
+       587,
+       79
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 3,
+      "b": 4,
+      "footprint": 0.998,
+      "n": [
+       222,
+       359
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.04,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 9,
+      "footprint": 0.913,
+      "n": [
+       587,
+       79
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 7,
+      "viol": 0.0,
+      "depth": 6.39,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 64,
+      "viol": 0.0,
+      "depth": 0.56,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     1,
+     1,
+     1,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.49,
+      "best_acc": 0.9431,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 1.99,
+      "best_acc": 0.6127,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 11.03,
+      "best_acc": 0.9716,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 8.73,
+      "best_acc": 0.9931,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.76,
+      "best_acc": 0.908,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 6.68,
+      "best_acc": 0.9868,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 0.57,
+      "best_acc": 0.9886,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 3.71,
+      "best_acc": 0.9881,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 12.12,
+      "best_acc": 0.9883,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.93,
+      "best_acc": 0.982,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": false,
+    "turn_offset": 1.920129414289137,
+    "n_units": 12,
+    "overlap_recall": 0.8744,
+    "n_overlap": 430
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.49,
+      "best_acc": 0.9431,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 1.99,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9931
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 11.03,
+      "best_acc": 0.9716,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 8.73,
+      "best_acc": 0.9931,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.76,
+      "best_acc": 0.908,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 6.68,
+      "best_acc": 0.9868,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 0.57,
+      "best_acc": 0.9886,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 3.71,
+      "best_acc": 0.9881,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 12.12,
+      "best_acc": 0.9883,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.93,
+      "best_acc": 0.982,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": false,
+    "turn_offset": 1.920129414289137,
+    "n_units": 11,
+    "overlap_recall": 0.9279,
+    "n_overlap": 430
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.49,
+      "best_acc": 0.8528,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 1.99,
+      "best_acc": 0.8916,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9961
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 11.03,
+      "best_acc": 0.8981,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 8.73,
+      "best_acc": 0.8778,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.76,
+      "best_acc": 0.6325,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 6.68,
+      "best_acc": 0.9031,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 0.57,
+      "best_acc": 0.7395,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 3.71,
+      "best_acc": 0.8786,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 12.12,
+      "best_acc": 0.9562,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.93,
+      "best_acc": 0.8867,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.920129414289137,
+    "n_units": 11,
+    "overlap_recall": 0.2442,
+    "n_overlap": 430
+   }
+  },
+  "13": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 7.47,
+      "best_acc": 0.5822,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.08,
+      "best_acc": 0.5473,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 5.88,
+      "best_acc": 0.9405,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 3.37,
+      "best_acc": 0.883,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.51,
+      "best_acc": 0.9536,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.3,
+      "best_acc": 0.6016,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 4.39,
+      "best_acc": 0.8879,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 2.12,
+      "best_acc": 0.9147,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.64,
+      "best_acc": 0.9267,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.5,
+      "best_acc": 0.9202,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": false,
+    "turn_offset": 1.7829537723980886,
+    "n_units": 13,
+    "overlap_recall": 0.2486,
+    "n_overlap": 350
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 7.47,
+      "best_acc": 0.5822,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.08,
+      "best_acc": 0.5473,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 5.88,
+      "best_acc": 0.9405,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 3.37,
+      "best_acc": 0.883,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.51,
+      "best_acc": 0.9536,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.3,
+      "best_acc": 0.6016,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 4.39,
+      "best_acc": 0.8879,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 2.12,
+      "best_acc": 0.9147,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.64,
+      "best_acc": 0.9267,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.5,
+      "best_acc": 0.9202,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": false,
+    "turn_offset": 1.7829537723980886,
+    "n_units": 13,
+    "overlap_recall": 0.2486,
+    "n_overlap": 350
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 7.47,
+      "best_acc": 0.9846,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9948
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.08,
+      "best_acc": 0.9349,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9968
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 5.88,
+      "best_acc": 0.9946,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 3.37,
+      "best_acc": 0.9849,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.51,
+      "best_acc": 0.9934,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.3,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 4.39,
+      "best_acc": 0.9879,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 2.12,
+      "best_acc": 0.9954,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.64,
+      "best_acc": 0.9831,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.5,
+      "best_acc": 0.9969,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.7829537723980886,
+    "n_units": 11,
+    "overlap_recall": 0.9343,
+    "n_overlap": 350,
+    "ledger": [
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 8,
+      "footprint": 0.998,
+      "n": [
+       198,
+       340
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.04,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 11,
+      "footprint": 0.998,
+      "n": [
+       185,
+       109
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.066,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 11,
+      "footprint": 0.998,
+      "n": [
+       185,
+       109
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.066,
+      "verdict": "accept"
+     },
+     {
+      "test": "look again inside address",
+      "address": 0,
+      "n": 436,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 1,
+      "n": 412,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 81,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 3,
+      "n": 185,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 638,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 579,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 7,
+      "n": 315,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 8,
+      "n": 152,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 9,
+      "n": 328,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 10,
+      "n": 262,
+      "parts": 1
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.99,
+      "corr": 0.971,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 8,
+      "footprint": 0.998,
+      "n": [
+       212,
+       367
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.045,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 9,
+      "b": 10,
+      "footprint": 0.997,
+      "n": [
+       118,
+       197
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.061,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 9,
+      "b": 10,
+      "footprint": 0.997,
+      "n": [
+       118,
+       197
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.061,
+      "verdict": "accept"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 62,
+      "viol": 0.0,
+      "depth": 0.79,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     2,
+     2,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 7.47,
+      "best_acc": 0.6229,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.08,
+      "best_acc": 0.5799,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 5.88,
+      "best_acc": 0.9946,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 3.37,
+      "best_acc": 0.9849,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.51,
+      "best_acc": 0.9934,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.3,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 4.39,
+      "best_acc": 0.9879,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 2.12,
+      "best_acc": 0.9954,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.64,
+      "best_acc": 0.9831,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.5,
+      "best_acc": 0.9969,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.7829537723980886,
+    "n_units": 13,
+    "overlap_recall": 0.8286,
+    "n_overlap": 350
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 7.47,
+      "best_acc": 0.9846,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9931
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.08,
+      "best_acc": 0.9349,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9968
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 5.88,
+      "best_acc": 0.9946,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 3.37,
+      "best_acc": 0.9849,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.51,
+      "best_acc": 0.9934,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.3,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 4.39,
+      "best_acc": 0.9879,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 2.12,
+      "best_acc": 0.9954,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.64,
+      "best_acc": 0.9831,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.5,
+      "best_acc": 0.9969,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.7829537723980886,
+    "n_units": 11,
+    "overlap_recall": 0.9343,
+    "n_overlap": 350
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 7.47,
+      "best_acc": 0.9212,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9963
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 10.08,
+      "best_acc": 0.8698,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 1.0
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 5.88,
+      "best_acc": 0.9405,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 3.37,
+      "best_acc": 0.883,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.51,
+      "best_acc": 0.9536,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.3,
+      "best_acc": 0.6016,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 4.39,
+      "best_acc": 0.8879,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 2.12,
+      "best_acc": 0.9147,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.64,
+      "best_acc": 0.9267,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 0.5,
+      "best_acc": 0.9202,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": false,
+    "turn_offset": 1.7829537723980886,
+    "n_units": 11,
+    "overlap_recall": 0.2829,
+    "n_overlap": 350
+   }
+  },
+  "14": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 6.08,
+      "best_acc": 0.4901,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.42,
+      "best_acc": 0.8375,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 1.83,
+      "best_acc": 0.9141,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 7.28,
+      "best_acc": 0.8889,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.14,
+      "best_acc": 0.3995,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 12.18,
+      "best_acc": 0.5438,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 3.07,
+      "best_acc": 0.9264,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.46,
+      "best_acc": 0.8771,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.28,
+      "best_acc": 0.9073,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.64,
+      "best_acc": 0.8811,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": true,
+    "turn_offset": 1.041420000251385,
+    "n_units": 11,
+    "overlap_recall": 0.2538,
+    "n_overlap": 524
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 6.08,
+      "best_acc": 0.4901,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.42,
+      "best_acc": 0.8375,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 1.83,
+      "best_acc": 0.9141,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 7.28,
+      "best_acc": 0.8889,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.14,
+      "best_acc": 0.3995,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 12.18,
+      "best_acc": 0.5438,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 3.07,
+      "best_acc": 0.9264,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.46,
+      "best_acc": 0.8771,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.28,
+      "best_acc": 0.9073,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.64,
+      "best_acc": 0.8811,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": true,
+    "turn_offset": 1.041420000251385,
+    "n_units": 11,
+    "overlap_recall": 0.2538,
+    "n_overlap": 524
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 6.08,
+      "best_acc": 0.9892,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9982
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.42,
+      "best_acc": 0.9356,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9943
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 1.83,
+      "best_acc": 0.9898,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 7.28,
+      "best_acc": 0.9496,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.14,
+      "best_acc": 0.967,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 12.18,
+      "best_acc": 0.9871,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 3.07,
+      "best_acc": 0.9946,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.46,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.28,
+      "best_acc": 0.9899,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.64,
+      "best_acc": 0.9846,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.041420000251385,
+    "n_units": 11,
+    "overlap_recall": 0.9275,
+    "n_overlap": 524,
+    "ledger": [
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 7,
+      "footprint": 1.0,
+      "n": [
+       274,
+       235
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.063,
+      "verdict": "accept"
+     },
+     {
+      "test": "look again inside address",
+      "address": 0,
+      "n": 388,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 1,
+      "n": 558,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 554,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 3,
+      "n": 472,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 4,
+      "n": 590,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 486,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 524,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 7,
+      "n": 406,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 8,
+      "n": 251,
+      "parts": 1
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 3,
+      "footprint": 1.0,
+      "n": [
+       305,
+       249
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.029,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 8,
+      "footprint": 0.996,
+      "n": [
+       94,
+       430
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.117,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 8,
+      "footprint": 0.996,
+      "n": [
+       94,
+       430
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.117,
+      "verdict": "accept"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 61,
+      "viol": 0.0167,
+      "depth": 1.01,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     1,
+     1,
+     2,
+     1,
+     1,
+     1,
+     2,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 6.08,
+      "best_acc": 0.543,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.42,
+      "best_acc": 0.7549,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 1.83,
+      "best_acc": 0.9898,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 7.28,
+      "best_acc": 0.9496,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.14,
+      "best_acc": 0.967,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 12.18,
+      "best_acc": 0.9871,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 3.07,
+      "best_acc": 0.9946,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.46,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.28,
+      "best_acc": 0.9899,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.64,
+      "best_acc": 0.9846,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.041420000251385,
+    "n_units": 13,
+    "overlap_recall": 0.8588,
+    "n_overlap": 524
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 6.08,
+      "best_acc": 0.9892,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9964
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.42,
+      "best_acc": 0.9356,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9885
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 1.83,
+      "best_acc": 0.9898,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 7.28,
+      "best_acc": 0.9496,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.14,
+      "best_acc": 0.967,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 12.18,
+      "best_acc": 0.9871,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 3.07,
+      "best_acc": 0.9946,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.46,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.28,
+      "best_acc": 0.9899,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.64,
+      "best_acc": 0.9846,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.041420000251385,
+    "n_units": 11,
+    "overlap_recall": 0.9275,
+    "n_overlap": 524
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 6.08,
+      "best_acc": 0.912,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.9961
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.42,
+      "best_acc": 0.8375,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 1.83,
+      "best_acc": 0.9141,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 7.28,
+      "best_acc": 0.8889,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 11.14,
+      "best_acc": 0.3995,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 12.18,
+      "best_acc": 0.5438,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 3.07,
+      "best_acc": 0.9264,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.46,
+      "best_acc": 0.8771,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.28,
+      "best_acc": 0.9073,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 9.64,
+      "best_acc": 0.8811,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 0,
+    "turn_merged": true,
+    "turn_offset": 1.041420000251385,
+    "n_units": 10,
+    "overlap_recall": 0.2691,
+    "n_overlap": 524
+   }
+  }
+ }
+}

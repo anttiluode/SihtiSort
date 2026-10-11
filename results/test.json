@@ -1,0 +1,6756 @@
+{
+ "set": "test",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "commit": "5c2153c5d67790578b5869120d7fa97a50cabbe1",
+ "code_dirty": false,
+ "pooled": {
+  "B1": {
+   "mood_one_unit": 8,
+   "n_mood": 20,
+   "strong_one_unit": 3,
+   "mild_one_unit": 5,
+   "stable_mean_acc": 0.7388,
+   "false_merges": 21,
+   "turn_merged": [
+    [
+     0.9,
+     false
+    ],
+    [
+     1.93,
+     false
+    ],
+    [
+     0.95,
+     false
+    ],
+    [
+     0.86,
+     true
+    ],
+    [
+     1.27,
+     false
+    ]
+   ],
+   "overlap_recall": 0.1285,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "B2": {
+   "mood_one_unit": 6,
+   "n_mood": 20,
+   "strong_one_unit": 2,
+   "mild_one_unit": 4,
+   "stable_mean_acc": 0.6144,
+   "false_merges": 18,
+   "turn_merged": [
+    [
+     0.9,
+     false
+    ],
+    [
+     1.93,
+     false
+    ],
+    [
+     0.95,
+     false
+    ],
+    [
+     0.86,
+     true
+    ],
+    [
+     1.27,
+     false
+    ]
+   ],
+   "overlap_recall": 0.2635,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "S": {
+   "mood_one_unit": 7,
+   "n_mood": 20,
+   "strong_one_unit": 3,
+   "mild_one_unit": 4,
+   "stable_mean_acc": 0.7783,
+   "false_merges": 14,
+   "turn_merged": [
+    [
+     0.9,
+     false
+    ],
+    [
+     1.93,
+     false
+    ],
+    [
+     0.95,
+     false
+    ],
+    [
+     0.86,
+     true
+    ],
+    [
+     1.27,
+     false
+    ]
+   ],
+   "overlap_recall": 0.8195,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.984,
+    1.0
+   ]
+  },
+  "S-block": {
+   "mood_one_unit": 5,
+   "n_mood": 20,
+   "strong_one_unit": 1,
+   "mild_one_unit": 4,
+   "stable_mean_acc": 0.7783,
+   "false_merges": 14,
+   "turn_merged": [
+    [
+     0.9,
+     false
+    ],
+    [
+     1.93,
+     false
+    ],
+    [
+     0.95,
+     false
+    ],
+    [
+     0.86,
+     true
+    ],
+    [
+     1.27,
+     false
+    ]
+   ],
+   "overlap_recall": 0.7928,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  },
+  "S-memory": {
+   "mood_one_unit": 7,
+   "n_mood": 20,
+   "strong_one_unit": 3,
+   "mild_one_unit": 4,
+   "stable_mean_acc": 0.7783,
+   "false_merges": 14,
+   "turn_merged": [
+    [
+     0.9,
+     false
+    ],
+    [
+     1.93,
+     false
+    ],
+    [
+     0.95,
+     false
+    ],
+    [
+     0.86,
+     true
+    ],
+    [
+     1.27,
+     false
+    ]
+   ],
+   "overlap_recall": 0.8195,
+   "state_acc_mild": [],
+   "state_acc_strong": [
+    0.984,
+    1.0
+   ]
+  },
+  "S-sieve": {
+   "mood_one_unit": 6,
+   "n_mood": 20,
+   "strong_one_unit": 2,
+   "mild_one_unit": 4,
+   "stable_mean_acc": 0.6144,
+   "false_merges": 18,
+   "turn_merged": [
+    [
+     0.9,
+     false
+    ],
+    [
+     1.93,
+     false
+    ],
+    [
+     0.95,
+     false
+    ],
+    [
+     0.86,
+     true
+    ],
+    [
+     1.27,
+     false
+    ]
+   ],
+   "overlap_recall": 0.2635,
+   "state_acc_mild": [],
+   "state_acc_strong": []
+  }
+ },
+ "gates": {
+  "G0": {
+   "B1_mood_pct": 40.0,
+   "B1_stable_acc": 0.7388,
+   "passed": false
+  },
+  "G1": {
+   "S_mood_pct": 35.0,
+   "B2_mood_pct": 30.0,
+   "gain": 5.0,
+   "S_false_merges": 14,
+   "B2_false_merges": 18,
+   "S_stable": 0.7783,
+   "B2_stable": 0.6144,
+   "passed": false
+  },
+  "G2": {
+   "S_block_mood_pct": 25.0,
+   "B2_mood_pct": 30.0,
+   "passed": true
+  },
+  "G3": {
+   "S_state_mild": [],
+   "S_memory_state_mild": [],
+   "S_state_strong": [
+    0.984,
+    1.0
+   ],
+   "S_memory_state_strong": [
+    0.984,
+    1.0
+   ],
+   "diff_points": null,
+   "passed": false
+  },
+  "G4": {
+   "turn_merged": [
+    [
+     0.9,
+     false
+    ],
+    [
+     1.93,
+     false
+    ],
+    [
+     0.95,
+     false
+    ],
+    [
+     0.86,
+     true
+    ],
+    [
+     1.27,
+     false
+    ]
+   ],
+   "far_merges": 0,
+   "merge_rule_failed": false
+  },
+  "G5": {
+   "S_overlap": 0.8195,
+   "S_sieve_overlap": 0.2635,
+   "passed": true
+  }
+ },
+ "per_seed": {
+  "0": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.96,
+      "best_acc": 0.3493,
+      "one_unit": false,
+      "n_units_10pct": 3
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 8.74,
+      "best_acc": 0.4168,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 10.38,
+      "best_acc": 0.5904,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.81,
+      "best_acc": 0.3772,
+      "one_unit": false,
+      "n_units_10pct": 3
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 9.01,
+      "best_acc": 0.4196,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.91,
+      "best_acc": 0.3148,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 6.84,
+      "best_acc": 0.8605,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 10.48,
+      "best_acc": 0.8637,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.64,
+      "best_acc": 0.8342,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.18,
+      "best_acc": 0.849,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 7,
+    "turn_merged": false,
+    "turn_offset": 0.9046800706458055,
+    "n_units": 14,
+    "overlap_recall": 0.0603,
+    "n_overlap": 514
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.96,
+      "best_acc": 0.444,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 8.74,
+      "best_acc": 0.4168,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 10.38,
+      "best_acc": 0.2833,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.81,
+      "best_acc": 0.5401,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 9.01,
+      "best_acc": 0.4196,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.91,
+      "best_acc": 0.1439,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 6.84,
+      "best_acc": 0.8605,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 10.48,
+      "best_acc": 0.4835,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.64,
+      "best_acc": 0.8342,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.18,
+      "best_acc": 0.9972,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 0.9046800706458055,
+    "n_units": 9,
+    "overlap_recall": 0.3949,
+    "n_overlap": 514
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.96,
+      "best_acc": 0.4494,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 8.74,
+      "best_acc": 0.4607,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 10.38,
+      "best_acc": 0.2677,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.81,
+      "best_acc": 0.5472,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 9.01,
+      "best_acc": 0.4298,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.91,
+      "best_acc": 0.5992,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 6.84,
+      "best_acc": 0.9784,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 10.48,
+      "best_acc": 0.6892,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.64,
+      "best_acc": 0.9777,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.18,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 5,
+    "turn_merged": false,
+    "turn_offset": 0.9046800706458055,
+    "n_units": 9,
+    "overlap_recall": 0.7918,
+    "n_overlap": 514,
+    "ledger": [
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 9,
+      "footprint": 0.996,
+      "corr": 0.99,
+      "union_viol": 0.0038,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 13,
+      "footprint": 0.998,
+      "corr": 0.961,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.972,
+      "corr": 0.941,
+      "union_viol": 0.0747,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 5,
+      "footprint": 0.993,
+      "corr": 0.951,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 11,
+      "footprint": 0.97,
+      "corr": 0.952,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 5,
+      "footprint": 0.981,
+      "corr": 0.948,
+      "union_viol": 0.0651,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 12,
+      "footprint": 0.998,
+      "corr": 0.99,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 9,
+      "b": 13,
+      "footprint": 1.0,
+      "corr": 0.948,
+      "union_viol": 0.001,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 9,
+      "footprint": 0.996,
+      "corr": 0.99,
+      "union_viol": 0.0038,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 13,
+      "footprint": 0.998,
+      "corr": 0.961,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.972,
+      "corr": 0.941,
+      "union_viol": 0.0747,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 5,
+      "footprint": 0.993,
+      "corr": 0.951,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 11,
+      "footprint": 0.97,
+      "corr": 0.952,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 5,
+      "footprint": 0.981,
+      "corr": 0.948,
+      "union_viol": 0.0651,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 9,
+      "b": 13,
+      "footprint": 1.0,
+      "corr": 0.948,
+      "union_viol": 0.001,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 13,
+      "footprint": 1.0,
+      "corr": 0.951,
+      "union_viol": 0.0036,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.972,
+      "corr": 0.941,
+      "union_viol": 0.0747,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 5,
+      "footprint": 0.993,
+      "corr": 0.951,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 11,
+      "footprint": 0.97,
+      "corr": 0.952,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 5,
+      "footprint": 0.981,
+      "corr": 0.948,
+      "union_viol": 0.0651,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 13,
+      "footprint": 1.0,
+      "corr": 0.951,
+      "union_viol": 0.0036,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.97,
+      "corr": 0.942,
+      "union_viol": 0.0665,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 5,
+      "footprint": 0.991,
+      "corr": 0.955,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 5,
+      "footprint": 0.981,
+      "corr": 0.948,
+      "union_viol": 0.0651,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 13,
+      "footprint": 1.0,
+      "corr": 0.951,
+      "union_viol": 0.0036,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.973,
+      "corr": 0.953,
+      "union_viol": 0.0491,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.973,
+      "corr": 0.953,
+      "union_viol": 0.0491,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.931,
+      "n": [
+       70,
+       398
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 10,
+      "footprint": 0.947,
+      "n": [
+       70,
+       254
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.973,
+      "n": [
+       969,
+       192
+      ],
+      "union_viol": 0.0491,
+      "switch_ratio": 0.899,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 10,
+      "footprint": 0.996,
+      "n": [
+       398,
+       254
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.317,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "look again inside address",
+      "address": 1,
+      "n": 1132,
+      "parts": 3
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 858,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 3,
+      "n": 130,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 4,
+      "n": 500,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 351,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 457,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 7,
+      "n": 574,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 8,
+      "n": 283,
+      "parts": 1
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.993,
+      "corr": 0.907,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 3,
+      "footprint": 0.976,
+      "corr": 0.943,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.994,
+      "corr": 0.956,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.998,
+      "corr": 0.975,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 6,
+      "footprint": 0.972,
+      "corr": 0.938,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.993,
+      "corr": 0.907,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 3,
+      "footprint": 0.976,
+      "corr": 0.943,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.994,
+      "corr": 0.956,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.985,
+      "corr": 0.936,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.901,
+      "n": [
+       18,
+       500
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 9,
+      "footprint": 0.904,
+      "n": [
+       18,
+       457
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.913,
+      "n": [
+       18,
+       283
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 4,
+      "b": 6,
+      "footprint": 0.965,
+      "n": [
+       858,
+       130
+      ],
+      "union_viol": 0.0041,
+      "switch_ratio": 1.011,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 9,
+      "b": 11,
+      "footprint": 0.997,
+      "n": [
+       457,
+       283
+      ],
+      "union_viol": 0.0027,
+      "switch_ratio": 0.332,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 71,
+      "viol": 0.0143,
+      "depth": 1.26,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.96,
+      "best_acc": 0.4494,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 8.74,
+      "best_acc": 0.4607,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 10.38,
+      "best_acc": 0.2677,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.81,
+      "best_acc": 0.5472,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 9.01,
+      "best_acc": 0.4298,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.91,
+      "best_acc": 0.5992,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 6.84,
+      "best_acc": 0.9784,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 10.48,
+      "best_acc": 0.6892,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.64,
+      "best_acc": 0.9777,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.18,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 5,
+    "turn_merged": false,
+    "turn_offset": 0.9046800706458055,
+    "n_units": 9,
+    "overlap_recall": 0.7918,
+    "n_overlap": 514
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.96,
+      "best_acc": 0.4494,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 8.74,
+      "best_acc": 0.4607,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 10.38,
+      "best_acc": 0.2677,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.81,
+      "best_acc": 0.5472,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 9.01,
+      "best_acc": 0.4298,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.91,
+      "best_acc": 0.5992,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 6.84,
+      "best_acc": 0.9784,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 10.48,
+      "best_acc": 0.6892,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.64,
+      "best_acc": 0.9777,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.18,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 5,
+    "turn_merged": false,
+    "turn_offset": 0.9046800706458055,
+    "n_units": 9,
+    "overlap_recall": 0.7918,
+    "n_overlap": 514
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 2.96,
+      "best_acc": 0.444,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 8.74,
+      "best_acc": 0.4168,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 10.38,
+      "best_acc": 0.2833,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.81,
+      "best_acc": 0.5401,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 9.01,
+      "best_acc": 0.4196,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.91,
+      "best_acc": 0.1439,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 6.84,
+      "best_acc": 0.8605,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 10.48,
+      "best_acc": 0.4835,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.64,
+      "best_acc": 0.8342,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.18,
+      "best_acc": 0.9972,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 0.9046800706458055,
+    "n_units": 9,
+    "overlap_recall": 0.3949,
+    "n_overlap": 514
+   }
+  },
+  "1": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.12,
+      "best_acc": 0.291,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.98,
+      "best_acc": 0.4314,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.89,
+      "best_acc": 0.8691,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.98,
+      "best_acc": 0.8509,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 7.63,
+      "best_acc": 0.8658,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.56,
+      "best_acc": 0.0643,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 8.52,
+      "best_acc": 0.727,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 9.08,
+      "best_acc": 0.2822,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.25,
+      "best_acc": 0.5094,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 13.2,
+      "best_acc": 0.8507,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 1.925695544488903,
+    "n_units": 12,
+    "overlap_recall": 0.0756,
+    "n_overlap": 569
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.12,
+      "best_acc": 0.291,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.98,
+      "best_acc": 0.4314,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.89,
+      "best_acc": 0.6513,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.98,
+      "best_acc": 0.9922,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 7.63,
+      "best_acc": 0.8658,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.56,
+      "best_acc": 0.0445,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 8.52,
+      "best_acc": 0.3371,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 9.08,
+      "best_acc": 0.1938,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.25,
+      "best_acc": 0.3805,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 13.2,
+      "best_acc": 0.2788,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 1.925695544488903,
+    "n_units": 8,
+    "overlap_recall": 0.2812,
+    "n_overlap": 569
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.12,
+      "best_acc": 0.3267,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.98,
+      "best_acc": 0.4805,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.89,
+      "best_acc": 0.6927,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.98,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 7.63,
+      "best_acc": 0.9274,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.56,
+      "best_acc": 0.1886,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 8.52,
+      "best_acc": 0.491,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 9.08,
+      "best_acc": 0.762,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.25,
+      "best_acc": 0.4465,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 13.2,
+      "best_acc": 0.3003,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 1.925695544488903,
+    "n_units": 9,
+    "overlap_recall": 0.7715,
+    "n_overlap": 569,
+    "ledger": [
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 6,
+      "footprint": 0.954,
+      "corr": 0.908,
+      "union_viol": 0.0197,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.999,
+      "corr": 0.996,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.961,
+      "corr": 0.941,
+      "union_viol": 0.0259,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 4,
+      "footprint": 0.986,
+      "corr": 0.948,
+      "union_viol": 0.0063,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 5,
+      "footprint": 0.992,
+      "corr": 0.968,
+      "union_viol": 0.0031,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 9,
+      "footprint": 0.997,
+      "corr": 0.991,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.993,
+      "corr": 0.945,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 10,
+      "footprint": 0.96,
+      "corr": 0.912,
+      "union_viol": 0.0406,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 11,
+      "footprint": 0.99,
+      "corr": 0.913,
+      "union_viol": 0.1895,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 11,
+      "footprint": 0.957,
+      "corr": 0.935,
+      "union_viol": 0.0328,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 11,
+      "footprint": 0.976,
+      "corr": 0.943,
+      "union_viol": 0.0363,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.957,
+      "corr": 0.939,
+      "union_viol": 0.0212,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 4,
+      "footprint": 0.986,
+      "corr": 0.948,
+      "union_viol": 0.0063,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 5,
+      "footprint": 0.992,
+      "corr": 0.968,
+      "union_viol": 0.0031,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 9,
+      "footprint": 0.997,
+      "corr": 0.991,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.993,
+      "corr": 0.945,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 10,
+      "footprint": 0.96,
+      "corr": 0.912,
+      "union_viol": 0.0406,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 11,
+      "footprint": 0.99,
+      "corr": 0.913,
+      "union_viol": 0.1895,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 11,
+      "footprint": 0.976,
+      "corr": 0.943,
+      "union_viol": 0.0363,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.957,
+      "corr": 0.939,
+      "union_viol": 0.0212,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 4,
+      "footprint": 0.986,
+      "corr": 0.948,
+      "union_viol": 0.0063,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 5,
+      "footprint": 0.992,
+      "corr": 0.968,
+      "union_viol": 0.0031,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.993,
+      "corr": 0.945,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 10,
+      "footprint": 0.96,
+      "corr": 0.912,
+      "union_viol": 0.0406,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 11,
+      "footprint": 0.99,
+      "corr": 0.913,
+      "union_viol": 0.1895,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 11,
+      "footprint": 0.976,
+      "corr": 0.943,
+      "union_viol": 0.0363,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.957,
+      "corr": 0.939,
+      "union_viol": 0.0212,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 4,
+      "footprint": 0.993,
+      "corr": 0.949,
+      "union_viol": 0.0034,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 10,
+      "footprint": 0.96,
+      "corr": 0.912,
+      "union_viol": 0.0406,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 11,
+      "footprint": 0.99,
+      "corr": 0.913,
+      "union_viol": 0.1895,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 11,
+      "footprint": 0.976,
+      "corr": 0.943,
+      "union_viol": 0.0363,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.957,
+      "corr": 0.939,
+      "union_viol": 0.0212,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 10,
+      "footprint": 0.96,
+      "corr": 0.912,
+      "union_viol": 0.0406,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 11,
+      "footprint": 0.99,
+      "corr": 0.913,
+      "union_viol": 0.1895,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 11,
+      "footprint": 0.976,
+      "corr": 0.943,
+      "union_viol": 0.0363,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 6,
+      "footprint": 0.949,
+      "n": [
+       1334,
+       166
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 10,
+      "footprint": 0.922,
+      "n": [
+       1334,
+       401
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.957,
+      "n": [
+       1334,
+       178
+      ],
+      "union_viol": 0.0212,
+      "switch_ratio": 0.898,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 8,
+      "footprint": 0.998,
+      "n": [
+       277,
+       564
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.787,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 10,
+      "footprint": 0.96,
+      "n": [
+       166,
+       401
+      ],
+      "union_viol": 0.0406,
+      "switch_ratio": 0.712,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 11,
+      "footprint": 0.99,
+      "n": [
+       166,
+       178
+      ],
+      "union_viol": 0.1895,
+      "switch_ratio": 0.998,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 10,
+      "b": 11,
+      "footprint": 0.976,
+      "n": [
+       401,
+       178
+      ],
+      "union_viol": 0.0363,
+      "switch_ratio": 0.768,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "look again inside address",
+      "address": 0,
+      "n": 1427,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 1,
+      "n": 327,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 894,
+      "parts": 3
+     },
+     {
+      "test": "look again inside address",
+      "address": 3,
+      "n": 637,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 643,
+      "parts": 3
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 468,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 7,
+      "n": 66,
+      "parts": 1
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 12,
+      "footprint": 0.98,
+      "corr": 0.967,
+      "union_viol": 0.0099,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 9,
+      "footprint": 0.997,
+      "corr": 0.912,
+      "union_viol": 0.0086,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 4,
+      "footprint": 0.992,
+      "corr": 0.95,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 11,
+      "footprint": 0.968,
+      "corr": 0.916,
+      "union_viol": 0.0021,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 12,
+      "footprint": 0.987,
+      "corr": 0.922,
+      "union_viol": 0.012,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 9,
+      "footprint": 0.998,
+      "corr": 0.942,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 10,
+      "footprint": 0.976,
+      "corr": 0.921,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 9,
+      "b": 10,
+      "footprint": 0.981,
+      "corr": 0.942,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 11,
+      "b": 12,
+      "footprint": 0.975,
+      "corr": 0.946,
+      "union_viol": 0.0056,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 12,
+      "footprint": 0.98,
+      "corr": 0.967,
+      "union_viol": 0.0099,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 9,
+      "footprint": 0.997,
+      "corr": 0.912,
+      "union_viol": 0.0086,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 11,
+      "footprint": 0.968,
+      "corr": 0.916,
+      "union_viol": 0.0021,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 12,
+      "footprint": 0.987,
+      "corr": 0.922,
+      "union_viol": 0.012,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 9,
+      "footprint": 0.998,
+      "corr": 0.942,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 10,
+      "footprint": 0.976,
+      "corr": 0.921,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 9,
+      "b": 10,
+      "footprint": 0.981,
+      "corr": 0.942,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 11,
+      "b": 12,
+      "footprint": 0.975,
+      "corr": 0.946,
+      "union_viol": 0.0056,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 12,
+      "footprint": 0.98,
+      "corr": 0.967,
+      "union_viol": 0.0099,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 11,
+      "footprint": 0.968,
+      "corr": 0.916,
+      "union_viol": 0.0021,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 12,
+      "footprint": 0.987,
+      "corr": 0.922,
+      "union_viol": 0.012,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 8,
+      "b": 10,
+      "footprint": 0.977,
+      "corr": 0.947,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 11,
+      "b": 12,
+      "footprint": 0.975,
+      "corr": 0.946,
+      "union_viol": 0.0056,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 12,
+      "footprint": 0.98,
+      "corr": 0.967,
+      "union_viol": 0.0099,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 11,
+      "footprint": 0.968,
+      "corr": 0.916,
+      "union_viol": 0.0021,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 12,
+      "footprint": 0.987,
+      "corr": 0.922,
+      "union_viol": 0.012,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 11,
+      "b": 12,
+      "footprint": 0.975,
+      "corr": 0.946,
+      "union_viol": 0.0056,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 12,
+      "footprint": 0.98,
+      "corr": 0.967,
+      "union_viol": 0.0099,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 12,
+      "footprint": 0.975,
+      "corr": 0.948,
+      "union_viol": 0.0091,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.934,
+      "n": [
+       382,
+       1045
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 7,
+      "footprint": 0.934,
+      "n": [
+       1045,
+       486
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 12,
+      "footprint": 0.98,
+      "n": [
+       1045,
+       66
+      ],
+      "union_viol": 0.0099,
+      "switch_ratio": 0.967,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 8,
+      "footprint": 0.998,
+      "n": [
+       327,
+       643
+      ],
+      "union_viol": 0.0083,
+      "switch_ratio": 0.827,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 3,
+      "b": 5,
+      "footprint": 0.962,
+      "n": [
+       886,
+       8
+      ],
+      "verdict": "reject: too few spikes"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 12,
+      "footprint": 0.975,
+      "n": [
+       486,
+       66
+      ],
+      "union_viol": 0.0091,
+      "switch_ratio": 0.914,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 79,
+      "viol": 0.0128,
+      "depth": 0.73,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.12,
+      "best_acc": 0.3267,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.98,
+      "best_acc": 0.4805,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.89,
+      "best_acc": 0.6927,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.98,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 7.63,
+      "best_acc": 0.9274,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.56,
+      "best_acc": 0.1886,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 8.52,
+      "best_acc": 0.491,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 9.08,
+      "best_acc": 0.762,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.25,
+      "best_acc": 0.4465,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 13.2,
+      "best_acc": 0.3003,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 1.925695544488903,
+    "n_units": 9,
+    "overlap_recall": 0.7715,
+    "n_overlap": 569
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.12,
+      "best_acc": 0.3267,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.98,
+      "best_acc": 0.4805,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.89,
+      "best_acc": 0.6927,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.98,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 7.63,
+      "best_acc": 0.9274,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.56,
+      "best_acc": 0.1886,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 8.52,
+      "best_acc": 0.491,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 9.08,
+      "best_acc": 0.762,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.25,
+      "best_acc": 0.4465,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 13.2,
+      "best_acc": 0.3003,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 1.925695544488903,
+    "n_units": 9,
+    "overlap_recall": 0.7715,
+    "n_overlap": 569
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.12,
+      "best_acc": 0.291,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 4.98,
+      "best_acc": 0.4314,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 12.89,
+      "best_acc": 0.6513,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 2.98,
+      "best_acc": 0.9922,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 7.63,
+      "best_acc": 0.8658,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 9.56,
+      "best_acc": 0.0445,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 8.52,
+      "best_acc": 0.3371,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 9.08,
+      "best_acc": 0.1938,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 8.25,
+      "best_acc": 0.3805,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 13.2,
+      "best_acc": 0.2788,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 1.925695544488903,
+    "n_units": 8,
+    "overlap_recall": 0.2812,
+    "n_overlap": 569
+   }
+  },
+  "2": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.98,
+      "best_acc": 0.4134,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 13.22,
+      "best_acc": 0.8199,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.09,
+      "best_acc": 0.8153,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 5.3,
+      "best_acc": 0.3284,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.88,
+      "best_acc": 0.7928,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 5.83,
+      "best_acc": 0.7541,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 1.63,
+      "best_acc": 0.864,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.17,
+      "best_acc": 0.4719,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 6.74,
+      "best_acc": 0.848,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 7.24,
+      "best_acc": 0.8419,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 3,
+    "turn_merged": false,
+    "turn_offset": 0.947736715121185,
+    "n_units": 15,
+    "overlap_recall": 0.0436,
+    "n_overlap": 413
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.98,
+      "best_acc": 0.4014,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 13.22,
+      "best_acc": 0.8199,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.09,
+      "best_acc": 0.8813,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 5.3,
+      "best_acc": 0.349,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.88,
+      "best_acc": 0.1519,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 5.83,
+      "best_acc": 0.7541,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 1.63,
+      "best_acc": 0.864,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.17,
+      "best_acc": 0.2347,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 6.74,
+      "best_acc": 0.6359,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 7.24,
+      "best_acc": 0.2763,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 0.947736715121185,
+    "n_units": 9,
+    "overlap_recall": 0.1477,
+    "n_overlap": 413
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.98,
+      "best_acc": 0.9107,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.984
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 13.22,
+      "best_acc": 0.9929,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 1.0
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.09,
+      "best_acc": 0.9974,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 5.3,
+      "best_acc": 0.441,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.88,
+      "best_acc": 0.2119,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 5.83,
+      "best_acc": 0.8245,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 1.63,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.17,
+      "best_acc": 0.3167,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 6.74,
+      "best_acc": 0.7165,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 7.24,
+      "best_acc": 0.2566,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 3,
+    "turn_merged": false,
+    "turn_offset": 0.947736715121185,
+    "n_units": 9,
+    "overlap_recall": 0.7748,
+    "n_overlap": 413,
+    "ledger": [
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.996,
+      "corr": 0.965,
+      "union_viol": 0.0137,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.992,
+      "corr": 0.908,
+      "union_viol": 0.2645,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 9,
+      "footprint": 0.965,
+      "corr": 0.944,
+      "union_viol": 0.0168,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.998,
+      "corr": 0.929,
+      "union_viol": 0.014,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.967,
+      "corr": 0.916,
+      "union_viol": 0.0157,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.958,
+      "corr": 0.926,
+      "union_viol": 0.0147,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 7,
+      "footprint": 0.981,
+      "corr": 0.944,
+      "union_viol": 0.0028,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 12,
+      "footprint": 0.97,
+      "corr": 0.923,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 13,
+      "footprint": 0.971,
+      "corr": 0.955,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 9,
+      "footprint": 0.985,
+      "corr": 0.925,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 10,
+      "footprint": 0.963,
+      "corr": 0.905,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 9,
+      "b": 10,
+      "footprint": 0.981,
+      "corr": 0.977,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 9,
+      "b": 14,
+      "footprint": 0.997,
+      "corr": 0.95,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 14,
+      "footprint": 0.966,
+      "corr": 0.907,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.996,
+      "corr": 0.965,
+      "union_viol": 0.0137,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.992,
+      "corr": 0.908,
+      "union_viol": 0.2645,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 9,
+      "footprint": 0.96,
+      "corr": 0.939,
+      "union_viol": 0.0147,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.998,
+      "corr": 0.929,
+      "union_viol": 0.014,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.967,
+      "corr": 0.916,
+      "union_viol": 0.0157,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.958,
+      "corr": 0.926,
+      "union_viol": 0.0147,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 7,
+      "footprint": 0.981,
+      "corr": 0.944,
+      "union_viol": 0.0028,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 12,
+      "footprint": 0.97,
+      "corr": 0.923,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 13,
+      "footprint": 0.971,
+      "corr": 0.955,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 9,
+      "footprint": 0.983,
+      "corr": 0.925,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 9,
+      "b": 14,
+      "footprint": 0.994,
+      "corr": 0.944,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.996,
+      "corr": 0.965,
+      "union_viol": 0.0137,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.992,
+      "corr": 0.908,
+      "union_viol": 0.2645,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 9,
+      "footprint": 0.96,
+      "corr": 0.939,
+      "union_viol": 0.0147,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.998,
+      "corr": 0.929,
+      "union_viol": 0.014,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.967,
+      "corr": 0.916,
+      "union_viol": 0.0157,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.958,
+      "corr": 0.926,
+      "union_viol": 0.0147,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 7,
+      "footprint": 0.981,
+      "corr": 0.944,
+      "union_viol": 0.0028,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 12,
+      "footprint": 0.97,
+      "corr": 0.923,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 9,
+      "footprint": 0.983,
+      "corr": 0.925,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 9,
+      "b": 14,
+      "footprint": 0.994,
+      "corr": 0.944,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.996,
+      "corr": 0.965,
+      "union_viol": 0.0137,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.992,
+      "corr": 0.908,
+      "union_viol": 0.2645,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 9,
+      "footprint": 0.961,
+      "corr": 0.943,
+      "union_viol": 0.0131,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.998,
+      "corr": 0.929,
+      "union_viol": 0.014,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.958,
+      "corr": 0.926,
+      "union_viol": 0.0147,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 7,
+      "footprint": 0.981,
+      "corr": 0.944,
+      "union_viol": 0.0028,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 12,
+      "footprint": 0.97,
+      "corr": 0.923,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 9,
+      "footprint": 0.983,
+      "corr": 0.912,
+      "union_viol": 0.0009,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.998,
+      "corr": 0.964,
+      "union_viol": 0.1525,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 9,
+      "footprint": 0.961,
+      "corr": 0.943,
+      "union_viol": 0.0131,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.998,
+      "corr": 0.929,
+      "union_viol": 0.014,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.958,
+      "corr": 0.926,
+      "union_viol": 0.0147,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 9,
+      "footprint": 0.951,
+      "corr": 0.934,
+      "union_viol": 0.0015,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 11,
+      "footprint": 0.998,
+      "corr": 0.907,
+      "union_viol": 0.0019,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 12,
+      "footprint": 0.97,
+      "corr": 0.923,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.978,
+      "corr": 0.959,
+      "union_viol": 0.0635,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.998,
+      "corr": 0.929,
+      "union_viol": 0.014,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.958,
+      "corr": 0.926,
+      "union_viol": 0.0147,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 12,
+      "footprint": 0.97,
+      "corr": 0.923,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.978,
+      "corr": 0.959,
+      "union_viol": 0.0635,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.998,
+      "corr": 0.929,
+      "union_viol": 0.014,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.958,
+      "corr": 0.926,
+      "union_viol": 0.0147,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.992,
+      "n": [
+       198,
+       234
+      ],
+      "union_viol": 0.0186,
+      "switch_ratio": 0.579,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 4,
+      "footprint": 0.978,
+      "n": [
+       198,
+       1298
+      ],
+      "union_viol": 0.0635,
+      "switch_ratio": 1.046,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 6,
+      "footprint": 0.906,
+      "n": [
+       198,
+       637
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.998,
+      "n": [
+       198,
+       160
+      ],
+      "union_viol": 0.014,
+      "switch_ratio": 0.793,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 4,
+      "footprint": 0.956,
+      "n": [
+       234,
+       1298
+      ],
+      "union_viol": 0.002,
+      "switch_ratio": 0.828,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 6,
+      "footprint": 0.93,
+      "n": [
+       234,
+       637
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 11,
+      "footprint": 0.995,
+      "n": [
+       234,
+       160
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.607,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.958,
+      "n": [
+       346,
+       130
+      ],
+      "union_viol": 0.0147,
+      "switch_ratio": 0.976,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 4,
+      "b": 11,
+      "footprint": 0.973,
+      "n": [
+       1298,
+       160
+      ],
+      "union_viol": 0.0014,
+      "switch_ratio": 0.899,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 11,
+      "footprint": 0.915,
+      "n": [
+       637,
+       160
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "look again inside address",
+      "address": 0,
+      "n": 219,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 1,
+      "n": 300,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 375,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 3,
+      "n": 416,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 4,
+      "n": 1130,
+      "parts": 3
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 379,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 710,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 8,
+      "n": 174,
+      "parts": 1
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.98,
+      "corr": 0.937,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 8,
+      "footprint": 0.999,
+      "corr": 0.989,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.996,
+      "corr": 0.912,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 3,
+      "footprint": 0.999,
+      "corr": 0.901,
+      "union_viol": 0.0423,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 7,
+      "footprint": 0.98,
+      "corr": 0.964,
+      "union_viol": 0.005,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 8,
+      "footprint": 0.986,
+      "corr": 0.938,
+      "union_viol": 0.0157,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 9,
+      "footprint": 0.979,
+      "corr": 0.958,
+      "union_viol": 0.0072,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.98,
+      "corr": 0.956,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 7,
+      "footprint": 0.981,
+      "corr": 0.913,
+      "union_viol": 0.0049,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 13,
+      "footprint": 0.968,
+      "corr": 0.925,
+      "union_viol": 0.0133,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 8,
+      "footprint": 0.95,
+      "corr": 0.918,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 9,
+      "footprint": 0.997,
+      "corr": 0.982,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 11,
+      "b": 12,
+      "footprint": 0.974,
+      "corr": 0.96,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.98,
+      "corr": 0.94,
+      "union_viol": 0.0064,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.996,
+      "corr": 0.906,
+      "union_viol": 0.0066,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 3,
+      "footprint": 0.999,
+      "corr": 0.901,
+      "union_viol": 0.0423,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 7,
+      "footprint": 0.98,
+      "corr": 0.964,
+      "union_viol": 0.005,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 9,
+      "footprint": 0.979,
+      "corr": 0.958,
+      "union_viol": 0.0072,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.98,
+      "corr": 0.956,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 7,
+      "footprint": 0.981,
+      "corr": 0.913,
+      "union_viol": 0.0049,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 13,
+      "footprint": 0.968,
+      "corr": 0.925,
+      "union_viol": 0.0133,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 9,
+      "footprint": 0.997,
+      "corr": 0.982,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 11,
+      "b": 12,
+      "footprint": 0.974,
+      "corr": 0.96,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.98,
+      "corr": 0.94,
+      "union_viol": 0.0064,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.996,
+      "corr": 0.906,
+      "union_viol": 0.0066,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 3,
+      "footprint": 0.999,
+      "corr": 0.901,
+      "union_viol": 0.0423,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 7,
+      "footprint": 0.979,
+      "corr": 0.963,
+      "union_viol": 0.0066,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.98,
+      "corr": 0.956,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 13,
+      "footprint": 0.968,
+      "corr": 0.925,
+      "union_viol": 0.0133,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 11,
+      "b": 12,
+      "footprint": 0.974,
+      "corr": 0.96,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.98,
+      "corr": 0.94,
+      "union_viol": 0.0064,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.996,
+      "corr": 0.906,
+      "union_viol": 0.0066,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 3,
+      "footprint": 0.999,
+      "corr": 0.901,
+      "union_viol": 0.0423,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 7,
+      "footprint": 0.979,
+      "corr": 0.963,
+      "union_viol": 0.0066,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.98,
+      "corr": 0.956,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 13,
+      "footprint": 0.968,
+      "corr": 0.925,
+      "union_viol": 0.0133,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.98,
+      "corr": 0.94,
+      "union_viol": 0.0064,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.996,
+      "corr": 0.906,
+      "union_viol": 0.0066,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 7,
+      "footprint": 0.979,
+      "corr": 0.963,
+      "union_viol": 0.0066,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 13,
+      "footprint": 0.968,
+      "corr": 0.925,
+      "union_viol": 0.0133,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.98,
+      "n": [
+       283,
+       32
+      ],
+      "union_viol": 0.0064,
+      "switch_ratio": 0.75,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 2,
+      "footprint": 0.998,
+      "n": [
+       283,
+       300
+      ],
+      "union_viol": 0.0017,
+      "switch_ratio": 0.203,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.943,
+      "n": [
+       283,
+       1034
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.935,
+      "n": [
+       283,
+       710
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.996,
+      "n": [
+       283,
+       174
+      ],
+      "union_viol": 0.0066,
+      "switch_ratio": 0.577,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.98,
+      "n": [
+       32,
+       300
+      ],
+      "union_viol": 0.0091,
+      "switch_ratio": 0.815,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 7,
+      "footprint": 0.979,
+      "n": [
+       32,
+       1034
+      ],
+      "union_viol": 0.0066,
+      "switch_ratio": 0.951,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 14,
+      "footprint": 0.993,
+      "n": [
+       32,
+       174
+      ],
+      "union_viol": 0.0098,
+      "switch_ratio": 0.725,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 7,
+      "footprint": 0.941,
+      "n": [
+       300,
+       1034
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 11,
+      "footprint": 0.928,
+      "n": [
+       300,
+       710
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 14,
+      "footprint": 0.994,
+      "n": [
+       300,
+       174
+      ],
+      "union_viol": 0.019,
+      "switch_ratio": 0.723,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 5,
+      "b": 6,
+      "footprint": 0.999,
+      "n": [
+       198,
+       218
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.039,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 5,
+      "b": 13,
+      "footprint": 0.961,
+      "n": [
+       198,
+       9
+      ],
+      "verdict": "reject: too few spikes"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 13,
+      "footprint": 0.968,
+      "n": [
+       218,
+       9
+      ],
+      "verdict": "reject: too few spikes"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 14,
+      "footprint": 0.963,
+      "n": [
+       1034,
+       174
+      ],
+      "union_viol": 0.0108,
+      "switch_ratio": 0.9,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 11,
+      "b": 14,
+      "footprint": 0.909,
+      "n": [
+       710,
+       174
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.98,
+      "n": [
+       283,
+       32
+      ],
+      "union_viol": 0.0064,
+      "switch_ratio": 0.75,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 2,
+      "footprint": 0.998,
+      "n": [
+       283,
+       300
+      ],
+      "union_viol": 0.0017,
+      "switch_ratio": 0.203,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.943,
+      "n": [
+       283,
+       1034
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.935,
+      "n": [
+       283,
+       710
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.996,
+      "n": [
+       283,
+       174
+      ],
+      "union_viol": 0.0066,
+      "switch_ratio": 0.577,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.98,
+      "n": [
+       32,
+       300
+      ],
+      "union_viol": 0.0091,
+      "switch_ratio": 0.815,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 7,
+      "footprint": 0.979,
+      "n": [
+       32,
+       1034
+      ],
+      "union_viol": 0.0066,
+      "switch_ratio": 0.951,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 14,
+      "footprint": 0.993,
+      "n": [
+       32,
+       174
+      ],
+      "union_viol": 0.0098,
+      "switch_ratio": 0.725,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 7,
+      "footprint": 0.941,
+      "n": [
+       300,
+       1034
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 11,
+      "footprint": 0.928,
+      "n": [
+       300,
+       710
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 14,
+      "footprint": 0.994,
+      "n": [
+       300,
+       174
+      ],
+      "union_viol": 0.019,
+      "switch_ratio": 0.723,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 5,
+      "b": 13,
+      "footprint": 0.965,
+      "n": [
+       416,
+       9
+      ],
+      "verdict": "reject: too few spikes"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 14,
+      "footprint": 0.963,
+      "n": [
+       1034,
+       174
+      ],
+      "union_viol": 0.0108,
+      "switch_ratio": 0.9,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 11,
+      "b": 14,
+      "footprint": 0.909,
+      "n": [
+       710,
+       174
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.98,
+      "n": [
+       583,
+       32
+      ],
+      "union_viol": 0.0098,
+      "switch_ratio": 0.941,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.942,
+      "n": [
+       583,
+       1034
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.932,
+      "n": [
+       583,
+       710
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 14,
+      "footprint": 0.996,
+      "n": [
+       583,
+       174
+      ],
+      "union_viol": 0.0172,
+      "switch_ratio": 0.915,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 7,
+      "footprint": 0.979,
+      "n": [
+       32,
+       1034
+      ],
+      "union_viol": 0.0066,
+      "switch_ratio": 0.951,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 14,
+      "footprint": 0.993,
+      "n": [
+       32,
+       174
+      ],
+      "union_viol": 0.0098,
+      "switch_ratio": 0.725,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 5,
+      "b": 13,
+      "footprint": 0.965,
+      "n": [
+       416,
+       9
+      ],
+      "verdict": "reject: too few spikes"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 7,
+      "b": 14,
+      "footprint": 0.963,
+      "n": [
+       1034,
+       174
+      ],
+      "union_viol": 0.0108,
+      "switch_ratio": 0.9,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 11,
+      "b": 14,
+      "footprint": 0.909,
+      "n": [
+       710,
+       174
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 23,
+      "viol": 0.0,
+      "depth": 5.87,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 6,
+      "viol": 0.2,
+      "depth": 4.48,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 5,
+      "viol": 0.0,
+      "depth": 4.7,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 5,
+      "viol": 0.0,
+      "depth": 5.97,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 19,
+      "viol": 0.0,
+      "depth": 1.19,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 8,
+      "viol": 0.0,
+      "depth": 3.55,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 4,
+      "viol": 0.0,
+      "depth": 6.94,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 10,
+      "viol": 0.0,
+      "depth": 2.24,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     2,
+     1,
+     1,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.98,
+      "best_acc": 0.4882,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 13.22,
+      "best_acc": 0.519,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.09,
+      "best_acc": 0.9974,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 5.3,
+      "best_acc": 0.441,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.88,
+      "best_acc": 0.2119,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 5.83,
+      "best_acc": 0.8245,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 1.63,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.17,
+      "best_acc": 0.3167,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 6.74,
+      "best_acc": 0.7165,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 7.24,
+      "best_acc": 0.2566,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 3,
+    "turn_merged": false,
+    "turn_offset": 0.947736715121185,
+    "n_units": 11,
+    "overlap_recall": 0.6416,
+    "n_overlap": 413
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.98,
+      "best_acc": 0.9092,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 0.984
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 13.22,
+      "best_acc": 0.9929,
+      "one_unit": true,
+      "n_units_10pct": 1,
+      "state_acc": 1.0
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.09,
+      "best_acc": 0.9974,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 5.3,
+      "best_acc": 0.441,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.88,
+      "best_acc": 0.2119,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 5.83,
+      "best_acc": 0.8245,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 1.63,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.17,
+      "best_acc": 0.3167,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 6.74,
+      "best_acc": 0.7165,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 7.24,
+      "best_acc": 0.2566,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 3,
+    "turn_merged": false,
+    "turn_offset": 0.947736715121185,
+    "n_units": 9,
+    "overlap_recall": 0.7748,
+    "n_overlap": 413
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 5.98,
+      "best_acc": 0.4014,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 13.22,
+      "best_acc": 0.8199,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 3.09,
+      "best_acc": 0.8813,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 5.3,
+      "best_acc": 0.349,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 4.88,
+      "best_acc": 0.1519,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 5.83,
+      "best_acc": 0.7541,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 1.63,
+      "best_acc": 0.864,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 5.17,
+      "best_acc": 0.2347,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 6.74,
+      "best_acc": 0.6359,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 7.24,
+      "best_acc": 0.2763,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": false,
+    "turn_offset": 0.947736715121185,
+    "n_units": 9,
+    "overlap_recall": 0.1477,
+    "n_overlap": 413
+   }
+  },
+  "3": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 9.58,
+      "best_acc": 0.4446,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.3,
+      "best_acc": 0.8576,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 9.31,
+      "best_acc": 0.4713,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 11.44,
+      "best_acc": 0.8932,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 2.94,
+      "best_acc": 0.6481,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 3.8,
+      "best_acc": 0.3026,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 13.95,
+      "best_acc": 0.5539,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.91,
+      "best_acc": 0.898,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 13.43,
+      "best_acc": 0.3721,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.31,
+      "best_acc": 0.8865,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 4,
+    "turn_merged": true,
+    "turn_offset": 0.8552157598941496,
+    "n_units": 10,
+    "overlap_recall": 0.1765,
+    "n_overlap": 425
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 9.58,
+      "best_acc": 0.2323,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.3,
+      "best_acc": 0.4674,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 9.31,
+      "best_acc": 0.2555,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 11.44,
+      "best_acc": 0.8932,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 2.94,
+      "best_acc": 0.6481,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 3.8,
+      "best_acc": 0.3026,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 13.95,
+      "best_acc": 0.5539,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.91,
+      "best_acc": 0.8354,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 13.43,
+      "best_acc": 0.3721,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.31,
+      "best_acc": 0.8865,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 3,
+    "turn_merged": true,
+    "turn_offset": 0.8552157598941496,
+    "n_units": 8,
+    "overlap_recall": 0.2071,
+    "n_overlap": 425
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 9.58,
+      "best_acc": 0.256,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.3,
+      "best_acc": 0.3969,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 9.31,
+      "best_acc": 0.2921,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 11.44,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 2.94,
+      "best_acc": 0.6805,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 3.8,
+      "best_acc": 0.3195,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 13.95,
+      "best_acc": 0.9529,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.91,
+      "best_acc": 0.9678,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 13.43,
+      "best_acc": 0.9556,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.31,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": true,
+    "turn_offset": 0.8552157598941496,
+    "n_units": 9,
+    "overlap_recall": 0.8659,
+    "n_overlap": 425,
+    "ledger": [
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 5,
+      "footprint": 0.986,
+      "corr": 0.944,
+      "union_viol": 0.0088,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.988,
+      "corr": 0.914,
+      "union_viol": 0.0101,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 4,
+      "footprint": 0.975,
+      "corr": 0.929,
+      "union_viol": 0.0387,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 8,
+      "footprint": 0.98,
+      "corr": 0.955,
+      "union_viol": 0.0404,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.956,
+      "corr": 0.914,
+      "union_viol": 0.0105,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 8,
+      "footprint": 0.998,
+      "corr": 0.942,
+      "union_viol": 0.001,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 4,
+      "footprint": 0.975,
+      "corr": 0.929,
+      "union_viol": 0.0387,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 8,
+      "footprint": 0.98,
+      "corr": 0.955,
+      "union_viol": 0.0404,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.956,
+      "corr": 0.914,
+      "union_viol": 0.0105,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 8,
+      "footprint": 0.998,
+      "corr": 0.942,
+      "union_viol": 0.001,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 4,
+      "footprint": 0.976,
+      "corr": 0.956,
+      "union_viol": 0.0252,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.956,
+      "corr": 0.914,
+      "union_viol": 0.0105,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 7,
+      "footprint": 0.998,
+      "n": [
+       683,
+       697
+      ],
+      "union_viol": 0.0116,
+      "switch_ratio": 1.025,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 4,
+      "footprint": 0.976,
+      "n": [
+       141,
+       1009
+      ],
+      "union_viol": 0.0252,
+      "switch_ratio": 0.829,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.956,
+      "n": [
+       539,
+       130
+      ],
+      "union_viol": 0.0105,
+      "switch_ratio": 1.033,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "look again inside address",
+      "address": 0,
+      "n": 654,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 1,
+      "n": 67,
+      "parts": 3
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 602,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 4,
+      "n": 1062,
+      "parts": 3
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 241,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 760,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 7,
+      "n": 487,
+      "parts": 1
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.967,
+      "corr": 0.918,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 9,
+      "footprint": 0.994,
+      "corr": 0.977,
+      "union_viol": 0.0074,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 7,
+      "footprint": 0.978,
+      "corr": 0.941,
+      "union_viol": 0.0054,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 5,
+      "b": 6,
+      "footprint": 0.957,
+      "corr": 0.928,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 9,
+      "footprint": 0.997,
+      "corr": 0.911,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 0,
+      "b": 1,
+      "footprint": 0.967,
+      "corr": 0.918,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 9,
+      "footprint": 0.994,
+      "corr": 0.977,
+      "union_viol": 0.0074,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 7,
+      "footprint": 0.978,
+      "corr": 0.941,
+      "union_viol": 0.0054,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 9,
+      "footprint": 0.997,
+      "corr": 0.911,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 9,
+      "footprint": 0.994,
+      "corr": 0.977,
+      "union_viol": 0.0074,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 7,
+      "footprint": 0.978,
+      "corr": 0.941,
+      "union_viol": 0.0054,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 9,
+      "footprint": 0.997,
+      "corr": 0.911,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 7,
+      "footprint": 0.985,
+      "corr": 0.906,
+      "union_viol": 0.003,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 7,
+      "footprint": 0.979,
+      "corr": 0.924,
+      "union_viol": 0.0041,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 3,
+      "b": 4,
+      "footprint": 0.986,
+      "corr": 0.905,
+      "union_viol": 0.0069,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 11,
+      "footprint": 0.973,
+      "n": [
+       654,
+       296
+      ],
+      "union_viol": 0.0053,
+      "switch_ratio": 1.044,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 12,
+      "footprint": 0.998,
+      "n": [
+       654,
+       464
+      ],
+      "union_viol": 0.009,
+      "switch_ratio": 1.045,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.913,
+      "n": [
+       6,
+       1014
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 8,
+      "footprint": 0.908,
+      "n": [
+       6,
+       109
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 3,
+      "b": 8,
+      "footprint": 0.995,
+      "n": [
+       1014,
+       109
+      ],
+      "union_viol": 0.008,
+      "switch_ratio": 0.62,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 11,
+      "b": 12,
+      "footprint": 0.964,
+      "n": [
+       296,
+       464
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 1.069,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 68,
+      "viol": 0.0149,
+      "depth": 1.1,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 3,
+      "viol": 0.5,
+      "depth": 6.63,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 9.58,
+      "best_acc": 0.256,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.3,
+      "best_acc": 0.3969,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 9.31,
+      "best_acc": 0.2921,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 11.44,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 2.94,
+      "best_acc": 0.6805,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 3.8,
+      "best_acc": 0.3195,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 13.95,
+      "best_acc": 0.9529,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.91,
+      "best_acc": 0.9678,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 13.43,
+      "best_acc": 0.9556,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.31,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": true,
+    "turn_offset": 0.8552157598941496,
+    "n_units": 9,
+    "overlap_recall": 0.8659,
+    "n_overlap": 425
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 9.58,
+      "best_acc": 0.256,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.3,
+      "best_acc": 0.3969,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 9.31,
+      "best_acc": 0.2921,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 11.44,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 2.94,
+      "best_acc": 0.6805,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 3.8,
+      "best_acc": 0.3195,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 13.95,
+      "best_acc": 0.9529,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.91,
+      "best_acc": 0.9678,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 13.43,
+      "best_acc": 0.9556,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.31,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": true,
+    "turn_offset": 0.8552157598941496,
+    "n_units": 9,
+    "overlap_recall": 0.8659,
+    "n_overlap": 425
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 9.58,
+      "best_acc": 0.2323,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 9.3,
+      "best_acc": 0.4674,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 9.31,
+      "best_acc": 0.2555,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 11.44,
+      "best_acc": 0.8932,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 2.94,
+      "best_acc": 0.6481,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 3.8,
+      "best_acc": 0.3026,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 13.95,
+      "best_acc": 0.5539,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 13.91,
+      "best_acc": 0.8354,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 13.43,
+      "best_acc": 0.3721,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.31,
+      "best_acc": 0.8865,
+      "one_unit": true,
+      "n_units_10pct": 2
+     }
+    ],
+    "false_merges": 3,
+    "turn_merged": true,
+    "turn_offset": 0.8552157598941496,
+    "n_units": 8,
+    "overlap_recall": 0.2071,
+    "n_overlap": 425
+   }
+  },
+  "4": {
+   "B1": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.51,
+      "best_acc": 0.5268,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 5.53,
+      "best_acc": 0.8799,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 13.8,
+      "best_acc": 0.4048,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 0.89,
+      "best_acc": 0.8182,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.37,
+      "best_acc": 0.1956,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.64,
+      "best_acc": 0.5499,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.75,
+      "best_acc": 0.8571,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 12.8,
+      "best_acc": 0.7321,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.38,
+      "best_acc": 0.8923,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.86,
+      "best_acc": 0.7818,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 3,
+    "turn_merged": false,
+    "turn_offset": 1.2669913292215425,
+    "n_units": 11,
+    "overlap_recall": 0.2867,
+    "n_overlap": 572
+   },
+   "B2": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.51,
+      "best_acc": 0.5268,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 5.53,
+      "best_acc": 0.8799,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 13.8,
+      "best_acc": 0.266,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 0.89,
+      "best_acc": 0.8182,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.37,
+      "best_acc": 0.1956,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.64,
+      "best_acc": 0.3638,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.75,
+      "best_acc": 0.8571,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 12.8,
+      "best_acc": 0.7321,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.38,
+      "best_acc": 0.8923,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.86,
+      "best_acc": 0.7818,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 3,
+    "turn_merged": false,
+    "turn_offset": 1.2669913292215425,
+    "n_units": 10,
+    "overlap_recall": 0.2867,
+    "n_overlap": 572
+   },
+   "S": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.51,
+      "best_acc": 0.6009,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 5.53,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 13.8,
+      "best_acc": 0.2722,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 0.89,
+      "best_acc": 0.9915,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.37,
+      "best_acc": 0.1974,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.64,
+      "best_acc": 0.3811,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.75,
+      "best_acc": 0.998,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 12.8,
+      "best_acc": 0.7806,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.38,
+      "best_acc": 0.989,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.86,
+      "best_acc": 0.9882,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.2669913292215425,
+    "n_units": 10,
+    "overlap_recall": 0.8934,
+    "n_overlap": 572,
+    "ledger": [
+     {
+      "test": "same neuron, same shape",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.96,
+      "corr": 0.928,
+      "union_viol": 0.0518,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 7,
+      "footprint": 0.995,
+      "corr": 0.91,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 9,
+      "footprint": 0.911,
+      "n": [
+       639,
+       289
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.951,
+      "n": [
+       204,
+       688
+      ],
+      "union_viol": 0.0438,
+      "switch_ratio": 0.888,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 4,
+      "footprint": 0.92,
+      "n": [
+       204,
+       625
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 6,
+      "footprint": 0.964,
+      "n": [
+       204,
+       355
+      ],
+      "union_viol": 0.0538,
+      "switch_ratio": 0.704,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 4,
+      "footprint": 0.905,
+      "n": [
+       688,
+       625
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 6,
+      "footprint": 0.998,
+      "n": [
+       688,
+       355
+      ],
+      "union_viol": 0.0,
+      "switch_ratio": 0.607,
+      "verdict": "reject: they interleave"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 4,
+      "b": 6,
+      "footprint": 0.919,
+      "n": [
+       625,
+       355
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 5,
+      "b": 10,
+      "footprint": 0.905,
+      "n": [
+       426,
+       182
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "look again inside address",
+      "address": 0,
+      "n": 673,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 2,
+      "n": 727,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 3,
+      "n": 508,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 4,
+      "n": 689,
+      "parts": 3
+     },
+     {
+      "test": "look again inside address",
+      "address": 5,
+      "n": 496,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 6,
+      "n": 415,
+      "parts": 2
+     },
+     {
+      "test": "look again inside address",
+      "address": 7,
+      "n": 450,
+      "parts": 1
+     },
+     {
+      "test": "look again inside address",
+      "address": 8,
+      "n": 349,
+      "parts": 1
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.996,
+      "corr": 0.928,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 6,
+      "footprint": 0.952,
+      "corr": 0.939,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 11,
+      "footprint": 0.984,
+      "corr": 0.918,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.999,
+      "corr": 0.905,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 7,
+      "footprint": 0.988,
+      "corr": 0.981,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 8,
+      "footprint": 0.97,
+      "corr": 0.946,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 11,
+      "footprint": 0.98,
+      "corr": 0.914,
+      "union_viol": 0.0392,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 7,
+      "b": 8,
+      "footprint": 0.976,
+      "corr": 0.967,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 11,
+      "footprint": 0.982,
+      "corr": 0.949,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.996,
+      "corr": 0.928,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 11,
+      "footprint": 0.984,
+      "corr": 0.918,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.999,
+      "corr": 0.905,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 6,
+      "b": 8,
+      "footprint": 0.977,
+      "corr": 0.967,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 11,
+      "footprint": 0.982,
+      "corr": 0.949,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.996,
+      "corr": 0.928,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 11,
+      "footprint": 0.984,
+      "corr": 0.918,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.999,
+      "corr": 0.905,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 10,
+      "b": 11,
+      "footprint": 0.982,
+      "corr": 0.949,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 2,
+      "b": 3,
+      "footprint": 0.996,
+      "corr": 0.928,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.999,
+      "corr": 0.905,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, same shape",
+      "a": 4,
+      "b": 5,
+      "footprint": 0.999,
+      "corr": 0.905,
+      "union_viol": 0.0,
+      "verdict": "accept"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 0,
+      "b": 13,
+      "footprint": 0.917,
+      "n": [
+       673,
+       349
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 2,
+      "footprint": 0.931,
+      "n": [
+       18,
+       727
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 6,
+      "footprint": 0.931,
+      "n": [
+       18,
+       689
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 1,
+      "b": 10,
+      "footprint": 0.943,
+      "n": [
+       18,
+       415
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 6,
+      "footprint": 0.907,
+      "n": [
+       727,
+       689
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 2,
+      "b": 10,
+      "footprint": 0.998,
+      "n": [
+       727,
+       415
+      ],
+      "union_viol": 0.0105,
+      "switch_ratio": 0.665,
+      "verdict": "reject: refractory"
+     },
+     {
+      "test": "same neuron, different state",
+      "a": 6,
+      "b": 10,
+      "footprint": 0.922,
+      "n": [
+       689,
+       415
+      ],
+      "verdict": "reject: different place"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 74,
+      "viol": 0.0411,
+      "depth": 2.96,
+      "verdict": "reject"
+     },
+     {
+      "test": "open new address from residue",
+      "n": 62,
+      "viol": 0.0,
+      "depth": 4.08,
+      "verdict": "reject"
+     }
+    ],
+    "n_states": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "S-block": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.51,
+      "best_acc": 0.6009,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 5.53,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 13.8,
+      "best_acc": 0.2722,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 0.89,
+      "best_acc": 0.9915,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.37,
+      "best_acc": 0.1974,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.64,
+      "best_acc": 0.3811,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.75,
+      "best_acc": 0.998,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 12.8,
+      "best_acc": 0.7806,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.38,
+      "best_acc": 0.989,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.86,
+      "best_acc": 0.9882,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.2669913292215425,
+    "n_units": 10,
+    "overlap_recall": 0.8934,
+    "n_overlap": 572
+   },
+   "S-memory": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.51,
+      "best_acc": 0.6009,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 5.53,
+      "best_acc": 1.0,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 13.8,
+      "best_acc": 0.2722,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 0.89,
+      "best_acc": 0.9915,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.37,
+      "best_acc": 0.1974,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.64,
+      "best_acc": 0.3811,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.75,
+      "best_acc": 0.998,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 12.8,
+      "best_acc": 0.7806,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.38,
+      "best_acc": 0.989,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.86,
+      "best_acc": 0.9882,
+      "one_unit": true,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 1,
+    "turn_merged": false,
+    "turn_offset": 1.2669913292215425,
+    "n_units": 10,
+    "overlap_recall": 0.8934,
+    "n_overlap": 572
+   },
+   "S-sieve": {
+    "neurons": [
+     {
+      "id": 0,
+      "kind": "mood_strong",
+      "pos": 13.51,
+      "best_acc": 0.5268,
+      "one_unit": false,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 1,
+      "kind": "mood_strong",
+      "pos": 5.53,
+      "best_acc": 0.8799,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 2,
+      "kind": "mood_mild",
+      "pos": 13.8,
+      "best_acc": 0.266,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 3,
+      "kind": "mood_mild",
+      "pos": 0.89,
+      "best_acc": 0.8182,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 4,
+      "kind": "turn_a",
+      "pos": 12.37,
+      "best_acc": 0.1956,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 5,
+      "kind": "turn_b",
+      "pos": 13.64,
+      "best_acc": 0.3638,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 6,
+      "kind": "stable",
+      "pos": 7.75,
+      "best_acc": 0.8571,
+      "one_unit": true,
+      "n_units_10pct": 2
+     },
+     {
+      "id": 7,
+      "kind": "stable",
+      "pos": 12.8,
+      "best_acc": 0.7321,
+      "one_unit": false,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 8,
+      "kind": "stable",
+      "pos": 11.38,
+      "best_acc": 0.8923,
+      "one_unit": true,
+      "n_units_10pct": 1
+     },
+     {
+      "id": 9,
+      "kind": "stable",
+      "pos": 1.86,
+      "best_acc": 0.7818,
+      "one_unit": false,
+      "n_units_10pct": 1
+     }
+    ],
+    "false_merges": 3,
+    "turn_merged": false,
+    "turn_offset": 1.2669913292215425,
+    "n_units": 10,
+    "overlap_recall": 0.2867,
+    "n_overlap": 572
+   }
+  }
+ }
+}
