@@ -1,0 +1,1582 @@
+{
+ "drift": {
+  "summary": {
+   "naive": {
+    "false_reopenings": 40,
+    "true_reopenings": 6,
+    "mood": 30,
+    "stable": 32,
+    "false_merges": 9,
+    "separable_pairs_merged_by_commit": 5,
+    "separated": 4
+   },
+   "aware": {
+    "false_reopenings": 5,
+    "true_reopenings": 5,
+    "mood": 47,
+    "stable": 44,
+    "false_merges": 9,
+    "separable_pairs_merged_by_commit": 5,
+    "separated": 4
+   },
+   "committed": {
+    "mood": 47,
+    "stable": 48,
+    "false_merges": 10
+   }
+  },
+  "gates": {
+   "D0": {
+    "naive_false_reopenings": 40,
+    "danger_real": true
+   },
+   "D1": {
+    "aware_false_reopenings": 5,
+    "mood": [
+     47,
+     47
+    ],
+    "stable": [
+     48,
+     44
+    ],
+    "passed": false
+   },
+   "D2": {
+    "separable": 5,
+    "separated": 4,
+    "passed": true
+   }
+  },
+  "rows": [
+   {
+    "seed": 80,
+    "drift": 0.6,
+    "turn_offset": 0.009,
+    "turn_rate_ratio": 1.531,
+    "committed": {
+     "mood": 3,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 3,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 3,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.279,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.261,
+      "true_a": 3,
+      "true_b": 3,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.842,
+      "true_a": 5,
+      "true_b": 0,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.194,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 1.061,
+      "true_a": 5,
+      "true_b": 0,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 81,
+    "drift": 0.6,
+    "turn_offset": 0.106,
+    "turn_rate_ratio": 1.248,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 3,
+     "stable": 3,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.161,
+      "true_a": 1,
+      "true_b": 1,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.312,
+      "true_a": 7,
+      "true_b": 7,
+      "false": true
+     }
+    ],
+    "reopen_aware": []
+   },
+   {
+    "seed": 82,
+    "drift": -0.6,
+    "turn_offset": 0.427,
+    "turn_rate_ratio": 3.316,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 3,
+     "stable": 1,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.196,
+      "true_a": 6,
+      "true_b": 6,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.314,
+      "true_a": 7,
+      "true_b": 7,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.692,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.272,
+      "true_a": 2,
+      "true_b": 2,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.197,
+      "true_a": 8,
+      "true_b": 8,
+      "false": true
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.533,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 83,
+    "drift": -0.6,
+    "turn_offset": 0.022,
+    "turn_rate_ratio": 1.523,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 3,
+     "stable": 2,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 3,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.155,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.168,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.239,
+      "true_a": 1,
+      "true_b": 1,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.189,
+      "true_a": 6,
+      "true_b": 6,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.307,
+      "true_a": 7,
+      "true_b": 7,
+      "false": true
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.179,
+      "true_a": 7,
+      "true_b": 7,
+      "false": true
+     }
+    ]
+   },
+   {
+    "seed": 84,
+    "drift": -0.6,
+    "turn_offset": 0.45,
+    "turn_rate_ratio": 1.121,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 2,
+     "stable": 0,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 3,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.235,
+      "true_a": 9,
+      "true_b": 9,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.171,
+      "true_a": 3,
+      "true_b": 3,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.297,
+      "true_a": 6,
+      "true_b": 6,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.174,
+      "true_a": 5,
+      "true_b": 5,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.312,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.318,
+      "true_a": 7,
+      "true_b": 7,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.226,
+      "true_a": 8,
+      "true_b": 8,
+      "false": true
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.163,
+      "true_a": 9,
+      "true_b": 9,
+      "false": true
+     }
+    ]
+   },
+   {
+    "seed": 85,
+    "drift": 0.6,
+    "turn_offset": 0.236,
+    "turn_rate_ratio": 1.298,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 3,
+     "stable": 3,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.29,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.302,
+      "true_a": 9,
+      "true_b": 9,
+      "false": true
+     }
+    ],
+    "reopen_aware": []
+   },
+   {
+    "seed": 86,
+    "drift": -0.6,
+    "turn_offset": 0.088,
+    "turn_rate_ratio": 1.289,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 2,
+     "stable": 3,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 3,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.26,
+      "true_a": 2,
+      "true_b": 2,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.357,
+      "true_a": 7,
+      "true_b": 7,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.15,
+      "true_a": 1,
+      "true_b": 1,
+      "false": true
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.158,
+      "true_a": 7,
+      "true_b": 7,
+      "false": true
+     }
+    ]
+   },
+   {
+    "seed": 87,
+    "drift": 0.6,
+    "turn_offset": 0.392,
+    "turn_rate_ratio": 1.053,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 2,
+     "stable": 3,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.257,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.202,
+      "true_a": 8,
+      "true_b": 8,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.352,
+      "true_a": 2,
+      "true_b": 2,
+      "false": true
+     }
+    ],
+    "reopen_aware": []
+   },
+   {
+    "seed": 88,
+    "drift": 0.6,
+    "turn_offset": 0.352,
+    "turn_rate_ratio": 1.136,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 1,
+     "stable": 3,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.203,
+      "true_a": 1,
+      "true_b": 1,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.284,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.196,
+      "true_a": 3,
+      "true_b": 3,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.165,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.307,
+      "true_a": 8,
+      "true_b": 8,
+      "false": true
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.292,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 89,
+    "drift": 0.6,
+    "turn_offset": 0.385,
+    "turn_rate_ratio": 1.987,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 2
+    },
+    "naive": {
+     "mood": 3,
+     "stable": 3,
+     "turn_merged": false,
+     "false_merges": 2
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 3,
+     "turn_merged": false,
+     "false_merges": 2
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.257,
+      "true_a": 2,
+      "true_b": 2,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "rate"
+      ],
+      "gap": 0.142,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.323,
+      "true_a": 8,
+      "true_b": 8,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.266,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.388,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.16,
+      "true_a": 8,
+      "true_b": 8,
+      "false": true
+     }
+    ]
+   },
+   {
+    "seed": 90,
+    "drift": 0.6,
+    "turn_offset": 0.341,
+    "turn_rate_ratio": 3.173,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 3,
+     "stable": 3,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.268,
+      "true_a": 9,
+      "true_b": 9,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.353,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.568,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.319,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 91,
+    "drift": 0.6,
+    "turn_offset": 0.455,
+    "turn_rate_ratio": 2.379,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 2
+    },
+    "naive": {
+     "mood": 2,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 2
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 2
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.218,
+      "true_a": 4,
+      "true_b": 4,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.296,
+      "true_a": 2,
+      "true_b": 2,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.37,
+      "true_a": 0,
+      "true_b": 0,
+      "false": true
+     },
+     {
+      "kind": "forced split",
+      "by": [
+       "position"
+      ],
+      "gap": 0.241,
+      "true_a": 1,
+      "true_b": 1,
+      "false": true
+     }
+    ],
+    "reopen_aware": []
+   }
+  ]
+ },
+ "no_drift": {
+  "summary": {
+   "naive": {
+    "false_reopenings": 1,
+    "true_reopenings": 11,
+    "mood": 45,
+    "stable": 48,
+    "false_merges": 3,
+    "separable_pairs_merged_by_commit": 9,
+    "separated": 9
+   },
+   "aware": {
+    "false_reopenings": 1,
+    "true_reopenings": 11,
+    "mood": 45,
+    "stable": 48,
+    "false_merges": 3,
+    "separable_pairs_merged_by_commit": 9,
+    "separated": 9
+   },
+   "committed": {
+    "mood": 46,
+    "stable": 48,
+    "false_merges": 3
+   }
+  },
+  "gates": {
+   "D3": {
+    "separable": 9,
+    "separated": 9,
+    "naive_separated": 9,
+    "mood": [
+     46,
+     45
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "aware_false_reopenings": 1,
+    "passed": true
+   }
+  },
+  "rows": [
+   {
+    "seed": 50,
+    "drift": 0.0,
+    "turn_offset": 0.417,
+    "turn_rate_ratio": 1.051,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.374,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.365,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 51,
+    "drift": 0.0,
+    "turn_offset": 0.154,
+    "turn_rate_ratio": 1.448,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.205,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "forced split",
+      "by": [
+       "rate"
+      ],
+      "gap": 0.716,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 52,
+    "drift": 0.0,
+    "turn_offset": 0.287,
+    "turn_rate_ratio": 1.087,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.292,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.292,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 53,
+    "drift": 0.0,
+    "turn_offset": 0.359,
+    "turn_rate_ratio": 1.778,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.352,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.319,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 54,
+    "drift": 0.0,
+    "turn_offset": 0.259,
+    "turn_rate_ratio": 1.742,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.247,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "forced split",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.302,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 55,
+    "drift": 0.0,
+    "turn_offset": 0.435,
+    "turn_rate_ratio": 2.043,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 3,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 3,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "rate"
+      ],
+      "gap": 0.044,
+      "true_a": 1,
+      "true_b": 1,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.393,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "rate"
+      ],
+      "gap": 0.03,
+      "true_a": 1,
+      "true_b": 1,
+      "false": true
+     },
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.388,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 56,
+    "drift": 0.0,
+    "turn_offset": 0.008,
+    "turn_rate_ratio": 2.05,
+    "committed": {
+     "mood": 2,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 2,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 2,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "forced split",
+      "by": [
+       "rate"
+      ],
+      "gap": 0.086,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "forced split",
+      "by": [
+       "rate"
+      ],
+      "gap": 0.049,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 57,
+    "drift": 0.0,
+    "turn_offset": 0.234,
+    "turn_rate_ratio": 2.323,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.264,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.238,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 58,
+    "drift": 0.0,
+    "turn_offset": 0.44,
+    "turn_rate_ratio": 1.115,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.46,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.458,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 59,
+    "drift": 0.0,
+    "turn_offset": 0.413,
+    "turn_rate_ratio": 1.461,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.418,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position"
+      ],
+      "gap": 0.413,
+      "true_a": 5,
+      "true_b": 4,
+      "false": false
+     }
+    ]
+   },
+   {
+    "seed": 60,
+    "drift": 0.0,
+    "turn_offset": 0.014,
+    "turn_rate_ratio": 1.13,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "reopen_naive": [],
+    "reopen_aware": []
+   },
+   {
+    "seed": 61,
+    "drift": 0.0,
+    "turn_offset": 0.386,
+    "turn_rate_ratio": 2.244,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "naive": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "aware": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "reopen_naive": [
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.422,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ],
+    "reopen_aware": [
+     {
+      "kind": "states",
+      "by": [
+       "position",
+       "rate"
+      ],
+      "gap": 0.414,
+      "true_a": 4,
+      "true_b": 5,
+      "false": false
+     }
+    ]
+   }
+  ]
+ }
+}

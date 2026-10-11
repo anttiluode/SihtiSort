@@ -144,7 +144,7 @@ Two design changes were made on calibration seeds 70–71, before the frozen com
 | P2 keeps true mood merges (drop ≤ 1) | **Pass.** 46 → 45. |
 | P3 doesn't shatter single neurons (drop ≤ 2) | **Pass.** 48 → 48. |
 | P4 revises online without flip-flopping back | **Condition failed.** 7 pairs were merged early and separated later, most of them merged at 10 s and apart from 20 s on. But one pair (0.01 channels apart, rates 1.13×) was apart at 10–20 s and merged from 30 s on. |
-| P5 what it can't see | Only that same pair stays merged. Its remainder says *agrees*: position gap 0.03 ± 0.02 channels and similar rates. Neither refuter can see a pair at the same place firing at the same rate. |
+| P5 what it can't see | Only that same pair stays merged. Its remainder said *agrees* (since renamed *no contradiction at tested resolution*, see below): position gap 0.03 ± 0.02 channels and similar rates. Neither refuter can see a pair at the same place firing at the same rate. |
 
 Two things in the picture are worth saying plainly:
 
@@ -152,6 +152,21 @@ Two things in the picture are worth saying plainly:
 - **The remainder moves the other way.** Its early mistakes at 10 s are corrected by 20 s and stay corrected.
 
 The other sets were run with the full recording only, post hoc. On the crowded test set the remainder helps: stable neurons recovered as one unit go from 11 to 17 of 20, mood neurons from 7 to 8, and false merges from 14 to 11. On the sparse set nothing is reopened and nothing changes.
+
+## The drift control ([PROTOCOL_4.md](PROTOCOL_4.md), Sol's suggestion)
+
+Real probes drift relative to the tissue. One neuron's early spikes then sit somewhere else than its late spikes, and if its moods occupy different stretches of time, its two states sit at different average places. That is exactly what Protocol 3's position check reads as "two neurons", but the right answer is still one neuron. So the generator now moves the whole probe by 0.6 channels over the 60 s, and moods and turn-taking blocks last about 20 s.
+
+The fix tested here compares the two parts **only at matched times**: within 15 s windows that contain both, then averaged. Both versions run on the same sorting. The remainder status "agrees" is now called **"no contradiction at tested resolution"**, because the old label overstated what a test had shown.
+
+| Gate | Result |
+|---|---|
+| D0 the danger is real | **Yes, badly.** Naive position check: 40 false reopenings in 12 recordings; mood neurons kept as one unit 47 → 30, stable 48 → 32. |
+| D1 drift-aware keeps true neurons (≤ 1 false reopening, mood drop ≤ 1, stable drop ≤ 2) | **Fail.** False reopenings 40 → 5, mood 47 → 47, but stable 48 → 44. |
+| D2 drift-aware still separates the false merges it can see | **Pass.** 4 of 5. |
+| D3 no regression without drift (seeds 50–61) | **Pass.** 9 of 9 separated, mood 46 → 45, stable 48 → 48. |
+
+The 5 remaining false reopenings are all forced splits with gaps of 0.16–0.19 channels, just over the 0.15 threshold. Inside one 15 s window the probe still moves 0.15 channels, so a split into earlier and later spikes within the window still looks like two places. Matching times removed most of the confusion but not all of it. The standard next step, used by current sorters, is to estimate the probe's drift from all neurons together (it is shared) and subtract it before any position test. Turn-taking pairs whose blocks never share a window get a silent position test. One such pair (0.39 channels apart, rates 1.05×) stays merged.
 
 ## The test that matters next
 
@@ -173,6 +188,7 @@ python diagnostics/commit_and_revise.py    # PROTOCOL_2 (~9 min)
 python diagnostics/position_refuter.py     # post hoc (~3.5 min)
 python diagnostics/two_channel.py          # PROTOCOL_3 (~45 min on 2 cores)
 python diagnostics/figure_two_channel.py
+python diagnostics/drift_control.py        # PROTOCOL_4 (~12 min on 2 cores)
 ```
 
 Files: [sihtisort/synth.py](sihtisort/synth.py) (recording and ground truth) · [sihtisort/sort.py](sihtisort/sort.py) (B1, B2, SihtiSort) · [sihtisort/evaluate.py](sihtisort/evaluate.py) (scoring) · [run_gates.py](run_gates.py) · `results/*.json` (every number above, with the ledger of every hypothesis tested).
