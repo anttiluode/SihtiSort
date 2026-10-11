@@ -168,6 +168,36 @@ The fix tested here compares the two parts **only at matched times**: within 15 
 
 The 5 remaining false reopenings are all forced splits with gaps of 0.16–0.19 channels, just over the 0.15 threshold. Inside one 15 s window the probe still moves 0.15 channels, so a split into earlier and later spikes within the window still looks like two places. Matching times removed most of the confusion but not all of it. The standard next step, used by current sorters, is to estimate the probe's drift from all neurons together (it is shared) and subtract it before any position test. Turn-taking pairs whose blocks never share a window get a silent position test. One such pair (0.39 channels apart, rates 1.05×) stays merged.
 
+## Correct the frame, or compare at the switch ([PROTOCOL_5.md](PROTOCOL_5.md))
+
+Two ways out of Protocol 4's failure were tested on 36 fresh recordings, run once:
+
+- **Correct the frame (Sol).** Probe drift is shared by every neuron, so estimate it from the whole sorted population, blind, and subtract it. Two controls: the true drift from the simulator, and a deliberately wrong one (the estimate reversed in time).
+- **Compare at the switch.** Norman-Haignere et al. (Nature Neuroscience 2025) found that auditory cortex integrates over fixed absolute time, not over speech structure. Protocol 4's 15 s window was time-yoked in the same way. The structure-yoked alternative compares the ≤ 15 spikes on each side of every moment the two parts hand over to each other. Across that instant the probe has barely moved.
+
+False reopenings of true neurons, and separable false merges that end up apart:
+
+| Method | Linear drift (0.6 ch / 60 s) | Sine drift (±0.3 ch, 40 s period) | No drift |
+|---|---|---|---|
+| naive (Protocol 3) | 44 false · 5/6 | 45 false · 3/3 | 0 · 8/9 |
+| window (Protocol 4) | 5 false · 5/6 | 31 false · 3/3 | 0 · 8/9 |
+| frame, true drift | **0** · 6/6 | 5 false · 3/3 | 0 · 8/9 |
+| frame, estimated drift | **0** · 6/6 | 10 false · 3/3 | 0 · 8/9 |
+| frame, wrong drift (control) | 54 false · 4/6 | 41 false · 3/3 | 0 · 8/9 |
+| switch | **0** · 4/6 | **0** · 2/3 | 0 · 7/9 |
+| switch + estimated frame | **0** · 4/6 | **0** · 3/3 | 0 · 7/9 |
+
+| Gate | Result |
+|---|---|
+| F1 estimated frame passes all three sets | **Fail.** It passes linear and no-drift, but makes 10 false reopenings under sine drift. |
+| F2 switch passes all three sets | **Fail.** Zero false reopenings in all 36 recordings, but it separates only 4/6 (linear) and 2/3 (sine), under the 70% bar. |
+| F3 the wrong correction does damage | **Pass.** 54 false reopenings, more than no correction at all, so the correction is doing real work. |
+| F4 the true drift passes linear and sine | **Fail.** It passes linear but makes 5 false reopenings under sine drift. |
+
+The blind drift estimate was accurate: within 0.013–0.030 channels of the truth (linear) and 0.027–0.049 (sine). So the sine failure is not an estimation failure; even the *true* drift fails there. Averaging a part's spikes over a stretch in which the probe moves quickly blurs its footprint, and the blur differs between the parts. Correcting the average's position cannot undo that.
+
+**The two fixes fail in opposite directions.** Frame correction finds every separable pair but can split a true neuron when the probe moves fast. The switch comparison never split a true neuron in any of the 36 recordings, drift or not, but it needs handovers with at least 6 spikes on each side, so it misses some real pairs. Combined, the switch comparison with the estimated frame passed the sine and no-drift sets and failed linear on recall alone (4 of 6). No single method passed all three sets.
+
 ## The test that matters next
 
 The preprint's **spe-1** dataset ([CRCNS](https://crcns.org/), analysis code at [voytekresearch/spikewise](https://github.com/voytekresearch/spikewise)) has simultaneous intracellular ground truth beside the Neuropixels recording. For the cells whose waveform switches state, the question is whether a sorter that remembers keeps each one as one unit where snapshot sorting splits it. Download needs a CRCNS account, and this repository does not include a loader yet.
@@ -189,6 +219,7 @@ python diagnostics/position_refuter.py     # post hoc (~3.5 min)
 python diagnostics/two_channel.py          # PROTOCOL_3 (~45 min on 2 cores)
 python diagnostics/figure_two_channel.py
 python diagnostics/drift_control.py        # PROTOCOL_4 (~12 min on 2 cores)
+python diagnostics/frame_or_switch.py      # PROTOCOL_5 (~30 min on 2 cores)
 ```
 
 Files: [sihtisort/synth.py](sihtisort/synth.py) (recording and ground truth) · [sihtisort/sort.py](sihtisort/sort.py) (B1, B2, SihtiSort) · [sihtisort/evaluate.py](sihtisort/evaluate.py) (scoring) · [run_gates.py](run_gates.py) · `results/*.json` (every number above, with the ledger of every hypothesis tested).

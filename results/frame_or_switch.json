@@ -1,0 +1,6617 @@
+{
+ "linear": {
+  "table": {
+   "naive": {
+    "false_reopenings": 44,
+    "true_reopenings": 8,
+    "mood": [
+     47,
+     24
+    ],
+    "stable": [
+     47,
+     31
+    ],
+    "separable": 6,
+    "separated": 5,
+    "recordings": 12,
+    "passed": false
+   },
+   "window": {
+    "false_reopenings": 5,
+    "true_reopenings": 8,
+    "mood": [
+     47,
+     47
+    ],
+    "stable": [
+     47,
+     44
+    ],
+    "separable": 6,
+    "separated": 5,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-oracle": {
+    "false_reopenings": 0,
+    "true_reopenings": 8,
+    "mood": [
+     47,
+     48
+    ],
+    "stable": [
+     47,
+     48
+    ],
+    "separable": 6,
+    "separated": 6,
+    "recordings": 12,
+    "passed": true
+   },
+   "frame-estimated": {
+    "false_reopenings": 0,
+    "true_reopenings": 9,
+    "mood": [
+     47,
+     48
+    ],
+    "stable": [
+     47,
+     48
+    ],
+    "separable": 6,
+    "separated": 6,
+    "recordings": 12,
+    "passed": true
+   },
+   "frame-wrong": {
+    "false_reopenings": 54,
+    "true_reopenings": 8,
+    "mood": [
+     47,
+     19
+    ],
+    "stable": [
+     47,
+     28
+    ],
+    "separable": 6,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   },
+   "switch": {
+    "false_reopenings": 0,
+    "true_reopenings": 5,
+    "mood": [
+     47,
+     47
+    ],
+    "stable": [
+     47,
+     47
+    ],
+    "separable": 6,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   },
+   "switch+frame": {
+    "false_reopenings": 0,
+    "true_reopenings": 5,
+    "mood": [
+     47,
+     47
+    ],
+    "stable": [
+     47,
+     47
+    ],
+    "separable": 6,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   }
+  },
+  "rows": [
+   {
+    "seed": 110,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.256,
+    "turn_rate_ratio": 1.584,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0303,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.215,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.247,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.194,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.263,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.245,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.249,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.244,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.391,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.245,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.261,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.167,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.496,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.273,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.278,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 111,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.085,
+    "turn_rate_ratio": 1.597,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0173,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 1,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.311,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.252,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.275,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.383,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.155,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.168,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.566,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.485,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.528,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.647,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.268,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 112,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.422,
+    "turn_rate_ratio": 1.28,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0252,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 1,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.345,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.342,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.661,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.295,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.298,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.253,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.151,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.392,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.163,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.452,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.468,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.27,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.635,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.575,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.846,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.476,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.576,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.461,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.394,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.39,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 113,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.075,
+    "turn_rate_ratio": 1.848,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0255,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 3,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.309,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.309,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.285,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.166,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.258,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.518,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.193,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.563,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.535,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 114,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.071,
+    "turn_rate_ratio": 1.688,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0131,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 2,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.196,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.04,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.16,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.192,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.074,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.063,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.06,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 2,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.378,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.021,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.339,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.384,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.054,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.051,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 115,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.302,
+    "turn_rate_ratio": 1.554,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0234,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 1,
+      "stable": 3,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.178,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.292,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.193,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.211,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.238,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.201,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.321,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.512,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.325,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.208,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.377,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 116,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.438,
+    "turn_rate_ratio": 1.281,
+    "committed": {
+     "mood": 3,
+     "stable": 3,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0138,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.318,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.193,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.573,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.27,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.546,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.546,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.545,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.571,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.259,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.599,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.401,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 117,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.079,
+    "turn_rate_ratio": 2.029,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 2
+    },
+    "drift_estimate_rms_error": 0.0183,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 1,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.333,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.236,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.189,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.282,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.154,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.639,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.157,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.025,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.058,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.06,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.533,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.383,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.318,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.503,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.281,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.136,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.14,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 118,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.469,
+    "turn_rate_ratio": 1.477,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0234,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 1,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.301,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.258,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.152,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.262,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.223,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.522,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.486,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.458,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 0,
+      "stable": 3,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.155,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.561,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.31,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.492,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.409,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.481,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.486,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 119,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.366,
+    "turn_rate_ratio": 1.167,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0191,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 2,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.267,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.299,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.204,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.217,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.337,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.25,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.307,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.295,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 2,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.188,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.438,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.5,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.369,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.45,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 120,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.029,
+    "turn_rate_ratio": 1.169,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0233,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 2,
+      "stable": 2,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.172,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.235,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.193,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.166,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.203,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.195,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.32,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.331,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.289,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.33,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.263,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 121,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.149,
+    "turn_rate_ratio": 1.036,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0223,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.393,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.167,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.32,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.213,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.158,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.612,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.152,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.356,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.557,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    }
+   }
+  ]
+ },
+ "sine": {
+  "table": {
+   "naive": {
+    "false_reopenings": 45,
+    "true_reopenings": 7,
+    "mood": [
+     45,
+     36
+    ],
+    "stable": [
+     46,
+     19
+    ],
+    "separable": 3,
+    "separated": 3,
+    "recordings": 12,
+    "passed": false
+   },
+   "window": {
+    "false_reopenings": 31,
+    "true_reopenings": 8,
+    "mood": [
+     45,
+     39
+    ],
+    "stable": [
+     46,
+     27
+    ],
+    "separable": 3,
+    "separated": 3,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-oracle": {
+    "false_reopenings": 5,
+    "true_reopenings": 7,
+    "mood": [
+     45,
+     44
+    ],
+    "stable": [
+     46,
+     44
+    ],
+    "separable": 3,
+    "separated": 3,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-estimated": {
+    "false_reopenings": 10,
+    "true_reopenings": 8,
+    "mood": [
+     45,
+     44
+    ],
+    "stable": [
+     46,
+     40
+    ],
+    "separable": 3,
+    "separated": 3,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-wrong": {
+    "false_reopenings": 41,
+    "true_reopenings": 8,
+    "mood": [
+     45,
+     35
+    ],
+    "stable": [
+     46,
+     24
+    ],
+    "separable": 3,
+    "separated": 3,
+    "recordings": 12,
+    "passed": false
+   },
+   "switch": {
+    "false_reopenings": 0,
+    "true_reopenings": 5,
+    "mood": [
+     45,
+     45
+    ],
+    "stable": [
+     46,
+     46
+    ],
+    "separable": 3,
+    "separated": 2,
+    "recordings": 12,
+    "passed": false
+   },
+   "switch+frame": {
+    "false_reopenings": 0,
+    "true_reopenings": 6,
+    "mood": [
+     45,
+     45
+    ],
+    "stable": [
+     46,
+     46
+    ],
+    "separable": 3,
+    "separated": 3,
+    "recordings": 12,
+    "passed": true
+   }
+  },
+  "rows": [
+   {
+    "seed": 130,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.039,
+    "turn_rate_ratio": 1.779,
+    "committed": {
+     "mood": 3,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0488,
+    "true_drift_range": 0.599,
+    "naive": {
+     "counts": {
+      "mood": 3,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.357,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.507,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.153,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 3,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.275,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.488,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.245,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.432,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.011,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 3,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.152,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.45,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.031,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 2,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.545,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.577,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.267,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.22,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.127,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.005,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 131,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.301,
+    "turn_rate_ratio": 1.367,
+    "committed": {
+     "mood": 3,
+     "stable": 2,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0443,
+    "true_drift_range": 0.599,
+    "naive": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.314,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.844,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.396,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 2,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.203,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.876,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.301,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.162,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.268,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.285,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.846,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.223,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.851,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.171,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.242,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.853,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.175,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.272,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 3,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.297,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 132,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.402,
+    "turn_rate_ratio": 1.302,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0338,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 2,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.188,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.244,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.398,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.185,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.178,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.305,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.217,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.271,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.218,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.218,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.236,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.264,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.28,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.674,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.348,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.248,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.231,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 133,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.256,
+    "turn_rate_ratio": 1.149,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0416,
+    "true_drift_range": 0.599,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.307,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.199,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.341,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.271,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.281,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.152,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.277,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.362,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.28,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.271,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.257,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.265,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 134,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.252,
+    "turn_rate_ratio": 1.593,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0434,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 3,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.236,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.378,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.219,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.208,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.168,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.204,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.288,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 135,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.14,
+    "turn_rate_ratio": 3.493,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0266,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 2,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.398,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.433,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.416,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.191,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.355,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.333,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 3,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.262,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.362,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.241,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.329,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.172,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 1,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.624,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.734,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.172,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.718,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.396,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.637,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.627,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 136,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.035,
+    "turn_rate_ratio": 1.519,
+    "committed": {
+     "mood": 3,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0482,
+    "true_drift_range": 0.599,
+    "naive": {
+     "counts": {
+      "mood": 1,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.449,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.413,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.272,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.199,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.988,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 1,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.354,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.321,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.191,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.279,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 1.041,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.236,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 1.103,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.28,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 1.07,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 2,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.276,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.334,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.218,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 1.202,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 1.128,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 1.111,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 137,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.138,
+    "turn_rate_ratio": 1.131,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0393,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.23,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.459,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.291,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.3,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.358,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.193,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.175,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.318,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 138,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.393,
+    "turn_rate_ratio": 2.41,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0373,
+    "true_drift_range": 0.599,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.421,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.359,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.34,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.295,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.288,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.328,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.331,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.0,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.397,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.17,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.371,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 0,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.61,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.544,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.54,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.511,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.162,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.216,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.204,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.295,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.415,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 139,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.289,
+    "turn_rate_ratio": 1.009,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.033,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.471,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.362,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.21,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.397,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.25,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.366,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.492,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.293,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.228,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 140,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.311,
+    "turn_rate_ratio": 1.796,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.044,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 2,
+      "stable": 0,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.421,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.324,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.34,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.278,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.398,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.334,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.247,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.305,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.26,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.309,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.222,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 2,
+      "stable": 0,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.581,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.46,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.478,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.564,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.598,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.496,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.429,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 141,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.499,
+    "turn_rate_ratio": 1.154,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0404,
+    "true_drift_range": 0.6,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.383,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.587,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.401,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.35,
+       "false": true
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 3,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.284,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.368,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.266,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.316,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.263,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.518,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.493,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.154,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.152,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.498,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.184,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.422,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.467,
+       "false": false
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "no_drift": {
+  "table": {
+   "naive": {
+    "false_reopenings": 0,
+    "true_reopenings": 10,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 9,
+    "separated": 8,
+    "recordings": 12,
+    "passed": true
+   },
+   "window": {
+    "false_reopenings": 0,
+    "true_reopenings": 10,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 9,
+    "separated": 8,
+    "recordings": 12,
+    "passed": true
+   },
+   "frame-oracle": {
+    "false_reopenings": 0,
+    "true_reopenings": 10,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 9,
+    "separated": 8,
+    "recordings": 12,
+    "passed": true
+   },
+   "frame-estimated": {
+    "false_reopenings": 0,
+    "true_reopenings": 10,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 9,
+    "separated": 8,
+    "recordings": 12,
+    "passed": true
+   },
+   "frame-wrong": {
+    "false_reopenings": 0,
+    "true_reopenings": 10,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 9,
+    "separated": 8,
+    "recordings": 12,
+    "passed": true
+   },
+   "switch": {
+    "false_reopenings": 0,
+    "true_reopenings": 8,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 9,
+    "separated": 7,
+    "recordings": 12,
+    "passed": true
+   },
+   "switch+frame": {
+    "false_reopenings": 0,
+    "true_reopenings": 8,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 9,
+    "separated": 7,
+    "recordings": 12,
+    "passed": true
+   }
+  },
+  "rows": [
+   {
+    "seed": 150,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.465,
+    "turn_rate_ratio": 1.271,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0139,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.464,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.465,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.464,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.453,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.463,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.474,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.472,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 151,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.18,
+    "turn_rate_ratio": 1.475,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0077,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 152,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.13,
+    "turn_rate_ratio": 1.001,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0104,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 153,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.272,
+    "turn_rate_ratio": 1.403,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0103,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.267,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.238,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.267,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.263,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.264,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.292,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.289,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 154,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.33,
+    "turn_rate_ratio": 1.578,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0105,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.26,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.238,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.26,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.258,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.254,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 155,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.415,
+    "turn_rate_ratio": 1.061,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 2
+    },
+    "drift_estimate_rms_error": 0.0091,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.377,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.357,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.377,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.37,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.381,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.345,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.348,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 156,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.002,
+    "turn_rate_ratio": 2.463,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.009,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.028,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.046,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.028,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.026,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.03,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.2,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.201,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 157,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.431,
+    "turn_rate_ratio": 1.223,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.007,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.441,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.443,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.441,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.438,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.448,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.414,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.415,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 158,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.389,
+    "turn_rate_ratio": 1.821,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.011,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.342,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.352,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.342,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.337,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.34,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.365,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.371,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 159,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.288,
+    "turn_rate_ratio": 1.423,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0041,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.296,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.332,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.296,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.294,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.295,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    }
+   },
+   {
+    "seed": 160,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.295,
+    "turn_rate_ratio": 1.25,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.013,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.28,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.265,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.28,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.279,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.283,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.267,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.26,
+       "false": false
+      }
+     ]
+    }
+   },
+   {
+    "seed": 161,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.362,
+    "turn_rate_ratio": 1.403,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0109,
+    "true_drift_range": 0.0,
+    "naive": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.328,
+       "false": false
+      }
+     ]
+    },
+    "window": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.341,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.328,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.316,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.32,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.35,
+       "false": false
+      }
+     ]
+    },
+    "switch+frame": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.346,
+       "false": false
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "gates": {
+  "F1": false,
+  "F2": false,
+  "F3": {
+   "frame_wrong_false_reopenings_linear": 54,
+   "control_behaves": true
+  },
+  "F4": false
+ }
+}
