@@ -1,0 +1,6268 @@
+{
+ "identifiability": {
+  "gates": {
+   "R1": {
+    "turn_pairs_merged_by_v0_with_rate_ratio_ge_1_5": 2,
+    "split_by_revision": 0,
+    "passed": false
+   },
+   "R1_context": {
+    "turn_pairs_merged_by_v0_total": 11,
+    "similar_rate_pairs_merged": [
+     [
+      20,
+      1.096,
+      true
+     ],
+     [
+      22,
+      1.154,
+      true
+     ],
+     [
+      23,
+      1.085,
+      true
+     ],
+     [
+      24,
+      1.18,
+      true
+     ],
+     [
+      25,
+      1.333,
+      true
+     ],
+     [
+      26,
+      1.021,
+      true
+     ],
+     [
+      27,
+      1.029,
+      true
+     ],
+     [
+      28,
+      1.075,
+      true
+     ],
+     [
+      29,
+      1.151,
+      true
+     ]
+    ]
+   },
+   "R2": {
+    "mood_merges": 30,
+    "wrongly_split": 0,
+    "passed": true
+   },
+   "R3": {
+    "survived": 34,
+    "survived_correct": 29,
+    "passed": false,
+    "untested": 2,
+    "untested_truly_one_neuron": 1,
+    "refuted": 0,
+    "refuted_truly_two_neurons": 0
+   },
+   "R4": {
+    "revisions": 0,
+    "seconds_to_revise": [],
+    "seconds_to_survive": [
+     35.0,
+     45.0,
+     55.1,
+     50.7,
+     30.2,
+     30.0,
+     55.4,
+     25.0,
+     45.1,
+     45.2,
+     30.1,
+     40.0,
+     25.0,
+     45.1,
+     35.0,
+     45.2,
+     25.2,
+     45.0,
+     45.2,
+     30.1,
+     55.5,
+     55.3,
+     45.4,
+     35.0,
+     25.0,
+     40.3,
+     30.0,
+     25.0,
+     45.0,
+     45.1,
+     40.0,
+     35.0,
+     25.3,
+     50.1
+    ]
+   }
+  },
+  "mood_one_unit_v0": 47,
+  "mood_one_unit_revised": 47,
+  "false_merges_v0": 9,
+  "false_merges_revised": 9,
+  "rows": [
+   {
+    "seed": 20,
+    "turn_offset": 0.2305733549014711,
+    "turn_rate_ratio": 1.096,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 2
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 2
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 2
+    },
+    "commitments": [
+     {
+      "address": 1,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       221,
+       190
+      ],
+      "confidence_runs_z": -18.91,
+      "rate_a": 6.62,
+      "rate_b": 7.6,
+      "ratio": 1.147,
+      "z": 1.36,
+      "se": 0.101,
+      "status": "survived",
+      "true_a": 5,
+      "true_b": 4,
+      "kind_a": "turn_b",
+      "kind_b": "turn_a",
+      "purity": [
+       0.995,
+       1.0
+      ],
+      "truth": "two neurons",
+      "correct": false,
+      "first_refuted_s": null,
+      "first_survived_s": 35.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": -5.19,
+        "status": "untested from here",
+        "z": 1.41,
+        "ratio": 2.805
+       },
+       {
+        "t": 10.0,
+        "runs_z": -7.58,
+        "status": "untested from here",
+        "z": 1.2,
+        "ratio": 1.396
+       },
+       {
+        "t": 15.0,
+        "runs_z": -9.21,
+        "status": "untested from here",
+        "z": 0.97,
+        "ratio": 1.249
+       },
+       {
+        "t": 20.0,
+        "runs_z": -10.96,
+        "status": "untested from here",
+        "z": 0.09,
+        "ratio": 1.016
+       },
+       {
+        "t": 25.0,
+        "runs_z": -12.41,
+        "status": "untested from here",
+        "z": 0.34,
+        "ratio": 1.056
+       },
+       {
+        "t": 30.0,
+        "runs_z": -13.9,
+        "status": "untested from here",
+        "z": 0.59,
+        "ratio": 1.086
+       },
+       {
+        "t": 35.0,
+        "runs_z": -14.61,
+        "status": "survived",
+        "z": 0.59,
+        "ratio": 1.081
+       },
+       {
+        "t": 40.0,
+        "runs_z": -15.15,
+        "status": "survived",
+        "z": 1.06,
+        "ratio": 1.143
+       },
+       {
+        "t": 45.0,
+        "runs_z": -16.41,
+        "status": "survived",
+        "z": 1.51,
+        "ratio": 1.191
+       },
+       {
+        "t": 50.0,
+        "runs_z": -17.22,
+        "status": "survived",
+        "z": 1.29,
+        "ratio": 1.153
+       },
+       {
+        "t": 55.0,
+        "runs_z": -17.83,
+        "status": "survived",
+        "z": 1.68,
+        "ratio": 1.195
+       },
+       {
+        "t": 60.0,
+        "runs_z": -18.91,
+        "status": "survived",
+        "z": 1.36,
+        "ratio": 1.147
+       }
+      ]
+     },
+     {
+      "address": 4,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       291,
+       184
+      ],
+      "confidence_runs_z": -21.05,
+      "rate_a": 7.67,
+      "rate_b": 8.68,
+      "ratio": 1.131,
+      "z": 1.3,
+      "se": 0.095,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.997,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 45.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.22,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": -7.79,
+        "status": "untested from here",
+        "z": 1.08,
+        "ratio": 1.336
+       },
+       {
+        "t": 15.0,
+        "runs_z": -10.18,
+        "status": "untested from here",
+        "z": 1.18,
+        "ratio": 1.245
+       },
+       {
+        "t": 20.0,
+        "runs_z": -11.7,
+        "status": "untested from here",
+        "z": 1.47,
+        "ratio": 1.278
+       },
+       {
+        "t": 25.0,
+        "runs_z": -12.94,
+        "status": "untested from here",
+        "z": 1.72,
+        "ratio": 1.312
+       },
+       {
+        "t": 30.0,
+        "runs_z": -14.12,
+        "status": "untested from here",
+        "z": 1.83,
+        "ratio": 1.32
+       },
+       {
+        "t": 35.0,
+        "runs_z": -15.39,
+        "status": "untested from here",
+        "z": 1.7,
+        "ratio": 1.286
+       },
+       {
+        "t": 40.0,
+        "runs_z": -16.65,
+        "status": "untested from here",
+        "z": 1.52,
+        "ratio": 1.246
+       },
+       {
+        "t": 45.0,
+        "runs_z": -17.86,
+        "status": "survived",
+        "z": 1.76,
+        "ratio": 1.241
+       },
+       {
+        "t": 50.0,
+        "runs_z": -19.08,
+        "status": "survived",
+        "z": 1.86,
+        "ratio": 1.233
+       },
+       {
+        "t": 55.0,
+        "runs_z": -19.88,
+        "status": "survived",
+        "z": 0.9,
+        "ratio": 1.099
+       },
+       {
+        "t": 60.0,
+        "runs_z": -21.05,
+        "status": "survived",
+        "z": 1.3,
+        "ratio": 1.131
+       }
+      ]
+     },
+     {
+      "address": 5,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       162,
+       114
+      ],
+      "confidence_runs_z": -15.4,
+      "rate_a": 4.72,
+      "rate_b": 4.88,
+      "ratio": 1.034,
+      "z": 0.27,
+      "se": 0.125,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.994,
+       0.974
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 55.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": -3.58,
+        "status": "untested from here",
+        "z": 2.12,
+        "ratio": 3.495
+       },
+       {
+        "t": 10.1,
+        "runs_z": -5.88,
+        "status": "untested from here",
+        "z": 2.01,
+        "ratio": 2.897
+       },
+       {
+        "t": 15.1,
+        "runs_z": -6.73,
+        "status": "untested from here",
+        "z": 1.54,
+        "ratio": 1.795
+       },
+       {
+        "t": 20.1,
+        "runs_z": -6.85,
+        "status": "untested from here",
+        "z": 1.07,
+        "ratio": 1.485
+       },
+       {
+        "t": 25.1,
+        "runs_z": -7.52,
+        "status": "untested from here",
+        "z": 1.17,
+        "ratio": 1.539
+       },
+       {
+        "t": 30.1,
+        "runs_z": -8.09,
+        "status": "untested from here",
+        "z": 1.43,
+        "ratio": 1.688
+       },
+       {
+        "t": 35.1,
+        "runs_z": -10.45,
+        "status": "untested from here",
+        "z": 1.56,
+        "ratio": 1.442
+       },
+       {
+        "t": 40.1,
+        "runs_z": -12.16,
+        "status": "untested from here",
+        "z": 0.85,
+        "ratio": 1.158
+       },
+       {
+        "t": 45.1,
+        "runs_z": -13.28,
+        "status": "untested from here",
+        "z": 0.92,
+        "ratio": 1.146
+       },
+       {
+        "t": 50.1,
+        "runs_z": -14.22,
+        "status": "untested from here",
+        "z": 0.69,
+        "ratio": 1.098
+       },
+       {
+        "t": 55.1,
+        "runs_z": -14.97,
+        "status": "survived",
+        "z": 0.34,
+        "ratio": 1.044
+       },
+       {
+        "t": 60.1,
+        "runs_z": -15.4,
+        "status": "survived",
+        "z": 0.27,
+        "ratio": 1.034
+       }
+      ]
+     },
+     {
+      "address": 10,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       268,
+       107
+      ],
+      "confidence_runs_z": -17.25,
+      "rate_a": 5.9,
+      "rate_b": 7.73,
+      "ratio": 1.31,
+      "z": 2.28,
+      "se": 0.119,
+      "status": "survived",
+      "true_a": 2,
+      "true_b": 2,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       0.989,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 50.7,
+      "timeline": [
+       {
+        "t": 5.7,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.7,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.7,
+        "runs_z": 0.24,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 20.7,
+        "runs_z": 0.21,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 25.7,
+        "runs_z": 0.19,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 30.7,
+        "runs_z": 0.17,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 35.7,
+        "runs_z": -11.08,
+        "status": "untested from here",
+        "z": 1.63,
+        "ratio": 1.659
+       },
+       {
+        "t": 40.7,
+        "runs_z": -13.71,
+        "status": "untested from here",
+        "z": 1.07,
+        "ratio": 1.217
+       },
+       {
+        "t": 45.7,
+        "runs_z": -15.53,
+        "status": "untested from here",
+        "z": 1.37,
+        "ratio": 1.209
+       },
+       {
+        "t": 50.7,
+        "runs_z": -16.01,
+        "status": "survived",
+        "z": 1.39,
+        "ratio": 1.205
+       },
+       {
+        "t": 55.7,
+        "runs_z": -16.26,
+        "status": "survived",
+        "z": 1.62,
+        "ratio": 1.24
+       },
+       {
+        "t": 60.7,
+        "runs_z": -17.25,
+        "status": "survived",
+        "z": 2.28,
+        "ratio": 1.31
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 21,
+    "turn_offset": 0.302923514785484,
+    "turn_rate_ratio": 2.738,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "commitments": [
+     {
+      "address": 0,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       406,
+       312
+      ],
+      "confidence_runs_z": -26.21,
+      "rate_a": 11.7,
+      "rate_b": 12.37,
+      "ratio": 1.057,
+      "z": 0.73,
+      "se": 0.076,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.993,
+       0.997
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 30.2,
+      "timeline": [
+       {
+        "t": 5.2,
+        "runs_z": 0.17,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.2,
+        "runs_z": 0.13,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.2,
+        "runs_z": 0.1,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 20.2,
+        "runs_z": -15.0,
+        "status": "untested from here",
+        "z": 0.07,
+        "ratio": 1.013
+       },
+       {
+        "t": 25.2,
+        "runs_z": -16.52,
+        "status": "untested from here",
+        "z": 0.33,
+        "ratio": 1.05
+       },
+       {
+        "t": 30.2,
+        "runs_z": -18.52,
+        "status": "survived",
+        "z": 0.32,
+        "ratio": 1.037
+       },
+       {
+        "t": 35.2,
+        "runs_z": -20.39,
+        "status": "survived",
+        "z": 0.9,
+        "ratio": 1.092
+       },
+       {
+        "t": 40.2,
+        "runs_z": -21.71,
+        "status": "survived",
+        "z": 0.84,
+        "ratio": 1.081
+       },
+       {
+        "t": 45.2,
+        "runs_z": -23.07,
+        "status": "survived",
+        "z": 1.09,
+        "ratio": 1.098
+       },
+       {
+        "t": 50.2,
+        "runs_z": -24.13,
+        "status": "survived",
+        "z": 0.38,
+        "ratio": 1.031
+       },
+       {
+        "t": 55.2,
+        "runs_z": -25.28,
+        "status": "survived",
+        "z": 0.34,
+        "ratio": 1.027
+       },
+       {
+        "t": 60.2,
+        "runs_z": -26.21,
+        "status": "survived",
+        "z": 0.73,
+        "ratio": 1.057
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 22,
+    "turn_offset": 0.09964768968754145,
+    "turn_rate_ratio": 1.154,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "commitments": [
+     {
+      "address": 2,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       259,
+       224
+      ],
+      "confidence_runs_z": -20.08,
+      "rate_a": 7.65,
+      "rate_b": 8.9,
+      "ratio": 1.163,
+      "z": 1.62,
+      "se": 0.093,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.988,
+       0.987
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 30.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": -9.08,
+        "status": "untested from here",
+        "z": 1.26,
+        "ratio": 1.457
+       },
+       {
+        "t": 15.0,
+        "runs_z": -10.03,
+        "status": "untested from here",
+        "z": 1.37,
+        "ratio": 1.491
+       },
+       {
+        "t": 20.0,
+        "runs_z": -11.68,
+        "status": "untested from here",
+        "z": 1.05,
+        "ratio": 1.254
+       },
+       {
+        "t": 25.0,
+        "runs_z": -14.05,
+        "status": "untested from here",
+        "z": 0.72,
+        "ratio": 1.11
+       },
+       {
+        "t": 30.0,
+        "runs_z": -15.49,
+        "status": "survived",
+        "z": 0.68,
+        "ratio": 1.089
+       },
+       {
+        "t": 35.0,
+        "runs_z": -16.13,
+        "status": "survived",
+        "z": 0.29,
+        "ratio": 1.034
+       },
+       {
+        "t": 40.0,
+        "runs_z": -16.82,
+        "status": "survived",
+        "z": 1.01,
+        "ratio": 1.119
+       },
+       {
+        "t": 45.0,
+        "runs_z": -17.23,
+        "status": "survived",
+        "z": 1.18,
+        "ratio": 1.136
+       },
+       {
+        "t": 50.0,
+        "runs_z": -18.42,
+        "status": "survived",
+        "z": 1.45,
+        "ratio": 1.158
+       },
+       {
+        "t": 55.0,
+        "runs_z": -19.39,
+        "status": "survived",
+        "z": 1.54,
+        "ratio": 1.161
+       },
+       {
+        "t": 60.0,
+        "runs_z": -20.08,
+        "status": "survived",
+        "z": 1.62,
+        "ratio": 1.163
+       }
+      ]
+     },
+     {
+      "address": 6,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       183,
+       115
+      ],
+      "confidence_runs_z": -16.19,
+      "rate_a": 5.34,
+      "rate_b": 4.59,
+      "ratio": 1.163,
+      "z": 1.24,
+      "se": 0.121,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       1.0,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 55.4,
+      "timeline": [
+       {
+        "t": 5.4,
+        "runs_z": -2.78,
+        "status": "untested from here",
+        "z": 0.02,
+        "ratio": 1.015
+       },
+       {
+        "t": 10.4,
+        "runs_z": -5.92,
+        "status": "untested from here",
+        "z": 0.31,
+        "ratio": 1.097
+       },
+       {
+        "t": 15.4,
+        "runs_z": -7.56,
+        "status": "untested from here",
+        "z": 0.28,
+        "ratio": 1.073
+       },
+       {
+        "t": 20.4,
+        "runs_z": -8.83,
+        "status": "untested from here",
+        "z": 0.1,
+        "ratio": 1.025
+       },
+       {
+        "t": 25.4,
+        "runs_z": -10.21,
+        "status": "untested from here",
+        "z": 0.45,
+        "ratio": 1.098
+       },
+       {
+        "t": 30.4,
+        "runs_z": -11.67,
+        "status": "untested from here",
+        "z": 0.71,
+        "ratio": 1.125
+       },
+       {
+        "t": 35.4,
+        "runs_z": -12.64,
+        "status": "untested from here",
+        "z": 0.68,
+        "ratio": 1.112
+       },
+       {
+        "t": 40.4,
+        "runs_z": -13.51,
+        "status": "untested from here",
+        "z": 0.51,
+        "ratio": 1.081
+       },
+       {
+        "t": 45.4,
+        "runs_z": -14.07,
+        "status": "untested from here",
+        "z": 0.11,
+        "ratio": 1.017
+       },
+       {
+        "t": 50.4,
+        "runs_z": -14.87,
+        "status": "untested from here",
+        "z": 0.23,
+        "ratio": 1.032
+       },
+       {
+        "t": 55.4,
+        "runs_z": -15.44,
+        "status": "survived",
+        "z": 1.09,
+        "ratio": 1.153
+       },
+       {
+        "t": 60.4,
+        "runs_z": -16.19,
+        "status": "survived",
+        "z": 1.24,
+        "ratio": 1.163
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 23,
+    "turn_offset": 0.3207291104391153,
+    "turn_rate_ratio": 1.085,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "commitments": [
+     {
+      "address": 0,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       192,
+       76
+      ],
+      "confidence_runs_z": -16.11,
+      "rate_a": 4.53,
+      "rate_b": 4.67,
+      "ratio": 1.03,
+      "z": 0.22,
+      "se": 0.136,
+      "status": "untested from here",
+      "need_more_seconds": 1.2,
+      "true_a": 4,
+      "true_b": 5,
+      "kind_a": "turn_a",
+      "kind_b": "turn_b",
+      "purity": [
+       1.0,
+       0.974
+      ],
+      "truth": "two neurons",
+      "correct": false,
+      "first_refuted_s": null,
+      "first_survived_s": null,
+      "timeline": [
+       {
+        "t": 5.2,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.2,
+        "runs_z": -6.61,
+        "status": "untested from here",
+        "z": 1.3,
+        "ratio": 1.535
+       },
+       {
+        "t": 15.2,
+        "runs_z": -7.75,
+        "status": "untested from here",
+        "z": 2.39,
+        "ratio": 1.846
+       },
+       {
+        "t": 20.2,
+        "runs_z": -9.74,
+        "status": "untested from here",
+        "z": 1.28,
+        "ratio": 1.318
+       },
+       {
+        "t": 25.2,
+        "runs_z": -10.85,
+        "status": "untested from here",
+        "z": 1.8,
+        "ratio": 1.398
+       },
+       {
+        "t": 30.2,
+        "runs_z": -11.66,
+        "status": "untested from here",
+        "z": 0.76,
+        "ratio": 1.137
+       },
+       {
+        "t": 35.2,
+        "runs_z": -12.57,
+        "status": "untested from here",
+        "z": 0.53,
+        "ratio": 1.088
+       },
+       {
+        "t": 40.2,
+        "runs_z": -13.22,
+        "status": "untested from here",
+        "z": 0.05,
+        "ratio": 1.008
+       },
+       {
+        "t": 45.2,
+        "runs_z": -14.02,
+        "status": "untested from here",
+        "z": 0.09,
+        "ratio": 1.013
+       },
+       {
+        "t": 50.2,
+        "runs_z": -14.91,
+        "status": "untested from here",
+        "z": 0.03,
+        "ratio": 1.004
+       },
+       {
+        "t": 55.2,
+        "runs_z": -15.59,
+        "status": "untested from here",
+        "z": 0.07,
+        "ratio": 1.01
+       },
+       {
+        "t": 60.2,
+        "runs_z": -16.11,
+        "status": "untested from here",
+        "z": 0.22,
+        "ratio": 1.03
+       }
+      ]
+     },
+     {
+      "address": 4,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       408,
+       253
+      ],
+      "confidence_runs_z": -24.91,
+      "rate_a": 11.46,
+      "rate_b": 10.6,
+      "ratio": 1.081,
+      "z": 0.97,
+      "se": 0.081,
+      "status": "survived",
+      "true_a": 3,
+      "true_b": 3,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       0.995,
+       0.988
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": -6.66,
+        "status": "untested from here",
+        "z": 0.28,
+        "ratio": 1.102
+       },
+       {
+        "t": 10.0,
+        "runs_z": -9.24,
+        "status": "untested from here",
+        "z": 0.15,
+        "ratio": 1.051
+       },
+       {
+        "t": 15.0,
+        "runs_z": -10.32,
+        "status": "untested from here",
+        "z": 0.11,
+        "ratio": 1.035
+       },
+       {
+        "t": 20.0,
+        "runs_z": -13.76,
+        "status": "untested from here",
+        "z": 0.44,
+        "ratio": 1.072
+       },
+       {
+        "t": 25.0,
+        "runs_z": -16.05,
+        "status": "survived",
+        "z": 0.64,
+        "ratio": 1.087
+       },
+       {
+        "t": 30.0,
+        "runs_z": -17.15,
+        "status": "survived",
+        "z": 1.06,
+        "ratio": 1.137
+       },
+       {
+        "t": 35.0,
+        "runs_z": -18.83,
+        "status": "survived",
+        "z": 0.87,
+        "ratio": 1.108
+       },
+       {
+        "t": 40.0,
+        "runs_z": -20.21,
+        "status": "survived",
+        "z": 0.85,
+        "ratio": 1.103
+       },
+       {
+        "t": 45.0,
+        "runs_z": -21.4,
+        "status": "survived",
+        "z": 0.49,
+        "ratio": 1.056
+       },
+       {
+        "t": 50.0,
+        "runs_z": -22.65,
+        "status": "survived",
+        "z": 0.43,
+        "ratio": 1.042
+       },
+       {
+        "t": 55.0,
+        "runs_z": -23.65,
+        "status": "survived",
+        "z": 1.21,
+        "ratio": 1.113
+       },
+       {
+        "t": 60.0,
+        "runs_z": -24.91,
+        "status": "survived",
+        "z": 0.97,
+        "ratio": 1.081
+       }
+      ]
+     },
+     {
+      "address": 6,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       228,
+       121
+      ],
+      "confidence_runs_z": -16.47,
+      "rate_a": 6.05,
+      "rate_b": 5.47,
+      "ratio": 1.106,
+      "z": 0.87,
+      "se": 0.117,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       1.0,
+       0.959
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 45.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": -3.25,
+        "status": "untested from here",
+        "z": 1.15,
+        "ratio": 1.755
+       },
+       {
+        "t": 10.1,
+        "runs_z": -5.34,
+        "status": "untested from here",
+        "z": 1.15,
+        "ratio": 1.653
+       },
+       {
+        "t": 15.1,
+        "runs_z": -6.7,
+        "status": "untested from here",
+        "z": 1.13,
+        "ratio": 1.616
+       },
+       {
+        "t": 20.1,
+        "runs_z": -6.79,
+        "status": "untested from here",
+        "z": 1.18,
+        "ratio": 1.64
+       },
+       {
+        "t": 25.1,
+        "runs_z": -10.19,
+        "status": "untested from here",
+        "z": 1.02,
+        "ratio": 1.209
+       },
+       {
+        "t": 30.1,
+        "runs_z": -11.24,
+        "status": "untested from here",
+        "z": 0.45,
+        "ratio": 1.075
+       },
+       {
+        "t": 35.1,
+        "runs_z": -12.37,
+        "status": "untested from here",
+        "z": 0.2,
+        "ratio": 1.029
+       },
+       {
+        "t": 40.1,
+        "runs_z": -13.49,
+        "status": "untested from here",
+        "z": 0.36,
+        "ratio": 1.051
+       },
+       {
+        "t": 45.1,
+        "runs_z": -14.44,
+        "status": "survived",
+        "z": 0.35,
+        "ratio": 1.047
+       },
+       {
+        "t": 50.1,
+        "runs_z": -15.15,
+        "status": "survived",
+        "z": 0.68,
+        "ratio": 1.087
+       },
+       {
+        "t": 55.1,
+        "runs_z": -15.92,
+        "status": "survived",
+        "z": 1.02,
+        "ratio": 1.129
+       },
+       {
+        "t": 60.1,
+        "runs_z": -16.47,
+        "status": "survived",
+        "z": 0.87,
+        "ratio": 1.106
+       }
+      ]
+     },
+     {
+      "address": 7,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       315,
+       120
+      ],
+      "confidence_runs_z": -19.81,
+      "rate_a": 7.41,
+      "rate_b": 7.36,
+      "ratio": 1.007,
+      "z": 0.06,
+      "se": 0.109,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.99,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 45.2,
+      "timeline": [
+       {
+        "t": 5.2,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.2,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.2,
+        "runs_z": -10.01,
+        "status": "untested from here",
+        "z": 0.46,
+        "ratio": 1.142
+       },
+       {
+        "t": 20.2,
+        "runs_z": -11.65,
+        "status": "untested from here",
+        "z": 0.91,
+        "ratio": 1.271
+       },
+       {
+        "t": 25.2,
+        "runs_z": -13.17,
+        "status": "untested from here",
+        "z": 0.83,
+        "ratio": 1.155
+       },
+       {
+        "t": 30.2,
+        "runs_z": -14.38,
+        "status": "untested from here",
+        "z": 0.7,
+        "ratio": 1.128
+       },
+       {
+        "t": 35.2,
+        "runs_z": -15.38,
+        "status": "untested from here",
+        "z": 0.5,
+        "ratio": 1.088
+       },
+       {
+        "t": 40.2,
+        "runs_z": -16.28,
+        "status": "untested from here",
+        "z": 0.34,
+        "ratio": 1.058
+       },
+       {
+        "t": 45.2,
+        "runs_z": -17.58,
+        "status": "survived",
+        "z": 0.55,
+        "ratio": 1.075
+       },
+       {
+        "t": 50.2,
+        "runs_z": -17.98,
+        "status": "survived",
+        "z": 0.19,
+        "ratio": 1.025
+       },
+       {
+        "t": 55.2,
+        "runs_z": -18.83,
+        "status": "survived",
+        "z": 0.07,
+        "ratio": 1.009
+       },
+       {
+        "t": 60.2,
+        "runs_z": -19.81,
+        "status": "survived",
+        "z": 0.06,
+        "ratio": 1.007
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 24,
+    "turn_offset": 0.20258865781957192,
+    "turn_rate_ratio": 1.18,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "commitments": [
+     {
+      "address": 1,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       322,
+       276
+      ],
+      "confidence_runs_z": -22.99,
+      "rate_a": 10.09,
+      "rate_b": 10.22,
+      "ratio": 1.013,
+      "z": 0.16,
+      "se": 0.083,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       1.0,
+       0.993
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 30.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.1,
+        "runs_z": -7.8,
+        "status": "untested from here",
+        "z": 0.73,
+        "ratio": 1.279
+       },
+       {
+        "t": 15.1,
+        "runs_z": -10.83,
+        "status": "untested from here",
+        "z": 0.3,
+        "ratio": 1.053
+       },
+       {
+        "t": 20.1,
+        "runs_z": -13.13,
+        "status": "untested from here",
+        "z": 0.14,
+        "ratio": 1.021
+       },
+       {
+        "t": 25.1,
+        "runs_z": -14.55,
+        "status": "untested from here",
+        "z": 0.33,
+        "ratio": 1.046
+       },
+       {
+        "t": 30.1,
+        "runs_z": -16.1,
+        "status": "survived",
+        "z": 0.51,
+        "ratio": 1.064
+       },
+       {
+        "t": 35.1,
+        "runs_z": -17.33,
+        "status": "survived",
+        "z": 0.05,
+        "ratio": 1.006
+       },
+       {
+        "t": 40.1,
+        "runs_z": -18.35,
+        "status": "survived",
+        "z": 0.34,
+        "ratio": 1.036
+       },
+       {
+        "t": 45.1,
+        "runs_z": -19.62,
+        "status": "survived",
+        "z": 0.26,
+        "ratio": 1.027
+       },
+       {
+        "t": 50.1,
+        "runs_z": -21.12,
+        "status": "survived",
+        "z": 0.65,
+        "ratio": 1.062
+       },
+       {
+        "t": 55.1,
+        "runs_z": -21.99,
+        "status": "survived",
+        "z": 0.41,
+        "ratio": 1.037
+       },
+       {
+        "t": 60.1,
+        "runs_z": -22.99,
+        "status": "survived",
+        "z": 0.16,
+        "ratio": 1.013
+       }
+      ]
+     },
+     {
+      "address": 8,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       411,
+       153
+      ],
+      "confidence_runs_z": -22.93,
+      "rate_a": 9.52,
+      "rate_b": 9.45,
+      "ratio": 1.008,
+      "z": 0.08,
+      "se": 0.096,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.998,
+       0.993
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 40.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": -6.52,
+        "status": "untested from here",
+        "z": 1.78,
+        "ratio": 2.323
+       },
+       {
+        "t": 10.0,
+        "runs_z": -8.83,
+        "status": "untested from here",
+        "z": 0.63,
+        "ratio": 1.164
+       },
+       {
+        "t": 15.0,
+        "runs_z": -11.37,
+        "status": "untested from here",
+        "z": 0.18,
+        "ratio": 1.041
+       },
+       {
+        "t": 20.0,
+        "runs_z": -13.32,
+        "status": "untested from here",
+        "z": 0.15,
+        "ratio": 1.032
+       },
+       {
+        "t": 25.0,
+        "runs_z": -14.64,
+        "status": "untested from here",
+        "z": 0.38,
+        "ratio": 1.083
+       },
+       {
+        "t": 30.0,
+        "runs_z": -16.17,
+        "status": "untested from here",
+        "z": 0.29,
+        "ratio": 1.064
+       },
+       {
+        "t": 35.0,
+        "runs_z": -17.41,
+        "status": "untested from here",
+        "z": 0.12,
+        "ratio": 1.024
+       },
+       {
+        "t": 40.0,
+        "runs_z": -19.1,
+        "status": "survived",
+        "z": 0.16,
+        "ratio": 1.021
+       },
+       {
+        "t": 45.0,
+        "runs_z": -19.87,
+        "status": "survived",
+        "z": 0.41,
+        "ratio": 1.051
+       },
+       {
+        "t": 50.0,
+        "runs_z": -21.04,
+        "status": "survived",
+        "z": 0.21,
+        "ratio": 1.023
+       },
+       {
+        "t": 55.0,
+        "runs_z": -21.81,
+        "status": "survived",
+        "z": 0.05,
+        "ratio": 1.005
+       },
+       {
+        "t": 60.0,
+        "runs_z": -22.93,
+        "status": "survived",
+        "z": 0.08,
+        "ratio": 1.008
+       }
+      ]
+     },
+     {
+      "address": 10,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       338,
+       226
+      ],
+      "confidence_runs_z": -22.46,
+      "rate_a": 9.27,
+      "rate_b": 9.49,
+      "ratio": 1.024,
+      "z": 0.27,
+      "se": 0.087,
+      "status": "survived",
+      "true_a": 2,
+      "true_b": 2,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       0.994,
+       0.996
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.0,
+        "runs_z": -10.65,
+        "status": "untested from here",
+        "z": 0.48,
+        "ratio": 1.17
+       },
+       {
+        "t": 20.0,
+        "runs_z": -13.62,
+        "status": "untested from here",
+        "z": 1.63,
+        "ratio": 1.275
+       },
+       {
+        "t": 25.0,
+        "runs_z": -15.04,
+        "status": "survived",
+        "z": 0.23,
+        "ratio": 1.031
+       },
+       {
+        "t": 30.0,
+        "runs_z": -16.0,
+        "status": "survived",
+        "z": 0.03,
+        "ratio": 1.004
+       },
+       {
+        "t": 35.0,
+        "runs_z": -17.12,
+        "status": "survived",
+        "z": 0.16,
+        "ratio": 1.018
+       },
+       {
+        "t": 40.0,
+        "runs_z": -18.28,
+        "status": "survived",
+        "z": 0.12,
+        "ratio": 1.013
+       },
+       {
+        "t": 45.0,
+        "runs_z": -19.29,
+        "status": "survived",
+        "z": 0.02,
+        "ratio": 1.002
+       },
+       {
+        "t": 50.0,
+        "runs_z": -20.4,
+        "status": "survived",
+        "z": 0.19,
+        "ratio": 1.019
+       },
+       {
+        "t": 55.0,
+        "runs_z": -21.55,
+        "status": "survived",
+        "z": 0.08,
+        "ratio": 1.007
+       },
+       {
+        "t": 60.0,
+        "runs_z": -22.46,
+        "status": "survived",
+        "z": 0.27,
+        "ratio": 1.024
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 25,
+    "turn_offset": 0.0001560175855018405,
+    "turn_rate_ratio": 1.333,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "commitments": [
+     {
+      "address": 0,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       444,
+       251
+      ],
+      "confidence_runs_z": -26.14,
+      "rate_a": 11.23,
+      "rate_b": 12.5,
+      "ratio": 1.113,
+      "z": 1.35,
+      "se": 0.079,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.995,
+       0.996
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 45.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 20.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 25.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 30.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 35.1,
+        "runs_z": -18.99,
+        "status": "untested from here",
+        "z": 1.95,
+        "ratio": 1.459
+       },
+       {
+        "t": 40.1,
+        "runs_z": -20.55,
+        "status": "untested from here",
+        "z": 1.83,
+        "ratio": 1.42
+       },
+       {
+        "t": 45.1,
+        "runs_z": -22.37,
+        "status": "survived",
+        "z": 2.43,
+        "ratio": 1.355
+       },
+       {
+        "t": 50.1,
+        "runs_z": -23.88,
+        "status": "survived",
+        "z": 2.18,
+        "ratio": 1.236
+       },
+       {
+        "t": 55.1,
+        "runs_z": -25.05,
+        "status": "survived",
+        "z": 1.61,
+        "ratio": 1.148
+       },
+       {
+        "t": 60.1,
+        "runs_z": -26.14,
+        "status": "survived",
+        "z": 1.35,
+        "ratio": 1.113
+       }
+      ]
+     },
+     {
+      "address": 4,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       257,
+       207
+      ],
+      "confidence_runs_z": -19.4,
+      "rate_a": 7.33,
+      "rate_b": 8.26,
+      "ratio": 1.127,
+      "z": 1.24,
+      "se": 0.096,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.981,
+       0.981
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 35.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": -8.89,
+        "status": "untested from here",
+        "z": 0.12,
+        "ratio": 1.028
+       },
+       {
+        "t": 15.0,
+        "runs_z": -10.05,
+        "status": "untested from here",
+        "z": 1.05,
+        "ratio": 1.238
+       },
+       {
+        "t": 20.0,
+        "runs_z": -11.92,
+        "status": "untested from here",
+        "z": 0.52,
+        "ratio": 1.098
+       },
+       {
+        "t": 25.0,
+        "runs_z": -12.41,
+        "status": "untested from here",
+        "z": 0.97,
+        "ratio": 1.184
+       },
+       {
+        "t": 30.0,
+        "runs_z": -13.74,
+        "status": "untested from here",
+        "z": 1.31,
+        "ratio": 1.216
+       },
+       {
+        "t": 35.0,
+        "runs_z": -14.5,
+        "status": "survived",
+        "z": 0.84,
+        "ratio": 1.118
+       },
+       {
+        "t": 40.0,
+        "runs_z": -15.66,
+        "status": "survived",
+        "z": 1.13,
+        "ratio": 1.144
+       },
+       {
+        "t": 45.0,
+        "runs_z": -17.05,
+        "status": "survived",
+        "z": 1.57,
+        "ratio": 1.19
+       },
+       {
+        "t": 50.0,
+        "runs_z": -18.16,
+        "status": "survived",
+        "z": 0.86,
+        "ratio": 1.092
+       },
+       {
+        "t": 55.0,
+        "runs_z": -18.8,
+        "status": "survived",
+        "z": 1.19,
+        "ratio": 1.126
+       },
+       {
+        "t": 60.0,
+        "runs_z": -19.4,
+        "status": "survived",
+        "z": 1.24,
+        "ratio": 1.127
+       }
+      ]
+     },
+     {
+      "address": 6,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       241,
+       183
+      ],
+      "confidence_runs_z": -19.63,
+      "rate_a": 8.51,
+      "rate_b": 6.23,
+      "ratio": 1.366,
+      "z": 3.14,
+      "se": 0.099,
+      "status": "survived",
+      "true_a": 4,
+      "true_b": 5,
+      "kind_a": "turn_a",
+      "kind_b": "turn_b",
+      "purity": [
+       0.996,
+       0.995
+      ],
+      "truth": "two neurons",
+      "correct": false,
+      "first_refuted_s": 40.2,
+      "first_survived_s": 45.2,
+      "timeline": [
+       {
+        "t": 5.2,
+        "runs_z": -5.52,
+        "status": "untested from here",
+        "z": 1.02,
+        "ratio": 1.712
+       },
+       {
+        "t": 10.2,
+        "runs_z": -8.14,
+        "status": "untested from here",
+        "z": 1.48,
+        "ratio": 1.416
+       },
+       {
+        "t": 15.2,
+        "runs_z": -9.64,
+        "status": "untested from here",
+        "z": 2.44,
+        "ratio": 1.646
+       },
+       {
+        "t": 20.2,
+        "runs_z": -10.16,
+        "status": "untested from here",
+        "z": 2.59,
+        "ratio": 1.643
+       },
+       {
+        "t": 25.2,
+        "runs_z": -11.61,
+        "status": "untested from here",
+        "z": 1.97,
+        "ratio": 1.381
+       },
+       {
+        "t": 30.2,
+        "runs_z": -13.02,
+        "status": "untested from here",
+        "z": 2.43,
+        "ratio": 1.43
+       },
+       {
+        "t": 35.2,
+        "runs_z": -14.33,
+        "status": "untested from here",
+        "z": 2.71,
+        "ratio": 1.454
+       },
+       {
+        "t": 40.2,
+        "runs_z": -15.33,
+        "status": "refuted",
+        "z": 3.22,
+        "ratio": 1.51
+       },
+       {
+        "t": 45.2,
+        "runs_z": -16.54,
+        "status": "survived",
+        "z": 3.01,
+        "ratio": 1.42
+       },
+       {
+        "t": 50.2,
+        "runs_z": -17.6,
+        "status": "survived",
+        "z": 2.86,
+        "ratio": 1.367
+       },
+       {
+        "t": 55.2,
+        "runs_z": -18.46,
+        "status": "survived",
+        "z": 2.64,
+        "ratio": 1.317
+       },
+       {
+        "t": 60.2,
+        "runs_z": -19.63,
+        "status": "survived",
+        "z": 3.14,
+        "ratio": 1.366
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 26,
+    "turn_offset": 0.11719976197395827,
+    "turn_rate_ratio": 1.021,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "commitments": [
+     {
+      "address": 1,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       479,
+       179
+      ],
+      "confidence_runs_z": -23.91,
+      "rate_a": 11.01,
+      "rate_b": 11.34,
+      "ratio": 1.031,
+      "z": 0.34,
+      "se": 0.09,
+      "status": "survived",
+      "true_a": 2,
+      "true_b": 2,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       0.998,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.2,
+      "timeline": [
+       {
+        "t": 5.2,
+        "runs_z": -5.32,
+        "status": "untested from here",
+        "z": 0.28,
+        "ratio": 1.088
+       },
+       {
+        "t": 10.2,
+        "runs_z": -8.57,
+        "status": "untested from here",
+        "z": 0.73,
+        "ratio": 1.196
+       },
+       {
+        "t": 15.2,
+        "runs_z": -10.44,
+        "status": "untested from here",
+        "z": 0.15,
+        "ratio": 1.035
+       },
+       {
+        "t": 20.2,
+        "runs_z": -13.15,
+        "status": "untested from here",
+        "z": 0.16,
+        "ratio": 1.024
+       },
+       {
+        "t": 25.2,
+        "runs_z": -14.92,
+        "status": "survived",
+        "z": 0.95,
+        "ratio": 1.132
+       },
+       {
+        "t": 30.2,
+        "runs_z": -16.19,
+        "status": "survived",
+        "z": 1.01,
+        "ratio": 1.134
+       },
+       {
+        "t": 35.2,
+        "runs_z": -17.19,
+        "status": "survived",
+        "z": 1.19,
+        "ratio": 1.156
+       },
+       {
+        "t": 40.2,
+        "runs_z": -18.73,
+        "status": "survived",
+        "z": 0.93,
+        "ratio": 1.116
+       },
+       {
+        "t": 45.2,
+        "runs_z": -19.76,
+        "status": "survived",
+        "z": 1.01,
+        "ratio": 1.119
+       },
+       {
+        "t": 50.2,
+        "runs_z": -21.04,
+        "status": "survived",
+        "z": 0.85,
+        "ratio": 1.098
+       },
+       {
+        "t": 55.2,
+        "runs_z": -22.45,
+        "status": "survived",
+        "z": 0.52,
+        "ratio": 1.055
+       },
+       {
+        "t": 60.2,
+        "runs_z": -23.91,
+        "status": "survived",
+        "z": 0.34,
+        "ratio": 1.031
+       }
+      ]
+     },
+     {
+      "address": 6,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       234,
+       123
+      ],
+      "confidence_runs_z": -17.17,
+      "rate_a": 6.72,
+      "rate_b": 5.16,
+      "ratio": 1.302,
+      "z": 2.31,
+      "se": 0.115,
+      "status": "survived",
+      "true_a": 5,
+      "true_b": 4,
+      "kind_a": "turn_b",
+      "kind_b": "turn_a",
+      "purity": [
+       0.996,
+       0.959
+      ],
+      "truth": "two neurons",
+      "correct": false,
+      "first_refuted_s": null,
+      "first_survived_s": 45.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.0,
+        "runs_z": -8.99,
+        "status": "untested from here",
+        "z": 2.05,
+        "ratio": 1.625
+       },
+       {
+        "t": 20.0,
+        "runs_z": -9.77,
+        "status": "untested from here",
+        "z": 1.78,
+        "ratio": 1.418
+       },
+       {
+        "t": 25.0,
+        "runs_z": -11.11,
+        "status": "untested from here",
+        "z": 1.64,
+        "ratio": 1.342
+       },
+       {
+        "t": 30.0,
+        "runs_z": -11.89,
+        "status": "untested from here",
+        "z": 1.63,
+        "ratio": 1.302
+       },
+       {
+        "t": 35.0,
+        "runs_z": -13.1,
+        "status": "untested from here",
+        "z": 1.98,
+        "ratio": 1.334
+       },
+       {
+        "t": 40.0,
+        "runs_z": -14.36,
+        "status": "untested from here",
+        "z": 2.25,
+        "ratio": 1.361
+       },
+       {
+        "t": 45.0,
+        "runs_z": -14.85,
+        "status": "survived",
+        "z": 2.14,
+        "ratio": 1.328
+       },
+       {
+        "t": 50.0,
+        "runs_z": -15.76,
+        "status": "survived",
+        "z": 2.2,
+        "ratio": 1.31
+       },
+       {
+        "t": 55.0,
+        "runs_z": -16.26,
+        "status": "survived",
+        "z": 2.2,
+        "ratio": 1.296
+       },
+       {
+        "t": 60.0,
+        "runs_z": -17.17,
+        "status": "survived",
+        "z": 2.31,
+        "ratio": 1.302
+       }
+      ]
+     },
+     {
+      "address": 7,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       163,
+       140
+      ],
+      "confidence_runs_z": -14.77,
+      "rate_a": 5.18,
+      "rate_b": 4.82,
+      "ratio": 1.074,
+      "z": 0.6,
+      "se": 0.12,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.963,
+       0.993
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 45.2,
+      "timeline": [
+       {
+        "t": 5.2,
+        "runs_z": -3.01,
+        "status": "untested from here",
+        "z": 1.45,
+        "ratio": 2.031
+       },
+       {
+        "t": 10.2,
+        "runs_z": -5.21,
+        "status": "untested from here",
+        "z": 1.56,
+        "ratio": 1.627
+       },
+       {
+        "t": 15.2,
+        "runs_z": -7.05,
+        "status": "untested from here",
+        "z": 2.13,
+        "ratio": 1.631
+       },
+       {
+        "t": 20.2,
+        "runs_z": -8.29,
+        "status": "untested from here",
+        "z": 1.46,
+        "ratio": 1.363
+       },
+       {
+        "t": 25.2,
+        "runs_z": -9.46,
+        "status": "untested from here",
+        "z": 2.21,
+        "ratio": 1.512
+       },
+       {
+        "t": 30.2,
+        "runs_z": -10.8,
+        "status": "untested from here",
+        "z": 2.15,
+        "ratio": 1.421
+       },
+       {
+        "t": 35.2,
+        "runs_z": -12.03,
+        "status": "untested from here",
+        "z": 1.32,
+        "ratio": 1.217
+       },
+       {
+        "t": 40.2,
+        "runs_z": -12.74,
+        "status": "untested from here",
+        "z": 1.17,
+        "ratio": 1.177
+       },
+       {
+        "t": 45.2,
+        "runs_z": -13.45,
+        "status": "survived",
+        "z": 0.95,
+        "ratio": 1.133
+       },
+       {
+        "t": 50.2,
+        "runs_z": -14.12,
+        "status": "survived",
+        "z": 0.59,
+        "ratio": 1.078
+       },
+       {
+        "t": 55.2,
+        "runs_z": -14.5,
+        "status": "survived",
+        "z": 0.67,
+        "ratio": 1.086
+       },
+       {
+        "t": 60.2,
+        "runs_z": -14.77,
+        "status": "survived",
+        "z": 0.6,
+        "ratio": 1.074
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 27,
+    "turn_offset": 0.15690713611121584,
+    "turn_rate_ratio": 1.029,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "commitments": [
+     {
+      "address": 1,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       365,
+       149
+      ],
+      "confidence_runs_z": -20.66,
+      "rate_a": 8.88,
+      "rate_b": 7.89,
+      "ratio": 1.126,
+      "z": 1.19,
+      "se": 0.1,
+      "status": "survived",
+      "true_a": 5,
+      "true_b": 4,
+      "kind_a": "turn_b",
+      "kind_b": "turn_a",
+      "purity": [
+       0.995,
+       0.96
+      ],
+      "truth": "two neurons",
+      "correct": false,
+      "first_refuted_s": null,
+      "first_survived_s": 30.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": -4.68,
+        "status": "untested from here",
+        "z": 0.89,
+        "ratio": 1.352
+       },
+       {
+        "t": 10.1,
+        "runs_z": -6.77,
+        "status": "untested from here",
+        "z": 1.79,
+        "ratio": 1.634
+       },
+       {
+        "t": 15.1,
+        "runs_z": -8.92,
+        "status": "untested from here",
+        "z": 1.44,
+        "ratio": 1.441
+       },
+       {
+        "t": 20.1,
+        "runs_z": -11.01,
+        "status": "untested from here",
+        "z": 2.62,
+        "ratio": 1.557
+       },
+       {
+        "t": 25.1,
+        "runs_z": -12.57,
+        "status": "untested from here",
+        "z": 2.17,
+        "ratio": 1.381
+       },
+       {
+        "t": 30.1,
+        "runs_z": -14.19,
+        "status": "survived",
+        "z": 2.14,
+        "ratio": 1.321
+       },
+       {
+        "t": 35.1,
+        "runs_z": -15.48,
+        "status": "survived",
+        "z": 1.67,
+        "ratio": 1.219
+       },
+       {
+        "t": 40.1,
+        "runs_z": -16.34,
+        "status": "survived",
+        "z": 1.15,
+        "ratio": 1.139
+       },
+       {
+        "t": 45.1,
+        "runs_z": -17.58,
+        "status": "survived",
+        "z": 1.2,
+        "ratio": 1.138
+       },
+       {
+        "t": 50.1,
+        "runs_z": -18.72,
+        "status": "survived",
+        "z": 1.24,
+        "ratio": 1.138
+       },
+       {
+        "t": 55.1,
+        "runs_z": -19.71,
+        "status": "survived",
+        "z": 1.19,
+        "ratio": 1.129
+       },
+       {
+        "t": 60.1,
+        "runs_z": -20.66,
+        "status": "survived",
+        "z": 1.19,
+        "ratio": 1.126
+       }
+      ]
+     },
+     {
+      "address": 3,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       188,
+       113
+      ],
+      "confidence_runs_z": -15.9,
+      "rate_a": 5.17,
+      "rate_b": 4.95,
+      "ratio": 1.044,
+      "z": 0.35,
+      "se": 0.122,
+      "status": "survived",
+      "true_a": 3,
+      "true_b": 3,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       1.0,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 55.5,
+      "timeline": [
+       {
+        "t": 5.5,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.5,
+        "runs_z": -6.72,
+        "status": "untested from here",
+        "z": 1.21,
+        "ratio": 1.457
+       },
+       {
+        "t": 15.5,
+        "runs_z": -8.15,
+        "status": "untested from here",
+        "z": 0.01,
+        "ratio": 1.003
+       },
+       {
+        "t": 20.5,
+        "runs_z": -9.32,
+        "status": "untested from here",
+        "z": 0.06,
+        "ratio": 1.013
+       },
+       {
+        "t": 25.5,
+        "runs_z": -10.24,
+        "status": "untested from here",
+        "z": 0.69,
+        "ratio": 1.134
+       },
+       {
+        "t": 30.5,
+        "runs_z": -10.93,
+        "status": "untested from here",
+        "z": 0.83,
+        "ratio": 1.151
+       },
+       {
+        "t": 35.5,
+        "runs_z": -12.02,
+        "status": "untested from here",
+        "z": 0.28,
+        "ratio": 1.045
+       },
+       {
+        "t": 40.5,
+        "runs_z": -12.61,
+        "status": "untested from here",
+        "z": 0.43,
+        "ratio": 1.067
+       },
+       {
+        "t": 45.5,
+        "runs_z": -13.59,
+        "status": "untested from here",
+        "z": 0.33,
+        "ratio": 1.048
+       },
+       {
+        "t": 50.5,
+        "runs_z": -14.55,
+        "status": "untested from here",
+        "z": 0.09,
+        "ratio": 1.013
+       },
+       {
+        "t": 55.5,
+        "runs_z": -15.18,
+        "status": "survived",
+        "z": 0.08,
+        "ratio": 1.011
+       },
+       {
+        "t": 60.5,
+        "runs_z": -15.9,
+        "status": "survived",
+        "z": 0.35,
+        "ratio": 1.044
+       }
+      ]
+     },
+     {
+      "address": 5,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       190,
+       100
+      ],
+      "confidence_runs_z": -14.98,
+      "rate_a": 5.28,
+      "rate_b": 4.36,
+      "ratio": 1.211,
+      "z": 1.5,
+      "se": 0.128,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       1.0,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 55.3,
+      "timeline": [
+       {
+        "t": 5.3,
+        "runs_z": -4.46,
+        "status": "untested from here",
+        "z": 0.66,
+        "ratio": 1.358
+       },
+       {
+        "t": 10.3,
+        "runs_z": -5.16,
+        "status": "untested from here",
+        "z": 0.1,
+        "ratio": 1.044
+       },
+       {
+        "t": 15.3,
+        "runs_z": -5.38,
+        "status": "untested from here",
+        "z": 0.16,
+        "ratio": 1.065
+       },
+       {
+        "t": 20.3,
+        "runs_z": -6.29,
+        "status": "untested from here",
+        "z": 0.42,
+        "ratio": 1.172
+       },
+       {
+        "t": 25.3,
+        "runs_z": -9.35,
+        "status": "untested from here",
+        "z": 2.17,
+        "ratio": 1.549
+       },
+       {
+        "t": 30.3,
+        "runs_z": -10.62,
+        "status": "untested from here",
+        "z": 2.29,
+        "ratio": 1.499
+       },
+       {
+        "t": 35.3,
+        "runs_z": -11.75,
+        "status": "untested from here",
+        "z": 2.28,
+        "ratio": 1.455
+       },
+       {
+        "t": 40.3,
+        "runs_z": -12.52,
+        "status": "untested from here",
+        "z": 1.94,
+        "ratio": 1.35
+       },
+       {
+        "t": 45.3,
+        "runs_z": -13.27,
+        "status": "untested from here",
+        "z": 1.4,
+        "ratio": 1.219
+       },
+       {
+        "t": 50.3,
+        "runs_z": -14.0,
+        "status": "untested from here",
+        "z": 1.14,
+        "ratio": 1.168
+       },
+       {
+        "t": 55.3,
+        "runs_z": -14.38,
+        "status": "survived",
+        "z": 1.3,
+        "ratio": 1.187
+       },
+       {
+        "t": 60.3,
+        "runs_z": -14.98,
+        "status": "survived",
+        "z": 1.5,
+        "ratio": 1.211
+       }
+      ]
+     },
+     {
+      "address": 6,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       228,
+       131
+      ],
+      "confidence_runs_z": -17.5,
+      "rate_a": 6.2,
+      "rate_b": 6.24,
+      "ratio": 1.007,
+      "z": 0.06,
+      "se": 0.112,
+      "status": "survived",
+      "true_a": 2,
+      "true_b": 2,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       0.996,
+       0.985
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 45.4,
+      "timeline": [
+       {
+        "t": 5.4,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.4,
+        "runs_z": -7.53,
+        "status": "untested from here",
+        "z": 0.76,
+        "ratio": 1.26
+       },
+       {
+        "t": 15.4,
+        "runs_z": -8.92,
+        "status": "untested from here",
+        "z": 1.11,
+        "ratio": 1.28
+       },
+       {
+        "t": 20.4,
+        "runs_z": -10.14,
+        "status": "untested from here",
+        "z": 1.16,
+        "ratio": 1.25
+       },
+       {
+        "t": 25.4,
+        "runs_z": -10.65,
+        "status": "untested from here",
+        "z": 1.1,
+        "ratio": 1.225
+       },
+       {
+        "t": 30.4,
+        "runs_z": -12.15,
+        "status": "untested from here",
+        "z": 0.3,
+        "ratio": 1.047
+       },
+       {
+        "t": 35.4,
+        "runs_z": -13.09,
+        "status": "untested from here",
+        "z": 0.67,
+        "ratio": 1.1
+       },
+       {
+        "t": 40.4,
+        "runs_z": -14.08,
+        "status": "untested from here",
+        "z": 0.82,
+        "ratio": 1.118
+       },
+       {
+        "t": 45.4,
+        "runs_z": -14.72,
+        "status": "survived",
+        "z": 0.55,
+        "ratio": 1.073
+       },
+       {
+        "t": 50.4,
+        "runs_z": -15.7,
+        "status": "survived",
+        "z": 0.33,
+        "ratio": 1.04
+       },
+       {
+        "t": 55.4,
+        "runs_z": -16.56,
+        "status": "survived",
+        "z": 0.43,
+        "ratio": 1.051
+       },
+       {
+        "t": 60.4,
+        "runs_z": -17.5,
+        "status": "survived",
+        "z": 0.06,
+        "ratio": 1.007
+       }
+      ]
+     },
+     {
+      "address": 7,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       401,
+       268
+      ],
+      "confidence_runs_z": -24.36,
+      "rate_a": 11.75,
+      "rate_b": 10.58,
+      "ratio": 1.11,
+      "z": 1.3,
+      "se": 0.08,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.995,
+       0.993
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 35.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.0,
+        "runs_z": -10.34,
+        "status": "untested from here",
+        "z": 0.09,
+        "ratio": 1.028
+       },
+       {
+        "t": 20.0,
+        "runs_z": -12.55,
+        "status": "untested from here",
+        "z": 0.41,
+        "ratio": 1.125
+       },
+       {
+        "t": 25.0,
+        "runs_z": -14.09,
+        "status": "untested from here",
+        "z": 0.42,
+        "ratio": 1.128
+       },
+       {
+        "t": 30.0,
+        "runs_z": -17.14,
+        "status": "untested from here",
+        "z": 0.31,
+        "ratio": 1.045
+       },
+       {
+        "t": 35.0,
+        "runs_z": -17.8,
+        "status": "survived",
+        "z": 0.67,
+        "ratio": 1.083
+       },
+       {
+        "t": 40.0,
+        "runs_z": -19.44,
+        "status": "survived",
+        "z": 0.8,
+        "ratio": 1.084
+       },
+       {
+        "t": 45.0,
+        "runs_z": -20.77,
+        "status": "survived",
+        "z": 1.02,
+        "ratio": 1.099
+       },
+       {
+        "t": 50.0,
+        "runs_z": -22.33,
+        "status": "survived",
+        "z": 1.72,
+        "ratio": 1.159
+       },
+       {
+        "t": 55.0,
+        "runs_z": -23.34,
+        "status": "survived",
+        "z": 1.57,
+        "ratio": 1.138
+       },
+       {
+        "t": 60.0,
+        "runs_z": -24.36,
+        "status": "survived",
+        "z": 1.3,
+        "ratio": 1.11
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 28,
+    "turn_offset": 0.4424464770384317,
+    "turn_rate_ratio": 1.075,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "commitments": [
+     {
+      "address": 2,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       399,
+       225
+      ],
+      "confidence_runs_z": -22.74,
+      "rate_a": 11.0,
+      "rate_b": 10.18,
+      "ratio": 1.081,
+      "z": 0.91,
+      "se": 0.086,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.987,
+       0.991
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.19,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": -2.41,
+        "status": "untested from here",
+        "z": 0.59,
+        "ratio": 1.805
+       },
+       {
+        "t": 15.0,
+        "runs_z": -10.44,
+        "status": "untested from here",
+        "z": 1.66,
+        "ratio": 1.531
+       },
+       {
+        "t": 20.0,
+        "runs_z": -12.92,
+        "status": "untested from here",
+        "z": 0.45,
+        "ratio": 1.074
+       },
+       {
+        "t": 25.0,
+        "runs_z": -15.06,
+        "status": "survived",
+        "z": 0.37,
+        "ratio": 1.048
+       },
+       {
+        "t": 30.0,
+        "runs_z": -16.17,
+        "status": "survived",
+        "z": 0.89,
+        "ratio": 1.109
+       },
+       {
+        "t": 35.0,
+        "runs_z": -17.51,
+        "status": "survived",
+        "z": 1.2,
+        "ratio": 1.138
+       },
+       {
+        "t": 40.0,
+        "runs_z": -18.75,
+        "status": "survived",
+        "z": 1.4,
+        "ratio": 1.15
+       },
+       {
+        "t": 45.0,
+        "runs_z": -20.02,
+        "status": "survived",
+        "z": 1.54,
+        "ratio": 1.158
+       },
+       {
+        "t": 50.0,
+        "runs_z": -21.03,
+        "status": "survived",
+        "z": 1.03,
+        "ratio": 1.098
+       },
+       {
+        "t": 55.0,
+        "runs_z": -21.96,
+        "status": "survived",
+        "z": 1.17,
+        "ratio": 1.108
+       },
+       {
+        "t": 60.0,
+        "runs_z": -22.74,
+        "status": "survived",
+        "z": 0.91,
+        "ratio": 1.081
+       }
+      ]
+     },
+     {
+      "address": 5,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       212,
+       204
+      ],
+      "confidence_runs_z": -18.75,
+      "rate_a": 7.26,
+      "rate_b": 7.19,
+      "ratio": 1.011,
+      "z": 0.11,
+      "se": 0.1,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.986,
+       0.975
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 40.3,
+      "timeline": [
+       {
+        "t": 5.3,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.3,
+        "runs_z": 0.17,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.3,
+        "runs_z": 0.14,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 20.3,
+        "runs_z": -9.73,
+        "status": "untested from here",
+        "z": 1.24,
+        "ratio": 1.616
+       },
+       {
+        "t": 25.3,
+        "runs_z": -11.91,
+        "status": "untested from here",
+        "z": 0.27,
+        "ratio": 1.057
+       },
+       {
+        "t": 30.3,
+        "runs_z": -12.8,
+        "status": "untested from here",
+        "z": 0.09,
+        "ratio": 1.017
+       },
+       {
+        "t": 35.3,
+        "runs_z": -14.46,
+        "status": "untested from here",
+        "z": 0.84,
+        "ratio": 1.127
+       },
+       {
+        "t": 40.3,
+        "runs_z": -15.2,
+        "status": "survived",
+        "z": 0.19,
+        "ratio": 1.025
+       },
+       {
+        "t": 45.3,
+        "runs_z": -16.63,
+        "status": "survived",
+        "z": 0.47,
+        "ratio": 1.056
+       },
+       {
+        "t": 50.3,
+        "runs_z": -17.32,
+        "status": "survived",
+        "z": 0.48,
+        "ratio": 1.054
+       },
+       {
+        "t": 55.3,
+        "runs_z": -18.29,
+        "status": "survived",
+        "z": 0.12,
+        "ratio": 1.013
+       },
+       {
+        "t": 60.3,
+        "runs_z": -18.75,
+        "status": "survived",
+        "z": 0.11,
+        "ratio": 1.011
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 29,
+    "turn_offset": 0.2531611492857247,
+    "turn_rate_ratio": 1.151,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "commitments": [
+     {
+      "address": 3,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       221,
+       209
+      ],
+      "confidence_runs_z": -19.99,
+      "rate_a": 7.18,
+      "rate_b": 7.47,
+      "ratio": 1.04,
+      "z": 0.4,
+      "se": 0.098,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       1.0,
+       0.99
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 30.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": -5.32,
+        "status": "untested from here",
+        "z": 0.92,
+        "ratio": 1.748
+       },
+       {
+        "t": 10.0,
+        "runs_z": -8.36,
+        "status": "untested from here",
+        "z": 0.85,
+        "ratio": 1.228
+       },
+       {
+        "t": 15.0,
+        "runs_z": -10.33,
+        "status": "untested from here",
+        "z": 1.09,
+        "ratio": 1.262
+       },
+       {
+        "t": 20.0,
+        "runs_z": -12.04,
+        "status": "untested from here",
+        "z": 1.33,
+        "ratio": 1.245
+       },
+       {
+        "t": 25.0,
+        "runs_z": -13.46,
+        "status": "untested from here",
+        "z": 0.81,
+        "ratio": 1.126
+       },
+       {
+        "t": 30.0,
+        "runs_z": -14.83,
+        "status": "survived",
+        "z": 0.77,
+        "ratio": 1.11
+       },
+       {
+        "t": 35.0,
+        "runs_z": -15.75,
+        "status": "survived",
+        "z": 0.48,
+        "ratio": 1.064
+       },
+       {
+        "t": 40.0,
+        "runs_z": -16.83,
+        "status": "survived",
+        "z": 0.52,
+        "ratio": 1.064
+       },
+       {
+        "t": 45.0,
+        "runs_z": -17.44,
+        "status": "survived",
+        "z": 0.12,
+        "ratio": 1.014
+       },
+       {
+        "t": 50.0,
+        "runs_z": -18.49,
+        "status": "survived",
+        "z": 0.1,
+        "ratio": 1.011
+       },
+       {
+        "t": 55.0,
+        "runs_z": -19.35,
+        "status": "survived",
+        "z": 0.37,
+        "ratio": 1.039
+       },
+       {
+        "t": 60.0,
+        "runs_z": -19.99,
+        "status": "survived",
+        "z": 0.4,
+        "ratio": 1.04
+       }
+      ]
+     },
+     {
+      "address": 8,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       337,
+       319
+      ],
+      "confidence_runs_z": -23.68,
+      "rate_a": 10.86,
+      "rate_b": 12.14,
+      "ratio": 1.119,
+      "z": 1.41,
+      "se": 0.08,
+      "status": "survived",
+      "true_a": 5,
+      "true_b": 4,
+      "kind_a": "turn_b",
+      "kind_b": "turn_a",
+      "purity": [
+       0.994,
+       0.984
+      ],
+      "truth": "two neurons",
+      "correct": false,
+      "first_refuted_s": null,
+      "first_survived_s": 25.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": -6.63,
+        "status": "untested from here",
+        "z": 1.36,
+        "ratio": 1.482
+       },
+       {
+        "t": 10.0,
+        "runs_z": -9.83,
+        "status": "untested from here",
+        "z": 1.45,
+        "ratio": 1.36
+       },
+       {
+        "t": 15.0,
+        "runs_z": -11.33,
+        "status": "untested from here",
+        "z": 1.1,
+        "ratio": 1.23
+       },
+       {
+        "t": 20.0,
+        "runs_z": -13.69,
+        "status": "untested from here",
+        "z": 0.73,
+        "ratio": 1.109
+       },
+       {
+        "t": 25.0,
+        "runs_z": -15.39,
+        "status": "survived",
+        "z": 0.55,
+        "ratio": 1.071
+       },
+       {
+        "t": 30.0,
+        "runs_z": -16.34,
+        "status": "survived",
+        "z": 0.94,
+        "ratio": 1.114
+       },
+       {
+        "t": 35.0,
+        "runs_z": -17.67,
+        "status": "survived",
+        "z": 0.85,
+        "ratio": 1.096
+       },
+       {
+        "t": 40.0,
+        "runs_z": -18.83,
+        "status": "survived",
+        "z": 0.97,
+        "ratio": 1.105
+       },
+       {
+        "t": 45.0,
+        "runs_z": -20.32,
+        "status": "survived",
+        "z": 1.1,
+        "ratio": 1.108
+       },
+       {
+        "t": 50.0,
+        "runs_z": -21.65,
+        "status": "survived",
+        "z": 1.32,
+        "ratio": 1.122
+       },
+       {
+        "t": 55.0,
+        "runs_z": -22.7,
+        "status": "survived",
+        "z": 1.42,
+        "ratio": 1.125
+       },
+       {
+        "t": 60.0,
+        "runs_z": -23.68,
+        "status": "survived",
+        "z": 1.41,
+        "ratio": 1.119
+       }
+      ]
+     },
+     {
+      "address": 10,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       182,
+       136
+      ],
+      "confidence_runs_z": -16.49,
+      "rate_a": 5.71,
+      "rate_b": 5.32,
+      "ratio": 1.073,
+      "z": 0.6,
+      "se": 0.116,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.995,
+       0.963
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 45.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.0,
+        "runs_z": -9.15,
+        "status": "untested from here",
+        "z": 0.3,
+        "ratio": 1.088
+       },
+       {
+        "t": 20.0,
+        "runs_z": -10.81,
+        "status": "untested from here",
+        "z": 0.0,
+        "ratio": 1.0
+       },
+       {
+        "t": 25.0,
+        "runs_z": -11.19,
+        "status": "untested from here",
+        "z": 0.89,
+        "ratio": 1.167
+       },
+       {
+        "t": 30.0,
+        "runs_z": -12.27,
+        "status": "untested from here",
+        "z": 0.14,
+        "ratio": 1.022
+       },
+       {
+        "t": 35.0,
+        "runs_z": -12.86,
+        "status": "untested from here",
+        "z": 0.35,
+        "ratio": 1.053
+       },
+       {
+        "t": 40.0,
+        "runs_z": -13.64,
+        "status": "untested from here",
+        "z": 0.16,
+        "ratio": 1.022
+       },
+       {
+        "t": 45.0,
+        "runs_z": -14.53,
+        "status": "survived",
+        "z": 0.19,
+        "ratio": 1.025
+       },
+       {
+        "t": 50.0,
+        "runs_z": -15.44,
+        "status": "survived",
+        "z": 0.14,
+        "ratio": 1.018
+       },
+       {
+        "t": 55.0,
+        "runs_z": -16.05,
+        "status": "survived",
+        "z": 0.11,
+        "ratio": 1.014
+       },
+       {
+        "t": 60.0,
+        "runs_z": -16.49,
+        "status": "survived",
+        "z": 0.6,
+        "ratio": 1.073
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 30,
+    "turn_offset": 0.21455349933290555,
+    "turn_rate_ratio": 1.996,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 3,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 3,
+     "false_merges": 1
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 3,
+     "false_merges": 1
+    },
+    "commitments": [
+     {
+      "address": 3,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       190,
+       166
+      ],
+      "confidence_runs_z": -17.4,
+      "rate_a": 6.6,
+      "rate_b": 5.33,
+      "ratio": 1.24,
+      "z": 1.98,
+      "se": 0.109,
+      "status": "survived",
+      "true_a": 2,
+      "true_b": 2,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       0.979,
+       0.994
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 45.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": -4.8,
+        "status": "untested from here",
+        "z": 0.18,
+        "ratio": 1.077
+       },
+       {
+        "t": 10.1,
+        "runs_z": -7.08,
+        "status": "untested from here",
+        "z": 0.33,
+        "ratio": 1.119
+       },
+       {
+        "t": 15.1,
+        "runs_z": -7.95,
+        "status": "untested from here",
+        "z": 0.36,
+        "ratio": 1.126
+       },
+       {
+        "t": 20.1,
+        "runs_z": -8.84,
+        "status": "untested from here",
+        "z": 0.79,
+        "ratio": 1.203
+       },
+       {
+        "t": 25.1,
+        "runs_z": -9.86,
+        "status": "untested from here",
+        "z": 0.59,
+        "ratio": 1.144
+       },
+       {
+        "t": 30.1,
+        "runs_z": -10.78,
+        "status": "untested from here",
+        "z": 0.5,
+        "ratio": 1.118
+       },
+       {
+        "t": 35.1,
+        "runs_z": -12.48,
+        "status": "untested from here",
+        "z": 0.78,
+        "ratio": 1.141
+       },
+       {
+        "t": 40.1,
+        "runs_z": -13.8,
+        "status": "untested from here",
+        "z": 1.42,
+        "ratio": 1.219
+       },
+       {
+        "t": 45.1,
+        "runs_z": -14.97,
+        "status": "survived",
+        "z": 1.6,
+        "ratio": 1.225
+       },
+       {
+        "t": 50.1,
+        "runs_z": -16.01,
+        "status": "survived",
+        "z": 1.6,
+        "ratio": 1.209
+       },
+       {
+        "t": 55.1,
+        "runs_z": -16.46,
+        "status": "survived",
+        "z": 1.85,
+        "ratio": 1.236
+       },
+       {
+        "t": 60.1,
+        "runs_z": -17.4,
+        "status": "survived",
+        "z": 1.98,
+        "ratio": 1.24
+       }
+      ]
+     },
+     {
+      "address": 7,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       261,
+       94
+      ],
+      "confidence_runs_z": -18.2,
+      "rate_a": 5.8,
+      "rate_b": 6.42,
+      "ratio": 1.106,
+      "z": 0.83,
+      "se": 0.122,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.996,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 40.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": -6.99,
+        "status": "untested from here",
+        "z": 1.47,
+        "ratio": 1.581
+       },
+       {
+        "t": 15.0,
+        "runs_z": -8.18,
+        "status": "untested from here",
+        "z": 0.89,
+        "ratio": 1.305
+       },
+       {
+        "t": 20.0,
+        "runs_z": -9.16,
+        "status": "untested from here",
+        "z": 1.22,
+        "ratio": 1.381
+       },
+       {
+        "t": 25.0,
+        "runs_z": -11.32,
+        "status": "untested from here",
+        "z": 1.03,
+        "ratio": 1.198
+       },
+       {
+        "t": 30.0,
+        "runs_z": -12.74,
+        "status": "untested from here",
+        "z": 0.67,
+        "ratio": 1.107
+       },
+       {
+        "t": 35.0,
+        "runs_z": -14.14,
+        "status": "untested from here",
+        "z": 0.19,
+        "ratio": 1.027
+       },
+       {
+        "t": 40.0,
+        "runs_z": -14.88,
+        "status": "survived",
+        "z": 0.67,
+        "ratio": 1.094
+       },
+       {
+        "t": 45.0,
+        "runs_z": -15.95,
+        "status": "survived",
+        "z": 0.44,
+        "ratio": 1.059
+       },
+       {
+        "t": 50.0,
+        "runs_z": -16.74,
+        "status": "survived",
+        "z": 0.61,
+        "ratio": 1.08
+       },
+       {
+        "t": 55.0,
+        "runs_z": -17.56,
+        "status": "survived",
+        "z": 0.65,
+        "ratio": 1.083
+       },
+       {
+        "t": 60.0,
+        "runs_z": -18.2,
+        "status": "survived",
+        "z": 0.83,
+        "ratio": 1.106
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 31,
+    "turn_offset": 0.03383913118081653,
+    "turn_rate_ratio": 3.071,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "commitments": [
+     {
+      "address": 0,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       381,
+       102
+      ],
+      "confidence_runs_z": -18.46,
+      "rate_a": 7.81,
+      "rate_b": 10.38,
+      "ratio": 1.328,
+      "z": 2.4,
+      "se": 0.118,
+      "status": "survived",
+      "true_a": 2,
+      "true_b": 2,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       0.984,
+       0.971
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 35.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 15.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 20.0,
+        "runs_z": -9.32,
+        "status": "untested from here",
+        "z": 0.72,
+        "ratio": 1.299
+       },
+       {
+        "t": 25.0,
+        "runs_z": -11.67,
+        "status": "untested from here",
+        "z": 1.05,
+        "ratio": 1.306
+       },
+       {
+        "t": 30.0,
+        "runs_z": -14.19,
+        "status": "untested from here",
+        "z": 2.33,
+        "ratio": 1.406
+       },
+       {
+        "t": 35.0,
+        "runs_z": -15.21,
+        "status": "survived",
+        "z": 2.35,
+        "ratio": 1.36
+       },
+       {
+        "t": 40.0,
+        "runs_z": -16.49,
+        "status": "survived",
+        "z": 2.17,
+        "ratio": 1.317
+       },
+       {
+        "t": 45.0,
+        "runs_z": -16.97,
+        "status": "survived",
+        "z": 1.9,
+        "ratio": 1.266
+       },
+       {
+        "t": 50.0,
+        "runs_z": -17.77,
+        "status": "survived",
+        "z": 2.13,
+        "ratio": 1.298
+       },
+       {
+        "t": 55.0,
+        "runs_z": -17.88,
+        "status": "survived",
+        "z": 2.33,
+        "ratio": 1.329
+       },
+       {
+        "t": 60.0,
+        "runs_z": -18.46,
+        "status": "survived",
+        "z": 2.4,
+        "ratio": 1.328
+       }
+      ]
+     },
+     {
+      "address": 2,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       321,
+       238
+      ],
+      "confidence_runs_z": -21.93,
+      "rate_a": 9.42,
+      "rate_b": 9.83,
+      "ratio": 1.043,
+      "z": 0.48,
+      "se": 0.087,
+      "status": "survived",
+      "true_a": 3,
+      "true_b": 3,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       1.0,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.3,
+      "timeline": [
+       {
+        "t": 5.3,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.3,
+        "runs_z": -8.63,
+        "status": "untested from here",
+        "z": 0.85,
+        "ratio": 1.249
+       },
+       {
+        "t": 15.3,
+        "runs_z": -10.88,
+        "status": "untested from here",
+        "z": 0.81,
+        "ratio": 1.155
+       },
+       {
+        "t": 20.3,
+        "runs_z": -12.83,
+        "status": "untested from here",
+        "z": 0.88,
+        "ratio": 1.151
+       },
+       {
+        "t": 25.3,
+        "runs_z": -14.85,
+        "status": "survived",
+        "z": 0.81,
+        "ratio": 1.113
+       },
+       {
+        "t": 30.3,
+        "runs_z": -15.53,
+        "status": "survived",
+        "z": 0.02,
+        "ratio": 1.002
+       },
+       {
+        "t": 35.3,
+        "runs_z": -16.42,
+        "status": "survived",
+        "z": 0.08,
+        "ratio": 1.009
+       },
+       {
+        "t": 40.3,
+        "runs_z": -17.13,
+        "status": "survived",
+        "z": 0.16,
+        "ratio": 1.019
+       },
+       {
+        "t": 45.3,
+        "runs_z": -18.35,
+        "status": "survived",
+        "z": 0.55,
+        "ratio": 1.062
+       },
+       {
+        "t": 50.3,
+        "runs_z": -19.8,
+        "status": "survived",
+        "z": 0.58,
+        "ratio": 1.058
+       },
+       {
+        "t": 55.3,
+        "runs_z": -21.04,
+        "status": "survived",
+        "z": 0.64,
+        "ratio": 1.06
+       },
+       {
+        "t": 60.3,
+        "runs_z": -21.93,
+        "status": "survived",
+        "z": 0.48,
+        "ratio": 1.043
+       }
+      ]
+     },
+     {
+      "address": 4,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       235,
+       106
+      ],
+      "confidence_runs_z": -17.36,
+      "rate_a": 6.09,
+      "rate_b": 5.2,
+      "ratio": 1.171,
+      "z": 1.33,
+      "se": 0.119,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       1.0,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 50.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.1,
+        "runs_z": -7.2,
+        "status": "untested from here",
+        "z": 0.03,
+        "ratio": 1.008
+       },
+       {
+        "t": 15.1,
+        "runs_z": -9.02,
+        "status": "untested from here",
+        "z": 0.39,
+        "ratio": 1.101
+       },
+       {
+        "t": 20.1,
+        "runs_z": -10.51,
+        "status": "untested from here",
+        "z": 0.36,
+        "ratio": 1.088
+       },
+       {
+        "t": 25.1,
+        "runs_z": -11.49,
+        "status": "untested from here",
+        "z": 0.08,
+        "ratio": 1.018
+       },
+       {
+        "t": 30.1,
+        "runs_z": -12.38,
+        "status": "untested from here",
+        "z": 0.88,
+        "ratio": 1.171
+       },
+       {
+        "t": 35.1,
+        "runs_z": -13.31,
+        "status": "untested from here",
+        "z": 1.29,
+        "ratio": 1.22
+       },
+       {
+        "t": 40.1,
+        "runs_z": -14.38,
+        "status": "untested from here",
+        "z": 1.54,
+        "ratio": 1.245
+       },
+       {
+        "t": 45.1,
+        "runs_z": -14.99,
+        "status": "untested from here",
+        "z": 1.46,
+        "ratio": 1.22
+       },
+       {
+        "t": 50.1,
+        "runs_z": -15.91,
+        "status": "survived",
+        "z": 1.5,
+        "ratio": 1.221
+       },
+       {
+        "t": 55.1,
+        "runs_z": -16.7,
+        "status": "survived",
+        "z": 1.65,
+        "ratio": 1.231
+       },
+       {
+        "t": 60.1,
+        "runs_z": -17.36,
+        "status": "survived",
+        "z": 1.33,
+        "ratio": 1.171
+       }
+      ]
+     },
+     {
+      "address": 9,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       147,
+       75
+      ],
+      "confidence_runs_z": -13.29,
+      "rate_a": 4.36,
+      "rate_b": 3.62,
+      "ratio": 1.203,
+      "z": 1.26,
+      "se": 0.147,
+      "status": "untested from here",
+      "need_more_seconds": 10.9,
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       1.0,
+       0.973
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": null,
+      "timeline": [
+       {
+        "t": 5.3,
+        "runs_z": -4.24,
+        "status": "untested from here",
+        "z": 1.21,
+        "ratio": 1.776
+       },
+       {
+        "t": 10.3,
+        "runs_z": -6.02,
+        "status": "untested from here",
+        "z": 0.88,
+        "ratio": 1.391
+       },
+       {
+        "t": 15.3,
+        "runs_z": -7.15,
+        "status": "untested from here",
+        "z": 1.44,
+        "ratio": 1.468
+       },
+       {
+        "t": 20.3,
+        "runs_z": -7.91,
+        "status": "untested from here",
+        "z": 1.0,
+        "ratio": 1.278
+       },
+       {
+        "t": 25.3,
+        "runs_z": -9.14,
+        "status": "untested from here",
+        "z": 1.38,
+        "ratio": 1.331
+       },
+       {
+        "t": 30.3,
+        "runs_z": -9.75,
+        "status": "untested from here",
+        "z": 1.29,
+        "ratio": 1.28
+       },
+       {
+        "t": 35.3,
+        "runs_z": -9.9,
+        "status": "untested from here",
+        "z": 1.81,
+        "ratio": 1.39
+       },
+       {
+        "t": 40.3,
+        "runs_z": -10.9,
+        "status": "untested from here",
+        "z": 1.63,
+        "ratio": 1.315
+       },
+       {
+        "t": 45.3,
+        "runs_z": -11.57,
+        "status": "untested from here",
+        "z": 1.29,
+        "ratio": 1.231
+       },
+       {
+        "t": 50.3,
+        "runs_z": -11.96,
+        "status": "untested from here",
+        "z": 1.52,
+        "ratio": 1.267
+       },
+       {
+        "t": 55.3,
+        "runs_z": -12.37,
+        "status": "untested from here",
+        "z": 0.87,
+        "ratio": 1.141
+       },
+       {
+        "t": 60.3,
+        "runs_z": -13.29,
+        "status": "untested from here",
+        "z": 1.26,
+        "ratio": 1.203
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "test": {
+  "gates": {
+   "R1": {
+    "turn_pairs_merged_by_v0_with_rate_ratio_ge_1_5": 0,
+    "split_by_revision": 0,
+    "passed": false
+   },
+   "R1_context": {
+    "turn_pairs_merged_by_v0_total": 1,
+    "similar_rate_pairs_merged": [
+     [
+      3,
+      1.02,
+      true
+     ]
+    ]
+   },
+   "R2": {
+    "mood_merges": 3,
+    "wrongly_split": 0,
+    "passed": true
+   },
+   "R3": {
+    "survived": 3,
+    "survived_correct": 3,
+    "passed": true,
+    "untested": 0,
+    "untested_truly_one_neuron": 0,
+    "refuted": 0,
+    "refuted_truly_two_neurons": 0
+   },
+   "R4": {
+    "revisions": 0,
+    "seconds_to_revise": [],
+    "seconds_to_survive": [
+     30.1,
+     35.1,
+     35.0
+    ]
+   }
+  },
+  "mood_one_unit_v0": 7,
+  "mood_one_unit_revised": 7,
+  "false_merges_v0": 14,
+  "false_merges_revised": 14,
+  "rows": [
+   {
+    "seed": 0,
+    "turn_offset": 0.9046800706458055,
+    "turn_rate_ratio": 1.509,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 0,
+     "false_merges": 5
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 0,
+     "false_merges": 5
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 0,
+     "false_merges": 5
+    },
+    "commitments": []
+   },
+   {
+    "seed": 1,
+    "turn_offset": 1.925695544488903,
+    "turn_rate_ratio": 2.087,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 1,
+     "false_merges": 4
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 1,
+     "false_merges": 4
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 1,
+     "false_merges": 4
+    },
+    "commitments": []
+   },
+   {
+    "seed": 2,
+    "turn_offset": 0.947736715121185,
+    "turn_rate_ratio": 1.653,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 3,
+     "false_merges": 2
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 3,
+     "false_merges": 2
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 3,
+     "false_merges": 2
+    },
+    "commitments": [
+     {
+      "address": 0,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       297,
+       297
+      ],
+      "confidence_runs_z": -19.38,
+      "rate_a": 9.88,
+      "rate_b": 9.64,
+      "ratio": 1.025,
+      "z": 0.29,
+      "se": 0.087,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.956,
+       0.914
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 30.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": -6.42,
+        "status": "untested from here",
+        "z": 0.37,
+        "ratio": 1.147
+       },
+       {
+        "t": 10.1,
+        "runs_z": -8.33,
+        "status": "untested from here",
+        "z": 0.15,
+        "ratio": 1.033
+       },
+       {
+        "t": 15.1,
+        "runs_z": -9.83,
+        "status": "untested from here",
+        "z": 0.0,
+        "ratio": 1.0
+       },
+       {
+        "t": 20.1,
+        "runs_z": -10.93,
+        "status": "untested from here",
+        "z": 0.2,
+        "ratio": 1.036
+       },
+       {
+        "t": 25.1,
+        "runs_z": -12.71,
+        "status": "untested from here",
+        "z": 1.56,
+        "ratio": 1.236
+       },
+       {
+        "t": 30.1,
+        "runs_z": -14.09,
+        "status": "survived",
+        "z": 1.7,
+        "ratio": 1.229
+       },
+       {
+        "t": 35.1,
+        "runs_z": -15.35,
+        "status": "survived",
+        "z": 1.64,
+        "ratio": 1.204
+       },
+       {
+        "t": 40.1,
+        "runs_z": -16.55,
+        "status": "survived",
+        "z": 0.85,
+        "ratio": 1.093
+       },
+       {
+        "t": 45.1,
+        "runs_z": -16.58,
+        "status": "survived",
+        "z": 0.41,
+        "ratio": 1.042
+       },
+       {
+        "t": 50.1,
+        "runs_z": -17.69,
+        "status": "survived",
+        "z": 0.48,
+        "ratio": 1.046
+       },
+       {
+        "t": 55.1,
+        "runs_z": -18.75,
+        "status": "survived",
+        "z": 0.57,
+        "ratio": 1.052
+       },
+       {
+        "t": 60.1,
+        "runs_z": -19.38,
+        "status": "survived",
+        "z": 0.29,
+        "ratio": 1.025
+       }
+      ]
+     },
+     {
+      "address": 3,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       219,
+       200
+      ],
+      "confidence_runs_z": -19.71,
+      "rate_a": 7.85,
+      "rate_b": 6.56,
+      "ratio": 1.196,
+      "z": 1.81,
+      "se": 0.099,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       1.0,
+       0.995
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 35.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.1,
+        "runs_z": -8.18,
+        "status": "untested from here",
+        "z": 0.45,
+        "ratio": 1.383
+       },
+       {
+        "t": 15.1,
+        "runs_z": -10.9,
+        "status": "untested from here",
+        "z": 0.25,
+        "ratio": 1.049
+       },
+       {
+        "t": 20.1,
+        "runs_z": -12.08,
+        "status": "untested from here",
+        "z": 0.78,
+        "ratio": 1.137
+       },
+       {
+        "t": 25.1,
+        "runs_z": -13.55,
+        "status": "untested from here",
+        "z": 0.67,
+        "ratio": 1.108
+       },
+       {
+        "t": 30.1,
+        "runs_z": -14.63,
+        "status": "untested from here",
+        "z": 0.58,
+        "ratio": 1.086
+       },
+       {
+        "t": 35.1,
+        "runs_z": -15.65,
+        "status": "survived",
+        "z": 1.04,
+        "ratio": 1.143
+       },
+       {
+        "t": 40.1,
+        "runs_z": -16.4,
+        "status": "survived",
+        "z": 1.92,
+        "ratio": 1.261
+       },
+       {
+        "t": 45.1,
+        "runs_z": -17.09,
+        "status": "survived",
+        "z": 1.98,
+        "ratio": 1.255
+       },
+       {
+        "t": 50.1,
+        "runs_z": -18.03,
+        "status": "survived",
+        "z": 1.94,
+        "ratio": 1.234
+       },
+       {
+        "t": 55.1,
+        "runs_z": -18.91,
+        "status": "survived",
+        "z": 1.69,
+        "ratio": 1.19
+       },
+       {
+        "t": 60.1,
+        "runs_z": -19.71,
+        "status": "survived",
+        "z": 1.81,
+        "ratio": 1.196
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 3,
+    "turn_offset": 0.8552157598941496,
+    "turn_rate_ratio": 1.02,
+    "v0": {
+     "turn_merged": true,
+     "mood_one_unit": 1,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": true,
+     "mood_one_unit": 1,
+     "false_merges": 1
+    },
+    "revised": {
+     "turn_merged": true,
+     "mood_one_unit": 1,
+     "false_merges": 1
+    },
+    "commitments": []
+   },
+   {
+    "seed": 4,
+    "turn_offset": 1.2669913292215425,
+    "turn_rate_ratio": 1.552,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 2,
+     "false_merges": 2
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 2,
+     "false_merges": 2
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 2,
+     "false_merges": 2
+    },
+    "commitments": [
+     {
+      "address": 3,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       382,
+       126
+      ],
+      "confidence_runs_z": -21.27,
+      "rate_a": 8.33,
+      "rate_b": 9.08,
+      "ratio": 1.09,
+      "z": 0.83,
+      "se": 0.105,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.997,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 35.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.0,
+        "runs_z": -8.35,
+        "status": "untested from here",
+        "z": 0.62,
+        "ratio": 1.174
+       },
+       {
+        "t": 15.0,
+        "runs_z": -10.26,
+        "status": "untested from here",
+        "z": 0.81,
+        "ratio": 1.188
+       },
+       {
+        "t": 20.0,
+        "runs_z": -11.93,
+        "status": "untested from here",
+        "z": 0.79,
+        "ratio": 1.174
+       },
+       {
+        "t": 25.0,
+        "runs_z": -13.55,
+        "status": "untested from here",
+        "z": 0.58,
+        "ratio": 1.122
+       },
+       {
+        "t": 30.0,
+        "runs_z": -14.51,
+        "status": "untested from here",
+        "z": 0.78,
+        "ratio": 1.133
+       },
+       {
+        "t": 35.0,
+        "runs_z": -16.26,
+        "status": "survived",
+        "z": 0.96,
+        "ratio": 1.128
+       },
+       {
+        "t": 40.0,
+        "runs_z": -17.2,
+        "status": "survived",
+        "z": 1.09,
+        "ratio": 1.143
+       },
+       {
+        "t": 45.0,
+        "runs_z": -18.31,
+        "status": "survived",
+        "z": 1.01,
+        "ratio": 1.128
+       },
+       {
+        "t": 50.0,
+        "runs_z": -19.33,
+        "status": "survived",
+        "z": 1.01,
+        "ratio": 1.125
+       },
+       {
+        "t": 55.0,
+        "runs_z": -20.44,
+        "status": "survived",
+        "z": 0.88,
+        "ratio": 1.099
+       },
+       {
+        "t": 60.0,
+        "runs_z": -21.27,
+        "status": "survived",
+        "z": 0.83,
+        "ratio": 1.09
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "sparse_posthoc": {
+  "gates": {
+   "R1": {
+    "turn_pairs_merged_by_v0_with_rate_ratio_ge_1_5": 0,
+    "split_by_revision": 0,
+    "passed": false
+   },
+   "R1_context": {
+    "turn_pairs_merged_by_v0_total": 0,
+    "similar_rate_pairs_merged": []
+   },
+   "R2": {
+    "mood_merges": 9,
+    "wrongly_split": 0,
+    "passed": true
+   },
+   "R3": {
+    "survived": 9,
+    "survived_correct": 9,
+    "passed": true,
+    "untested": 0,
+    "untested_truly_one_neuron": 0,
+    "refuted": 0,
+    "refuted_truly_two_neurons": 0
+   },
+   "R4": {
+    "revisions": 0,
+    "seconds_to_revise": [],
+    "seconds_to_survive": [
+     25.1,
+     25.0,
+     20.0,
+     25.0,
+     25.1,
+     25.1,
+     45.7,
+     25.0,
+     35.1
+    ]
+   }
+  },
+  "mood_one_unit_v0": 20,
+  "mood_one_unit_revised": 20,
+  "false_merges_v0": 2,
+  "false_merges_revised": 1,
+  "rows": [
+   {
+    "seed": 10,
+    "turn_offset": 0.8115227151187203,
+    "turn_rate_ratio": 1.939,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "commitments": [
+     {
+      "address": 4,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       381,
+       205
+      ],
+      "confidence_runs_z": -22.23,
+      "rate_a": 10.06,
+      "rate_b": 9.75,
+      "ratio": 1.032,
+      "z": 0.35,
+      "se": 0.089,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.984,
+       0.976
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.1,
+        "runs_z": -9.72,
+        "status": "untested from here",
+        "z": 0.05,
+        "ratio": 1.012
+       },
+       {
+        "t": 15.1,
+        "runs_z": -12.25,
+        "status": "untested from here",
+        "z": 0.49,
+        "ratio": 1.083
+       },
+       {
+        "t": 20.1,
+        "runs_z": -14.45,
+        "status": "untested from here",
+        "z": 0.83,
+        "ratio": 1.128
+       },
+       {
+        "t": 25.1,
+        "runs_z": -15.92,
+        "status": "survived",
+        "z": 1.01,
+        "ratio": 1.142
+       },
+       {
+        "t": 30.1,
+        "runs_z": -16.93,
+        "status": "survived",
+        "z": 0.84,
+        "ratio": 1.112
+       },
+       {
+        "t": 35.1,
+        "runs_z": -17.76,
+        "status": "survived",
+        "z": 0.53,
+        "ratio": 1.067
+       },
+       {
+        "t": 40.1,
+        "runs_z": -18.13,
+        "status": "survived",
+        "z": 0.55,
+        "ratio": 1.066
+       },
+       {
+        "t": 45.1,
+        "runs_z": -19.13,
+        "status": "survived",
+        "z": 0.57,
+        "ratio": 1.065
+       },
+       {
+        "t": 50.1,
+        "runs_z": -20.08,
+        "status": "survived",
+        "z": 0.28,
+        "ratio": 1.029
+       },
+       {
+        "t": 55.1,
+        "runs_z": -21.27,
+        "status": "survived",
+        "z": 0.19,
+        "ratio": 1.018
+       },
+       {
+        "t": 60.1,
+        "runs_z": -22.23,
+        "status": "survived",
+        "z": 0.35,
+        "ratio": 1.032
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 11,
+    "turn_offset": 1.2489167936601724,
+    "turn_rate_ratio": 2.417,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "commitments": [
+     {
+      "address": 1,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       362,
+       312
+      ],
+      "confidence_runs_z": -24.2,
+      "rate_a": 11.5,
+      "rate_b": 11.43,
+      "ratio": 1.006,
+      "z": 0.08,
+      "se": 0.079,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.986,
+       0.987
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": -7.59,
+        "status": "untested from here",
+        "z": 0.59,
+        "ratio": 1.188
+       },
+       {
+        "t": 10.0,
+        "runs_z": -10.26,
+        "status": "untested from here",
+        "z": 0.79,
+        "ratio": 1.158
+       },
+       {
+        "t": 15.0,
+        "runs_z": -12.66,
+        "status": "untested from here",
+        "z": 0.51,
+        "ratio": 1.087
+       },
+       {
+        "t": 20.0,
+        "runs_z": -14.1,
+        "status": "untested from here",
+        "z": 0.18,
+        "ratio": 1.026
+       },
+       {
+        "t": 25.0,
+        "runs_z": -15.84,
+        "status": "survived",
+        "z": 0.56,
+        "ratio": 1.07
+       },
+       {
+        "t": 30.0,
+        "runs_z": -17.45,
+        "status": "survived",
+        "z": 0.76,
+        "ratio": 1.088
+       },
+       {
+        "t": 35.0,
+        "runs_z": -18.86,
+        "status": "survived",
+        "z": 0.69,
+        "ratio": 1.073
+       },
+       {
+        "t": 40.0,
+        "runs_z": -19.9,
+        "status": "survived",
+        "z": 0.19,
+        "ratio": 1.018
+       },
+       {
+        "t": 45.0,
+        "runs_z": -21.22,
+        "status": "survived",
+        "z": 0.04,
+        "ratio": 1.004
+       },
+       {
+        "t": 50.0,
+        "runs_z": -22.35,
+        "status": "survived",
+        "z": 0.1,
+        "ratio": 1.009
+       },
+       {
+        "t": 55.0,
+        "runs_z": -23.45,
+        "status": "survived",
+        "z": 0.15,
+        "ratio": 1.013
+       },
+       {
+        "t": 60.0,
+        "runs_z": -24.2,
+        "status": "survived",
+        "z": 0.08,
+        "ratio": 1.006
+       }
+      ]
+     },
+     {
+      "address": 4,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       352,
+       349
+      ],
+      "confidence_runs_z": -24.15,
+      "rate_a": 12.28,
+      "rate_b": 11.62,
+      "ratio": 1.057,
+      "z": 0.71,
+      "se": 0.077,
+      "status": "survived",
+      "true_a": 2,
+      "true_b": 2,
+      "kind_a": "mood_mild",
+      "kind_b": "mood_mild",
+      "purity": [
+       0.997,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 20.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": -4.81,
+        "status": "untested from here",
+        "z": 0.47,
+        "ratio": 1.197
+       },
+       {
+        "t": 10.0,
+        "runs_z": -6.99,
+        "status": "untested from here",
+        "z": 0.26,
+        "ratio": 1.101
+       },
+       {
+        "t": 15.0,
+        "runs_z": -12.07,
+        "status": "untested from here",
+        "z": 0.86,
+        "ratio": 1.145
+       },
+       {
+        "t": 20.0,
+        "runs_z": -13.82,
+        "status": "survived",
+        "z": 0.89,
+        "ratio": 1.127
+       },
+       {
+        "t": 25.0,
+        "runs_z": -15.57,
+        "status": "survived",
+        "z": 1.29,
+        "ratio": 1.166
+       },
+       {
+        "t": 30.0,
+        "runs_z": -17.1,
+        "status": "survived",
+        "z": 1.34,
+        "ratio": 1.159
+       },
+       {
+        "t": 35.0,
+        "runs_z": -18.67,
+        "status": "survived",
+        "z": 1.5,
+        "ratio": 1.163
+       },
+       {
+        "t": 40.0,
+        "runs_z": -20.21,
+        "status": "survived",
+        "z": 1.42,
+        "ratio": 1.143
+       },
+       {
+        "t": 45.0,
+        "runs_z": -20.73,
+        "status": "survived",
+        "z": 0.9,
+        "ratio": 1.085
+       },
+       {
+        "t": 50.0,
+        "runs_z": -22.1,
+        "status": "survived",
+        "z": 0.82,
+        "ratio": 1.071
+       },
+       {
+        "t": 55.0,
+        "runs_z": -23.3,
+        "status": "survived",
+        "z": 0.89,
+        "ratio": 1.074
+       },
+       {
+        "t": 60.0,
+        "runs_z": -24.15,
+        "status": "survived",
+        "z": 0.71,
+        "ratio": 1.057
+       }
+      ]
+     },
+     {
+      "address": 5,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       427,
+       204
+      ],
+      "confidence_runs_z": -23.78,
+      "rate_a": 11.18,
+      "rate_b": 9.7,
+      "ratio": 1.153,
+      "z": 1.65,
+      "se": 0.087,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.995,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": -7.38,
+        "status": "untested from here",
+        "z": 0.25,
+        "ratio": 1.126
+       },
+       {
+        "t": 10.0,
+        "runs_z": -10.13,
+        "status": "untested from here",
+        "z": 1.28,
+        "ratio": 1.291
+       },
+       {
+        "t": 15.0,
+        "runs_z": -11.46,
+        "status": "untested from here",
+        "z": 1.03,
+        "ratio": 1.2
+       },
+       {
+        "t": 20.0,
+        "runs_z": -13.22,
+        "status": "untested from here",
+        "z": 1.0,
+        "ratio": 1.155
+       },
+       {
+        "t": 25.0,
+        "runs_z": -15.05,
+        "status": "survived",
+        "z": 0.67,
+        "ratio": 1.09
+       },
+       {
+        "t": 30.0,
+        "runs_z": -16.69,
+        "status": "survived",
+        "z": 0.72,
+        "ratio": 1.09
+       },
+       {
+        "t": 35.0,
+        "runs_z": -17.87,
+        "status": "survived",
+        "z": 0.59,
+        "ratio": 1.071
+       },
+       {
+        "t": 40.0,
+        "runs_z": -19.16,
+        "status": "survived",
+        "z": 0.58,
+        "ratio": 1.067
+       },
+       {
+        "t": 45.0,
+        "runs_z": -20.55,
+        "status": "survived",
+        "z": 0.39,
+        "ratio": 1.039
+       },
+       {
+        "t": 50.0,
+        "runs_z": -21.51,
+        "status": "survived",
+        "z": 0.75,
+        "ratio": 1.073
+       },
+       {
+        "t": 55.0,
+        "runs_z": -22.7,
+        "status": "survived",
+        "z": 1.13,
+        "ratio": 1.109
+       },
+       {
+        "t": 60.0,
+        "runs_z": -23.78,
+        "status": "survived",
+        "z": 1.65,
+        "ratio": 1.153
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 12,
+    "turn_offset": 1.920129414289137,
+    "turn_rate_ratio": 1.348,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "commitments": [
+     {
+      "address": 3,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       356,
+       225
+      ],
+      "confidence_runs_z": -22.64,
+      "rate_a": 9.77,
+      "rate_b": 10.0,
+      "ratio": 1.024,
+      "z": 0.27,
+      "se": 0.087,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.994,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.1,
+        "runs_z": -9.3,
+        "status": "untested from here",
+        "z": 0.88,
+        "ratio": 1.499
+       },
+       {
+        "t": 15.1,
+        "runs_z": -11.83,
+        "status": "untested from here",
+        "z": 0.5,
+        "ratio": 1.092
+       },
+       {
+        "t": 20.1,
+        "runs_z": -13.64,
+        "status": "untested from here",
+        "z": 0.45,
+        "ratio": 1.067
+       },
+       {
+        "t": 25.1,
+        "runs_z": -15.33,
+        "status": "survived",
+        "z": 0.06,
+        "ratio": 1.008
+       },
+       {
+        "t": 30.1,
+        "runs_z": -16.47,
+        "status": "survived",
+        "z": 0.22,
+        "ratio": 1.026
+       },
+       {
+        "t": 35.1,
+        "runs_z": -17.74,
+        "status": "survived",
+        "z": 0.15,
+        "ratio": 1.016
+       },
+       {
+        "t": 40.1,
+        "runs_z": -18.86,
+        "status": "survived",
+        "z": 0.17,
+        "ratio": 1.017
+       },
+       {
+        "t": 45.1,
+        "runs_z": -19.95,
+        "status": "survived",
+        "z": 0.18,
+        "ratio": 1.017
+       },
+       {
+        "t": 50.1,
+        "runs_z": -20.86,
+        "status": "survived",
+        "z": 0.09,
+        "ratio": 1.008
+       },
+       {
+        "t": 55.1,
+        "runs_z": -21.95,
+        "status": "survived",
+        "z": 0.07,
+        "ratio": 1.006
+       },
+       {
+        "t": 60.1,
+        "runs_z": -22.64,
+        "status": "survived",
+        "z": 0.27,
+        "ratio": 1.024
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 13,
+    "turn_offset": 1.7829537723980886,
+    "turn_rate_ratio": 1.032,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 0
+    },
+    "commitments": [
+     {
+      "address": 6,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       366,
+       213
+      ],
+      "confidence_runs_z": -22.66,
+      "rate_a": 9.76,
+      "rate_b": 9.55,
+      "ratio": 1.021,
+      "z": 0.24,
+      "se": 0.088,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.992,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": -3.98,
+        "status": "untested from here",
+        "z": 0.57,
+        "ratio": 1.786
+       },
+       {
+        "t": 10.1,
+        "runs_z": -8.47,
+        "status": "untested from here",
+        "z": 0.36,
+        "ratio": 1.113
+       },
+       {
+        "t": 15.1,
+        "runs_z": -11.09,
+        "status": "untested from here",
+        "z": 0.33,
+        "ratio": 1.07
+       },
+       {
+        "t": 20.1,
+        "runs_z": -12.93,
+        "status": "untested from here",
+        "z": 0.51,
+        "ratio": 1.092
+       },
+       {
+        "t": 25.1,
+        "runs_z": -14.68,
+        "status": "survived",
+        "z": 0.71,
+        "ratio": 1.1
+       },
+       {
+        "t": 30.1,
+        "runs_z": -15.6,
+        "status": "survived",
+        "z": 0.53,
+        "ratio": 1.067
+       },
+       {
+        "t": 35.1,
+        "runs_z": -17.01,
+        "status": "survived",
+        "z": 0.37,
+        "ratio": 1.043
+       },
+       {
+        "t": 40.1,
+        "runs_z": -18.27,
+        "status": "survived",
+        "z": 0.36,
+        "ratio": 1.039
+       },
+       {
+        "t": 45.1,
+        "runs_z": -19.76,
+        "status": "survived",
+        "z": 0.73,
+        "ratio": 1.076
+       },
+       {
+        "t": 50.1,
+        "runs_z": -20.7,
+        "status": "survived",
+        "z": 0.63,
+        "ratio": 1.063
+       },
+       {
+        "t": 55.1,
+        "runs_z": -21.51,
+        "status": "survived",
+        "z": 0.14,
+        "ratio": 1.013
+       },
+       {
+        "t": 60.1,
+        "runs_z": -22.66,
+        "status": "survived",
+        "z": 0.24,
+        "ratio": 1.021
+       }
+      ]
+     },
+     {
+      "address": 7,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       196,
+       120
+      ],
+      "confidence_runs_z": -16.49,
+      "rate_a": 6.05,
+      "rate_b": 5.01,
+      "ratio": 1.206,
+      "z": 1.58,
+      "se": 0.118,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       1.0,
+       0.992
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 45.7,
+      "timeline": [
+       {
+        "t": 5.7,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.7,
+        "runs_z": -5.52,
+        "status": "untested from here",
+        "z": 0.57,
+        "ratio": 1.287
+       },
+       {
+        "t": 15.7,
+        "runs_z": -8.5,
+        "status": "untested from here",
+        "z": 1.46,
+        "ratio": 1.388
+       },
+       {
+        "t": 20.7,
+        "runs_z": -9.78,
+        "status": "untested from here",
+        "z": 0.92,
+        "ratio": 1.206
+       },
+       {
+        "t": 25.7,
+        "runs_z": -11.19,
+        "status": "untested from here",
+        "z": 1.05,
+        "ratio": 1.224
+       },
+       {
+        "t": 30.7,
+        "runs_z": -11.97,
+        "status": "untested from here",
+        "z": 0.73,
+        "ratio": 1.145
+       },
+       {
+        "t": 35.7,
+        "runs_z": -12.81,
+        "status": "untested from here",
+        "z": 0.84,
+        "ratio": 1.142
+       },
+       {
+        "t": 40.7,
+        "runs_z": -13.93,
+        "status": "untested from here",
+        "z": 0.77,
+        "ratio": 1.114
+       },
+       {
+        "t": 45.7,
+        "runs_z": -14.59,
+        "status": "survived",
+        "z": 1.53,
+        "ratio": 1.227
+       },
+       {
+        "t": 50.7,
+        "runs_z": -15.63,
+        "status": "survived",
+        "z": 1.7,
+        "ratio": 1.244
+       },
+       {
+        "t": 55.7,
+        "runs_z": -16.2,
+        "status": "survived",
+        "z": 1.69,
+        "ratio": 1.226
+       },
+       {
+        "t": 60.7,
+        "runs_z": -16.49,
+        "status": "survived",
+        "z": 1.58,
+        "ratio": 1.206
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "seed": 14,
+    "turn_offset": 1.041420000251385,
+    "turn_rate_ratio": 1.031,
+    "v0": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "committed_before_revision": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "revised": {
+     "turn_merged": false,
+     "mood_one_unit": 4,
+     "false_merges": 1
+    },
+    "commitments": [
+     {
+      "address": 2,
+      "states": [
+       0,
+       1
+      ],
+      "n": [
+       304,
+       250
+      ],
+      "confidence_runs_z": -22.7,
+      "rate_a": 9.26,
+      "rate_b": 9.57,
+      "ratio": 1.034,
+      "z": 0.39,
+      "se": 0.086,
+      "status": "survived",
+      "true_a": 0,
+      "true_b": 0,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.987,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 25.0,
+      "timeline": [
+       {
+        "t": 5.0,
+        "runs_z": -6.25,
+        "status": "untested from here",
+        "z": 0.29,
+        "ratio": 1.095
+       },
+       {
+        "t": 10.0,
+        "runs_z": -9.59,
+        "status": "untested from here",
+        "z": 0.81,
+        "ratio": 1.231
+       },
+       {
+        "t": 15.0,
+        "runs_z": -11.58,
+        "status": "untested from here",
+        "z": 0.4,
+        "ratio": 1.076
+       },
+       {
+        "t": 20.0,
+        "runs_z": -13.49,
+        "status": "untested from here",
+        "z": 0.33,
+        "ratio": 1.05
+       },
+       {
+        "t": 25.0,
+        "runs_z": -15.16,
+        "status": "survived",
+        "z": 0.31,
+        "ratio": 1.043
+       },
+       {
+        "t": 30.0,
+        "runs_z": -16.53,
+        "status": "survived",
+        "z": 0.48,
+        "ratio": 1.063
+       },
+       {
+        "t": 35.0,
+        "runs_z": -17.78,
+        "status": "survived",
+        "z": 0.43,
+        "ratio": 1.051
+       },
+       {
+        "t": 40.0,
+        "runs_z": -18.68,
+        "status": "survived",
+        "z": 0.64,
+        "ratio": 1.074
+       },
+       {
+        "t": 45.0,
+        "runs_z": -19.89,
+        "status": "survived",
+        "z": 0.43,
+        "ratio": 1.044
+       },
+       {
+        "t": 50.0,
+        "runs_z": -21.19,
+        "status": "survived",
+        "z": 0.76,
+        "ratio": 1.073
+       },
+       {
+        "t": 55.0,
+        "runs_z": -21.98,
+        "status": "survived",
+        "z": 0.47,
+        "ratio": 1.043
+       },
+       {
+        "t": 60.0,
+        "runs_z": -22.7,
+        "status": "survived",
+        "z": 0.39,
+        "ratio": 1.034
+       }
+      ]
+     },
+     {
+      "address": 6,
+      "states": [
+       1,
+       0
+      ],
+      "n": [
+       424,
+       99
+      ],
+      "confidence_runs_z": -20.63,
+      "rate_a": 8.87,
+      "rate_b": 9.25,
+      "ratio": 1.043,
+      "z": 0.36,
+      "se": 0.116,
+      "status": "survived",
+      "true_a": 1,
+      "true_b": 1,
+      "kind_a": "mood_strong",
+      "kind_b": "mood_strong",
+      "purity": [
+       0.998,
+       1.0
+      ],
+      "truth": "one neuron",
+      "correct": true,
+      "first_refuted_s": null,
+      "first_survived_s": 35.1,
+      "timeline": [
+       {
+        "t": 5.1,
+        "runs_z": 0.0,
+        "status": "untested from here",
+        "z": null,
+        "ratio": null
+       },
+       {
+        "t": 10.1,
+        "runs_z": -7.88,
+        "status": "untested from here",
+        "z": 0.37,
+        "ratio": 1.113
+       },
+       {
+        "t": 15.1,
+        "runs_z": -9.9,
+        "status": "untested from here",
+        "z": 0.51,
+        "ratio": 1.101
+       },
+       {
+        "t": 20.1,
+        "runs_z": -11.74,
+        "status": "untested from here",
+        "z": 0.02,
+        "ratio": 1.004
+       },
+       {
+        "t": 25.1,
+        "runs_z": -13.48,
+        "status": "untested from here",
+        "z": 0.36,
+        "ratio": 1.052
+       },
+       {
+        "t": 30.1,
+        "runs_z": -14.6,
+        "status": "untested from here",
+        "z": 0.4,
+        "ratio": 1.056
+       },
+       {
+        "t": 35.1,
+        "runs_z": -15.66,
+        "status": "survived",
+        "z": 0.73,
+        "ratio": 1.1
+       },
+       {
+        "t": 40.1,
+        "runs_z": -16.86,
+        "status": "survived",
+        "z": 0.71,
+        "ratio": 1.095
+       },
+       {
+        "t": 45.1,
+        "runs_z": -17.85,
+        "status": "survived",
+        "z": 0.83,
+        "ratio": 1.11
+       },
+       {
+        "t": 50.1,
+        "runs_z": -18.79,
+        "status": "survived",
+        "z": 0.89,
+        "ratio": 1.118
+       },
+       {
+        "t": 55.1,
+        "runs_z": -19.82,
+        "status": "survived",
+        "z": 0.72,
+        "ratio": 1.09
+       },
+       {
+        "t": 60.1,
+        "runs_z": -20.63,
+        "status": "survived",
+        "z": 0.36,
+        "ratio": 1.043
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

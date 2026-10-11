@@ -1,0 +1,5724 @@
+{
+ "identifiability": {
+  "gates": {
+   "P1": {
+    "separable_pairs_merged_by_commit_mode": 9,
+    "reopened_at_60s": 9,
+    "passed": true
+   },
+   "P2": {
+    "mood_one_unit_commit": 46,
+    "mood_one_unit_two_channel": 45,
+    "passed": true
+   },
+   "P3": {
+    "stable_one_unit_commit": 48,
+    "stable_one_unit_two_channel": 48,
+    "passed": true
+   },
+   "false_merges": {
+    "commit": 3,
+    "two_channel": 3
+   },
+   "P4": {
+    "online_revisions": [
+     {
+      "seed": 51,
+      "merged_at": [
+       10
+      ],
+      "separated_at": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ]
+     },
+     {
+      "seed": 53,
+      "merged_at": [
+       50
+      ],
+      "separated_at": [
+       10,
+       20,
+       30,
+       40,
+       60
+      ]
+     },
+     {
+      "seed": 54,
+      "merged_at": [
+       10
+      ],
+      "separated_at": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ]
+     },
+     {
+      "seed": 56,
+      "merged_at": [
+       20
+      ],
+      "separated_at": [
+       10,
+       30,
+       40,
+       50,
+       60
+      ]
+     },
+     {
+      "seed": 58,
+      "merged_at": [
+       10
+      ],
+      "separated_at": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ]
+     },
+     {
+      "seed": 59,
+      "merged_at": [
+       10
+      ],
+      "separated_at": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ]
+     },
+     {
+      "seed": 61,
+      "merged_at": [
+       10
+      ],
+      "separated_at": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ]
+     }
+    ],
+    "separated_then_remerged": [
+     60
+    ],
+    "passed": false
+   },
+   "P5": [
+    {
+     "seed": 60,
+     "offset": 0.014,
+     "rate_ratio": 1.13,
+     "remainder": [
+      [
+       "agrees",
+       0.031,
+       0.022
+      ]
+     ]
+    }
+   ]
+  },
+  "rows": [
+   {
+    "seed": 50,
+    "turn_offset": 0.417,
+    "turn_rate_ratio": 1.051,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "states",
+        "n": [
+         287,
+         54
+        ],
+        "position_gap": 0.372,
+        "position_se": 0.026,
+        "position_z": 14.28,
+        "switch_ratio": 0.077,
+        "rate": {
+         "rate_a": 8.8,
+         "rate_b": 7.94,
+         "ratio": 1.109,
+         "z": 0.67,
+         "se": 0.153,
+         "status": "untested from here",
+         "need_more_seconds": 11.6
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 2
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 2
+      },
+      "turn_remainder": [
+       {
+        "address": 9,
+        "kind": "states",
+        "n": [
+         302,
+         121
+        ],
+        "position_gap": 0.37,
+        "position_se": 0.017,
+        "position_z": 21.21,
+        "switch_ratio": 0.046,
+        "rate": {
+         "rate_a": 8.79,
+         "rate_b": 8.09,
+         "ratio": 1.086,
+         "z": 0.76,
+         "se": 0.109,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 9,
+        "kind": "states",
+        "n": [
+         302,
+         121
+        ],
+        "position_gap": 0.37,
+        "position_se": 0.017,
+        "position_z": 21.21,
+        "switch_ratio": 0.046,
+        "rate": {
+         "rate_a": 8.79,
+         "rate_b": 8.09,
+         "ratio": 1.086,
+         "z": 0.76,
+         "se": 0.109,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 3,
+        "kind": "states",
+        "n": [
+         320,
+         165
+        ],
+        "position_gap": 0.374,
+        "position_se": 0.015,
+        "position_z": 24.45,
+        "switch_ratio": 0.041,
+        "rate": {
+         "rate_a": 8.69,
+         "rate_b": 7.44,
+         "ratio": 1.168,
+         "z": 1.6,
+         "se": 0.097,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 3,
+        "kind": "states",
+        "n": [
+         320,
+         165
+        ],
+        "position_gap": 0.374,
+        "position_se": 0.015,
+        "position_z": 24.45,
+        "switch_ratio": 0.041,
+        "rate": {
+         "rate_a": 8.69,
+         "rate_b": 7.44,
+         "ratio": 1.168,
+         "z": 1.6,
+         "se": 0.097,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [
+      {
+       "address": 3,
+       "kind": "states",
+       "n": [
+        320,
+        165
+       ],
+       "position_gap": 0.374,
+       "position_se": 0.015,
+       "position_z": 24.45,
+       "switch_ratio": 0.041,
+       "rate": {
+        "rate_a": 8.69,
+        "rate_b": 7.44,
+        "ratio": 1.168,
+        "z": 1.6,
+        "se": 0.097,
+        "status": "survived"
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 3,
+       "kind": "states",
+       "n": [
+        320,
+        165
+       ],
+       "position_gap": 0.374,
+       "position_se": 0.015,
+       "position_z": 24.45,
+       "switch_ratio": 0.041,
+       "rate": {
+        "rate_a": 8.69,
+        "rate_b": 7.44,
+        "ratio": 1.168,
+        "z": 1.6,
+        "se": 0.097,
+        "status": "survived"
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 51,
+    "turn_offset": 0.154,
+    "turn_rate_ratio": 1.448,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 0,
+        "kind": "forced split",
+        "n": [
+         45,
+         75
+        ],
+        "position_gap": 0.895,
+        "position_se": 0.115,
+        "position_z": 7.77,
+        "switch_ratio": 1.058,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 9,
+        "kind": "forced split",
+        "n": [
+         259,
+         48
+        ],
+        "position_gap": 0.205,
+        "position_se": 0.06,
+        "position_z": 3.39,
+        "switch_ratio": 0.173,
+        "rate": {
+         "rate_a": 6.14,
+         "rate_b": 3.01,
+         "ratio": 2.035,
+         "z": 4.17,
+         "se": 0.17,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "turn_remainder": [],
+     "reopened": [
+      {
+       "address": 9,
+       "kind": "forced split",
+       "n": [
+        259,
+        48
+       ],
+       "position_gap": 0.205,
+       "position_se": 0.06,
+       "position_z": 3.39,
+       "switch_ratio": 0.173,
+       "rate": {
+        "rate_a": 6.14,
+        "rate_b": 3.01,
+        "ratio": 2.035,
+        "z": 4.17,
+        "se": 0.17,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 52,
+    "turn_offset": 0.287,
+    "turn_rate_ratio": 1.087,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 3,
+       "stable": 3,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         41,
+         70
+        ],
+        "position_gap": 0.356,
+        "position_se": 0.094,
+        "position_z": 3.79,
+        "switch_ratio": 0.117,
+        "rate": {
+         "rate_a": 11.33,
+         "rate_b": 12.33,
+         "ratio": 1.088,
+         "z": 0.42,
+         "se": 0.204,
+         "status": "untested from here",
+         "need_more_seconds": 12.5
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         41,
+         70
+        ],
+        "position_gap": 0.356,
+        "position_se": 0.094,
+        "position_z": 3.79,
+        "switch_ratio": 0.117,
+        "rate": {
+         "rate_a": 11.33,
+         "rate_b": 12.33,
+         "ratio": 1.088,
+         "z": 0.42,
+         "se": 0.204,
+         "status": "untested from here",
+         "need_more_seconds": 12.5
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         65,
+         61
+        ],
+        "position_gap": 1.03,
+        "position_se": 0.086,
+        "position_z": 11.91,
+        "switch_ratio": 0.929,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 0,
+        "kind": "forced split",
+        "n": [
+         127,
+         102
+        ],
+        "position_gap": 0.289,
+        "position_se": 0.049,
+        "position_z": 5.89,
+        "switch_ratio": 0.08,
+        "rate": {
+         "rate_a": 13.17,
+         "rate_b": 10.59,
+         "ratio": 1.244,
+         "z": 1.61,
+         "se": 0.136,
+         "status": "untested from here",
+         "need_more_seconds": 0.3
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 0,
+        "kind": "forced split",
+        "n": [
+         127,
+         102
+        ],
+        "position_gap": 0.289,
+        "position_se": 0.049,
+        "position_z": 5.89,
+        "switch_ratio": 0.08,
+        "rate": {
+         "rate_a": 13.17,
+         "rate_b": 10.59,
+         "ratio": 1.244,
+         "z": 1.61,
+         "se": 0.136,
+         "status": "untested from here",
+         "need_more_seconds": 0.3
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [
+       {
+        "address": 0,
+        "kind": "forced split",
+        "n": [
+         145,
+         198
+        ],
+        "position_gap": 0.29,
+        "position_se": 0.03,
+        "position_z": 9.5,
+        "switch_ratio": 0.096,
+        "rate": {
+         "rate_a": 9.88,
+         "rate_b": 12.97,
+         "ratio": 1.312,
+         "z": 2.42,
+         "se": 0.112,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 0,
+        "kind": "forced split",
+        "n": [
+         145,
+         198
+        ],
+        "position_gap": 0.29,
+        "position_se": 0.03,
+        "position_z": 9.5,
+        "switch_ratio": 0.096,
+        "rate": {
+         "rate_a": 9.88,
+         "rate_b": 12.97,
+         "ratio": 1.312,
+         "z": 2.42,
+         "se": 0.112,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         228,
+         215
+        ],
+        "position_gap": 0.305,
+        "position_se": 0.028,
+        "position_z": 10.83,
+        "switch_ratio": 0.086,
+        "rate": {
+         "rate_a": 10.13,
+         "rate_b": 12.48,
+         "ratio": 1.232,
+         "z": 2.15,
+         "se": 0.097,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         228,
+         215
+        ],
+        "position_gap": 0.305,
+        "position_se": 0.028,
+        "position_z": 10.83,
+        "switch_ratio": 0.086,
+        "rate": {
+         "rate_a": 10.13,
+         "rate_b": 12.48,
+         "ratio": 1.232,
+         "z": 2.15,
+         "se": 0.097,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         318,
+         212
+        ],
+        "position_gap": 0.257,
+        "position_se": 0.026,
+        "position_z": 9.76,
+        "switch_ratio": 0.083,
+        "rate": {
+         "rate_a": 9.68,
+         "rate_b": 12.41,
+         "ratio": 1.282,
+         "z": 2.74,
+         "se": 0.091,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         318,
+         212
+        ],
+        "position_gap": 0.257,
+        "position_se": 0.026,
+        "position_z": 9.76,
+        "switch_ratio": 0.083,
+        "rate": {
+         "rate_a": 9.68,
+         "rate_b": 12.41,
+         "ratio": 1.282,
+         "z": 2.74,
+         "se": 0.091,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 0,
+        "kind": "states",
+        "n": [
+         404,
+         239
+        ],
+        "position_gap": 0.292,
+        "position_se": 0.014,
+        "position_z": 20.6,
+        "switch_ratio": 0.083,
+        "rate": {
+         "rate_a": 9.87,
+         "rate_b": 12.81,
+         "ratio": 1.298,
+         "z": 3.12,
+         "se": 0.084,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 0,
+        "kind": "states",
+        "n": [
+         404,
+         239
+        ],
+        "position_gap": 0.292,
+        "position_se": 0.014,
+        "position_z": 20.6,
+        "switch_ratio": 0.083,
+        "rate": {
+         "rate_a": 9.87,
+         "rate_b": 12.81,
+         "ratio": 1.298,
+         "z": 3.12,
+         "se": 0.084,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [
+      {
+       "address": 0,
+       "kind": "states",
+       "n": [
+        404,
+        239
+       ],
+       "position_gap": 0.292,
+       "position_se": 0.014,
+       "position_z": 20.6,
+       "switch_ratio": 0.083,
+       "rate": {
+        "rate_a": 9.87,
+        "rate_b": 12.81,
+        "ratio": 1.298,
+        "z": 3.12,
+        "se": 0.084,
+        "status": "survived"
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 0,
+       "kind": "states",
+       "n": [
+        404,
+        239
+       ],
+       "position_gap": 0.292,
+       "position_se": 0.014,
+       "position_z": 20.6,
+       "switch_ratio": 0.083,
+       "rate": {
+        "rate_a": 9.87,
+        "rate_b": 12.81,
+        "ratio": 1.298,
+        "z": 3.12,
+        "se": 0.084,
+        "status": "survived"
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 53,
+    "turn_offset": 0.359,
+    "turn_rate_ratio": 1.778,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "turn_remainder": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         186,
+         202
+        ],
+        "position_gap": 0.2,
+        "position_se": 0.026,
+        "position_z": 7.77,
+        "switch_ratio": 0.813,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         186,
+         202
+        ],
+        "position_gap": 0.2,
+        "position_se": 0.026,
+        "position_z": 7.77,
+        "switch_ratio": 0.813,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         339,
+         108
+        ],
+        "position_gap": 0.352,
+        "position_se": 0.024,
+        "position_z": 14.96,
+        "switch_ratio": 0.196,
+        "rate": {
+         "rate_a": 6.74,
+         "rate_b": 11.91,
+         "ratio": 1.768,
+         "z": 4.82,
+         "se": 0.118,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         339,
+         108
+        ],
+        "position_gap": 0.352,
+        "position_se": 0.024,
+        "position_z": 14.96,
+        "switch_ratio": 0.196,
+        "rate": {
+         "rate_a": 6.74,
+         "rate_b": 11.91,
+         "ratio": 1.768,
+         "z": 4.82,
+         "se": 0.118,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [
+      {
+       "address": 2,
+       "kind": "forced split",
+       "n": [
+        339,
+        108
+       ],
+       "position_gap": 0.352,
+       "position_se": 0.024,
+       "position_z": 14.96,
+       "switch_ratio": 0.196,
+       "rate": {
+        "rate_a": 6.74,
+        "rate_b": 11.91,
+        "ratio": 1.768,
+        "z": 4.82,
+        "se": 0.118,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 2,
+       "kind": "forced split",
+       "n": [
+        339,
+        108
+       ],
+       "position_gap": 0.352,
+       "position_se": 0.024,
+       "position_z": 14.96,
+       "switch_ratio": 0.196,
+       "rate": {
+        "rate_a": 6.74,
+        "rate_b": 11.91,
+        "ratio": 1.768,
+        "z": 4.82,
+        "se": 0.118,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 54,
+    "turn_offset": 0.259,
+    "turn_rate_ratio": 1.742,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 4,
+       "stable": 1,
+       "turn_merged": false,
+       "false_merges": 2
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 1,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "turn_remainder": [
+       {
+        "address": 0,
+        "kind": "forced split",
+        "n": [
+         53,
+         30
+        ],
+        "position_gap": 1.471,
+        "position_se": 0.055,
+        "position_z": 26.62,
+        "switch_ratio": 1.136,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 0,
+        "kind": "forced split",
+        "n": [
+         53,
+         30
+        ],
+        "position_gap": 1.471,
+        "position_se": 0.055,
+        "position_z": 26.62,
+        "switch_ratio": 1.136,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         56,
+         39
+        ],
+        "position_gap": 0.273,
+        "position_se": 0.07,
+        "position_z": 3.89,
+        "switch_ratio": 0.198,
+        "rate": {
+         "rate_a": 3.8,
+         "rate_b": 7.6,
+         "ratio": 1.998,
+         "z": 3.13,
+         "se": 0.221,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         56,
+         39
+        ],
+        "position_gap": 0.273,
+        "position_se": 0.07,
+        "position_z": 3.89,
+        "switch_ratio": 0.198,
+        "rate": {
+         "rate_a": 3.8,
+         "rate_b": 7.6,
+         "ratio": 1.998,
+         "z": 3.13,
+         "se": 0.221,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 9,
+        "kind": "forced split",
+        "n": [
+         41,
+         95
+        ],
+        "position_gap": 0.332,
+        "position_se": 0.081,
+        "position_z": 4.08,
+        "switch_ratio": 0.229,
+        "rate": {
+         "rate_a": 7.6,
+         "rate_b": 3.9,
+         "ratio": 1.947,
+         "z": 3.3,
+         "se": 0.202,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 9,
+        "kind": "forced split",
+        "n": [
+         41,
+         95
+        ],
+        "position_gap": 0.332,
+        "position_se": 0.081,
+        "position_z": 4.08,
+        "switch_ratio": 0.229,
+        "rate": {
+         "rate_a": 7.6,
+         "rate_b": 3.9,
+         "ratio": 1.947,
+         "z": 3.3,
+         "se": 0.202,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         140,
+         37
+        ],
+        "position_gap": 0.238,
+        "position_se": 0.062,
+        "position_z": 3.82,
+        "switch_ratio": 0.155,
+        "rate": {
+         "rate_a": 4.05,
+         "rate_b": 7.86,
+         "ratio": 1.94,
+         "z": 3.37,
+         "se": 0.197,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         140,
+         37
+        ],
+        "position_gap": 0.238,
+        "position_se": 0.062,
+        "position_z": 3.82,
+        "switch_ratio": 0.155,
+        "rate": {
+         "rate_a": 4.05,
+         "rate_b": 7.86,
+         "ratio": 1.94,
+         "z": 3.37,
+         "se": 0.197,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         65,
+         163
+        ],
+        "position_gap": 0.294,
+        "position_se": 0.043,
+        "position_z": 6.82,
+        "switch_ratio": 0.108,
+        "rate": {
+         "rate_a": 7.31,
+         "rate_b": 4.01,
+         "ratio": 1.824,
+         "z": 3.94,
+         "se": 0.153,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         65,
+         163
+        ],
+        "position_gap": 0.294,
+        "position_se": 0.043,
+        "position_z": 6.82,
+        "switch_ratio": 0.108,
+        "rate": {
+         "rate_a": 7.31,
+         "rate_b": 4.01,
+         "ratio": 1.824,
+         "z": 3.94,
+         "se": 0.153,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [
+       {
+        "address": 5,
+        "kind": "forced split",
+        "n": [
+         187,
+         96
+        ],
+        "position_gap": 0.247,
+        "position_se": 0.047,
+        "position_z": 5.3,
+        "switch_ratio": 0.15,
+        "rate": {
+         "rate_a": 4.13,
+         "rate_b": 6.59,
+         "ratio": 1.596,
+         "z": 3.56,
+         "se": 0.131,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 5,
+        "kind": "forced split",
+        "n": [
+         187,
+         96
+        ],
+        "position_gap": 0.247,
+        "position_se": 0.047,
+        "position_z": 5.3,
+        "switch_ratio": 0.15,
+        "rate": {
+         "rate_a": 4.13,
+         "rate_b": 6.59,
+         "ratio": 1.596,
+         "z": 3.56,
+         "se": 0.131,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "turn_remainder": [
+      {
+       "address": 5,
+       "kind": "forced split",
+       "n": [
+        187,
+        96
+       ],
+       "position_gap": 0.247,
+       "position_se": 0.047,
+       "position_z": 5.3,
+       "switch_ratio": 0.15,
+       "rate": {
+        "rate_a": 4.13,
+        "rate_b": 6.59,
+        "ratio": 1.596,
+        "z": 3.56,
+        "se": 0.131,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 5,
+       "kind": "forced split",
+       "n": [
+        187,
+        96
+       ],
+       "position_gap": 0.247,
+       "position_se": 0.047,
+       "position_z": 5.3,
+       "switch_ratio": 0.15,
+       "rate": {
+        "rate_a": 4.13,
+        "rate_b": 6.59,
+        "ratio": 1.596,
+        "z": 3.56,
+        "se": 0.131,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 55,
+    "turn_offset": 0.435,
+    "turn_rate_ratio": 2.043,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         48,
+         115
+        ],
+        "position_gap": 0.348,
+        "position_se": 0.046,
+        "position_z": 7.51,
+        "switch_ratio": 0.089,
+        "rate": {
+         "rate_a": 3.72,
+         "rate_b": 7.16,
+         "ratio": 1.924,
+         "z": 3.68,
+         "se": 0.178,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 1,
+        "kind": "forced split",
+        "n": [
+         211,
+         49
+        ],
+        "position_gap": 0.028,
+        "position_se": 0.051,
+        "position_z": 0.54,
+        "switch_ratio": 0.139,
+        "rate": {
+         "rate_a": 11.01,
+         "rate_b": 4.59,
+         "ratio": 2.397,
+         "z": 5.21,
+         "se": 0.168,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       },
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         48,
+         115
+        ],
+        "position_gap": 0.348,
+        "position_se": 0.046,
+        "position_z": 7.51,
+        "switch_ratio": 0.089,
+        "rate": {
+         "rate_a": 3.72,
+         "rate_b": 7.16,
+         "ratio": 1.924,
+         "z": 3.68,
+         "se": 0.178,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 7,
+        "kind": "forced split",
+        "n": [
+         119,
+         81
+        ],
+        "position_gap": 0.409,
+        "position_se": 0.038,
+        "position_z": 10.66,
+        "switch_ratio": 0.063,
+        "rate": {
+         "rate_a": 7.31,
+         "rate_b": 3.57,
+         "ratio": 2.044,
+         "z": 4.86,
+         "se": 0.147,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         285,
+         52
+        ],
+        "position_gap": 0.049,
+        "position_se": 0.04,
+        "position_z": 1.23,
+        "switch_ratio": 0.114,
+        "rate": {
+         "rate_a": 9.8,
+         "rate_b": 4.78,
+         "ratio": 2.051,
+         "z": 4.56,
+         "se": 0.158,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       },
+       {
+        "address": 7,
+        "kind": "forced split",
+        "n": [
+         119,
+         81
+        ],
+        "position_gap": 0.409,
+        "position_se": 0.038,
+        "position_z": 10.66,
+        "switch_ratio": 0.063,
+        "rate": {
+         "rate_a": 7.31,
+         "rate_b": 3.57,
+         "ratio": 2.044,
+         "z": 4.86,
+         "se": 0.147,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         124,
+         112
+        ],
+        "position_gap": 0.396,
+        "position_se": 0.041,
+        "position_z": 9.68,
+        "switch_ratio": 0.094,
+        "rate": {
+         "rate_a": 7.13,
+         "rate_b": 3.63,
+         "ratio": 1.962,
+         "z": 5.04,
+         "se": 0.134,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 1,
+        "kind": "forced split",
+        "n": [
+         58,
+         357
+        ],
+        "position_gap": 0.082,
+        "position_se": 0.068,
+        "position_z": 1.2,
+        "switch_ratio": 0.181,
+        "rate": {
+         "rate_a": 4.94,
+         "rate_b": 9.27,
+         "ratio": 1.876,
+         "z": 4.12,
+         "se": 0.153,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       },
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         124,
+         112
+        ],
+        "position_gap": 0.396,
+        "position_se": 0.041,
+        "position_z": 9.68,
+        "switch_ratio": 0.094,
+        "rate": {
+         "rate_a": 7.13,
+         "rate_b": 3.63,
+         "ratio": 1.962,
+         "z": 5.04,
+         "se": 0.134,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 5,
+        "kind": "states",
+        "n": [
+         146,
+         133
+        ],
+        "position_gap": 0.393,
+        "position_se": 0.024,
+        "position_z": 16.39,
+        "switch_ratio": 0.072,
+        "rate": {
+         "rate_a": 3.63,
+         "rate_b": 7.32,
+         "ratio": 2.015,
+         "z": 5.73,
+         "se": 0.122,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 3,
+        "kind": "states",
+        "n": [
+         436,
+         76
+        ],
+        "position_gap": 0.044,
+        "position_se": 0.023,
+        "position_z": 1.92,
+        "switch_ratio": 0.085,
+        "rate": {
+         "rate_a": 9.31,
+         "rate_b": 5.68,
+         "ratio": 1.64,
+         "z": 3.84,
+         "se": 0.129,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       },
+       {
+        "address": 5,
+        "kind": "states",
+        "n": [
+         146,
+         133
+        ],
+        "position_gap": 0.393,
+        "position_se": 0.024,
+        "position_z": 16.39,
+        "switch_ratio": 0.072,
+        "rate": {
+         "rate_a": 3.63,
+         "rate_b": 7.32,
+         "ratio": 2.015,
+         "z": 5.73,
+         "se": 0.122,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [
+      {
+       "address": 5,
+       "kind": "states",
+       "n": [
+        146,
+        133
+       ],
+       "position_gap": 0.393,
+       "position_se": 0.024,
+       "position_z": 16.39,
+       "switch_ratio": 0.072,
+       "rate": {
+        "rate_a": 3.63,
+        "rate_b": 7.32,
+        "ratio": 2.015,
+        "z": 5.73,
+        "se": 0.122,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 3,
+       "kind": "states",
+       "n": [
+        436,
+        76
+       ],
+       "position_gap": 0.044,
+       "position_se": 0.023,
+       "position_z": 1.92,
+       "switch_ratio": 0.085,
+       "rate": {
+        "rate_a": 9.31,
+        "rate_b": 5.68,
+        "ratio": 1.64,
+        "z": 3.84,
+        "se": 0.129,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "rate"
+       ]
+      },
+      {
+       "address": 5,
+       "kind": "states",
+       "n": [
+        146,
+        133
+       ],
+       "position_gap": 0.393,
+       "position_se": 0.024,
+       "position_z": 16.39,
+       "switch_ratio": 0.072,
+       "rate": {
+        "rate_a": 3.63,
+        "rate_b": 7.32,
+        "ratio": 2.015,
+        "z": 5.73,
+        "se": 0.122,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 56,
+    "turn_offset": 0.008,
+    "turn_rate_ratio": 2.05,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 2,
+       "stable": 2,
+       "turn_merged": false,
+       "false_merges": 2
+      },
+      "two_channel": {
+       "mood": 3,
+       "stable": 3,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         52,
+         34
+        ],
+        "position_gap": 1.036,
+        "position_se": 0.09,
+        "position_z": 11.46,
+        "switch_ratio": 0.984,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         95,
+         32
+        ],
+        "status": "silent",
+        "reason": "a part is too small"
+       }
+      ],
+      "reopened": []
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 5,
+        "kind": "forced split",
+        "n": [
+         55,
+         127
+        ],
+        "position_gap": 0.014,
+        "position_se": 0.026,
+        "position_z": 0.56,
+        "switch_ratio": 0.065,
+        "rate": {
+         "rate_a": 4.23,
+         "rate_b": 8.0,
+         "ratio": 1.889,
+         "z": 3.85,
+         "se": 0.165,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 5,
+        "kind": "forced split",
+        "n": [
+         55,
+         127
+        ],
+        "position_gap": 0.014,
+        "position_se": 0.026,
+        "position_z": 0.56,
+        "switch_ratio": 0.065,
+        "rate": {
+         "rate_a": 4.23,
+         "rate_b": 8.0,
+         "ratio": 1.889,
+         "z": 3.85,
+         "se": 0.165,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         181,
+         69
+        ],
+        "position_gap": 0.009,
+        "position_se": 0.018,
+        "position_z": 0.53,
+        "switch_ratio": 0.07,
+        "rate": {
+         "rate_a": 8.24,
+         "rate_b": 4.24,
+         "ratio": 1.944,
+         "z": 4.58,
+         "se": 0.145,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         181,
+         69
+        ],
+        "position_gap": 0.009,
+        "position_se": 0.018,
+        "position_z": 0.53,
+        "switch_ratio": 0.07,
+        "rate": {
+         "rate_a": 8.24,
+         "rate_b": 4.24,
+         "ratio": 1.944,
+         "z": 4.58,
+         "se": 0.145,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 1,
+        "kind": "forced split",
+        "n": [
+         109,
+         208
+        ],
+        "position_gap": 0.011,
+        "position_se": 0.02,
+        "position_z": 0.56,
+        "switch_ratio": 0.098,
+        "rate": {
+         "rate_a": 4.68,
+         "rate_b": 8.29,
+         "ratio": 1.774,
+         "z": 4.71,
+         "se": 0.122,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 1,
+        "kind": "forced split",
+        "n": [
+         109,
+         208
+        ],
+        "position_gap": 0.011,
+        "position_se": 0.02,
+        "position_z": 0.56,
+        "switch_ratio": 0.098,
+        "rate": {
+         "rate_a": 4.68,
+         "rate_b": 8.29,
+         "ratio": 1.774,
+         "z": 4.71,
+         "se": 0.122,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 2,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 2,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 10,
+        "kind": "forced split",
+        "n": [
+         311,
+         58
+        ],
+        "position_gap": 0.086,
+        "position_se": 0.03,
+        "position_z": 2.89,
+        "switch_ratio": 0.164,
+        "rate": {
+         "rate_a": 8.68,
+         "rate_b": 2.74,
+         "ratio": 3.169,
+         "z": 7.55,
+         "se": 0.153,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "rate"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 2,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 2,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [],
+     "reopened": [
+      {
+       "address": 10,
+       "kind": "forced split",
+       "n": [
+        311,
+        58
+       ],
+       "position_gap": 0.086,
+       "position_se": 0.03,
+       "position_z": 2.89,
+       "switch_ratio": 0.164,
+       "rate": {
+        "rate_a": 8.68,
+        "rate_b": 2.74,
+        "ratio": 3.169,
+        "z": 7.55,
+        "se": 0.153,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "rate"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 57,
+    "turn_offset": 0.234,
+    "turn_rate_ratio": 2.323,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 1,
+       "stable": 1,
+       "turn_merged": false,
+       "false_merges": 3
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 1,
+        "kind": "forced split",
+        "n": [
+         59,
+         91
+        ],
+        "position_gap": 1.056,
+        "position_se": 0.047,
+        "position_z": 22.39,
+        "switch_ratio": 0.816,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 3,
+        "kind": "forced split",
+        "n": [
+         73,
+         25
+        ],
+        "position_gap": 1.265,
+        "position_se": 0.045,
+        "position_z": 27.83,
+        "switch_ratio": 1.058,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         54,
+         59
+        ],
+        "position_gap": 0.782,
+        "position_se": 0.077,
+        "position_z": 10.17,
+        "switch_ratio": 1.056,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 2,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 3,
+        "kind": "forced split",
+        "n": [
+         114,
+         44
+        ],
+        "position_gap": 0.265,
+        "position_se": 0.044,
+        "position_z": 6.08,
+        "switch_ratio": 0.095,
+        "rate": {
+         "rate_a": 10.6,
+         "rate_b": 6.39,
+         "ratio": 1.66,
+         "z": 2.75,
+         "se": 0.184,
+         "status": "untested from here",
+         "need_more_seconds": 16.7
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         130,
+         114
+        ],
+        "position_gap": 1.005,
+        "position_se": 0.063,
+        "position_z": 15.89,
+        "switch_ratio": 0.975,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 3,
+        "kind": "forced split",
+        "n": [
+         114,
+         44
+        ],
+        "position_gap": 0.265,
+        "position_se": 0.044,
+        "position_z": 6.08,
+        "switch_ratio": 0.095,
+        "rate": {
+         "rate_a": 10.6,
+         "rate_b": 6.39,
+         "ratio": 1.66,
+         "z": 2.75,
+         "se": 0.184,
+         "status": "untested from here",
+         "need_more_seconds": 16.7
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 2,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 3,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         58,
+         162
+        ],
+        "position_gap": 0.284,
+        "position_se": 0.049,
+        "position_z": 5.81,
+        "switch_ratio": 0.106,
+        "rate": {
+         "rate_a": 6.11,
+         "rate_b": 9.1,
+         "ratio": 1.49,
+         "z": 2.51,
+         "se": 0.159,
+         "status": "untested from here",
+         "need_more_seconds": 11.3
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         58,
+         162
+        ],
+        "position_gap": 0.284,
+        "position_se": 0.049,
+        "position_z": 5.81,
+        "switch_ratio": 0.106,
+        "rate": {
+         "rate_a": 6.11,
+         "rate_b": 9.1,
+         "ratio": 1.49,
+         "z": 2.51,
+         "se": 0.159,
+         "status": "untested from here",
+         "need_more_seconds": 11.3
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 5,
+        "kind": "forced split",
+        "n": [
+         59,
+         173
+        ],
+        "position_gap": 0.958,
+        "position_se": 0.058,
+        "position_z": 16.48,
+        "switch_ratio": 0.628,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 7,
+        "kind": "forced split",
+        "n": [
+         63,
+         245
+        ],
+        "position_gap": 0.273,
+        "position_se": 0.038,
+        "position_z": 7.09,
+        "switch_ratio": 0.1,
+        "rate": {
+         "rate_a": 6.09,
+         "rate_b": 9.01,
+         "ratio": 1.48,
+         "z": 2.66,
+         "se": 0.147,
+         "status": "untested from here",
+         "need_more_seconds": 7.5
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 7,
+        "kind": "forced split",
+        "n": [
+         63,
+         245
+        ],
+        "position_gap": 0.273,
+        "position_se": 0.038,
+        "position_z": 7.09,
+        "switch_ratio": 0.1,
+        "rate": {
+         "rate_a": 6.09,
+         "rate_b": 9.01,
+         "ratio": 1.48,
+         "z": 2.66,
+         "se": 0.147,
+         "status": "untested from here",
+         "need_more_seconds": 7.5
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         105,
+         246
+        ],
+        "position_gap": 0.27,
+        "position_se": 0.029,
+        "position_z": 9.17,
+        "switch_ratio": 0.082,
+        "rate": {
+         "rate_a": 5.42,
+         "rate_b": 9.01,
+         "ratio": 1.662,
+         "z": 4.24,
+         "se": 0.12,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         105,
+         246
+        ],
+        "position_gap": 0.27,
+        "position_se": 0.029,
+        "position_z": 9.17,
+        "switch_ratio": 0.082,
+        "rate": {
+         "rate_a": 5.42,
+         "rate_b": 9.01,
+         "ratio": 1.662,
+         "z": 4.24,
+         "se": 0.12,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 4,
+        "kind": "states",
+        "n": [
+         323,
+         112
+        ],
+        "position_gap": 0.264,
+        "position_se": 0.023,
+        "position_z": 11.27,
+        "switch_ratio": 0.078,
+        "rate": {
+         "rate_a": 9.38,
+         "rate_b": 4.87,
+         "ratio": 1.928,
+         "z": 5.83,
+         "se": 0.113,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "states",
+        "n": [
+         323,
+         112
+        ],
+        "position_gap": 0.264,
+        "position_se": 0.023,
+        "position_z": 11.27,
+        "switch_ratio": 0.078,
+        "rate": {
+         "rate_a": 9.38,
+         "rate_b": 4.87,
+         "ratio": 1.928,
+         "z": 5.83,
+         "se": 0.113,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [
+      {
+       "address": 4,
+       "kind": "states",
+       "n": [
+        323,
+        112
+       ],
+       "position_gap": 0.264,
+       "position_se": 0.023,
+       "position_z": 11.27,
+       "switch_ratio": 0.078,
+       "rate": {
+        "rate_a": 9.38,
+        "rate_b": 4.87,
+        "ratio": 1.928,
+        "z": 5.83,
+        "se": 0.113,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 4,
+       "kind": "states",
+       "n": [
+        323,
+        112
+       ],
+       "position_gap": 0.264,
+       "position_se": 0.023,
+       "position_z": 11.27,
+       "switch_ratio": 0.078,
+       "rate": {
+        "rate_a": 9.38,
+        "rate_b": 4.87,
+        "ratio": 1.928,
+        "z": 5.83,
+        "se": 0.113,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 58,
+    "turn_offset": 0.44,
+    "turn_rate_ratio": 1.115,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 9,
+        "kind": "forced split",
+        "n": [
+         78,
+         27
+        ],
+        "status": "silent",
+        "reason": "a part is too small"
+       }
+      ],
+      "reopened": []
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 3,
+        "kind": "forced split",
+        "n": [
+         135,
+         63
+        ],
+        "position_gap": 0.43,
+        "position_se": 0.04,
+        "position_z": 10.79,
+        "switch_ratio": 0.105,
+        "rate": {
+         "rate_a": 9.97,
+         "rate_b": 9.78,
+         "ratio": 1.019,
+         "z": 0.12,
+         "se": 0.158,
+         "status": "untested from here",
+         "need_more_seconds": 7.3
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 3,
+        "kind": "forced split",
+        "n": [
+         135,
+         63
+        ],
+        "position_gap": 0.43,
+        "position_se": 0.04,
+        "position_z": 10.79,
+        "switch_ratio": 0.105,
+        "rate": {
+         "rate_a": 9.97,
+         "rate_b": 9.78,
+         "ratio": 1.019,
+         "z": 0.12,
+         "se": 0.158,
+         "status": "untested from here",
+         "need_more_seconds": 7.3
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 5,
+        "kind": "forced split",
+        "n": [
+         220,
+         66
+        ],
+        "position_gap": 0.518,
+        "position_se": 0.041,
+        "position_z": 12.76,
+        "switch_ratio": 0.148,
+        "rate": {
+         "rate_a": 9.78,
+         "rate_b": 9.78,
+         "ratio": 1.0,
+         "z": 0.0,
+         "se": 0.148,
+         "status": "untested from here",
+         "need_more_seconds": 6.1
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 5,
+        "kind": "forced split",
+        "n": [
+         220,
+         66
+        ],
+        "position_gap": 0.518,
+        "position_se": 0.041,
+        "position_z": 12.76,
+        "switch_ratio": 0.148,
+        "rate": {
+         "rate_a": 9.78,
+         "rate_b": 9.78,
+         "ratio": 1.0,
+         "z": 0.0,
+         "se": 0.148,
+         "status": "untested from here",
+         "need_more_seconds": 6.1
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         337,
+         63
+        ],
+        "position_gap": 0.512,
+        "position_se": 0.033,
+        "position_z": 15.63,
+        "switch_ratio": 0.085,
+        "rate": {
+         "rate_a": 10.13,
+         "rate_b": 9.78,
+         "ratio": 1.037,
+         "z": 0.25,
+         "se": 0.142,
+         "status": "untested from here",
+         "need_more_seconds": 4.4
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 4,
+        "kind": "states",
+        "n": [
+         340,
+         155
+        ],
+        "position_gap": 0.458,
+        "position_se": 0.02,
+        "position_z": 22.44,
+        "switch_ratio": 0.033,
+        "rate": {
+         "rate_a": 10.08,
+         "rate_b": 9.85,
+         "ratio": 1.023,
+         "z": 0.23,
+         "se": 0.098,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "states",
+        "n": [
+         340,
+         155
+        ],
+        "position_gap": 0.458,
+        "position_se": 0.02,
+        "position_z": 22.44,
+        "switch_ratio": 0.033,
+        "rate": {
+         "rate_a": 10.08,
+         "rate_b": 9.85,
+         "ratio": 1.023,
+         "z": 0.23,
+         "se": 0.098,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 4,
+        "kind": "states",
+        "n": [
+         341,
+         261
+        ],
+        "position_gap": 0.46,
+        "position_se": 0.025,
+        "position_z": 18.73,
+        "switch_ratio": 0.041,
+        "rate": {
+         "rate_a": 10.05,
+         "rate_b": 10.33,
+         "ratio": 1.027,
+         "z": 0.32,
+         "se": 0.083,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "states",
+        "n": [
+         341,
+         261
+        ],
+        "position_gap": 0.46,
+        "position_se": 0.025,
+        "position_z": 18.73,
+        "switch_ratio": 0.041,
+        "rate": {
+         "rate_a": 10.05,
+         "rate_b": 10.33,
+         "ratio": 1.027,
+         "z": 0.32,
+         "se": 0.083,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [
+      {
+       "address": 4,
+       "kind": "states",
+       "n": [
+        341,
+        261
+       ],
+       "position_gap": 0.46,
+       "position_se": 0.025,
+       "position_z": 18.73,
+       "switch_ratio": 0.041,
+       "rate": {
+        "rate_a": 10.05,
+        "rate_b": 10.33,
+        "ratio": 1.027,
+        "z": 0.32,
+        "se": 0.083,
+        "status": "survived"
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 4,
+       "kind": "states",
+       "n": [
+        341,
+        261
+       ],
+       "position_gap": 0.46,
+       "position_se": 0.025,
+       "position_z": 18.73,
+       "switch_ratio": 0.041,
+       "rate": {
+        "rate_a": 10.05,
+        "rate_b": 10.33,
+        "ratio": 1.027,
+        "z": 0.32,
+        "se": 0.083,
+        "status": "survived"
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 59,
+    "turn_offset": 0.413,
+    "turn_rate_ratio": 1.461,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 4,
+       "stable": 3,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 3,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "turn_remainder": [
+       {
+        "address": 8,
+        "n": 57,
+        "status": "silent",
+        "reason": "too few spikes"
+       }
+      ],
+      "reopened": []
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         101,
+         53
+        ],
+        "position_gap": 0.39,
+        "position_se": 0.042,
+        "position_z": 9.29,
+        "switch_ratio": 0.058,
+        "rate": {
+         "rate_a": 6.71,
+         "rate_b": 11.39,
+         "ratio": 1.697,
+         "z": 3.06,
+         "se": 0.173,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         101,
+         53
+        ],
+        "position_gap": 0.39,
+        "position_se": 0.042,
+        "position_z": 9.29,
+        "switch_ratio": 0.058,
+        "rate": {
+         "rate_a": 6.71,
+         "rate_b": 11.39,
+         "ratio": 1.697,
+         "z": 3.06,
+         "se": 0.173,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 1,
+        "kind": "states",
+        "n": [
+         185,
+         57
+        ],
+        "position_gap": 0.405,
+        "position_se": 0.026,
+        "position_z": 15.74,
+        "switch_ratio": 0.115,
+        "rate": {
+         "rate_a": 7.57,
+         "rate_b": 11.62,
+         "ratio": 1.534,
+         "z": 2.72,
+         "se": 0.158,
+         "status": "untested from here",
+         "need_more_seconds": 10.8
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 1,
+        "kind": "states",
+        "n": [
+         185,
+         57
+        ],
+        "position_gap": 0.405,
+        "position_se": 0.026,
+        "position_z": 15.74,
+        "switch_ratio": 0.115,
+        "rate": {
+         "rate_a": 7.57,
+         "rate_b": 11.62,
+         "ratio": 1.534,
+         "z": 2.72,
+         "se": 0.158,
+         "status": "untested from here",
+         "need_more_seconds": 10.8
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 2,
+        "kind": "states",
+        "n": [
+         236,
+         87
+        ],
+        "position_gap": 0.417,
+        "position_se": 0.016,
+        "position_z": 26.47,
+        "switch_ratio": 0.079,
+        "rate": {
+         "rate_a": 7.56,
+         "rate_b": 11.57,
+         "ratio": 1.529,
+         "z": 3.3,
+         "se": 0.129,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "states",
+        "n": [
+         236,
+         87
+        ],
+        "position_gap": 0.417,
+        "position_se": 0.016,
+        "position_z": 26.47,
+        "switch_ratio": 0.079,
+        "rate": {
+         "rate_a": 7.56,
+         "rate_b": 11.57,
+         "ratio": 1.529,
+         "z": 3.3,
+         "se": 0.129,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 5,
+        "kind": "states",
+        "n": [
+         291,
+         109
+        ],
+        "position_gap": 0.423,
+        "position_se": 0.019,
+        "position_z": 22.21,
+        "switch_ratio": 0.114,
+        "rate": {
+         "rate_a": 7.56,
+         "rate_b": 11.66,
+         "ratio": 1.543,
+         "z": 3.72,
+         "se": 0.116,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 5,
+        "kind": "states",
+        "n": [
+         291,
+         109
+        ],
+        "position_gap": 0.423,
+        "position_se": 0.019,
+        "position_z": 22.21,
+        "switch_ratio": 0.114,
+        "rate": {
+         "rate_a": 7.56,
+         "rate_b": 11.66,
+         "ratio": 1.543,
+         "z": 3.72,
+         "se": 0.116,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 0,
+        "kind": "states",
+        "n": [
+         354,
+         120
+        ],
+        "position_gap": 0.418,
+        "position_se": 0.021,
+        "position_z": 19.66,
+        "switch_ratio": 0.112,
+        "rate": {
+         "rate_a": 7.54,
+         "rate_b": 10.93,
+         "ratio": 1.45,
+         "z": 3.39,
+         "se": 0.11,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 0,
+        "kind": "states",
+        "n": [
+         354,
+         120
+        ],
+        "position_gap": 0.418,
+        "position_se": 0.021,
+        "position_z": 19.66,
+        "switch_ratio": 0.112,
+        "rate": {
+         "rate_a": 7.54,
+         "rate_b": 10.93,
+         "ratio": 1.45,
+         "z": 3.39,
+         "se": 0.11,
+         "status": "survived"
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [
+      {
+       "address": 0,
+       "kind": "states",
+       "n": [
+        354,
+        120
+       ],
+       "position_gap": 0.418,
+       "position_se": 0.021,
+       "position_z": 19.66,
+       "switch_ratio": 0.112,
+       "rate": {
+        "rate_a": 7.54,
+        "rate_b": 10.93,
+        "ratio": 1.45,
+        "z": 3.39,
+        "se": 0.11,
+        "status": "survived"
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 0,
+       "kind": "states",
+       "n": [
+        354,
+        120
+       ],
+       "position_gap": 0.418,
+       "position_se": 0.021,
+       "position_z": 19.66,
+       "switch_ratio": 0.112,
+       "rate": {
+        "rate_a": 7.54,
+        "rate_b": 10.93,
+        "ratio": 1.45,
+        "z": 3.39,
+        "se": 0.11,
+        "status": "survived"
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 60,
+    "turn_offset": 0.014,
+    "turn_rate_ratio": 1.13,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 3,
+       "stable": 3,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 3,
+        "kind": "forced split",
+        "n": [
+         86,
+         39
+        ],
+        "position_gap": 0.739,
+        "position_se": 0.049,
+        "position_z": 15.06,
+        "switch_ratio": 0.827,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [],
+      "reopened": []
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 9,
+        "kind": "forced split",
+        "n": [
+         108,
+         99
+        ],
+        "position_gap": 0.059,
+        "position_se": 0.045,
+        "position_z": 1.3,
+        "switch_ratio": 0.029,
+        "rate": {
+         "rate_a": 6.91,
+         "rate_b": 6.71,
+         "ratio": 1.029,
+         "z": 0.21,
+         "se": 0.141,
+         "status": "untested from here",
+         "need_more_seconds": 2.5
+        },
+        "status": "agrees"
+       }
+      ],
+      "reopened": []
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 2,
+        "kind": "states",
+        "n": [
+         167,
+         99
+        ],
+        "position_gap": 0.012,
+        "position_se": 0.025,
+        "position_z": 0.49,
+        "switch_ratio": 0.032,
+        "rate": {
+         "rate_a": 6.59,
+         "rate_b": 6.93,
+         "ratio": 1.052,
+         "z": 0.39,
+         "se": 0.128,
+         "status": "survived"
+        },
+        "status": "agrees"
+       }
+      ],
+      "reopened": []
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 5,
+        "kind": "states",
+        "n": [
+         212,
+         101
+        ],
+        "position_gap": 0.022,
+        "position_se": 0.023,
+        "position_z": 0.93,
+        "switch_ratio": 0.088,
+        "rate": {
+         "rate_a": 6.03,
+         "rate_b": 6.92,
+         "ratio": 1.148,
+         "z": 1.11,
+         "se": 0.124,
+         "status": "survived"
+        },
+        "status": "agrees"
+       }
+      ],
+      "reopened": []
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "turn_remainder": [
+       {
+        "address": 0,
+        "kind": "states",
+        "n": [
+         251,
+         125
+        ],
+        "position_gap": 0.031,
+        "position_se": 0.022,
+        "position_z": 1.43,
+        "switch_ratio": 0.066,
+        "rate": {
+         "rate_a": 6.23,
+         "rate_b": 6.59,
+         "ratio": 1.057,
+         "z": 0.5,
+         "se": 0.112,
+         "status": "survived"
+        },
+        "status": "agrees"
+       }
+      ],
+      "reopened": []
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "turn_remainder": [
+      {
+       "address": 0,
+       "kind": "states",
+       "n": [
+        251,
+        125
+       ],
+       "position_gap": 0.031,
+       "position_se": 0.022,
+       "position_z": 1.43,
+       "switch_ratio": 0.066,
+       "rate": {
+        "rate_a": 6.23,
+        "rate_b": 6.59,
+        "ratio": 1.057,
+        "z": 0.5,
+        "se": 0.112,
+        "status": "survived"
+       },
+       "status": "agrees"
+      }
+     ],
+     "reopened": []
+    }
+   },
+   {
+    "seed": 61,
+    "turn_offset": 0.386,
+    "turn_rate_ratio": 2.244,
+    "trace": [
+     {
+      "T": 10,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         61,
+         12
+        ],
+        "status": "silent",
+        "reason": "a part is too small"
+       }
+      ],
+      "reopened": []
+     },
+     {
+      "T": 20,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 7,
+        "kind": "forced split",
+        "n": [
+         67,
+         55
+        ],
+        "position_gap": 0.508,
+        "position_se": 0.041,
+        "position_z": 12.3,
+        "switch_ratio": 0.1,
+        "rate": {
+         "rate_a": 9.77,
+         "rate_b": 4.33,
+         "ratio": 2.259,
+         "z": 4.35,
+         "se": 0.187,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 7,
+        "kind": "forced split",
+        "n": [
+         67,
+         55
+        ],
+        "position_gap": 0.508,
+        "position_se": 0.041,
+        "position_z": 12.3,
+        "switch_ratio": 0.1,
+        "rate": {
+         "rate_a": 9.77,
+         "rate_b": 4.33,
+         "ratio": 2.259,
+         "z": 4.35,
+         "se": 0.187,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 30,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         54,
+         160
+        ],
+        "position_gap": 0.456,
+        "position_se": 0.035,
+        "position_z": 13.17,
+        "switch_ratio": 0.05,
+        "rate": {
+         "rate_a": 4.33,
+         "rate_b": 9.43,
+         "ratio": 2.18,
+         "z": 4.87,
+         "se": 0.16,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         54,
+         160
+        ],
+        "position_gap": 0.456,
+        "position_se": 0.035,
+        "position_z": 13.17,
+        "switch_ratio": 0.05,
+        "rate": {
+         "rate_a": 4.33,
+         "rate_b": 9.43,
+         "ratio": 2.18,
+         "z": 4.87,
+         "se": 0.16,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 40,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "states",
+        "n": [
+         268,
+         56
+        ],
+        "position_gap": 0.404,
+        "position_se": 0.025,
+        "position_z": 16.42,
+        "switch_ratio": 0.065,
+        "rate": {
+         "rate_a": 9.93,
+         "rate_b": 4.41,
+         "ratio": 2.252,
+         "z": 5.39,
+         "se": 0.151,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 50,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 6,
+        "kind": "states",
+        "n": [
+         302,
+         82
+        ],
+        "position_gap": 0.384,
+        "position_se": 0.026,
+        "position_z": 14.7,
+        "switch_ratio": 0.054,
+        "rate": {
+         "rate_a": 9.9,
+         "rate_b": 4.31,
+         "ratio": 2.298,
+         "z": 6.54,
+         "se": 0.127,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 6,
+        "kind": "states",
+        "n": [
+         302,
+         82
+        ],
+        "position_gap": 0.384,
+        "position_se": 0.026,
+        "position_z": 14.7,
+        "switch_ratio": 0.054,
+        "rate": {
+         "rate_a": 9.9,
+         "rate_b": 4.31,
+         "ratio": 2.298,
+         "z": 6.54,
+         "se": 0.127,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     },
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [
+       {
+        "address": 5,
+        "kind": "states",
+        "n": [
+         304,
+         122
+        ],
+        "position_gap": 0.422,
+        "position_se": 0.016,
+        "position_z": 25.87,
+        "switch_ratio": 0.063,
+        "rate": {
+         "rate_a": 9.85,
+         "rate_b": 4.32,
+         "ratio": 2.279,
+         "z": 7.53,
+         "se": 0.109,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 5,
+        "kind": "states",
+        "n": [
+         304,
+         122
+        ],
+        "position_gap": 0.422,
+        "position_se": 0.016,
+        "position_z": 25.87,
+        "switch_ratio": 0.063,
+        "rate": {
+         "rate_a": 9.85,
+         "rate_b": 4.32,
+         "ratio": 2.279,
+         "z": 7.53,
+         "se": 0.109,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [
+      {
+       "address": 5,
+       "kind": "states",
+       "n": [
+        304,
+        122
+       ],
+       "position_gap": 0.422,
+       "position_se": 0.016,
+       "position_z": 25.87,
+       "switch_ratio": 0.063,
+       "rate": {
+        "rate_a": 9.85,
+        "rate_b": 4.32,
+        "ratio": 2.279,
+        "z": 7.53,
+        "se": 0.109,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 5,
+       "kind": "states",
+       "n": [
+        304,
+        122
+       ],
+       "position_gap": 0.422,
+       "position_se": 0.016,
+       "position_z": 25.87,
+       "switch_ratio": 0.063,
+       "rate": {
+        "rate_a": 9.85,
+        "rate_b": 4.32,
+        "ratio": 2.279,
+        "z": 7.53,
+        "se": 0.109,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "test": {
+  "gates": {
+   "P1": {
+    "separable_pairs_merged_by_commit_mode": 1,
+    "reopened_at_60s": 1,
+    "passed": true
+   },
+   "P2": {
+    "mood_one_unit_commit": 7,
+    "mood_one_unit_two_channel": 8,
+    "passed": true
+   },
+   "P3": {
+    "stable_one_unit_commit": 11,
+    "stable_one_unit_two_channel": 17,
+    "passed": true
+   },
+   "false_merges": {
+    "commit": 14,
+    "two_channel": 11
+   }
+  },
+  "rows": [
+   {
+    "seed": 0,
+    "turn_offset": 0.905,
+    "turn_rate_ratio": 1.509,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 0,
+       "stable": 3,
+       "turn_merged": false,
+       "false_merges": 5
+      },
+      "two_channel": {
+       "mood": 0,
+       "stable": 3,
+       "turn_merged": false,
+       "false_merges": 4
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         249,
+         202
+        ],
+        "position_gap": 0.224,
+        "position_se": 0.029,
+        "position_z": 7.66,
+        "switch_ratio": 0.71,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 0,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 5
+     },
+     "two_channel": {
+      "mood": 0,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 4
+     },
+     "turn_remainder": [],
+     "reopened": [
+      {
+       "address": 6,
+       "kind": "forced split",
+       "n": [
+        249,
+        202
+       ],
+       "position_gap": 0.224,
+       "position_se": 0.029,
+       "position_z": 7.66,
+       "switch_ratio": 0.71,
+       "rate": null,
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 1,
+    "turn_offset": 1.926,
+    "turn_rate_ratio": 2.087,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 1,
+       "stable": 0,
+       "turn_merged": false,
+       "false_merges": 4
+      },
+      "two_channel": {
+       "mood": 2,
+       "stable": 3,
+       "turn_merged": false,
+       "false_merges": 2
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 0,
+        "kind": "forced split",
+        "n": [
+         301,
+         84
+        ],
+        "position_gap": 0.457,
+        "position_se": 0.053,
+        "position_z": 8.67,
+        "switch_ratio": 0.977,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 1,
+        "kind": "forced split",
+        "n": [
+         509,
+         522
+        ],
+        "position_gap": 0.195,
+        "position_se": 0.024,
+        "position_z": 8.09,
+        "switch_ratio": 0.969,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         206,
+         120
+        ],
+        "position_gap": 0.156,
+        "position_se": 0.047,
+        "position_z": 3.29,
+        "switch_ratio": 0.179,
+        "rate": {
+         "rate_a": 5.11,
+         "rate_b": 7.77,
+         "ratio": 1.521,
+         "z": 3.46,
+         "se": 0.121,
+         "status": "refuted"
+        },
+        "status": "reopened",
+        "by": [
+         "position",
+         "rate"
+        ]
+       },
+       {
+        "address": 3,
+        "kind": "forced split",
+        "n": [
+         266,
+         622
+        ],
+        "position_gap": 0.217,
+        "position_se": 0.017,
+        "position_z": 12.44,
+        "switch_ratio": 0.983,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 1,
+      "stable": 0,
+      "turn_merged": false,
+      "false_merges": 4
+     },
+     "two_channel": {
+      "mood": 2,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "turn_remainder": [],
+     "reopened": [
+      {
+       "address": 0,
+       "kind": "forced split",
+       "n": [
+        301,
+        84
+       ],
+       "position_gap": 0.457,
+       "position_se": 0.053,
+       "position_z": 8.67,
+       "switch_ratio": 0.977,
+       "rate": null,
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      },
+      {
+       "address": 1,
+       "kind": "forced split",
+       "n": [
+        509,
+        522
+       ],
+       "position_gap": 0.195,
+       "position_se": 0.024,
+       "position_z": 8.09,
+       "switch_ratio": 0.969,
+       "rate": null,
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      },
+      {
+       "address": 2,
+       "kind": "forced split",
+       "n": [
+        206,
+        120
+       ],
+       "position_gap": 0.156,
+       "position_se": 0.047,
+       "position_z": 3.29,
+       "switch_ratio": 0.179,
+       "rate": {
+        "rate_a": 5.11,
+        "rate_b": 7.77,
+        "ratio": 1.521,
+        "z": 3.46,
+        "se": 0.121,
+        "status": "refuted"
+       },
+       "status": "reopened",
+       "by": [
+        "position",
+        "rate"
+       ]
+      },
+      {
+       "address": 3,
+       "kind": "forced split",
+       "n": [
+        266,
+        622
+       ],
+       "position_gap": 0.217,
+       "position_se": 0.017,
+       "position_z": 12.44,
+       "switch_ratio": 0.983,
+       "rate": null,
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 2,
+    "turn_offset": 0.948,
+    "turn_rate_ratio": 1.653,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 3,
+       "stable": 1,
+       "turn_merged": false,
+       "false_merges": 2
+      },
+      "two_channel": {
+       "mood": 3,
+       "stable": 3,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         152,
+         853
+        ],
+        "position_gap": 0.164,
+        "position_se": 0.024,
+        "position_z": 6.86,
+        "switch_ratio": 0.636,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 6,
+        "kind": "forced split",
+        "n": [
+         188,
+         510
+        ],
+        "position_gap": 0.493,
+        "position_se": 0.019,
+        "position_z": 25.72,
+        "switch_ratio": 0.991,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 3,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "two_channel": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "turn_remainder": [],
+     "reopened": [
+      {
+       "address": 4,
+       "kind": "forced split",
+       "n": [
+        152,
+        853
+       ],
+       "position_gap": 0.164,
+       "position_se": 0.024,
+       "position_z": 6.86,
+       "switch_ratio": 0.636,
+       "rate": null,
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      },
+      {
+       "address": 6,
+       "kind": "forced split",
+       "n": [
+        188,
+        510
+       ],
+       "position_gap": 0.493,
+       "position_se": 0.019,
+       "position_z": 25.72,
+       "switch_ratio": 0.991,
+       "rate": null,
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 3,
+    "turn_offset": 0.855,
+    "turn_rate_ratio": 1.02,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 1,
+       "stable": 4,
+       "turn_merged": true,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 1,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 2
+      },
+      "turn_remainder": [
+       {
+        "address": 5,
+        "kind": "forced split",
+        "n": [
+         77,
+         164
+        ],
+        "position_gap": 0.78,
+        "position_se": 0.035,
+        "position_z": 22.58,
+        "switch_ratio": 0.077,
+        "rate": {
+         "rate_a": 4.39,
+         "rate_b": 4.05,
+         "ratio": 1.084,
+         "z": 0.57,
+         "se": 0.141,
+         "status": "untested from here",
+         "need_more_seconds": 5.7
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         725,
+         256
+        ],
+        "position_gap": 0.175,
+        "position_se": 0.03,
+        "position_z": 5.91,
+        "switch_ratio": 0.783,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 5,
+        "kind": "forced split",
+        "n": [
+         77,
+         164
+        ],
+        "position_gap": 0.78,
+        "position_se": 0.035,
+        "position_z": 22.58,
+        "switch_ratio": 0.077,
+        "rate": {
+         "rate_a": 4.39,
+         "rate_b": 4.05,
+         "ratio": 1.084,
+         "z": 0.57,
+         "se": 0.141,
+         "status": "untested from here",
+         "need_more_seconds": 5.7
+        },
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 1,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "two_channel": {
+      "mood": 1,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "turn_remainder": [
+      {
+       "address": 5,
+       "kind": "forced split",
+       "n": [
+        77,
+        164
+       ],
+       "position_gap": 0.78,
+       "position_se": 0.035,
+       "position_z": 22.58,
+       "switch_ratio": 0.077,
+       "rate": {
+        "rate_a": 4.39,
+        "rate_b": 4.05,
+        "ratio": 1.084,
+        "z": 0.57,
+        "se": 0.141,
+        "status": "untested from here",
+        "need_more_seconds": 5.7
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ],
+     "reopened": [
+      {
+       "address": 2,
+       "kind": "forced split",
+       "n": [
+        725,
+        256
+       ],
+       "position_gap": 0.175,
+       "position_se": 0.03,
+       "position_z": 5.91,
+       "switch_ratio": 0.783,
+       "rate": null,
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      },
+      {
+       "address": 5,
+       "kind": "forced split",
+       "n": [
+        77,
+        164
+       ],
+       "position_gap": 0.78,
+       "position_se": 0.035,
+       "position_z": 22.58,
+       "switch_ratio": 0.077,
+       "rate": {
+        "rate_a": 4.39,
+        "rate_b": 4.05,
+        "ratio": 1.084,
+        "z": 0.57,
+        "se": 0.141,
+        "status": "untested from here",
+        "need_more_seconds": 5.7
+       },
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "seed": 4,
+    "turn_offset": 1.267,
+    "turn_rate_ratio": 1.552,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 2,
+       "stable": 3,
+       "turn_merged": false,
+       "false_merges": 2
+      },
+      "two_channel": {
+       "mood": 2,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 2
+      },
+      "turn_remainder": [],
+      "reopened": [
+       {
+        "address": 2,
+        "kind": "forced split",
+        "n": [
+         491,
+         237
+        ],
+        "position_gap": 0.194,
+        "position_se": 0.011,
+        "position_z": 17.18,
+        "switch_ratio": 0.683,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       },
+       {
+        "address": 4,
+        "kind": "forced split",
+        "n": [
+         128,
+         564
+        ],
+        "position_gap": 0.394,
+        "position_se": 0.026,
+        "position_z": 15.23,
+        "switch_ratio": 0.912,
+        "rate": null,
+        "status": "reopened",
+        "by": [
+         "position"
+        ]
+       }
+      ]
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 2,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "two_channel": {
+      "mood": 2,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "turn_remainder": [],
+     "reopened": [
+      {
+       "address": 2,
+       "kind": "forced split",
+       "n": [
+        491,
+        237
+       ],
+       "position_gap": 0.194,
+       "position_se": 0.011,
+       "position_z": 17.18,
+       "switch_ratio": 0.683,
+       "rate": null,
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      },
+      {
+       "address": 4,
+       "kind": "forced split",
+       "n": [
+        128,
+        564
+       ],
+       "position_gap": 0.394,
+       "position_se": 0.026,
+       "position_z": 15.23,
+       "switch_ratio": 0.912,
+       "rate": null,
+       "status": "reopened",
+       "by": [
+        "position"
+       ]
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "sparse_posthoc": {
+  "gates": {
+   "P1": {
+    "separable_pairs_merged_by_commit_mode": 0,
+    "reopened_at_60s": 0,
+    "passed": false
+   },
+   "P2": {
+    "mood_one_unit_commit": 20,
+    "mood_one_unit_two_channel": 20,
+    "passed": true
+   },
+   "P3": {
+    "stable_one_unit_commit": 20,
+    "stable_one_unit_two_channel": 20,
+    "passed": true
+   },
+   "false_merges": {
+    "commit": 1,
+    "two_channel": 1
+   }
+  },
+  "rows": [
+   {
+    "seed": 10,
+    "turn_offset": 0.812,
+    "turn_rate_ratio": 1.939,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [],
+     "reopened": []
+    }
+   },
+   {
+    "seed": 11,
+    "turn_offset": 1.249,
+    "turn_rate_ratio": 2.417,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [],
+     "reopened": []
+    }
+   },
+   {
+    "seed": 12,
+    "turn_offset": 1.92,
+    "turn_rate_ratio": 1.348,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [],
+     "reopened": []
+    }
+   },
+   {
+    "seed": 13,
+    "turn_offset": 1.783,
+    "turn_rate_ratio": 1.032,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 0
+      },
+      "turn_remainder": [],
+      "reopened": []
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "turn_remainder": [],
+     "reopened": []
+    }
+   },
+   {
+    "seed": 14,
+    "turn_offset": 1.041,
+    "turn_rate_ratio": 1.031,
+    "trace": [
+     {
+      "T": 60,
+      "committed": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "two_channel": {
+       "mood": 4,
+       "stable": 4,
+       "turn_merged": false,
+       "false_merges": 1
+      },
+      "turn_remainder": [],
+      "reopened": []
+     }
+    ],
+    "final": {
+     "T": 60,
+     "committed": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "two_channel": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "turn_remainder": [],
+     "reopened": []
+    }
+   }
+  ]
+ }
+}

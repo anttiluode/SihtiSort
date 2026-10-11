@@ -95,6 +95,109 @@ All were made on calibration seeds 100–102, before the frozen commit.
 - **Not new machinery, except one test.** Residue subtraction is matching pursuit, as in current template-matching sorters. Refractory and cross-correlogram merges and drift correction exist in current sorters too. I have not checked whether any sorter already models within-unit waveform states over time. The switch-ratio test and the state-aware addresses are the parts specific to this repository.
 - **Identifiability limit.** From spikes alone, "one neuron with two moods" and "two neurons at the same place taking turns" can look the same. The footprint is the only separator, and it fails below roughly one channel of separation.
 
+## Commit, name the refuter, revise ([PROTOCOL_2.md](PROTOCOL_2.md))
+
+Antti's bike ride: two coloured shapes far ahead became "two cyclists" at once, then "two signs" as he rode closer. The brain didn't say "I can't tell". It committed and stayed open to correction. So every "one neuron, two states" merge became a **commitment** carrying three things: a confidence (a runs test on the state sequence), a named **refuter** (one neuron keeps its firing rate across waveform states, per the preprint's η² = 0.013, so a ≥ 1.5× rate gap at z ≥ 3 means two neurons), and a status of *survived*, *refuted* (the address is split) or *untested from here* (with the extra recording time needed).
+
+One design change was made on calibration seeds 40–41, before the frozen commit `af952bc`. The close turn-taking pair was never a two-state hypothesis, because the same-shape rule swallowed it. In commit mode, same-shape parts that take turns are now handed to the state rule. Protocol 2's thresholds are unchanged.
+
+**Identifiability set** (seeds 20–31: neurons ≥ 1 channel apart, except the turn-taking pair, placed 0–0.5 channels apart):
+
+| Gate | Result |
+|---|---|
+| R1 catches the false merge (pairs with true rate gap ≥ 1.5×) | **Fail.** Two merged pairs had a rate gap that large (2.0× and 2.7×), and neither ever became a two-state hypothesis. The first clustering lumped each pair together, and the look-again step didn't split it. A refuter only works on a hypothesis that exists. |
+| R2 doesn't destroy true merges | **Pass.** 0 of 30 true mood merges wrongly split. |
+| R3 "survived" means something (≥ 90% correct) | **Fail.** 29 of 34 correct (85%). All 5 wrong ones are turn-taking pairs whose rates differ by ≤ 1.37×. The rate refuter cannot see them, so "survived" overstated what was tested. |
+| R4 the bike ride | **No revision ever happened.** The refuter never fired. Commitments reached "survived" after 20–55 s of recording. |
+
+On the earlier sets nothing regressed: mood neurons kept as one unit stayed at 7/20 (test) and 20/20 (sparse), and sparse false merges went from 2 to 1.
+
+**The lesson, which is the bike ride's too:** surviving a test that can't see the difference is not evidence. From half a mile away, "two cyclists" survives every look, because distance can't separate a cyclist from a sign. The refuter has to be one that can actually tell the alternatives apart.
+
+**Post hoc: a position refuter** ([diagnostics/position_refuter.py](diagnostics/position_refuter.py), threshold not fixed in advance, n small). One neuron in two states sits at one place; two neurons sit at two. Each state's position was estimated as the amplitude-weighted channel centroid of its median spike:
+
+| Commitments on the identifiability set | Gap between the two states' positions (channels) |
+|---|---|
+| 30 true one-neuron merges | median 0.024, max 0.097 |
+| 6 true two-neuron merges (true offset → measured gap) | 0.32 → 0.30, 0.25 → 0.27, 0.23 → 0.27, 0.16 → 0.10, 0.12 → 0.09, 0.00 → 0.01 |
+
+The three pairs ≥ 0.23 channels apart sit well clear of every one-neuron merge. The pairs at 0.12–0.16 channels overlap the one-neuron spread, and the pair at 0.00 is truly identical from here. So "getting closer" means sub-channel position, and below about a tenth of a channel this probe cannot tell; a denser probe could.
+
+## Two channels: a committed address and a remainder ([PROTOCOL_3.md](PROTOCOL_3.md))
+
+Protocol 2 failed because the alternative "two neurons" was erased before any refuter could look, as Sol pointed out. The J-space paper (Gurnee et al. 2026, §4.1.1) shows a language model doing better. Given an ambiguous input, its workspace commits to one reading while the rest of the activation still carries the unresolved mixture, for a while. So SihtiSort now keeps two channels:
+
+1. **The committed address**, which it acts on.
+2. **A remainder**: every address keeps a split of itself alive. For a two-state address that is its states; for a one-state address it is a forced two-way split of its purified spikes. The split is fitted on half the spikes and tested on the other half, so it cannot manufacture the difference it is tested for.
+
+The remainder is tested for *position* (do the two parts sit ≥ 0.15 channels apart, at z ≥ 3?) and, when the parts take turns, for *rate*. If either fires, the address is **reopened** into two. The whole pipeline is rerun on the first 10, 20, … 60 s of each recording, with no access to later data, so each column below is what the sorter believed at that moment.
+
+![online](results/two_channel_online.png)
+
+Two design changes were made on calibration seeds 70–71, before the frozen commit `9f762e7`. Per-spike position estimates were biased toward the probe centre for small spikes, which made a neuron's quieter mood look as if it had moved, so position now uses averaged spikes with a bootstrap error. The forced split uses 5 restarts. The thresholds are unchanged.
+
+**Fresh identifiability set** (seeds 50–61, run once):
+
+| Gate | Result |
+|---|---|
+| P1 reopens false merges that can be seen (offset ≥ 0.25 ch or rate gap ≥ 1.5×) | **Pass.** 9 of 9 separated at 60 s. |
+| P2 keeps true mood merges (drop ≤ 1) | **Pass.** 46 → 45. |
+| P3 doesn't shatter single neurons (drop ≤ 2) | **Pass.** 48 → 48. |
+| P4 revises online without flip-flopping back | **Condition failed.** 7 pairs were merged early and separated later, most of them merged at 10 s and apart from 20 s on. But one pair (0.01 channels apart, rates 1.13×) was apart at 10–20 s and merged from 30 s on. |
+| P5 what it can't see | Only that same pair stays merged. Its remainder said *agrees* (since renamed *no contradiction at tested resolution*, see below): position gap 0.03 ± 0.02 channels and similar rates. Neither refuter can see a pair at the same place firing at the same rate. |
+
+Two things in the picture are worth saying plainly:
+
+- **The committed sorter alone gets *more* wrong as data arrives.** In 6 of the 12 rows it starts "apart" and ends "merged": more spikes make the turn-taking look more convincing. Persistence is not confirmation.
+- **The remainder moves the other way.** Its early mistakes at 10 s are corrected by 20 s and stay corrected.
+
+The other sets were run with the full recording only, post hoc. On the crowded test set the remainder helps: stable neurons recovered as one unit go from 11 to 17 of 20, mood neurons from 7 to 8, and false merges from 14 to 11. On the sparse set nothing is reopened and nothing changes.
+
+## The drift control ([PROTOCOL_4.md](PROTOCOL_4.md), Sol's suggestion)
+
+Real probes drift relative to the tissue. One neuron's early spikes then sit somewhere else than its late spikes, and if its moods occupy different stretches of time, its two states sit at different average places. That is exactly what Protocol 3's position check reads as "two neurons", but the right answer is still one neuron. So the generator now moves the whole probe by 0.6 channels over the 60 s, and moods and turn-taking blocks last about 20 s.
+
+The fix tested here compares the two parts **only at matched times**: within 15 s windows that contain both, then averaged. Both versions run on the same sorting. The remainder status "agrees" is now called **"no contradiction at tested resolution"**, because the old label overstated what a test had shown.
+
+| Gate | Result |
+|---|---|
+| D0 the danger is real | **Yes, badly.** Naive position check: 40 false reopenings in 12 recordings; mood neurons kept as one unit 47 → 30, stable 48 → 32. |
+| D1 drift-aware keeps true neurons (≤ 1 false reopening, mood drop ≤ 1, stable drop ≤ 2) | **Fail.** False reopenings 40 → 5, mood 47 → 47, but stable 48 → 44. |
+| D2 drift-aware still separates the false merges it can see | **Pass.** 4 of 5. |
+| D3 no regression without drift (seeds 50–61) | **Pass.** 9 of 9 separated, mood 46 → 45, stable 48 → 48. |
+
+The 5 remaining false reopenings are all forced splits with gaps of 0.16–0.19 channels, just over the 0.15 threshold. Inside one 15 s window the probe still moves 0.15 channels, so a split into earlier and later spikes within the window still looks like two places. Matching times removed most of the confusion but not all of it. The standard next step, used by current sorters, is to estimate the probe's drift from all neurons together (it is shared) and subtract it before any position test. Turn-taking pairs whose blocks never share a window get a silent position test. One such pair (0.39 channels apart, rates 1.05×) stays merged.
+
+## Correct the frame, or compare at the switch ([PROTOCOL_5.md](PROTOCOL_5.md))
+
+Two ways out of Protocol 4's failure were tested on 36 fresh recordings, run once:
+
+- **Correct the frame (Sol).** Probe drift is shared by every neuron, so estimate it from the whole sorted population, blind, and subtract it. Two controls: the true drift from the simulator, and a deliberately wrong one (the estimate reversed in time).
+- **Compare at the switch.** Norman-Haignere et al. (Nature Neuroscience 2025) found that auditory cortex integrates over fixed absolute time, not over speech structure. Protocol 4's 15 s window was time-yoked in the same way. The structure-yoked alternative compares the ≤ 15 spikes on each side of every moment the two parts hand over to each other. Across that instant the probe has barely moved.
+
+False reopenings of true neurons, and separable false merges that end up apart:
+
+| Method | Linear drift (0.6 ch / 60 s) | Sine drift (±0.3 ch, 40 s period) | No drift |
+|---|---|---|---|
+| naive (Protocol 3) | 44 false · 5/6 | 45 false · 3/3 | 0 · 8/9 |
+| window (Protocol 4) | 5 false · 5/6 | 31 false · 3/3 | 0 · 8/9 |
+| frame, true drift | **0** · 6/6 | 5 false · 3/3 | 0 · 8/9 |
+| frame, estimated drift | **0** · 6/6 | 10 false · 3/3 | 0 · 8/9 |
+| frame, wrong drift (control) | 54 false · 4/6 | 41 false · 3/3 | 0 · 8/9 |
+| switch | **0** · 4/6 | **0** · 2/3 | 0 · 7/9 |
+| switch + estimated frame | **0** · 4/6 | **0** · 3/3 | 0 · 7/9 |
+
+| Gate | Result |
+|---|---|
+| F1 estimated frame passes all three sets | **Fail.** It passes linear and no-drift, but makes 10 false reopenings under sine drift. |
+| F2 switch passes all three sets | **Fail.** Zero false reopenings in all 36 recordings, but it separates only 4/6 (linear) and 2/3 (sine), under the 70% bar. |
+| F3 the wrong correction does damage | **Pass.** 54 false reopenings, more than no correction at all, so the correction is doing real work. |
+| F4 the true drift passes linear and sine | **Fail.** It passes linear but makes 5 false reopenings under sine drift. |
+
+The blind drift estimate was accurate: within 0.013–0.030 channels of the truth (linear) and 0.027–0.049 (sine). So the sine failure is not an estimation failure; even the *true* drift fails there. Averaging a part's spikes over a stretch in which the probe moves quickly blurs its footprint, and the blur differs between the parts. Correcting the average's position cannot undo that.
+
+**The two fixes fail in opposite directions.** Frame correction finds every separable pair but can split a true neuron when the probe moves fast. The switch comparison never split a true neuron in any of the 36 recordings, drift or not, but it needs handovers with at least 6 spikes on each side, so it misses some real pairs. Combined, the switch comparison with the estimated frame passed the sine and no-drift sets and failed linear on recall alone (4 of 6). No single method passed all three sets.
+
 ## The test that matters next
 
 The preprint's **spe-1** dataset ([CRCNS](https://crcns.org/), analysis code at [voytekresearch/spikewise](https://github.com/voytekresearch/spikewise)) has simultaneous intracellular ground truth beside the Neuropixels recording. For the cells whose waveform switches state, the question is whether a sorter that remembers keeps each one as one unit where snapshot sorting splits it. Download needs a CRCNS account, and this repository does not include a loader yet.
@@ -111,6 +214,12 @@ python diagnostics/oracle_front_end.py
 python diagnostics/crowding.py
 python diagnostics/figure_timeline.py
 python diagnostics/rescore.py         # one-to-one rescoring (~5 min)
+python diagnostics/commit_and_revise.py    # PROTOCOL_2 (~9 min)
+python diagnostics/position_refuter.py     # post hoc (~3.5 min)
+python diagnostics/two_channel.py          # PROTOCOL_3 (~45 min on 2 cores)
+python diagnostics/figure_two_channel.py
+python diagnostics/drift_control.py        # PROTOCOL_4 (~12 min on 2 cores)
+python diagnostics/frame_or_switch.py      # PROTOCOL_5 (~30 min on 2 cores)
 ```
 
 Files: [sihtisort/synth.py](sihtisort/synth.py) (recording and ground truth) · [sihtisort/sort.py](sihtisort/sort.py) (B1, B2, SihtiSort) · [sihtisort/evaluate.py](sihtisort/evaluate.py) (scoring) · [run_gates.py](run_gates.py) · `results/*.json` (every number above, with the ledger of every hypothesis tested).

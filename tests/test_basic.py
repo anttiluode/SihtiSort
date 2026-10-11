@@ -39,3 +39,15 @@ def test_global_match_is_one_to_one():
     from sihtisort.evaluate import global_match
     # Sol's example: two true spikes at 100 and 105, one sorted spike at 102
     assert list(global_match(np.array([100, 105]), np.array([102]))) in ([0, -1], [-1, 0])
+
+
+def test_runs_z_and_refuter():
+    from sihtisort.sort import runs_z, refute
+    assert runs_z(np.array([0] * 50 + [1] * 50)) < -8          # long blocks
+    assert abs(runs_z(np.array([0, 1] * 50))) > 8              # perfect alternation is also non-random
+    # two states, equal rates in long blocks -> not refuted; 3x rate difference -> refuted
+    t_eq = np.concatenate([np.arange(0, 200) * 2000, 400000 + np.arange(0, 200) * 2000])
+    lab = np.r_[np.zeros(200, int), np.ones(200, int)]
+    assert refute(t_eq, lab, 0, 1)['status'] == 'survived'
+    t_diff = np.concatenate([np.arange(0, 200) * 2000, 400000 + np.arange(0, 200) * 6000])
+    assert refute(t_diff, lab, 0, 1)['status'] == 'refuted'
