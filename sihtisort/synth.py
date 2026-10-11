@@ -66,7 +66,7 @@ def state_at(times, blocks):
     return st
 
 
-def make_recording(seed, duration=DURATION, min_sep=None):
+def make_recording(seed, duration=DURATION, min_sep=None, turn_range=None):
     """min_sep (channels): if given, POST HOC sparse setting -- every neuron outside the
     turn-taking pair sits at least min_sep from every other neuron. Default None is the
     protocol's setting (positions uniformly random)."""
@@ -76,6 +76,9 @@ def make_recording(seed, duration=DURATION, min_sep=None):
     kinds = ['mood_strong'] * 2 + ['mood_mild'] * 2 + ['turn_a', 'turn_b'] + ['stable'] * 4
     turn_pos = rng.uniform(2.0, N_CH - 3.0)
     turn_offset = rng.uniform(0.5, 2.0)
+    if turn_range is not None:     # PROTOCOL_2 identifiability set: same draw, mapped onto a closer range
+        lo, hi = turn_range
+        turn_offset = lo + (turn_offset - 0.5) / 1.5 * (hi - lo)
     turn_blocks = block_process(rng, duration)
     for k, kind in enumerate(kinds):
         sigma = rng.uniform(1.2, 1.8)

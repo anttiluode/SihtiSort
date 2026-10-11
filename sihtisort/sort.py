@@ -98,8 +98,10 @@ def snapshot_sort(data, seed=0):
     return dict(t=t, label=lab, snips=S, sigma=sigma)
 
 
-def standard_merge(t, label, snips, ledger=None):
-    """Greedy merge of units with the same footprint, correlated templates and a passing refractory check."""
+def standard_merge(t, label, snips, ledger=None, turns_to_states=False):
+    """Greedy merge of units with the same footprint, correlated templates and a passing refractory check.
+    turns_to_states (PROTOCOL_2): parts that take turns are not merged here; they are left for the
+    state rule, where the merge becomes a commitment with a refuter."""
     label = label.copy()
     while True:
         ids = np.unique(label)
@@ -115,9 +117,13 @@ def standard_merge(t, label, snips, ledger=None):
                 if c < CORR_MIN:
                     continue
                 ok, u = refractory_ok(t[label == i], t[label == j])
+                verdict = 'accept' if ok else 'reject: refractory'
+                if ok and turns_to_states and min((label == i).sum(), (label == j).sum()) >= MIN_N \
+                        and switch_ratio(t[label == i], t[label == j]) <= R_MAX:
+                    ok, verdict = False, 'defer: same shape but they take turns -> state hypothesis'
                 if ledger is not None:
                     ledger.append(dict(test='same neuron, same shape', a=int(i), b=int(j), footprint=round(f, 3),
-                                       corr=round(c, 3), union_viol=round(u, 4), verdict='accept' if ok else 'reject: refractory'))
+                                       corr=round(c, 3), union_viol=round(u, 4), verdict=verdict))
                 if ok and (best is None or c > best[0]):
                     best = (c, i, j)
         if best is None:
@@ -355,9 +361,9 @@ def run_b2(data, seed=0, base=None):
     return dict(t=r['t'], unit=lab, state=np.zeros(len(r['t']), int)), r
 
 
-def group(t, lab, snips, ledger, block):
+def group(t, lab, snips, ledger, block, commit=False):
     """Standard merges, then (if block) the temporal-context merge into multi-state addresses."""
-    lab = standard_merge(t, lab, snips, ledger)
+    lab = standard_merge(t, lab, snips, ledger, turns_to_states=commit)
     if block:
         return lab, temporal_merge(t, lab, snips, ledger)
     return lab, addresses_from_units(t, lab, snips)
@@ -382,10 +388,11 @@ def look_again(sv, seed, ledger):
     return t, lab, clean
 
 
-def run_s(data, seed=0, base=None, block=True, memory=True, use_sieve=True):
+def run_s(data, seed=0, base=None, block=True, memory=True, use_sieve=True, commit=False):
+    """commit=True: PROTOCOL_2 mode (turn-taking parts become state hypotheses with refuters)."""
     r = base or snapshot_sort(data, seed)
     ledger = []
-    lab, addresses = group(r['t'], r['label'], r['snips'], ledger, block)
+    lab, addresses = group(r['t'], r['label'], r['snips'], ledger, block, commit)
     if not use_sieve:
         # merges and memory on the original detections, no residue
         unit_of = {}
@@ -405,10 +412,105 @@ def run_s(data, seed=0, base=None, block=True, memory=True, use_sieve=True):
     sv = sieve(data, r['sigma'], addresses, memory, first_times=r['t'])
     for _ in range(LOOKS):
         t2, lab2, clean = look_again(sv, seed, ledger)
-        lab2, addresses = group(t2, lab2, clean, ledger, block)
+        lab2, addresses = group(t2, lab2, clean, ledger, block, commit)
         sv = sieve(data, r['sigma'], addresses, memory, first_times=r['t'])
     addresses = open_addresses(data, sv, addresses, ledger, seed)
     sv = sieve(data, r['sigma'], addresses, memory, first_times=r['t'])
     st = finalize_states(sv, addresses, memory)
+    commits = commitments(sv['t'], sv['addr'], st)
+    unit_rev = revise(sv['addr'], st, commits)
     return dict(t=sv['t'], unit=sv['addr'], state=st, ledger=ledger,
-                n_states=[len(a['states']) for a in addresses])
+                n_states=[len(a['states']) for a in addresses],
+                unit_revised=unit_rev, commitments=commits)
+
+
+# ------------------------------------------------- commit, refute, revise
+# PROTOCOL_2.md: each "one neuron, two states" merge is a commitment with a confidence,
+# a named refuter (one neuron keeps its rate across states) and a status.
+REFUTE_Z = 3.0
+REFUTE_RATIO = 1.5
+SE_TESTED = 0.135
+STEP = 5 * FS
+
+
+def runs_z(lab):
+    """Wald-Wolfowitz runs test on a two-label sequence; negative = fewer runs = taking turns."""
+    lab = np.asarray(lab); N = len(lab); n1 = int((lab == lab[0]).sum()) if N else 0; n2 = N - n1
+    if N < 3 or n1 == 0 or n2 == 0:
+        return 0.0
+    runs = 1 + int((lab[1:] != lab[:-1]).sum())
+    mu = 2.0 * n1 * n2 / N + 1
+    var = 2.0 * n1 * n2 * (2.0 * n1 * n2 - N) / (N ** 2 * (N - 1))
+    return float((runs - mu) / np.sqrt(var)) if var > 0 else 0.0
+
+
+def state_rate(t, lab, s):
+    """Interval count and summed duration over runs of state s with >= 2 spikes."""
+    k, dur, i, n = 0, 0.0, 0, len(t)
+    while i < n:
+        j = i
+        while j + 1 < n and lab[j + 1] == lab[i]:
+            j += 1
+        if lab[i] == s and j > i:
+            k += j - i; dur += float(t[j] - t[i])
+        i = j + 1
+    return k, dur
+
+
+def refute(t, lab, a, b):
+    ka, da = state_rate(t, lab, a); kb, db = state_rate(t, lab, b)
+    span = float(t[-1] - t[0]) if len(t) > 1 else 0.0
+    if min(ka, kb) < 1 or min(da, db) <= 0:
+        return dict(status='untested from here', reason='a state has no run of two spikes yet')
+    ra, rb = ka / da * FS, kb / db * FS
+    se = float(np.sqrt(1 / ka + 1 / kb)); z = abs(np.log(ra / rb)) / se
+    ratio = max(ra, rb) / min(ra, rb)
+    out = dict(rate_a=round(ra, 2), rate_b=round(rb, 2), ratio=round(ratio, 3), z=round(float(z), 2), se=round(se, 3))
+    if z >= REFUTE_Z and ratio >= REFUTE_RATIO:
+        out['status'] = 'refuted'
+    elif se <= SE_TESTED:
+        out['status'] = 'survived'
+    else:
+        f = (se / SE_TESTED) ** 2
+        out.update(status='untested from here', need_more_seconds=round((f - 1) * span / FS, 1))
+    return out
+
+
+def commitments(t, unit, state):
+    o = np.argsort(t, kind='stable'); t, unit, state = t[o], unit[o], state[o]
+    out = []
+    for u in np.unique(unit):
+        m = unit == u
+        ss = np.unique(state[m])
+        if len(ss) < 2:
+            continue
+        counts = {int(s): int((state[m] == s).sum()) for s in ss}
+        ref = max(counts, key=counts.get)
+        for s in ss:
+            if s == ref:
+                continue
+            mm = m & ((state == ref) | (state == s))
+            tt, ll = t[mm], state[mm]
+            rec = dict(address=int(u), states=[int(ref), int(s)], n=[counts[ref], counts[int(s)]],
+                       confidence_runs_z=round(runs_z(ll), 2), **refute(tt, ll, ref, s))
+            timeline = []
+            for T in np.arange(tt[0] + STEP, tt[-1] + STEP, STEP):
+                k = tt <= T
+                if k.sum() < 3:
+                    continue
+                r = refute(tt[k], ll[k], ref, s)
+                timeline.append(dict(t=round(float(T) / FS, 1), runs_z=round(runs_z(ll[k]), 2), status=r['status'],
+                                     z=r.get('z'), ratio=r.get('ratio')))
+            rec['timeline'] = timeline
+            out.append(rec)
+    return out
+
+
+def revise(unit, state, commits):
+    """Split every refuted state off into its own address."""
+    unit = unit.copy(); nxt = int(unit.max()) + 1 if len(unit) else 0
+    for c in commits:
+        if c['status'] == 'refuted':
+            m = (unit == c['address']) & (state == c['states'][1])
+            unit[m] = nxt; nxt += 1
+    return unit
