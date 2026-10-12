@@ -65,3 +65,15 @@ Permute the bin labels across probe times (200 permutations), recompute `S`. The
 ## Predictions, written before any code
 
 Q0 pass, since the invariant is exact and the null matches the estimator. Q1 uncertain: soma voltage is a blunt label for branch state, and the probes are small. T1f rejects.
+
+## Deviations found on the calibration seeds (before the fresh run)
+
+All made on seeds 920–922 before the frozen commit. Gates and thresholds are unchanged.
+
+1. **The observer removes what it already knows before correlating.** Raw reverse correlation against the soma gave a pooled-kernel signal-to-noise ratio of about 8, and the per-bin kernel ratios were mostly noise. The observer knows its synaptic inputs and its probes, so it first subtracts the matrix neuron's prediction from the synaptic inputs (R1's filter bank, ridge) and the pooled probe responses, then estimates how each kernel deviates from its pooled value in each state bin. This removes variance, not signal: the probe signs are independent of everything subtracted. The pooled signal-to-noise ratio rose to 20–60.
+2. **Recordings are 300 s of regime A**, not R1's 50 s. Same morphology and synapses as R1's cell for the seed; the input trains are therefore new. T1's saturation scale is computed as in R1 from the first 60 s of the unprobed noise-free passive soma.
+3. **The state label is each branch's linear synaptic drive**, not the soma voltage. The observer knows its inputs, so it can say how hard each branch is being driven; a pair uses the branch of its first site. The invariant holds for any label that does not depend on the current probe, so this changes power, not validity. On the calibration seeds the soma-voltage label never came near rejection for any truth (mean z for T2 +1.2); the branch label gave T2 +1.5 overall and +2.0 on cross-branch pairs. Both are kept: branch-drive is gated, soma voltage is reported.
+4. **Probe amplitude ε = 1** (mV/ms at C = 1), giving a pooled signal-to-noise ratio of at least 20 on the noisy recordings.
+5. **A burst-regime arm was tried and dropped.** Probing during R1's regime B (branch bursts) did not make T2 more visible on seeds 920–921 (z +1.1, +1.1): the bursts the matrix neuron cannot predict swamp the kernel estimates (signal-to-noise 12–16). It is not part of the fresh run.
+
+What the calibration seeds showed (3 recordings, branch label): T0 0/3 and T1 0/3 rejected (Q0 would pass); T2 0/3 rejected (Q1 would fail), with z of +2.3, −0.3 and +2.5 overall and the signal only in cross-branch pairs. Even the noise-free recordings rejected for T2 in only 1 of 3 (z +5.0, +0.1, and a third not above 3). T1f was never rejected (mean z −0.2): an 8 ms filter after the gain barely disturbs kernels that already last about 25 ms. So Q1 is now expected to fail, and the prediction that T1f rejects is expected to fail too; both predictions above are kept as written.
