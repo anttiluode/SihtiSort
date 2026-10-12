@@ -493,10 +493,12 @@ def window_gap(tp, Sp, tq, Sq, seed=0, boots=40):
 SWITCH_K = 15
 
 
-def general_gap(tp, Sp, tq, Sq, mode, drift_fn=None, seed=0, boots=40):
+def general_gap(tp, Sp, tq, Sq, mode, drift_fn=None, seed=0, boots=40, register=False, info=None):
     """PROTOCOL_5 position gap. Groups of (part p spikes, part q spikes) compared at matched conditions:
     'naive' one group (whole parts); 'window' shared 15 s windows; 'switch' the <= 15 spikes on each side
-    of every label switch in the time-ordered union. Positions are corrected by drift_fn if given."""
+    of every label switch in the time-ordered union. Positions are corrected by drift_fn if given.
+    PROTOCOL_6: register=True shifts every spike by -drift at its own time before averaging, instead of
+    correcting the averaged centroid. info (a dict) receives the time span (s) of every group."""
     groups = []
     if mode == 'naive':
         groups = [(tp, Sp, tq, Sq)]
@@ -520,8 +522,13 @@ def general_gap(tp, Sp, tq, Sq, mode, drift_fn=None, seed=0, boots=40):
                 groups.append((tp[before], Sp[before], tq[after], Sq[after]))
             else:
                 groups.append((tp[after], Sp[after], tq[before], Sq[before]))
+    if info is not None:
+        info['spans_s'] = [float((max(ta.max(), tb.max()) - min(ta.min(), tb.min())) / FS) for ta, _, tb, _ in groups]
     if not groups:
         return None, None
+    if register and drift_fn is not None:
+        groups = [(ta, register_spikes(a, drift_fn(ta)), tb, register_spikes(b, drift_fn(tb))) for ta, a, tb, b in groups]
+        drift_fn = None
     d = drift_fn if drift_fn is not None else (lambda x: np.zeros(len(x)))
 
     def est(gs):
@@ -542,6 +549,18 @@ def general_gap(tp, Sp, tq, Sq, mode, drift_fn=None, seed=0, boots=40):
             res.append((ta[ia], a[ia], tb[ib], b[ib]))
         bs.append(est(res))
     return gap, float(np.std(bs))
+
+
+def register_spikes(S, shifts):
+    """Move each spike's footprint by -shift channels (linear interpolation along the channel axis,
+    edge channels repeated). S: (n, L, C); shifts: (n,) in channels."""
+    n, Lw, C = S.shape
+    x = np.arange(C)[None, :] + np.asarray(shifts, float)[:, None]          # read position for each new channel
+    x = np.clip(x, 0, C - 1)
+    i0 = np.floor(x).astype(int); i1 = np.minimum(i0 + 1, C - 1); f = (x - i0)[:, None, :]
+    g0 = np.take_along_axis(S, np.repeat(i0[:, None, :], Lw, 1), 2)
+    g1 = np.take_along_axis(S, np.repeat(i1[:, None, :], Lw, 1), 2)
+    return (1 - f) * g0 + f * g1
 
 
 def estimate_drift(t, addr, clean, win=5 * FS, min_spikes=6, min_windows=3):
@@ -578,7 +597,7 @@ def _forced_split(X, seed):
     return g.predict(pca.transform(X)), ~fit
 
 
-def remainder_channel(t, addr, state, clean, seed=0, aware=False, mode=None, drift_fn=None):
+def remainder_channel(t, addr, state, clean, seed=0, aware=False, mode=None, drift_fn=None, register=False):
     """aware=True (PROTOCOL_4): compare the parts' positions only inside shared 15 s windows.
     PROTOCOL_5: mode in {'naive', 'window', 'switch'}; drift_fn(samples) -> probe displacement in
     channels, subtracted from positions before comparing (None = no correction)."""
@@ -610,7 +629,10 @@ def remainder_channel(t, addr, state, clean, seed=0, aware=False, mode=None, dri
                 rec.update(status='silent', reason='a part is too small')
                 rem.append(rec); continue
             if aware is None:
-                gap, se = general_gap(t[tp], clean[tp], t[tq], clean[tq], mode, drift_fn, seed)
+                ginfo = {}
+                gap, se = general_gap(t[tp], clean[tp], t[tq], clean[tq], mode, drift_fn, seed, register=register, info=ginfo)
+                if mode == 'switch':
+                    rec_spans = ginfo.get('spans_s', [])
                 if gap is None:
                     gap, se = 0.0, np.inf
             elif aware:
@@ -627,6 +649,8 @@ def remainder_channel(t, addr, state, clean, seed=0, aware=False, mode=None, dri
                 o = np.argsort(tt, kind='stable'); rate = refute(tt[o], ll[o], 0, 1)
             pos_fire = gap >= POS_MIN and zp >= POS_Z
             rate_fire = rate is not None and rate['status'] == 'refuted'
+            if aware is None and mode == 'switch':
+                rec['switch_spans_s'] = [round(x, 2) for x in rec_spans]
             rec.update(position_gap=round(gap, 3), position_se=round(se, 3) if np.isfinite(se) else None, position_z=round(zp, 2),
                        switch_ratio=round(R, 3), rate=rate)
             if pos_fire or rate_fire:

@@ -1,0 +1,5726 @@
+{
+ "linear": {
+  "table": {
+   "frame-oracle-centroid": {
+    "false_reopenings": 2,
+    "true_reopenings": 6,
+    "mood": [
+     48,
+     47
+    ],
+    "stable": [
+     48,
+     47
+    ],
+    "separable": 6,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-oracle-registered": {
+    "false_reopenings": 2,
+    "true_reopenings": 6,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     46
+    ],
+    "separable": 6,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-estimated-centroid": {
+    "false_reopenings": 1,
+    "true_reopenings": 7,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     47
+    ],
+    "separable": 6,
+    "separated": 5,
+    "recordings": 12,
+    "passed": true
+   },
+   "frame-estimated-registered": {
+    "false_reopenings": 2,
+    "true_reopenings": 7,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     46
+    ],
+    "separable": 6,
+    "separated": 5,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-wrong-registered": {
+    "false_reopenings": 46,
+    "true_reopenings": 6,
+    "mood": [
+     48,
+     26
+    ],
+    "stable": [
+     48,
+     32
+    ],
+    "separable": 6,
+    "separated": 5,
+    "recordings": 12,
+    "passed": false
+   },
+   "switch": {
+    "false_reopenings": 1,
+    "true_reopenings": 3,
+    "mood": [
+     48,
+     47
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 6,
+    "separated": 3,
+    "recordings": 12,
+    "passed": false
+   }
+  },
+  "rows": [
+   {
+    "seed": 170,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.479,
+    "turn_rate_ratio": 1.978,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0247,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.35,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.365,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.35,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.33,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 2,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.306,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.378,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.199,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.394,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [],
+     "spans_s": [
+      3.45,
+      3.11,
+      6.27,
+      7.62,
+      5.57,
+      4.28,
+      3.17,
+      3.82,
+      3.7,
+      3.18,
+      3.93
+     ]
+    }
+   },
+   {
+    "seed": 171,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.38,
+    "turn_rate_ratio": 1.118,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0118,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.36,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.198,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.382,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.363,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.367,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 0,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.528,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.533,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.469,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.195,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.331,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.802,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.544,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.457,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      6.54,
+      5.55,
+      3.06,
+      2.05,
+      2.58,
+      12.97,
+      13.24,
+      13.75
+     ]
+    }
+   },
+   {
+    "seed": 172,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.462,
+    "turn_rate_ratio": 1.689,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0324,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.42,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.179,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.439,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.393,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.383,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.298,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.499,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.293,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.447,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.41,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.176,
+       "false": true
+      }
+     ],
+     "spans_s": [
+      6.98,
+      5.82,
+      5.55,
+      2.44,
+      3.33,
+      3.54,
+      3.46,
+      3.9,
+      7.87,
+      10.07,
+      8.59
+     ]
+    }
+   },
+   {
+    "seed": 173,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.253,
+    "turn_rate_ratio": 1.019,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0266,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.224,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.225,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.23,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.248,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.443,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.374,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.33,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [],
+     "spans_s": [
+      3.09,
+      2.9,
+      3.37,
+      2.92,
+      3.03,
+      10.36,
+      11.57,
+      12.4,
+      8.22,
+      2.32,
+      3.14,
+      3.22,
+      3.43,
+      4.37
+     ]
+    }
+   },
+   {
+    "seed": 174,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.416,
+    "turn_rate_ratio": 1.019,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0279,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.334,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.293,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.311,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.291,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 2,
+      "stable": 2,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.454,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.331,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.258,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.303,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [],
+     "spans_s": [
+      6.18,
+      2.39,
+      3.63,
+      4.73,
+      3.44,
+      2.95,
+      3.29
+     ]
+    }
+   },
+   {
+    "seed": 175,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.263,
+    "turn_rate_ratio": 1.376,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0243,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.207,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.181,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.23,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.185,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.23,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.206,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 1,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.574,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.614,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.262,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.31,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.242,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.408,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.28,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [],
+     "spans_s": [
+      3.34,
+      5.71,
+      2.37,
+      2.72,
+      2.91,
+      2.68,
+      2.7,
+      2.58,
+      3.26
+     ]
+    }
+   },
+   {
+    "seed": 176,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.074,
+    "turn_rate_ratio": 2.263,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0183,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.121,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.095,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.132,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.169,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 2,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.29,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.562,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.327,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.566,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.414,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.038,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      3.65,
+      6.82,
+      3.94,
+      4.05,
+      3.51
+     ]
+    }
+   },
+   {
+    "seed": 177,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.157,
+    "turn_rate_ratio": 1.071,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0184,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 2,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.273,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.663,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.545,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.374,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [],
+     "spans_s": [
+      18.98,
+      12.59,
+      8.44,
+      4.84,
+      5.21,
+      4.82,
+      3.97,
+      3.05,
+      5.55,
+      5.01
+     ]
+    }
+   },
+   {
+    "seed": 178,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.023,
+    "turn_rate_ratio": 1.193,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0221,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.481,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.37,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [],
+     "spans_s": [
+      2.61,
+      4.95,
+      3.06,
+      2.93
+     ]
+    }
+   },
+   {
+    "seed": 179,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.47,
+    "turn_rate_ratio": 1.749,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0198,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 2,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.182,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.414,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.251,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [],
+     "spans_s": [
+      2.19,
+      3.3,
+      3.13,
+      2.27,
+      2.11,
+      10.12,
+      10.75,
+      10.75,
+      2.74,
+      2.35
+     ]
+    }
+   },
+   {
+    "seed": 180,
+    "drift": 0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.334,
+    "turn_rate_ratio": 1.786,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0212,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.164,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 2,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.449,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.462,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.374,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.256,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.362,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.522,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [],
+     "spans_s": [
+      3.35,
+      4.04,
+      3.7,
+      4.36,
+      3.9,
+      2.25
+     ]
+    }
+   },
+   {
+    "seed": 181,
+    "drift": -0.6,
+    "drift_kind": "linear",
+    "turn_offset": 0.295,
+    "turn_rate_ratio": 1.088,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0347,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.32,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.52,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.423,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [],
+     "spans_s": [
+      5.82,
+      2.57
+     ]
+    }
+   }
+  ],
+  "switch_spans_s": {
+   "n": 97,
+   "median": 3.65,
+   "p95": 12.44,
+   "max": 18.98
+  }
+ },
+ "sine": {
+  "table": {
+   "frame-oracle-centroid": {
+    "false_reopenings": 0,
+    "true_reopenings": 8,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 6,
+    "separated": 6,
+    "recordings": 12,
+    "passed": true
+   },
+   "frame-oracle-registered": {
+    "false_reopenings": 5,
+    "true_reopenings": 8,
+    "mood": [
+     48,
+     45
+    ],
+    "stable": [
+     48,
+     46
+    ],
+    "separable": 6,
+    "separated": 6,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-estimated-centroid": {
+    "false_reopenings": 4,
+    "true_reopenings": 8,
+    "mood": [
+     48,
+     48
+    ],
+    "stable": [
+     48,
+     45
+    ],
+    "separable": 6,
+    "separated": 6,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-estimated-registered": {
+    "false_reopenings": 11,
+    "true_reopenings": 8,
+    "mood": [
+     48,
+     45
+    ],
+    "stable": [
+     48,
+     42
+    ],
+    "separable": 6,
+    "separated": 6,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-wrong-registered": {
+    "false_reopenings": 41,
+    "true_reopenings": 8,
+    "mood": [
+     48,
+     32
+    ],
+    "stable": [
+     48,
+     27
+    ],
+    "separable": 6,
+    "separated": 6,
+    "recordings": 12,
+    "passed": false
+   },
+   "switch": {
+    "false_reopenings": 6,
+    "true_reopenings": 7,
+    "mood": [
+     48,
+     45
+    ],
+    "stable": [
+     48,
+     46
+    ],
+    "separable": 6,
+    "separated": 5,
+    "recordings": 12,
+    "passed": false
+   }
+  },
+  "rows": [
+   {
+    "seed": 190,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.042,
+    "turn_rate_ratio": 1.367,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.033,
+    "true_drift_range": 0.599,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.161,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.154,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.18,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.182,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 2,
+      "stable": 2,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.574,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.372,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.386,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.634,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.649,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.157,
+       "false": true
+      }
+     ],
+     "spans_s": [
+      1.76,
+      2.95,
+      3.35,
+      3.54,
+      2.75,
+      8.59,
+      7.73
+     ]
+    }
+   },
+   {
+    "seed": 191,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.397,
+    "turn_rate_ratio": 1.633,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0419,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.183,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [],
+     "spans_s": [
+      11.64,
+      9.21,
+      9.76,
+      9.49,
+      11.11,
+      2.98,
+      3.39,
+      3.52,
+      4.74,
+      5.23,
+      4.05
+     ]
+    }
+   },
+   {
+    "seed": 192,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.303,
+    "turn_rate_ratio": 2.196,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0305,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.307,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.308,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.293,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.295,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 1,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.335,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.655,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.27,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.704,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.251,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.477,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.591,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.41,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.507,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      8.39,
+      2.48,
+      1.45,
+      3.38
+     ]
+    }
+   },
+   {
+    "seed": 193,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.126,
+    "turn_rate_ratio": 1.997,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 3
+    },
+    "drift_estimate_rms_error": 0.0346,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 3
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 3
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.174,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 3
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": true,
+      "false_merges": 3
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.152,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.198,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": true,
+      "false_merges": 3
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.503,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.397,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.587,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 3
+     },
+     "reopenings": [],
+     "spans_s": [
+      5.39,
+      5.36,
+      13.96,
+      2.77,
+      3.23,
+      2.55,
+      4.35,
+      4.36,
+      13.23,
+      6.57,
+      9.02
+     ]
+    }
+   },
+   {
+    "seed": 194,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.433,
+    "turn_rate_ratio": 1.02,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 2
+    },
+    "drift_estimate_rms_error": 0.0504,
+    "true_drift_range": 0.599,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.416,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.411,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.415,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.411,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 1,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.333,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.498,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.207,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.318,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.291,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 2
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.462,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      4.75,
+      2.63,
+      5.05,
+      3.63,
+      2.88,
+      4.5,
+      2.79,
+      3.6,
+      3.24
+     ]
+    }
+   },
+   {
+    "seed": 195,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.042,
+    "turn_rate_ratio": 1.471,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0357,
+    "true_drift_range": 0.599,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.156,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.158,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [],
+     "spans_s": [
+      8.91,
+      7.65,
+      8.95,
+      3.65,
+      3.9,
+      2.61,
+      9.32,
+      11.7,
+      9.66,
+      7.92
+     ]
+    }
+   },
+   {
+    "seed": 196,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.209,
+    "turn_rate_ratio": 1.89,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0412,
+    "true_drift_range": 0.599,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.252,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.252,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.246,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.242,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.203,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.207,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.168,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.205,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.229,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.252,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.22,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.183,
+       "false": true
+      }
+     ],
+     "spans_s": [
+      5.47,
+      2.88,
+      2.72,
+      2.99,
+      2.49,
+      6.94,
+      2.76,
+      2.75,
+      3.41
+     ]
+    }
+   },
+   {
+    "seed": 197,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.393,
+    "turn_rate_ratio": 1.02,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0436,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.35,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.397,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.154,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.352,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.179,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.38,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.206,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.152,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.294,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.152,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.375,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      4.02,
+      7.63,
+      6.17,
+      8.82,
+      7.14,
+      7.53,
+      9.11
+     ]
+    }
+   },
+   {
+    "seed": 198,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.411,
+    "turn_rate_ratio": 1.135,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0344,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.369,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.377,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.167,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.38,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.169,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.191,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.388,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.225,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.173,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 2,
+      "stable": 1,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.454,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.171,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.16,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.292,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.243,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.178,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.4,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.232,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.417,
+       "false": true
+      }
+     ],
+     "spans_s": [
+      2.57,
+      1.57,
+      9.45,
+      5.75,
+      7.01,
+      13.09,
+      11.2
+     ]
+    }
+   },
+   {
+    "seed": 199,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.303,
+    "turn_rate_ratio": 1.862,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0254,
+    "true_drift_range": 0.6,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.322,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.159,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.325,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.347,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.167,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.338,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 1,
+      "stable": 2,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.421,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.29,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.369,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.295,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.553,
+       "false": false
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.246,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.229,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.437,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      7.54,
+      6.61,
+      2.5,
+      3.9,
+      3.25,
+      7.06,
+      9.34,
+      5.6,
+      5.37,
+      2.99,
+      2.83,
+      2.35,
+      3.42
+     ]
+    }
+   },
+   {
+    "seed": 200,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.332,
+    "turn_rate_ratio": 1.815,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.065,
+    "true_drift_range": 0.599,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.306,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.303,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.223,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.208,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.221,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.299,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      5.33,
+      3.79,
+      2.61,
+      5.14,
+      5.42,
+      4.94,
+      4.27,
+      3.53,
+      6.11,
+      13.11
+     ]
+    }
+   },
+   {
+    "seed": 201,
+    "drift": 0.3,
+    "drift_kind": "sine",
+    "turn_offset": 0.268,
+    "turn_rate_ratio": 2.749,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0502,
+    "true_drift_range": 0.599,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.162,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.16,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.189,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.161,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.164,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.156,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.172,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 3,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.208,
+       "false": true
+      },
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.17,
+       "false": true
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.158,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.18,
+       "false": true
+      }
+     ],
+     "spans_s": [
+      9.14,
+      2.91,
+      3.46,
+      2.85,
+      3.35,
+      3.3,
+      3.26,
+      3.26,
+      3.25,
+      3.88,
+      2.78
+     ]
+    }
+   }
+  ],
+  "switch_spans_s": {
+   "n": 109,
+   "median": 4.27,
+   "p95": 11.46,
+   "max": 13.96
+  }
+ },
+ "no_drift": {
+  "table": {
+   "frame-oracle-centroid": {
+    "false_reopenings": 2,
+    "true_reopenings": 9,
+    "mood": [
+     47,
+     46
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 5,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-oracle-registered": {
+    "false_reopenings": 2,
+    "true_reopenings": 9,
+    "mood": [
+     47,
+     46
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 5,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-estimated-centroid": {
+    "false_reopenings": 2,
+    "true_reopenings": 9,
+    "mood": [
+     47,
+     46
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 5,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-estimated-registered": {
+    "false_reopenings": 2,
+    "true_reopenings": 9,
+    "mood": [
+     47,
+     46
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 5,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   },
+   "frame-wrong-registered": {
+    "false_reopenings": 2,
+    "true_reopenings": 9,
+    "mood": [
+     47,
+     46
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 5,
+    "separated": 4,
+    "recordings": 12,
+    "passed": false
+   },
+   "switch": {
+    "false_reopenings": 2,
+    "true_reopenings": 7,
+    "mood": [
+     47,
+     46
+    ],
+    "stable": [
+     48,
+     48
+    ],
+    "separable": 5,
+    "separated": 3,
+    "recordings": 12,
+    "passed": false
+   }
+  },
+  "rows": [
+   {
+    "seed": 210,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.342,
+    "turn_rate_ratio": 3.574,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.008,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.279,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.279,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.277,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.277,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.277,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.311,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      7.31,
+      6.43,
+      6.68,
+      6.74,
+      2.12,
+      2.52,
+      2.73,
+      2.86,
+      3.09,
+      6.28,
+      6.96,
+      5.12,
+      2.72,
+      2.27,
+      1.61,
+      3.21,
+      2.0,
+      2.41,
+      4.08,
+      4.05,
+      1.84
+     ]
+    }
+   },
+   {
+    "seed": 211,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.189,
+    "turn_rate_ratio": 1.78,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0099,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": []
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.152,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      10.15,
+      11.03,
+      5.85,
+      5.94,
+      4.67,
+      2.91,
+      9.64,
+      5.42,
+      4.13,
+      7.29,
+      4.73,
+      2.55
+     ]
+    }
+   },
+   {
+    "seed": 212,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.147,
+    "turn_rate_ratio": 1.232,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0092,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [],
+     "spans_s": [
+      2.16,
+      7.0,
+      5.44,
+      10.77,
+      9.6,
+      11.06,
+      7.62,
+      5.66,
+      7.41,
+      7.63,
+      8.03,
+      3.23,
+      3.77,
+      3.21,
+      2.96,
+      3.11,
+      2.21,
+      2.85,
+      2.66,
+      3.33,
+      2.32,
+      2.77,
+      3.26,
+      2.22,
+      2.33,
+      2.86,
+      1.91,
+      2.54,
+      1.91,
+      1.43,
+      1.86,
+      2.99
+     ]
+    }
+   },
+   {
+    "seed": 213,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.353,
+    "turn_rate_ratio": 1.18,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0099,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.377,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.377,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.369,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.371,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.384,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.392,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      12.83,
+      6.91,
+      6.19,
+      5.9,
+      4.4,
+      5.57,
+      3.2,
+      2.38,
+      2.88,
+      3.27,
+      3.75,
+      2.0,
+      1.92,
+      2.44,
+      2.2,
+      2.93,
+      3.88,
+      2.65,
+      3.9,
+      5.85,
+      6.26,
+      3.67,
+      5.04,
+      6.9,
+      10.54,
+      8.81,
+      8.63,
+      3.99
+     ]
+    }
+   },
+   {
+    "seed": 214,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.211,
+    "turn_rate_ratio": 1.009,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0058,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.161,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.161,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.167,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.166,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 1
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.158,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [],
+     "spans_s": [
+      6.03,
+      6.04,
+      3.86,
+      5.56,
+      3.32,
+      2.64,
+      3.44,
+      3.42,
+      2.13,
+      4.16,
+      3.09,
+      2.18,
+      6.08,
+      6.28,
+      4.76,
+      7.88,
+      6.15,
+      6.83,
+      7.54,
+      5.54,
+      6.28
+     ]
+    }
+   },
+   {
+    "seed": 215,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.023,
+    "turn_rate_ratio": 1.122,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 1
+    },
+    "drift_estimate_rms_error": 0.0046,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": []
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 1
+     },
+     "reopenings": [],
+     "spans_s": [
+      3.38,
+      2.51,
+      3.27,
+      3.47,
+      10.54,
+      3.39,
+      2.62,
+      2.75,
+      4.64,
+      3.18,
+      3.87,
+      3.11,
+      2.89,
+      2.04,
+      3.9,
+      2.16,
+      1.78,
+      2.83,
+      2.57,
+      3.95,
+      2.97,
+      2.91,
+      2.37,
+      2.32,
+      2.44,
+      2.57,
+      1.99
+     ]
+    }
+   },
+   {
+    "seed": 216,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.365,
+    "turn_rate_ratio": 1.124,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0074,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.357,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.357,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.358,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.357,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.354,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [],
+     "spans_s": [
+      4.8,
+      3.75,
+      4.0,
+      3.83,
+      4.16,
+      3.04,
+      3.67,
+      4.61,
+      4.01,
+      3.17,
+      2.91,
+      8.78,
+      11.94,
+      8.91,
+      6.12,
+      7.35,
+      6.82,
+      6.96,
+      3.35,
+      5.29
+     ]
+    }
+   },
+   {
+    "seed": 217,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.363,
+    "turn_rate_ratio": 2.615,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0122,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.359,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.359,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.356,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.356,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.359,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position",
+        "rate"
+       ],
+       "gap": 0.293,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      3.81,
+      3.01,
+      3.02,
+      2.76,
+      3.48,
+      3.22,
+      2.9,
+      1.94,
+      2.17,
+      2.28,
+      4.7,
+      4.68,
+      3.97,
+      10.39,
+      12.28,
+      13.13,
+      15.82,
+      12.64,
+      10.23,
+      9.19,
+      6.52,
+      7.67,
+      7.14,
+      7.54,
+      9.21,
+      10.08
+     ]
+    }
+   },
+   {
+    "seed": 218,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.299,
+    "turn_rate_ratio": 1.504,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0112,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.348,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.348,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.339,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.339,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.354,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "states",
+       "by": [
+        "position"
+       ],
+       "gap": 0.31,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      4.18,
+      5.55,
+      7.72,
+      4.47,
+      6.67,
+      4.4,
+      3.07,
+      4.44,
+      5.87,
+      6.28,
+      4.35,
+      4.15,
+      5.76,
+      5.07,
+      5.1,
+      3.69,
+      3.52,
+      2.83,
+      2.55,
+      4.4,
+      4.43,
+      4.66,
+      6.6,
+      12.22,
+      10.74
+     ]
+    }
+   },
+   {
+    "seed": 219,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.147,
+    "turn_rate_ratio": 1.521,
+    "committed": {
+     "mood": 3,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0137,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.196,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.047,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.196,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.047,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.195,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.053,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.195,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.049,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "position"
+       ],
+       "gap": 0.204,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.047,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": true,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.072,
+       "false": true
+      }
+     ],
+     "spans_s": [
+      4.68,
+      7.56,
+      6.46,
+      4.92,
+      5.39,
+      7.83,
+      4.95,
+      5.25,
+      6.81,
+      5.61,
+      3.29,
+      4.36,
+      7.94,
+      12.0,
+      7.25,
+      12.17,
+      9.16,
+      13.03,
+      9.87,
+      7.79
+     ]
+    }
+   },
+   {
+    "seed": 220,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.09,
+    "turn_rate_ratio": 1.713,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": true,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0074,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.055,
+       "false": false
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.055,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.054,
+       "false": false
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.054,
+       "false": false
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.051,
+       "false": false
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 4,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.061,
+       "false": false
+      }
+     ],
+     "spans_s": [
+      7.54,
+      5.88,
+      5.48,
+      4.08,
+      3.42,
+      4.46,
+      4.46,
+      4.59,
+      2.4,
+      2.45,
+      3.44,
+      1.76,
+      2.39,
+      2.9,
+      4.21,
+      3.02,
+      2.2,
+      3.28,
+      2.81,
+      2.05,
+      2.7,
+      3.26,
+      3.05,
+      2.41,
+      2.0,
+      3.07,
+      2.69,
+      3.76,
+      5.0,
+      4.04,
+      5.35,
+      3.53
+     ]
+    }
+   },
+   {
+    "seed": 221,
+    "drift": 0.0,
+    "drift_kind": null,
+    "turn_offset": 0.131,
+    "turn_rate_ratio": 2.244,
+    "committed": {
+     "mood": 4,
+     "stable": 4,
+     "turn_merged": false,
+     "false_merges": 0
+    },
+    "drift_estimate_rms_error": 0.0099,
+    "true_drift_range": 0.0,
+    "frame-oracle-centroid": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.061,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.046,
+       "false": true
+      }
+     ]
+    },
+    "frame-oracle-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.061,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.046,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-centroid": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.061,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.052,
+       "false": true
+      }
+     ]
+    },
+    "frame-estimated-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.061,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.051,
+       "false": true
+      }
+     ]
+    },
+    "frame-wrong-registered": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.062,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.045,
+       "false": true
+      }
+     ]
+    },
+    "switch": {
+     "counts": {
+      "mood": 3,
+      "stable": 4,
+      "turn_merged": false,
+      "false_merges": 0
+     },
+     "reopenings": [
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.073,
+       "false": false
+      },
+      {
+       "kind": "forced split",
+       "by": [
+        "rate"
+       ],
+       "gap": 0.119,
+       "false": true
+      }
+     ],
+     "spans_s": [
+      3.32,
+      3.43,
+      4.31,
+      5.68,
+      3.99,
+      4.41,
+      5.18,
+      2.98,
+      5.22,
+      3.72,
+      5.44,
+      4.2,
+      4.69,
+      6.76,
+      5.97,
+      4.62,
+      4.6,
+      6.91,
+      12.89,
+      11.36,
+      6.76,
+      8.31,
+      9.04,
+      8.54,
+      12.35,
+      7.78,
+      8.82,
+      17.28
+     ]
+    }
+   }
+  ],
+  "switch_spans_s": {
+   "n": 292,
+   "median": 4.21,
+   "p95": 11.04,
+   "max": 17.28
+  }
+ },
+ "gates": {
+  "G1": {
+   "registered_sine": 5,
+   "centroid_sine": 0,
+   "passed": false
+  },
+  "G2": false,
+  "G3": {
+   "wrong_registered_false_reopenings_linear": 46,
+   "control_behaves": true
+  }
+ }
+}

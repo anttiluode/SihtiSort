@@ -51,3 +51,11 @@ def test_runs_z_and_refuter():
     assert refute(t_eq, lab, 0, 1)['status'] == 'survived'
     t_diff = np.concatenate([np.arange(0, 200) * 2000, 400000 + np.arange(0, 200) * 6000])
     assert refute(t_diff, lab, 0, 1)['status'] == 'refuted'
+
+
+def test_register_spikes_moves_footprint():
+    from sihtisort.sort import register_spikes, template_centroid
+    from sihtisort.synth import template
+    T = template(10, 0.15, 0.3, 7.4, 1.5)[None]
+    R = register_spikes(T, [0.4])
+    assert abs(template_centroid(R[0]) - (template_centroid(T[0]) - 0.4)) < 0.05
