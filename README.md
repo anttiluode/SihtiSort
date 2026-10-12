@@ -335,6 +335,39 @@ A first version of that control used the isotonic map that best carries the pass
 
 What would make it a result: a pre-registered regime-B gate against the matched static control and a threshold-like static control, a cascade with a bounded output, and then the same comparison on a real neuron with uncaging at known sites.
 
+## Where does the state enter? The two-site gain invariant ([PROTOCOL_R2.md](PROTOCOL_R2.md))
+
+R1's NMDA residue was clean in ordinary activity. R2 asks whether **small probes in the same ordinary activity** can see what the residue could not.
+
+The gate I first proposed for this — kernels staying in a fixed subspace versus rotating with the state — does not separate the classes. An LNL cascade's kernels change shape with the state too, and by Boyd & Chua (1985) fixed filters plus a static polynomial can approximate any fading-memory system. What is exact is narrower. If all of the state dependence between two input sites and the recording is one pointwise gain applied after their signals merge, `y = f(v)` with `v` linear, then probing both sites at the same moments with independent random-sign currents gives, for every state bin `b`,
+
+`K₁(τ|b) / K₁(τ) = K₂(τ|b) / K₂(τ)`.
+
+The gain cancels. R2 measures the mean squared difference of those two ratios over 28 site pairs and judges it against 200 permutations of the state labels.
+
+**Setup.** R1's cell, 300 s of ordinary input (regime A) per recording, with OU and measurement noise and no paired reruns. All 8 sites get ±ε currents redrawn every 2 ms. The observer subtracts what it already knows (the matrix neuron's prediction from its synaptic inputs, and the pooled probe responses), then estimates per-state kernels by reverse correlation. The state label is each branch's linear synaptic drive. The protocol was committed before code (`417deb1`); the code was frozen at `4f64cdb` after calibration seeds 920–922 (five deviations, recorded in the protocol) and run once on seeds 2000–2009.
+
+| Truth | invariant rejected (of 10) | mean z (95% CI) | cross-branch pairs | same-branch pairs |
+|---|---|---|---|---|
+| T0 passive | 0 | −0.35 (−0.98 to 0.35) | 0 | 0 |
+| T1 passive + tanh readout | 0 | −0.42 (−0.74 to −0.08) | 0 | 0 |
+| T1f tanh readout + 8 ms filter | 0 | −0.03 (−0.36 to 0.30) | 0 | 0 |
+| **T2 NMDA** | **5** | **+2.53 (1.20 to 3.83)** | 5 | 1 |
+| T2, noise-free (reported) | 4 | +2.59 (1.21 to 3.90) | 5 | 0 |
+| T2, soma voltage as the label (reported) | 0 | +0.06 (−0.37 to 0.57) | 0 | 0 |
+
+- **Q0 — calibrated: passed.** The passive and tanh neurons were never rejected.
+- **Q1 — the probe sees the NMDA dendrite in ordinary activity: FAILED.** 5 of 10, against a bar of 8.
+
+What the numbers say:
+
+- **The effect is real but varies between cells, and noise is not the limit.** Each recording's z with noise tracks its noise-free z (5.2/5.6, 4.0/4.6, 0.3/−0.9, …). The five cells rejected with noise are exactly the five with the largest noise-free z. In the other five, ordinary input engages the NMDA conductances too little to move the kernels.
+- **It lives across branches.** Cross-branch pairs carry it (mean z +2.8); same-branch pairs barely move (+0.6). One branch's state changes that branch's path to the soma relative to the others, and two sites on the same branch share it.
+- **The label matters.** Binning by the soma voltage saw nothing (0/10). Binning by the drive each branch receives, which the observer knows because it controls its inputs, found it.
+- **T1f was never rejected.** My prediction that an output filter would break the invariant was wrong at 8 ms: the kernels last about 25 ms, and an 8 ms filter after the gain barely changes the ratios. So in this toy, a rejection does point at the dendrite, though in principle a slower post-gain filter would also reject.
+
+Compared with R1: the residue of the best fixed-filter model saw the NMDA dendrite in 0 of 10 recordings in ordinary activity; tiny random probes, read through a known-exact invariant, saw it in 5 of 10. That is the "poke as sense" point, measured: intervention reveals what passive residues do not. But it is half the recordings, not the 8 of 10 the gate asked for.
+
 ## The test that matters next
 
 The preprint's **spe-1** dataset ([CRCNS](https://crcns.org/), analysis code at [voytekresearch/spikewise](https://github.com/voytekresearch/spikewise)) has simultaneous intracellular ground truth beside the Neuropixels recording. For the cells whose waveform switches state, the question is whether a sorter that remembers keeps each one as one unit where snapshot sorting splits it. Download needs a CRCNS account, and this repository does not include a loader yet.
@@ -364,6 +397,8 @@ python run_matrix_residue.py calibration   # PROTOCOL_R1, seeds 900-902 (~11 min
 python run_matrix_residue.py test          # PROTOCOL_R1, seeds 1000-1009 (~45 min on 2 cores)
 python diagnostics/static_match.py         # post hoc: matched static controls (~10 min)
 python diagnostics/figure_matrix_residue.py
+python run_probe_kernels.py calibration    # PROTOCOL_R2, seeds 920-922 (~20 min on 2 cores)
+python run_probe_kernels.py test           # PROTOCOL_R2, seeds 2000-2009 (~50 min on 2 cores)
 ```
 
-Files: [sihtisort/synth.py](sihtisort/synth.py) (recording and ground truth) · [sihtisort/sort.py](sihtisort/sort.py) (B1, B2, SihtiSort) · [sihtisort/evaluate.py](sihtisort/evaluate.py) (scoring) · [run_gates.py](run_gates.py) · [sihtisort/cable.py](sihtisort/cable.py) (the three neurons) · [sihtisort/observer.py](sihtisort/observer.py) (matrix neuron, cascade, probes, null) · [run_matrix_residue.py](run_matrix_residue.py) · `results/*.json` (every number above, with the ledger of every hypothesis tested).
+Files: [sihtisort/synth.py](sihtisort/synth.py) (recording and ground truth) · [sihtisort/sort.py](sihtisort/sort.py) (B1, B2, SihtiSort) · [sihtisort/evaluate.py](sihtisort/evaluate.py) (scoring) · [run_gates.py](run_gates.py) · [sihtisort/cable.py](sihtisort/cable.py) (the three neurons) · [sihtisort/observer.py](sihtisort/observer.py) (matrix neuron, cascade, probes, null) · [run_matrix_residue.py](run_matrix_residue.py) · [sihtisort/probe.py](sihtisort/probe.py) (probing and the invariant) · [run_probe_kernels.py](run_probe_kernels.py) · `results/*.json` (every number above, with the ledger of every hypothesis tested).
