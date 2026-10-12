@@ -277,7 +277,7 @@ For each forced split, the sorter builds a one-neuron version of that address: i
 | cal-registered | 24/32 = 75% (59–88%) |
 | cal-uncorrected | 21/32 = 66% (47–81%) |
 
-- **C1 — safe: FAILED.** cal-registered passes linear (2 false, stable drop 2) and no drift (0), but not sine: 10 false reopenings and 3 stable neurons lost (the limits were 2 and 2).
+- **C1 — safe: FAILED.** cal-registered passes linear (2 false, stable drop 2) and no drift (0), but not sine: 10 false reopenings (limit 2), 4 mood neurons lost (limit 1) and 3 stable neurons lost (limit 2). The mood loss is identical without calibration, so it comes from the part this protocol left unchanged. (Corrected after Sol's read: the first version of this line omitted the mood drop.) By design, C1 on sine could not be passed: the unchanged two-state check alone made 3 false reopenings there, one more than the limit.
 - **C2 — calibration is what helps: passed.** False reopenings fall from 26 to 12. The per-recording difference is −0.23, with a 95% interval of −0.37 to −0.12 that excludes 0.
 - **C3 — still finds real pairs: passed**, at 75% against a bar of 70%. The interval's lower end (59%) is below the bar. The calibration costs three real pairs out of 32.
 - **Without drift correction, the null alone is far from enough.** That variant made 77 false reopenings under drift: 43 forced splits that got past their nulls, and 34 from the "states" remainder, which has no null.
