@@ -538,6 +538,8 @@ def general_gap(tp, Sp, tq, Sq, mode, drift_fn=None, seed=0, boots=40, register=
         return float((g * w).sum() / w.sum())
 
     gap = abs(est(groups))
+    if boots == 0:
+        return gap, float('nan')
     rng = np.random.default_rng(seed)
     bs = []
     for _ in range(boots):
@@ -588,6 +590,46 @@ def estimate_drift(t, addr, clean, win=5 * FS, min_spikes=6, min_windows=3):
     return lambda x: np.interp(np.asarray(x, float), xc, yc)
 
 
+NULL_DRAWS = 30
+
+
+def forced_split_null(t, S, null_drift, test_drift, register, seed=0, draws=NULL_DRAWS):
+    """PROTOCOL_7: what the forced-split procedure produces from ONE neuron like this address.
+    The address's own registered template is put back at each spike's time and drifted position, scaled by
+    the spike's own amplitude, plus the address's own residuals in a random order; the identical split and gap
+    measurement is then run `draws` times. (Deviation found on calibration seeds: resampling residuals WITH
+    replacement duplicates outlier residuals, and the mixture then splits off those duplicates as a small
+    cluster, so the null measured the wrong thing. Each residual is now used exactly once per draw.)"""
+    n = len(t)
+    d = null_drift(t) if null_drift is not None else np.zeros(n)
+    Sr = register_spikes(S, d) if np.any(d) else S
+    Tbar = Sr.mean(0)
+    Tk = register_spikes(np.repeat(Tbar[None], n, 0), -np.asarray(d)) if np.any(d) else np.repeat(Tbar[None], n, 0)
+    amp = (S * Tk).sum((1, 2)) / np.maximum((Tk * Tk).sum((1, 2)), 1e-9)
+    resid = S - amp[:, None, None] * Tk
+    rng = np.random.default_rng(seed + 7)
+    gaps, rz = [], []
+    for k in range(draws):
+        Sn = amp[:, None, None] * Tk + resid[rng.permutation(n)]
+        lab, test = _forced_split(Sn.reshape(n, -1), seed + 1 + k)
+        p, q = np.where(lab == 0)[0], np.where(lab == 1)[0]
+        tp, tq = np.where((lab == 0) & test)[0], np.where((lab == 1) & test)[0]
+        if min(len(tp), len(tq)) < MIN_N // 2:
+            gaps.append(0.0); rz.append(0.0); continue
+        if test_drift is None:
+            g, _ = general_gap(t[tp], Sn[tp], t[tq], Sn[tq], 'naive', None, seed, boots=0)
+        else:
+            g, _ = general_gap(t[tp], Sn[tp], t[tq], Sn[tq], 'naive', test_drift, seed, boots=0, register=register)
+        gaps.append(g)
+        z = 0.0
+        if switch_ratio(t[p], t[q]) <= R_MAX:
+            tt = np.concatenate([t[p], t[q]]); ll = np.r_[np.zeros(len(p), int), np.ones(len(q), int)]
+            o = np.argsort(tt, kind='stable'); z = refute(tt[o], ll[o], 0, 1).get('z') or 0.0
+        rz.append(float(z))
+    return dict(gap_mu=round(float(np.mean(gaps)), 4), gap_sd=round(float(np.std(gaps)), 4),
+                rate_z_mu=round(float(np.mean(rz)), 3), rate_z_sd=round(float(np.std(rz)), 3), draws=draws)
+
+
 def _forced_split(X, seed):
     """Two-way split fitted on even-indexed spikes only; the test then uses odd-indexed spikes,
     so the split cannot manufacture the difference it is tested on."""
@@ -597,10 +639,13 @@ def _forced_split(X, seed):
     return g.predict(pca.transform(X)), ~fit
 
 
-def remainder_channel(t, addr, state, clean, seed=0, aware=False, mode=None, drift_fn=None, register=False):
+def remainder_channel(t, addr, state, clean, seed=0, aware=False, mode=None, drift_fn=None, register=False,
+                      calibrate=False, null_drift=None):
     """aware=True (PROTOCOL_4): compare the parts' positions only inside shared 15 s windows.
     PROTOCOL_5: mode in {'naive', 'window', 'switch'}; drift_fn(samples) -> probe displacement in
-    channels, subtracted from positions before comparing (None = no correction)."""
+    channels, subtracted from positions before comparing (None = no correction).
+    PROTOCOL_7: calibrate=True judges forced splits against a one-neuron null built from the address's
+    own template, residuals and the measured drift null_drift (which may differ from drift_fn)."""
     if mode is None:
         mode = 'window' if aware else 'naive'
     if mode != 'naive' or drift_fn is not None:
@@ -649,6 +694,13 @@ def remainder_channel(t, addr, state, clean, seed=0, aware=False, mode=None, dri
                 o = np.argsort(tt, kind='stable'); rate = refute(tt[o], ll[o], 0, 1)
             pos_fire = gap >= POS_MIN and zp >= POS_Z
             rate_fire = rate is not None and rate['status'] == 'refuted'
+            if calibrate and kind == 'forced split':
+                nl = forced_split_null(t[m], clean[m], null_drift, drift_fn, register, seed)
+                bar = max(POS_MIN, nl['gap_mu'] + 3 * nl['gap_sd'])
+                rbar = nl['rate_z_mu'] + 3 * nl['rate_z_sd']
+                pos_fire = pos_fire and gap >= bar
+                rate_fire = rate_fire and (rate.get('z') or 0) >= rbar
+                rec['null'] = dict(nl, position_bar=round(bar, 3), rate_z_bar=round(rbar, 2))
             if aware is None and mode == 'switch':
                 rec['switch_spans_s'] = [round(x, 2) for x in rec_spans]
             rec.update(position_gap=round(gap, 3), position_se=round(se, 3) if np.isfinite(se) else None, position_z=round(zp, 2),
