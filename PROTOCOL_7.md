@@ -44,3 +44,7 @@ The recording is the resampling unit. 95% intervals are bootstrapped over record
 - **C2 — calibration is what helps.** Pooled over the 60 recordings, cal-registered has fewer false reopenings than uncal-registered, and the 95% recording-bootstrap interval of the per-recording difference excludes 0.
 - **C3 — still finds real pairs.** Pooled over the three sets, cal-registered separates ≥ 70% of the separable false merges (offset ≥ 0.25 channels or rate ratio ≥ 1.5) that commit mode leaves merged.
 - **Reported:** cal-uncorrected on the same measures, and the separable-pair recall of all three variants with recording-bootstrap intervals.
+
+## Deviation found on the calibration seeds (before the fresh run)
+
+Step 3 said to resample residuals *with replacement*. On seed 92 that made the null measure the wrong thing: a duplicated outlier residual added to near-identical templates forms a tight little cluster, and the two-way mixture split off 5–30 such spikes in most draws (a part too small to test), instead of splitting the neuron along the drift as it does in the real data. Each draw now uses every residual exactly once, in a random order (a permutation). Nothing else changed. Draws in which a part is too small to test count as gap 0, as in the real procedure, which then stays silent.
