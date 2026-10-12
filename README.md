@@ -261,6 +261,35 @@ Registration is the more accurate of the two. So why it did worse under sine dri
 
 So Sol's proposed fix is the right one: judge each forced split against a null distribution of what the whole procedure produces from one neuron of that size, under the measured drift. A fixed threshold plus a bootstrap z-score is not enough.
 
+## Judge each forced split against its own one-neuron null ([PROTOCOL_7.md](PROTOCOL_7.md), Sol's suggestion)
+
+For each forced split, the sorter builds a one-neuron version of that address: its own registered template, put back at each spike's time and drifted position, plus its own residuals. It runs the identical split 30 times on that. A forced split may reopen only if it beats the null's μ + 3σ (position) or the null's rate z-scores (rate). The thresholds were fixed before any code. One deviation was found on the calibration seeds and recorded before the fresh run: the residuals are permuted rather than resampled with replacement, because duplicated outliers gave the mixture a fake little cluster to split off. The code was frozen at `56190da` and run once on 60 fresh recordings (20 per set).
+
+| False reopenings (out of 20 recordings) | linear | sine | no drift | per recording, pooled (95% CI) |
+|---|---|---|---|---|
+| uncal-registered (Protocol 6 method) | 4 | 22 | 0 | 0.43 (0.25–0.63) |
+| **cal-registered** | **2** | **10** | **0** | **0.20 (0.08–0.32)** |
+| cal-uncorrected (null contains the drift, no correction) | 28 | 49 | 0 | 1.28 (0.95–1.63) |
+
+| Separable merged pairs pulled apart (pooled, 32 pairs) | recall (95% CI) |
+|---|---|
+| uncal-registered | 27/32 = 84% (72–97%) |
+| cal-registered | 24/32 = 75% (59–88%) |
+| cal-uncorrected | 21/32 = 66% (47–81%) |
+
+- **C1 — safe: FAILED.** cal-registered passes linear (2 false, stable drop 2) and no drift (0), but not sine: 10 false reopenings and 3 stable neurons lost (the limits were 2 and 2).
+- **C2 — calibration is what helps: passed.** False reopenings fall from 26 to 12. The per-recording difference is −0.23, with a 95% interval of −0.37 to −0.12 that excludes 0.
+- **C3 — still finds real pairs: passed**, at 75% against a bar of 70%. The interval's lower end (59%) is below the bar. The calibration costs three real pairs out of 32.
+- **Without drift correction, the null alone is far from enough.** That variant made 77 false reopenings under drift: 43 forced splits that got past their nulls, and 34 from the "states" remainder, which has no null.
+
+### Why it is not enough yet (post hoc, labelled as such)
+
+- **The null trusts its own drift estimate.** It is built with the estimated drift and corrected with the same estimate, so registration is perfect inside the null. The remaining false forced splits under sine have gaps of 0.15–0.22 channels where their nulls predicted about 0.01–0.08. The real data contain an error the null cannot: the drift estimate's own error. That error is largest under sine (RMS 0.03–0.047 channels, against 0.015–0.036 for linear and about 0.01 without drift). The sine set is where calibration fell short.
+- **The rate null is usually empty.** Most null splits do not take turns, so the rate bar is 0, and two false forced-split rate reopenings passed through it. Where the null does take turns, it matters: one real-looking rate z of 8.8 was stopped by a null bar of 9.0.
+- **Three of the 10 sine failures come from the "states" remainder** (two by rate, one by position), which this protocol left unchanged. The other 7 are forced splits: 5 by position, 2 by rate.
+
+The forced split now pays a price for how it was generated, and the price halves its errors. What it does not yet pay for is the observer's uncertainty about its own motion. The next null should carry that uncertainty, for example a drift estimated without the address being tested, or one perturbed by the estimate's measured error.
+
 ## The test that matters next
 
 The preprint's **spe-1** dataset ([CRCNS](https://crcns.org/), analysis code at [voytekresearch/spikewise](https://github.com/voytekresearch/spikewise)) has simultaneous intracellular ground truth beside the Neuropixels recording. For the cells whose waveform switches state, the question is whether a sorter that remembers keeps each one as one unit where snapshot sorting splits it. Download needs a CRCNS account, and this repository does not include a loader yet.
@@ -285,6 +314,7 @@ python diagnostics/drift_control.py        # PROTOCOL_4 (~12 min on 2 cores)
 python diagnostics/frame_or_switch.py      # PROTOCOL_5 (~30 min on 2 cores)
 python diagnostics/register_first.py       # PROTOCOL_6 (~30 min on 2 cores)
 python diagnostics/null_split.py           # diagnostics A and B (~4 min)
+python diagnostics/calibrated.py           # PROTOCOL_7 (~2.5 h on 2 cores)
 ```
 
 Files: [sihtisort/synth.py](sihtisort/synth.py) (recording and ground truth) · [sihtisort/sort.py](sihtisort/sort.py) (B1, B2, SihtiSort) · [sihtisort/evaluate.py](sihtisort/evaluate.py) (scoring) · [run_gates.py](run_gates.py) · `results/*.json` (every number above, with the ledger of every hypothesis tested).
